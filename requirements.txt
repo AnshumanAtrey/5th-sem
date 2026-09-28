@@ -1,0 +1,10 @@
+# For the Streamlit Cloud deploy (streamlit_app.py). Keep in sync with
+# Machine Learning/Retail Sales Prediction - Group 12/requirements.txt
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+joblib==1.6.0
+streamlit==1.64.0
+altair==6.3.0
