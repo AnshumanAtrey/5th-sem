@@ -1,297 +1,329 @@
 {
   "data": {
-    "rows": 2160,
-    "train_rows": 1728,
-    "test_rows": 432,
-    "train_stores": 48,
-    "test_stores": 12,
-    "test_store_ids": [
-      "S01",
-      "S06",
-      "S13",
-      "S14",
-      "S34",
-      "S37",
-      "S46",
-      "S47",
-      "S49",
-      "S51",
-      "S55",
-      "S58"
-    ]
+    "rows": 255232,
+    "train_rows": 205159,
+    "test_rows": 50073,
+    "train_weeks": [
+      "2011-03-04",
+      "2012-06-29",
+      70
+    ],
+    "test_weeks": [
+      "2012-07-06",
+      "2012-10-26",
+      17
+    ],
+    "series": 3183
   },
-  "comparison": {
-    "Linear Regression": {
-      "cv_new_store": {
-        "R2": 0.832,
-        "R2_std": 0.067,
-        "MSE": 5.151,
-        "RMSE": 2.245,
-        "MAE": 1.777
-      },
-      "cv_random_rows": {
-        "R2": 0.886,
-        "RMSE": 2.132
-      },
-      "train": {
-        "R2": 0.889,
-        "MSE": 4.435,
-        "RMSE": 2.106,
-        "MAE": 1.652
-      },
-      "test_unseen_stores": {
-        "R2": 0.814,
-        "MSE": 4.552,
-        "RMSE": 2.134,
-        "MAE": 1.648
-      }
-    },
-    "Polynomial Regression (deg 2)": {
-      "cv_new_store": {
-        "R2": 0.852,
-        "R2_std": 0.041,
-        "MSE": 4.636,
-        "RMSE": 2.142,
-        "MAE": 1.692
-      },
-      "cv_random_rows": {
-        "R2": 0.906,
-        "RMSE": 1.935
-      },
-      "train": {
+  "cv_folds": [
+    [
+      "2011-06-17",
+      "2011-08-26"
+    ],
+    [
+      "2011-09-02",
+      "2011-11-11"
+    ],
+    [
+      "2011-11-18",
+      "2012-01-27"
+    ],
+    [
+      "2012-02-03",
+      "2012-04-13"
+    ],
+    [
+      "2012-04-20",
+      "2012-06-29"
+    ]
+  ],
+  "cv": {
+    "Naive: last week's sales": {
+      "mean": {
+        "MAE": 2231.791,
+        "MSE": 57896421.272,
+        "RMSE": 6107.226,
         "R2": 0.911,
-        "MSE": 3.574,
-        "RMSE": 1.891,
-        "MAE": 1.479
+        "WMAE": 2647.177,
+        "bias": -4.774
       },
-      "test_unseen_stores": {
-        "R2": 0.849,
-        "MSE": 3.713,
-        "RMSE": 1.927,
-        "MAE": 1.513
+      "std": {
+        "MAE": 1215.956,
+        "MSE": 95705288.037,
+        "RMSE": 5074.226,
+        "R2": 0.13,
+        "WMAE": 2103.087,
+        "bias": 169.371
       }
     },
-    "Decision Tree": {
-      "cv_new_store": {
-        "R2": 0.506,
-        "R2_std": 0.243,
-        "MSE": 14.446,
-        "RMSE": 3.791,
-        "MAE": 3.081
+    "Seasonal naive: same week last year": {
+      "mean": {
+        "MAE": 1892.583,
+        "MSE": 16641251.889,
+        "RMSE": 4057.172,
+        "R2": 0.969,
+        "WMAE": 1921.791,
+        "bias": 305.536
       },
-      "cv_random_rows": {
-        "R2": 0.844,
-        "RMSE": 2.497
-      },
-      "train": {
-        "R2": 0.884,
-        "MSE": 4.637,
-        "RMSE": 2.153,
-        "MAE": 1.669
-      },
-      "test_unseen_stores": {
-        "R2": 0.643,
-        "MSE": 8.754,
-        "RMSE": 2.959,
-        "MAE": 2.344
+      "std": {
+        "MAE": 129.423,
+        "MSE": 3999149.515,
+        "RMSE": 475.137,
+        "R2": 0.004,
+        "WMAE": 212.025,
+        "bias": 306.446
       }
     },
-    "Random Forest": {
-      "cv_new_store": {
-        "R2": 0.613,
-        "R2_std": 0.175,
-        "MSE": 11.352,
-        "RMSE": 3.358,
-        "MAE": 2.759
+    "Seasonal rule: last 4 weeks + last year's jump": {
+      "mean": {
+        "MAE": 1575.28,
+        "MSE": 13593072.018,
+        "RMSE": 3613.751,
+        "R2": 0.975,
+        "WMAE": 1641.649,
+        "bias": 16.361
       },
-      "cv_random_rows": {
-        "R2": 0.903,
-        "RMSE": 1.966
-      },
-      "train": {
-        "R2": 0.961,
-        "MSE": 1.571,
-        "RMSE": 1.253,
-        "MAE": 0.954
-      },
-      "test_unseen_stores": {
-        "R2": 0.801,
-        "MSE": 4.88,
-        "RMSE": 2.209,
-        "MAE": 1.715
+      "std": {
+        "MAE": 258.483,
+        "MSE": 6076441.272,
+        "RMSE": 816.91,
+        "R2": 0.01,
+        "WMAE": 384.521,
+        "bias": 198.512
       }
     },
-    "Gradient Boosting": {
-      "cv_new_store": {
-        "R2": 0.756,
-        "R2_std": 0.091,
-        "MSE": 7.467,
-        "RMSE": 2.715,
-        "MAE": 2.22
-      },
-      "cv_random_rows": {
-        "R2": 0.935,
-        "RMSE": 1.606
-      },
-      "train": {
-        "R2": 0.962,
-        "MSE": 1.539,
-        "RMSE": 1.24,
-        "MAE": 0.943
-      },
-      "test_unseen_stores": {
-        "R2": 0.786,
-        "MSE": 5.251,
-        "RMSE": 2.292,
-        "MAE": 1.746
-      }
-    }
-  },
-  "best_model": "Polynomial Regression (deg 2)",
-  "residuals": {
-    "mean": 0.41,
-    "std": 1.883,
-    "abs_p50": 1.29,
-    "abs_p80": 2.356,
-    "abs_p90": 3.11,
-    "mape_pct": 7.379
-  },
-  "linear_residual_by_promo_bin": {
-    "(0, 40]": -1.012,
-    "(40, 80]": 0.091,
-    "(80, 120]": 0.772,
-    "(120, 160]": 1.176,
-    "(160, 200]": 1.304,
-    "(200, 240]": 1.279,
-    "(240, 280]": 0.773,
-    "(280, 320]": 0.415,
-    "(320, 360]": 0.15,
-    "(360, 400]": -0.379,
-    "(400, 440]": 0.751,
-    "(440, 480]": -1.163,
-    "(480, 520]": -0.677
-  },
-  "promo_saturation": {
     "Linear Regression": {
-      "0→100k": 1.15,
-      "100→200k": 1.15,
-      "200→300k": 1.15,
-      "300→400k": 1.15
+      "mean": {
+        "MAE": 1710.469,
+        "MSE": 18427610.954,
+        "RMSE": 4010.488,
+        "R2": 0.969,
+        "WMAE": 1845.836,
+        "bias": 163.951
+      },
+      "std": {
+        "MAE": 432.388,
+        "MSE": 17286183.88,
+        "RMSE": 1711.576,
+        "R2": 0.021,
+        "WMAE": 694.911,
+        "bias": 484.135
+      }
     },
-    "Polynomial Regression (deg 2)": {
-      "0→100k": 2.62,
-      "100→200k": 1.75,
-      "200→300k": 0.88,
-      "300→400k": 0.01
-    },
-    "TRUE hidden rule": {
-      "0→100k": 3.49,
-      "100→200k": 1.51,
-      "200→300k": 0.66,
-      "300→400k": 0.29
+    "Polynomial Regression (degree 2)": {
+      "mean": {
+        "MAE": 1668.486,
+        "MSE": 18278721.832,
+        "RMSE": 3960.496,
+        "R2": 0.969,
+        "WMAE": 1787.437,
+        "bias": 269.723
+      },
+      "std": {
+        "MAE": 473.474,
+        "MSE": 18254374.912,
+        "RMSE": 1800.413,
+        "R2": 0.023,
+        "WMAE": 678.679,
+        "bias": 545.614
+      }
     }
   },
-  "importance_rmse_increase": {
-    "store_size_sqft": 5.31,
-    "num_staff": 1.577,
-    "month": 1.495,
-    "location_type": 1.451,
-    "promo_spend_k": 1.036,
-    "competitor_distance_km": 0.296
-  },
-  "noise_floor": {
-    "R2": 0.869,
-    "MSE": 3.203,
-    "RMSE": 1.79,
-    "MAE": 1.384
-  },
-  "whatif": {
-    "store_id": "S34",
-    "year": 2024,
-    "month": 6,
-    "inputs": {
-      "store_size_sqft": 6950.0,
-      "num_staff": 10,
-      "promo_spend_k": 82.5,
-      "competitor_distance_km": 1.15,
-      "location_type": "Urban",
-      "month": 6
-    },
-    "actual_sales": 18.81,
-    "predicted_sales": 18.91,
-    "scenarios": [
-      {
-        "scenario": "Promo +₹50k",
-        "model_pred": 19.99,
-        "model_change": 1.08,
-        "true_rule_change": 1.0
-      },
-      {
-        "scenario": "Promo cut to ₹0",
-        "model_pred": 16.66,
-        "model_change": -2.26,
-        "true_rule_change": -2.89
-      },
-      {
-        "scenario": "Promo raised to ₹400k",
-        "model_pred": 22.07,
-        "model_change": 3.16,
-        "true_rule_change": 2.72
-      },
-      {
-        "scenario": "Store +1,000 sq ft",
-        "model_pred": 20.97,
-        "model_change": 2.05,
-        "true_rule_change": 1.28
-      },
-      {
-        "scenario": "+2 staff",
-        "model_pred": 18.31,
-        "model_change": -0.6,
-        "true_rule_change": 0.48
-      },
-      {
-        "scenario": "Competitor 2 km farther",
-        "model_pred": 19.35,
-        "model_change": 0.43,
-        "true_rule_change": 0.77
-      },
-      {
-        "scenario": "Competitor opens next door (0.2 km)",
-        "model_pred": 18.69,
-        "model_change": -0.22,
-        "true_rule_change": -0.68
-      },
-      {
-        "scenario": "Location → Rural",
-        "model_pred": 13.62,
-        "model_change": -5.29,
-        "true_rule_change": -4.13
-      },
-      {
-        "scenario": "Same store in November",
-        "model_pred": 24.17,
-        "model_change": 5.26,
-        "true_rule_change": 4.79
-      }
+  "cv_mae_per_fold": {
+    "Naive: last week's sales": [
+      1464.0,
+      1746.0,
+      4378.0,
+      1991.0,
+      1579.0
+    ],
+    "Seasonal naive: same week last year": [
+      1777.0,
+      1787.0,
+      2098.0,
+      1891.0,
+      1911.0
+    ],
+    "Seasonal rule: last 4 weeks + last year's jump": [
+      1295.0,
+      1378.0,
+      1914.0,
+      1532.0,
+      1758.0
+    ],
+    "Linear Regression": [
+      1410.0,
+      1413.0,
+      2457.0,
+      1650.0,
+      1621.0
+    ],
+    "Polynomial Regression (degree 2)": [
+      1334.0,
+      1346.0,
+      2479.0,
+      1670.0,
+      1513.0
     ]
   },
-  "feature_ranges": {
-    "store_size_sqft": [
-      2300.0,
-      14600.0
+  "cv_mae_by_week_kind": {
+    "Naive: last week's sales": {
+      "normal_weeks": 1867.2,
+      "holiday_and_pre_christmas_weeks": 5213.1
+    },
+    "Seasonal naive: same week last year": {
+      "normal_weeks": 1823.5,
+      "holiday_and_pre_christmas_weeks": 2455.5
+    },
+    "Seasonal rule: last 4 weeks + last year's jump": {
+      "normal_weeks": 1509.0,
+      "holiday_and_pre_christmas_weeks": 2119.7
+    },
+    "Linear Regression": {
+      "normal_weeks": 1577.9,
+      "holiday_and_pre_christmas_weeks": 2795.2
+    },
+    "Polynomial Regression (degree 2)": {
+      "normal_weeks": 1532.2,
+      "holiday_and_pre_christmas_weeks": 2785.3
+    }
+  },
+  "feature_selection_cv_mae": {
+    "All columns (+ store ID + economic data)": 1691.4,
+    "Without store ID": 1680.7,
+    "Without store ID and economic data (chosen)": 1668.5
+  },
+  "degree_check": {
+    "1": {
+      "train_MAE": 1405.8,
+      "cv_MAE": 1710.5
+    },
+    "2": {
+      "train_MAE": 1331.7,
+      "cv_MAE": 1668.5
+    },
+    "3": {
+      "train_MAE": 1289.9,
+      "cv_MAE": 2069.8
+    }
+  },
+  "best_model": "Polynomial Regression (degree 2)",
+  "train_fit": {
+    "Linear Regression": {
+      "MAE": 1464.571,
+      "MSE": 11255757.054,
+      "RMSE": 3354.96,
+      "R2": 0.978,
+      "WMAE": 1542.497,
+      "bias": -11.885
+    },
+    "Polynomial Regression (degree 2)": {
+      "MAE": 1391.892,
+      "MSE": 9320138.574,
+      "RMSE": 3052.89,
+      "R2": 0.982,
+      "WMAE": 1416.117,
+      "bias": -9.726
+    }
+  },
+  "test": {
+    "Naive: last week's sales": {
+      "MAE": 1555.054,
+      "MSE": 12181178.792,
+      "RMSE": 3490.155,
+      "R2": 0.975,
+      "WMAE": 1663.506,
+      "bias": -20.184
+    },
+    "Seasonal naive: same week last year": {
+      "MAE": 1683.276,
+      "MSE": 12601435.778,
+      "RMSE": 3549.85,
+      "R2": 0.974,
+      "WMAE": 1705.431,
+      "bias": 286.699
+    },
+    "Seasonal rule: last 4 weeks + last year's jump": {
+      "MAE": 1386.289,
+      "MSE": 9377768.7,
+      "RMSE": 3062.314,
+      "R2": 0.981,
+      "WMAE": 1400.424,
+      "bias": -25.69
+    },
+    "Linear Regression": {
+      "MAE": 1308.799,
+      "MSE": 7051494.961,
+      "RMSE": 2655.465,
+      "R2": 0.985,
+      "WMAE": 1344.893,
+      "bias": -241.752
+    },
+    "Polynomial Regression (degree 2)": {
+      "MAE": 1276.866,
+      "MSE": 6470585.189,
+      "RMSE": 2543.734,
+      "R2": 0.987,
+      "WMAE": 1291.311,
+      "bias": -208.325
+    }
+  },
+  "test_mae_change_vs_naive_pct": {
+    "Naive: last week's sales": 0.0,
+    "Seasonal naive: same week last year": -8.2,
+    "Seasonal rule: last 4 weeks + last year's jump": 10.9,
+    "Linear Regression": 15.8,
+    "Polynomial Regression (degree 2)": 17.9
+  },
+  "test_mae_change_vs_rule_pct": {
+    "Naive: last week's sales": -12.2,
+    "Seasonal naive: same week last year": -21.4,
+    "Seasonal rule: last 4 weeks + last year's jump": 0.0,
+    "Linear Regression": 5.6,
+    "Polynomial Regression (degree 2)": 7.9
+  },
+  "residuals": {
+    "mean": -208.3,
+    "std": 2535.2,
+    "abs_p50": 627.9,
+    "abs_p80": 1712.2,
+    "abs_p90": 2952.4
+  },
+  "holiday_example": {
+    "store": 35,
+    "dept": 72
+  },
+  "importance_mae_increase": {
+    "sales_roll4": 7753.0,
+    "sales_lag_52": 5332.0,
+    "sales_lag_1": 3733.1,
+    "sales_lag_2": 341.9,
+    "sales_yoy_jump": 219.7,
+    "Dept": 78.1,
+    "hol_labor_day": 20.8,
+    "month": 20.6,
+    "Size": 10.7,
+    "Type": 1.7,
+    "hol_super_bowl": 0.0,
+    "hol_thanksgiving": 0.0,
+    "hol_christmas": 0.0,
+    "pre_christmas": 0.0,
+    "markdown_reported": 0.0,
+    "promo_markdown": -5.8
+  },
+  "error_bands": {
+    "edges": [
+      1545.2,
+      5025.2,
+      11404.8,
+      25397.3
     ],
-    "num_staff": [
-      5.0,
-      21.0
-    ],
-    "promo_spend_k": [
-      0.4,
-      519.7
-    ],
-    "competitor_distance_km": [
-      0.1,
-      18.61
+    "p80_pct": [
+      1.0,
+      0.312,
+      0.173,
+      0.131,
+      0.097
     ]
   }
 }

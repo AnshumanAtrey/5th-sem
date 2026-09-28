@@ -1,0 +1,6 @@
+# Running the notebook headless, the tests, and rebuilding the report PDF.
+-r requirements.txt
+pytest==9.1.1
+nbconvert==7.17.1
+ipykernel==7.3.0
+playwright==1.63.0

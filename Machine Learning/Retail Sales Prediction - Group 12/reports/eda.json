@@ -1,62 +1,166 @@
 {
-  "rows": 2160,
-  "stores": 60,
-  "months": 36,
+  "rows": 421570,
+  "feature_rows": 8190,
+  "stores": 45,
+  "departments": 81,
+  "store_departments": 3331,
+  "weeks": 143,
+  "first_week": "2010-02-05",
+  "last_week": "2012-10-26",
+  "holiday_weeks": 10,
+  "duplicate_rows": 0,
+  "total_sales_billion": 6.74,
+  "classification": [
+    {
+      "column": "Store",
+      "data type": "Categorical (ID)",
+      "meaning": "Store number 1\u201345",
+      "how the model uses it": "to look up history; not a model input (tested, removed)",
+      "missing %": 0.0
+    },
+    {
+      "column": "Dept",
+      "data type": "Categorical (nominal)",
+      "meaning": "Department = product group",
+      "how the model uses it": "one-hot encoded input",
+      "missing %": 0.0
+    },
+    {
+      "column": "Date",
+      "data type": "Date/time",
+      "meaning": "Week ending Friday",
+      "how the model uses it": "source of month, holiday and history features",
+      "missing %": 0.0
+    },
+    {
+      "column": "Weekly_Sales",
+      "data type": "Numerical, continuous",
+      "meaning": "Dollars sold that week",
+      "how the model uses it": "TARGET; its past values become the history inputs",
+      "missing %": 0.0
+    },
+    {
+      "column": "IsHoliday",
+      "data type": "Binary",
+      "meaning": "Super Bowl, Labor Day, Thanksgiving, Christmas",
+      "how the model uses it": "split into 4 holiday flags",
+      "missing %": 0.0
+    },
+    {
+      "column": "Type",
+      "data type": "Categorical (nominal)",
+      "meaning": "Store format A / B / C",
+      "how the model uses it": "one-hot encoded input",
+      "missing %": 0.0
+    },
+    {
+      "column": "Size",
+      "data type": "Numerical, discrete",
+      "meaning": "Store floor area (sq ft)",
+      "how the model uses it": "scaled input",
+      "missing %": 0.0
+    },
+    {
+      "column": "MarkDown1-5",
+      "data type": "Numerical, continuous",
+      "meaning": "Anonymised promotional markdowns ($)",
+      "how the model uses it": "summed into one promotion input + flag",
+      "missing %": 67.5
+    },
+    {
+      "column": "Temperature",
+      "data type": "Numerical, continuous",
+      "meaning": "Local temperature (\u00b0F)",
+      "how the model uses it": "tested, removed (no gain)",
+      "missing %": 0.0
+    },
+    {
+      "column": "Fuel_Price",
+      "data type": "Numerical, continuous",
+      "meaning": "Local fuel price ($/gallon)",
+      "how the model uses it": "tested, removed (no gain)",
+      "missing %": 0.0
+    },
+    {
+      "column": "CPI",
+      "data type": "Numerical, continuous",
+      "meaning": "Consumer price index",
+      "how the model uses it": "tested, removed (no gain)",
+      "missing %": 0.0
+    },
+    {
+      "column": "Unemployment",
+      "data type": "Numerical, continuous",
+      "meaning": "Unemployment rate (%)",
+      "how the model uses it": "tested, removed (no gain)",
+      "missing %": 0.0
+    }
+  ],
   "missing_pct": {
-    "promo_spend_k": 6.2,
-    "competitor_distance_km": 8.0
+    "MarkDown1": 64.3,
+    "MarkDown2": 73.6,
+    "MarkDown3": 67.5,
+    "MarkDown4": 68.0,
+    "MarkDown5": 64.1
   },
-  "sales": {
-    "count": 2160.0,
-    "mean": 21.75,
-    "std": 6.08,
-    "min": 6.32,
-    "25%": 17.36,
-    "50%": 21.32,
-    "75%": 25.57,
-    "max": 45.94
+  "markdown_first_week": "2011-11-11",
+  "negative_sales_rows": 1285,
+  "zero_sales_rows": 73,
+  "model_rows": 255232,
+  "unrecorded_weeks_inside_history": 40483,
+  "sales_summary": {
+    "count": 421570.0,
+    "mean": 15981.5,
+    "std": 22711.0,
+    "min": 0.0,
+    "25%": 2079.6,
+    "50%": 7612.0,
+    "75%": 20205.9,
+    "max": 693099.4
   },
-  "sales_skew": 0.5,
-  "corr_with_sales": {
-    "store_size_sqft": 0.79,
-    "num_staff": 0.738,
-    "promo_spend_k": 0.303,
-    "month": 0.277,
-    "competitor_distance_km": 0.14
+  "top_weeks_million": {
+    "2010-12-24": 80.9,
+    "2011-12-23": 77.0,
+    "2011-11-25": 66.6,
+    "2010-11-26": 65.8,
+    "2010-12-17": 61.8,
+    "2011-12-16": 60.1
   },
-  "corr_size_staff": 0.925,
-  "mean_sales_by_location": {
-    "Urban": 22.12,
-    "Semi-Urban": 22.66,
-    "Rural": 20.29
+  "store_type_avg_week_million": {
+    "A": 1.38,
+    "B": 0.82,
+    "C": 0.47
   },
-  "mean_sales_by_month": {
-    "Jan": 19.57,
-    "Feb": 19.74,
-    "Mar": 20.91,
-    "Apr": 21.01,
-    "May": 20.88,
-    "Jun": 20.66,
-    "Jul": 20.12,
-    "Aug": 21.05,
-    "Sep": 21.95,
-    "Oct": 25.16,
-    "Nov": 25.94,
-    "Dec": 24.06
+  "corr_store_size_vs_sales": 0.846,
+  "top10_dept_share_pct": 46.0,
+  "top5_departments_avg_week": {
+    "92": 75205.0,
+    "95": 69824.0,
+    "38": 61091.0,
+    "72": 50567.0,
+    "65": 45442.0
   },
-  "mean_sales_by_promo_bin": {
-    "(0, 40]": 17.9,
-    "(40, 80]": 19.74,
-    "(80, 120]": 20.87,
-    "(120, 160]": 21.38,
-    "(160, 200]": 22.05,
-    "(200, 240]": 22.22,
-    "(240, 280]": 22.0,
-    "(280, 320]": 22.63,
-    "(320, 360]": 22.24,
-    "(360, 400]": 24.2,
-    "(400, 440]": 28.37,
-    "(440, 480]": 25.94,
-    "(480, 520]": 26.01
-  }
+  "avg_week_million_by_kind": {
+    "Normal week": 46.14,
+    "Super Bowl": 48.56,
+    "Labor Day": 46.91,
+    "Thanksgiving": 66.21,
+    "2 weeks before Christmas": 69.96,
+    "Christmas week": 43.24
+  },
+  "corr_with_target": {
+    "sales_lag_1": 0.959,
+    "sales_lag_2": 0.949,
+    "sales_roll4": 0.967,
+    "sales_lag_52": 0.984,
+    "sales_yoy_jump": 0.16,
+    "promo_markdown": 0.091,
+    "Size": 0.244,
+    "Temperature": -0.003,
+    "Fuel_Price": -0.005,
+    "CPI": -0.02,
+    "Unemployment": -0.035
+  },
+  "corr_markdown_vs_store_sales": 0.439,
+  "corr_markdown_vs_sales_per_sqft": -0.039
 }
