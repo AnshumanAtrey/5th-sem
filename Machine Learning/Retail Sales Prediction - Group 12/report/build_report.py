@@ -71,6 +71,117 @@ def flow(steps, cls=""):
     return f"<div class='flow {cls}'>" + "<i>→</i>".join(f"<div>{s}</div>" for s in steps) + "</div>"
 
 
+# Plain-English notes for every short form or technical word: the first use on each slide gets one, in small grey
+# brackets, so it can be read aloud in the viva. Longer phrases come first so they win over their parts.
+GLOSSARY = [
+    ("Polynomial Regression", "linear regression plus squared and multiplied inputs, so the line can bend"),
+    ("Linear Regression", "a weighted sum of the inputs"),
+    ("cross-validation", "testing on several held-back blocks of weeks"),
+    ("expanding-window", "each check trains on all earlier weeks"),
+    ("feature engineering", "building new input columns from raw data"),
+    ("permutation importance", "how much worse the model gets when one input is scrambled"),
+    ("Leakage-free", "no future information sneaks into training"),
+    ("leakage", "future information sneaking into training"),
+    ("over-fits", "memorises training weeks, does worse on new weeks"),
+    ("over-fitting", "memorising training data instead of learning the pattern"),
+    ("one-hot", "one yes/no column per category"),
+    ("imputation", "filling in missing values"),
+    ("impute", "fill in missing values"),
+    ("scaling", "putting all numbers on the same scale"),
+    ("scale", "put all numbers on the same scale"),
+    ("Pipeline", "the same steps, in the same order, for every row"),
+    ("pipeline", "the same steps, in the same order, for every row"),
+    ("baselines", "simple rules the model must beat"),
+    ("baseline", "simple rule the model must beat"),
+    ("regression", "predicting a number, not a category"),
+    ("supervised", "learns from examples with known answers"),
+    ("residual", "actual minus predicted"),
+    ("Residual", "actual minus predicted"),
+    ("correlation", "how strongly two things move together, −1 to 1"),
+    ("Correlation", "how strongly two things move together, −1 to 1"),
+    ("markdowns", "price cuts / promotions"),
+    ("markdown", "price cut / promotion"),
+    ("Markdowns", "price cuts / promotions"),
+    ("80% range", "8 out of 10 past forecasts landed inside it"),
+    ("Ridge-regularised", "extreme weights are penalised to avoid over-fitting"),
+    ("extrapolation", "predicting far outside what it has seen"),
+    ("WMAE", "MAE with holiday weeks counted 5×"),
+    ("RMSE", "typical miss in dollars, big misses punished more"),
+    ("MSE", "average of the squared misses"),
+    ("MAE", "average miss in dollars"),
+    ("R²", "share of the ups and downs the model explains; 1 = perfect"),
+    ("CV", "cross-validation: testing on held-back blocks of weeks"),
+    ("EDA", "exploring the data with charts"),
+    ("target", "the number we predict"),
+    ("Target", "the number we predict"),
+    ("features", "input columns the model uses"),
+    ("joblib", "file format for saving the trained model"),
+    ("Streamlit", "Python tool for building a web app"),
+    ("Kaggle", "data-science competition website"),
+    ("CPI", "consumer price index: how expensive things are"),
+    ("POS", "shop checkout data"),
+    ("r =", "correlation, −1 to 1"),
+]
+SKIP_TAGS = ("code", "pre", "th", "h1", "h2", "title", "small")
+SAME = {"imputation": "impute", "scaling": "scale", "markdowns": "markdown", "Markdowns": "markdown",
+        "baselines": "baseline", "over-fitting": "over-fits", "Residual": "residual", "Correlation": "correlation",
+        "correlation": "correlation", "r =": "correlation", "Target": "target", "Leakage-free": "leakage",
+        "CV": "cross-validation", "Pipeline": "pipeline"}  # one note per idea per slide
+
+
+def add_glossary(slide_html):
+    import re
+    done, notes = set(), []
+    parts = re.split(r"(<[^>]+>)", slide_html)
+    skip, skip_div = [], 0
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            name = re.match(r"</?\s*([a-zA-Z0-9]+)", part)
+            name = name.group(1).lower() if name else ""
+            if part.startswith("<p class='terms'"):
+                skip.append("p")
+            elif part.startswith("</p") and "p" in skip:
+                skip.remove("p")
+            elif part.startswith("<table class='tests'"):
+                skip.append("table")
+            elif part.startswith("</table") and "table" in skip:
+                skip.remove("table")
+            elif part.startswith("<div") and any(c in part for c in ("kicker", "foot", "'flow", "'pipe")):  # diagrams stay terse
+                skip_div = 1
+            elif skip_div and part.startswith("<div"):
+                skip_div += 1
+            elif skip_div and part.startswith("</div"):
+                skip_div -= 1
+            elif name in SKIP_TAGS:
+                if part.startswith("</"):
+                    skip = [t for t in skip if t != name] if name in skip else skip
+                elif not part.endswith("/>"):
+                    skip.append(name)
+            continue
+        if skip or skip_div or not part.strip():
+            continue
+        for term, note in GLOSSARY:
+            if SAME.get(term, term) in done:
+                continue
+            m = re.search(rf"(?<![\w-]){re.escape(term)}(?![\w-])", part) if term[-1].isalnum() else \
+                re.search(rf"(?<![\w-]){re.escape(term)}", part)
+            if m:
+                done.add(SAME.get(term, term))
+                notes.append(f"<span class='gloss'>({note})</span>")
+                part = part[:m.end()] + f"\x00{len(notes) - 1}\x00" + part[m.end():]
+        parts[i] = part
+    out = "".join(parts)
+    for n, note in enumerate(notes):
+        out = out.replace(f"\x00{n}\x00", " " + note)
+    return out
+
+
+TERMS = ("<p class='terms'><b>Key:</b> MAE = average miss in dollars · RMSE = typical miss, big misses punished more · "
+         "MSE = average of the squared misses · R² = share of the ups and downs explained (1 = perfect) · "
+         "CV = cross-validation, testing on held-back blocks of weeks · naive = next week equals last week</p>")
+
+
+
 SLIDES = []
 
 
@@ -94,9 +205,9 @@ def repo_tree():
              "problem-statement.pdf": "official brief (Group 12 + common rules)", "features.py": "shared feature pipeline",
              "theme.py": "shared colours", "best_model.joblib": "saved model", "results.json": "all model numbers",
              "eda.json": "all data numbers", "train.csv": "421,570 sales rows", "features.csv": "store-week context",
-             "stores.csv": "45 stores", "build_report.py": "builds this PDF", "screenshots.py": "app screenshots",
+             "stores.csv": "45 stores", "build_report.py": "builds the report + presentation PDFs", "screenshots.py": "app screenshots",
              "requirements.txt": "pinned libraries", "tests": "21 automated tests", "figures": "16 charts",
-             "screenshots": "5 app screenshots", "README.md": "how to run"}
+             "screenshots": "5 app screenshots", "README.md": "how to run", "Retailligence-Presentation.pdf": "9-slide viva deck", "Retailligence-Report.pdf": "full report"}
     lines = ["Retail Sales Prediction - Group 12/"]
 
     def walk(folder, prefix):
@@ -270,6 +381,15 @@ slide("Data quality and cleaning decisions", table(["Found", "Decision", "Why"],
     ["Duplicates", f"{E['duplicate_rows']} found", "—"],
 ], "check"), img("01_missing_values.png"), "Preprocessing")
 
+PIPE = f"""<div class='pipe'>
+<div class='box wide'>Model rows · {E['model_rows']:,} store-department-weeks with 56 weeks of history</div><i>↓</i>
+<div class='box wide'>Time split · first {R['data']['train_weeks'][2]} weeks train · last {R['data']['test_weeks'][2]} weeks test (never touched)</div><i>↓</i>
+<div class='row'><div class='box hl'>Training weeks<br><small>{R['data']['train_rows']:,} rows</small></div>
+<div class='box'>Test weeks<br><small>{R['data']['test_rows']:,} rows</small></div></div><i>↓</i>
+<div class='row'><div class='box'><b>History · promo · holidays</b><br><small>impute → scale → polynomial (deg 2)</small></div>
+<div class='box'><b>Size · markdown flag</b><br><small>impute → scale</small></div>
+<div class='box'><b>Type · month · Dept</b><br><small>one-hot</small></div></div><i>↓</i>
+<div class='box wide hl'>LinearRegression · fitted on training weeks only</div></div>"""
 # ── 13. Preprocessing pipeline ──────────────────────────────────────────
 slide("Train-test split and preprocessing pipeline", points([
     ("**Leakage-free**", "Every step is fitted on training weeks only, inside one scikit-learn <code>Pipeline</code>, then "
@@ -278,15 +398,7 @@ slide("Train-test split and preprocessing pipeline", points([
      "history, promotion and holiday inputs."),
     ("Categorical inputs", "One-hot encoding of store type, month and department; unseen categories are ignored safely."),
     ("Predictions", "Clipped at $0: a department cannot sell less than nothing."),
-]), f"""<div class='pipe'>
-<div class='box wide'>Model rows · {E['model_rows']:,} store-department-weeks with 56 weeks of history</div><i>↓</i>
-<div class='box wide'>Time split · first {R['data']['train_weeks'][2]} weeks train · last {R['data']['test_weeks'][2]} weeks test (never touched)</div><i>↓</i>
-<div class='row'><div class='box hl'>Training weeks<br><small>{R['data']['train_rows']:,} rows</small></div>
-<div class='box'>Test weeks<br><small>{R['data']['test_rows']:,} rows</small></div></div><i>↓</i>
-<div class='row'><div class='box'><b>History · promo · holidays</b><br><small>impute → scale → polynomial (deg 2)</small></div>
-<div class='box'><b>Size · markdown flag</b><br><small>impute → scale</small></div>
-<div class='box'><b>Type · month · Dept</b><br><small>one-hot</small></div></div><i>↓</i>
-<div class='box wide hl'>LinearRegression · fitted on training weeks only</div></div>""", "Preprocessing")
+]), PIPE, "Preprocessing")
 
 # ── 14. Feature engineering ─────────────────────────────────────────────
 slide("Feature engineering: history, date/time, holidays", points([
@@ -384,7 +496,7 @@ rows = [[esc(n), usd(R["cv"][n]["mean"]["MAE"]), usd(R["test"][n]["MAE"]), usd(R
         for n in R["test"]]
 rows[-1] = [f"<b>{c}</b>" for c in rows[-1]]
 slide("Model evaluation and comparison", table(["Method", "CV MAE", "Test MAE", "Test RMSE", "Test MSE", "Test R²", "error cut vs naive"],
-      rows, "check") + img("11_model_comparison.png", cls="below"), "", "Evaluation", "full")
+      rows, "check") + TERMS + img("11_model_comparison.png", cls="below"), "", "Evaluation", "full")
 
 # ── 26. Honest reading ──────────────────────────────────────────────────
 f45 = {n: (v[3] + v[4]) / 2 for n, v in R["cv_mae_per_fold"].items()}
@@ -512,25 +624,137 @@ slide("Team contributions and references", table(["Member", "Roll no.", "Owned"]
       "<li>F. Pedregosa et al. (2011). Scikit-learn: Machine learning in Python. <i>JMLR</i> 12, 2825–2830.</li>"
       "<li>Streamlit documentation. docs.streamlit.io</li></ol>", "Team")
 
-titles = [s.split("<h2>")[1].split("</h2>")[0] if "<h2>" in s else "" for s in SLIDES]
-for i, s in enumerate(SLIDES):
-    while "@@" in s:
-        key = s.split("@@")[1]
-        s = s.replace(f"@@{key}@@", str(next(n for n, t in enumerate(titles, 1) if t.startswith(key))))
-    SLIDES[i] = s
-CSS = (Path(__file__).parent / "report.css").read_text()
-pages = "".join(s.replace("</section>", f"<div class='foot'><span>Retailligence · Group 12 · ML Fundamentals Mini Project</span>"
-                                          f"<span>{i}</span></div></section>") for i, s in enumerate(SLIDES, 1))
-doc = (f"<!doctype html><html><head><meta charset='utf-8'><title>Retailligence — Project Report</title>"
-       f"<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap' rel='stylesheet'>"
-       f"<style>{CSS}</style></head><body>{pages}</body></html>")
-out_html = Path(__file__).parent / "Retailligence-Report.html"
-out_html.write_text(doc)
-with sync_playwright() as p:
-    browser = p.chromium.launch()
-    page = browser.new_page()
-    page.goto(out_html.as_uri())
-    page.wait_for_load_state("networkidle")
-    page.pdf(path=str(ROOT / "Retailligence-Report.pdf"), width="1280px", height="720px", print_background=True)
-    browser.close()
-print(f"wrote Retailligence-Report.pdf ({len(SLIDES)} slides)")
+
+
+def render(slides, name, title):
+    slides[:] = [add_glossary(s) for s in slides]
+    titles = [s.split("<h2>")[1].split("</h2>")[0] if "<h2>" in s else "" for s in slides]
+    for i, s in enumerate(slides):
+        while "@@" in s:
+            key = s.split("@@")[1]
+            s = s.replace(f"@@{key}@@", str(next(n for n, t in enumerate(titles, 1) if t.startswith(key))))
+        slides[i] = s
+    css = (Path(__file__).parent / "report.css").read_text()
+    pages = "".join(s.replace("</section>", f"<div class='foot'><span>Retailligence · Group 12 · ML Fundamentals Mini Project</span>"
+                                              f"<span>{i} / {len(slides)}</span></div></section>") for i, s in enumerate(slides, 1))
+    doc = (f"<!doctype html><html><head><meta charset='utf-8'><title>{title}</title>"
+           f"<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap' rel='stylesheet'>"
+           f"<style>{css}</style></head><body>{pages}</body></html>")
+    out_html = Path(__file__).parent / f"{name}.html"
+    out_html.write_text(doc)
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        page.goto(out_html.as_uri())
+        page.wait_for_load_state("networkidle")
+        page.pdf(path=str(ROOT / f"{name}.pdf"), width="1280px", height="720px", print_background=True)
+        browser.close()
+    print(f"wrote {name}.pdf ({len(slides)} slides)")
+
+
+render(SLIDES, "Retailligence-Report", "Retailligence — Project Report")
+
+# ══ 9-slide presentation: 3 parts × 3 slides, one part per presenter ══════════
+TEAM = ["Anshuman Atrey", "Shlok Kadam", "Rajneesh Kumar"]
+PARTS = ["Part 1 · Problem and data", "Part 2 · Analysis and models", "Part 3 · Results and deployment"]
+SLIDES = []
+
+
+def figure(name, caption, folder=FIG):
+    return f"<figure><img src='{folder}/{name}'><figcaption>{caption}</figcaption></figure>"
+
+
+by_type = {}
+for c in E["classification"]:
+    by_type.setdefault(c["data type"], []).append(f"<code>{esc(c['column'])}</code>")
+
+SLIDES.append(f"""<section class='slide cover'>
+<div class='chips'><span>ML Fundamentals Mini Project</span><span>Group 12</span><span>Regression · Forecasting</span></div>
+<h1>Retailligence</h1>
+<p class='sub'>Forecasting next week's sales for every department of every Walmart store, from sales history, store,
+product, promotion, month and holiday data, to plan stock and staff a week ahead.</p>
+<div class='coverstats'>{stats([(f"{E['rows']:,}", "sales rows"), (f"{E['stores']} × {E['departments']}", "stores × departments"),
+                                 (usd(T['MAE']), "average miss / dept-week"), (f"{T['R2']:.3f}", "test R²")])}</div>
+<p class='team'>{' · '.join(TEAM)}</p>
+<p class='meta'>B.Tech CSE 2024–28 · Semester V · Machine Learning Fundamentals</p></section>""")
+
+slide("Problem, data and what we predict", f"""<div class='quote'><b>Group 12 – Retail Sales Prediction.</b> Build a model
+that predicts retail sales using historical sales, product, store, promotion, month, holiday and other suitable
+information.</div>""" + points([
+    ("Target: **next week's sales**", "<code>Weekly_Sales</code> of one department in one store, in dollars: supervised "
+     "<b>regression</b> on time-ordered data, so we never train on the future."),
+    ("Data: **Walmart, Kaggle (2014)**", "<code>train.csv</code> + <code>features.csv</code> + <code>stores.csv</code>, "
+     "joined on store and week."),
+]), stats([(f"{E['rows']:,}", "sales rows"), (f"{E['store_departments']:,}", "store-department series"),
+           (E["weeks"], f"weeks · {E['first_week'][:7]} → {E['last_week'][:7]}"), (E["stores"], "stores · types A/B/C"),
+           (E["departments"], "departments (products)"), (f"${E['total_sales_billion']}B", "total sales")])
+    + table(["Data type", "Columns"], [[esc(t), ", ".join(cols)] for t, cols in by_type.items()], "mini"), PARTS[0])
+
+slide("Cleaning, preprocessing and features", points([
+    ("**Cleaning**", f"{E['negative_sales_rows']:,} negative sales (returns) → 0 · missing markdowns → 0 + a "
+     "\"reported\" flag · weeks with no record count as 0 sales in the history · no duplicates."),
+    ("**History features**", "last week, 2 weeks ago, 4-week average, same week last year, and <em>last year's jump</em> "
+     "for this week."),
+    ("**Date/time extraction**", "month, 4 holiday flags and the 2 pre-Christmas weeks (the biggest weeks, not flagged in the data)."),
+    ("**Leakage-free pipeline**", "impute → scale → polynomial terms, one-hot for type, month and department; fitted on "
+     "training weeks only."),
+]), PIPE, PARTS[0])
+
+slide("What the data tells us", "<div class='quad'>"
+      + figure("06_holiday_effect.png", f"<b>Holidays multiply sales:</b> Thanksgiving {k['Thanksgiving'] / k['Normal week']:.2f}×, "
+               f"pre-Christmas {k['2 weeks before Christmas'] / k['Normal week']:.2f}× a normal week.")
+      + figure("08_history_vs_sales.png", f"<b>History is the strongest clue:</b> r = {E['corr_with_target']['sales_lag_1']} "
+               f"with last week, {E['corr_with_target']['sales_lag_52']} with the same week last year.")
+      + figure("04_store_type_size.png", f"<b>Store and product matter:</b> Type A sells most; top 10 departments = "
+               f"{E['top10_dept_share_pct']}% of sales.")
+      + figure("09_markdown_vs_sales.png", f"<b>Promotions look strong, but it's store size:</b> per sq ft "
+               f"r = {E['corr_markdown_vs_sales_per_sqft']}.")
+      + "</div>", "", PARTS[1], "full")
+
+slide("Validation design and models", points([
+    ("**Never peek at the future**", f"The last {R['data']['test_weeks'][2]} weeks are locked away as the test set; "
+     "5 expanding-window folds inside the training weeks always learn from the past."),
+    ("**Three rule-of-thumb baselines**", "last week · same week last year · 4-week average + last year's jump."),
+    ("**Linear vs Polynomial Regression**", "degree-2 terms like <i>last week × Thanksgiving</i> let a holiday multiply sales."),
+    ("**Degree 2 wins**", f"CV MAE: degree 1 {usd(dc['1']['cv_MAE'])} · <b>2 {usd(dc['2']['cv_MAE'])}</b> · "
+     f"3 {usd(dc['3']['cv_MAE'])} (over-fits)."),
+]), f"<div class='folds'>{bars}<div class='legend'><b class='l-tr'></b> learn <b class='l-va'></b> check <b class='l-te'></b> final test</div></div>"
+      + img("12_degree_check.png", cls="half"), PARTS[1])
+
+slide("Results on 17 unseen weeks", table(["Method", "CV MAE", "Test MAE", "Test RMSE", "Test MSE", "Test R²", "error cut vs naive"],
+      rows, "check") + TERMS + img("11_model_comparison.png", cls="below"), "", PARTS[1], "full")
+
+slide("Reading the results honestly", points([
+    ("**The model wins on the test weeks**", f"{usd(T['MAE'])} vs {usd(R['test'][RULE]['MAE'])} for the best rule: "
+     f"{R['test_mae_change_vs_rule_pct'][BEST]:.1f}% lower error."),
+    ("**The rule wins big holiday weeks**", f"Only one holiday season exists to learn from. Holiday-week CV MAE: rule "
+     f"{usd(hk[RULE]['holiday_and_pre_christmas_weeks'])}, model {usd(hk[BEST]['holiday_and_pre_christmas_weeks'])}."),
+    ("**What drives the forecast**", f"4-week average (+{usd(imp['sales_roll4'])} MAE if shuffled), same week last year "
+     f"(+{usd(imp['sales_lag_52'])}), last week (+{usd(imp['sales_lag_1'])}); markdowns ≈ nothing."),
+]), img("15_holiday_season.png", cls="half") + img("16_feature_importance.png", cls="half"), PARTS[2])
+
+suite, _ = tests()
+slide("Streamlit app and testing", points([
+    ("**In:** store, department, week", "plus what-if markdown, kind of week and last week's sales, limited to the training range."),
+    ("**Out:** forecast + 80% range", "with a rule-of-thumb cross-check, actual sales for past weeks, a 16-week chart "
+     "and the model's test scores."),
+    ("**Honest by design**", "training weeks are labelled \"not a fair test\"; big holidays carry a warning; departments "
+     "without 56 weeks of history get an error, not a number."),
+    (f"**{suite.get('tests')} / {suite.get('tests')} tests pass**", "feature logic, no leakage, saved model, and the app "
+     "driven with 5 different inputs."),
+]), img("02_unseen_test_week_labor_day.png", SHOT, "shot"), PARTS[2])
+
+slide("Conclusion, limitations and future scope", points([
+    ("**Conclusion**", f"Degree-2 Polynomial Regression forecasts next week's department sales with R² {T['R2']:.3f} and "
+     f"an average miss of {usd(T['MAE'])}, {R['test_mae_change_vs_naive_pct'][BEST]:.1f}% better than \"same as last week\"."),
+    ("**Limitations**", "one holiday season to learn from · one week ahead only · anonymised markdowns · polynomial terms "
+     "over-react far outside the training range."),
+    ("**Future scope**", "more years of data · a holiday-week model · 2–4 weeks ahead · Ridge-regularised terms · live POS feed."),
+]), stats([(usd(T["MAE"]), "average miss"), (f"{T['R2']:.3f}", "R²"), (f"{R['test_mae_change_vs_naive_pct'][BEST]:.1f}%", "vs last week"),
+           (f"{R['test_mae_change_vs_rule_pct'][BEST]:.1f}%", "vs best rule"), (f"{suite.get('tests')}/{suite.get('tests')}", "tests pass"),
+           ("37", "slides in the full report")])
+    + "<p class='note'>References: Fildes et al. (2022) IJF 38(4) · Makridakis et al. (2022) IJF 38(4) · Bojer &amp; "
+      "Meldgaard (2021) IJF 37(2) · Bergmeir &amp; Benítez (2012) Inf. Sci. 191 · Hyndman &amp; Athanasopoulos (2021) FPP3 · "
+      "Kaggle Walmart Store Sales (2014).</p>", PARTS[2])
+
+render(SLIDES, "Retailligence-Presentation", "Retailligence — Presentation")

@@ -93,3 +93,16 @@ table.tests { font-size: 11px; } table.tests td { padding: 4px 8px; } table.test
 .chips span { display: inline-block; background: rgba(45, 212, 191, .14); color: #5eead4; border: 1px solid #2dd4bf55;
               border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 600; margin-right: 8px; }
 .coverstats .stats { grid-template-columns: repeat(4, 1fr); max-width: 1000px; }
+
+.quad { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 26px; }
+.quad figure { margin: 0; }
+.quad img { width: 100%; height: 218px; object-fit: contain; border-radius: 10px; border: 1px solid #243352; background: #0b1324; }
+.quad figcaption { font-size: 13.5px; color: #cbd5e1; margin-top: 5px; line-height: 1.35; }
+.quad figcaption b { color: #2dd4bf; }
+.cover .team { color: #fff; font-size: 19px; font-weight: 600; margin: 26px 0 0; }
+.cover .team + .meta { margin-top: 6px; }
+
+.gloss { font-size: .82em; font-weight: 400; color: #94a3b8; font-style: italic; letter-spacing: 0; text-transform: none; }
+.terms { font-size: 12.5px; color: #9fb0c8; margin: 10px 0 0; line-height: 1.5; }
+.terms b { color: #2dd4bf; }
+img.below { max-height: 220px; }

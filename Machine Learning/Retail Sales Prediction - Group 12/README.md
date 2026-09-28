@@ -15,7 +15,7 @@ order stock and plan staff a week ahead.
 | **Model** | Polynomial Regression (degree 2) on engineered history, date/time, holiday and store features |
 | **Test (17 unseen weeks)** | MAE **$1,277** per department-week · RMSE $2,544 · R² **0.987** |
 | **vs rules of thumb** | 17.9% lower error than "next week = last week", 7.9% lower than the best seasonal rule |
-| **Deliverables** | [notebook](Retailligence.ipynb) · [report PDF](Retailligence-Report.pdf) · [Streamlit app](app.py) · [tests](tests/) · [contributions](CONTRIBUTIONS.md) |
+| **Deliverables** | [notebook](Retailligence.ipynb) · [presentation (9 slides)](Retailligence-Presentation.pdf) · [full report (37 slides)](Retailligence-Report.pdf) · [Streamlit app](app.py) · [tests](tests/) · [contributions](CONTRIBUTIONS.md) |
 
 ## Run it
 
@@ -32,7 +32,7 @@ jupyter nbconvert --to notebook --execute --inplace Retailligence.ipynb   # figu
 pytest --junitxml=reports/tests.xml                                        # 21 tests
 python -m playwright install chromium                                      # once, for the next two steps
 python report/screenshots.py      # needs the app running on port 8765
-python report/build_report.py     # → Retailligence-Report.pdf
+python report/build_report.py     # → Retailligence-Report.pdf + Retailligence-Presentation.pdf
 ```
 
 **Live demo:** open the notebook in Colab with the badge above, then *Runtime → Run all*. The first cell clones this repo and
@@ -64,7 +64,8 @@ this repo, with main file `Machine Learning/Retail Sales Prediction - Group 12/a
 
 ```
 ├── Retailligence.ipynb       # the whole pipeline: data → EDA → features → models → evaluation → saved model
-├── Retailligence-Report.pdf  # final report (37 slides, every number read from reports/*.json)
+├── Retailligence-Presentation.pdf  # 9-slide viva deck: 3 parts × 3 slides, one part per presenter
+├── Retailligence-Report.pdf  # full report (37 slides, every number read from reports/*.json)
 ├── app.py                    # Streamlit app
 ├── problem-statement.pdf     # the official brief
 ├── src/features.py           # feature pipeline shared by notebook and app
