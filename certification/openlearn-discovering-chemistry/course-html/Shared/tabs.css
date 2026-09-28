@@ -1,0 +1,241 @@
+/* We don't render tabs, so these styles apply to the pills and dropdowns we render instead. */
+.osep-inpagenav .osep-inpagenavbutton {
+    display: none;
+}
+
+.osep-inpagenav .nav-pills > li {
+    position: relative;
+    box-sizing: content-box;
+    float: left;
+    height: auto;
+}
+
+.osep-inpagenav a {
+    color: #002158;
+    font-size: 1.14285em;
+    text-decoration: none;
+    display: block;
+    box-sizing: content-box;
+    line-height: 14px;
+}
+
+.osep-inpagenav .nav-pills > li > a {
+    padding: 12px 23px;
+    border-radius: 3px;
+    background-color: #eaf6fa;
+    margin: 2.5px;
+}
+
+.osep-inpagenav .nav-pills > li > a:hover,
+.osep-inpagenav .nav-pills > li > a:focus,
+.osep-inpagenav a:hover,
+.osep-inpagenav a:focus,
+.osep-inpagenav .dropdown-menu li a:hover,
+.osep-inpagenav .dropdown-menu li a:focus {
+    text-decoration: underline;
+    background-color: #eaf6fa;
+}
+
+.osep-inpagenav .nav-pills > li > a.nolink,
+.osep-inpagenav .dropdown-menu > li > a.nolink {
+    background: #f0f0f1;
+    border-color: #f0f0f1;
+    color: #676463;
+}
+
+.osep-inpagenav .nav-pills > li a.nolink:hover,
+.osep-inpagenav .nav-pills > li a.nolink:focus,
+.osep-inpagenav .dropdown-menu > li a.nolink:hover,
+.osep-inpagenav .dropdown-menu > li a.nolink:focus {
+    background: #f0f0f1;
+    text-decoration: none;
+}
+
+.osep-inpagenav .nav-pills > li.active > a,
+.osep-inpagenav .nav-pills > li.active > a:hover,
+.osep-inpagenav .nav-pills > li.active > a:focus,
+.osep-inpagenav .nav-pills > li.selected > a,
+.osep-inpagenav .nav-pills > li.selected > a:hover,
+.osep-inpagenav .nav-pills > li.selected > a:focus,
+.osep-inpagenav .nav-pills > .open > .dropdown-toggle,
+.osep-inpagenav .dropdown-menu > li.active > a,
+.osep-inpagenav .dropdown-menu > li.active > a:hover,
+.osep-inpagenav .dropdown-menu > li.active > a:focus,
+.osep-inpagenav .dropdown-menu > li.selected > a,
+.osep-inpagenav .dropdown-menu > li.selected > a:hover,
+.osep-inpagenav .dropdown-menu > li.selected > a:focus,
+.osep-inpagenav .dropdown-menu > li > a:hover,
+.osep-inpagenav .dropdown-menu > li > a:focus,
+.osep-inpagenav .osep-inpagenavbutton {
+    background: #bfe2ef;
+    color: #002158;
+}
+
+.osep-inpagenav .dropdown-toggle .smallicon {
+    width: 10px;
+    height: 10px;
+}
+
+.osep-inpagenav .dropdown-menu {
+    border: 1px solid #bfe2ef;
+    border-radius: 3px;
+    padding: 8px 0px;
+    margin-left: 2.5px;
+    margin-top: -2.5px;
+    background: #eaf6fa;
+    min-width: 160px;
+    font-size: .875em;
+}
+
+.osep-inpagenav .dropdown-menu li a {
+    font-size: 1em;
+    padding: 3px 20px;
+    color: #002158;
+    line-height: 20px;
+}
+
+.osep-inpagenav .dropdown-menu li.level3 a {
+    padding-left: 40px;
+    font-size: 0.92857em;
+}
+
+.osep-inpagenav .dropdown-menu .divider {
+    background-color: #bfe2ef;
+}
+
+.osep-inpagenav .dropdown-menu .divider-top {
+    margin: 8px 0px 0px;
+}
+
+.osep-inpagenav .dropdown-menu .divider-bottom {
+    margin: 0px 0px 8px;
+}
+
+
+
+@media(max-width: 767px) {
+
+    #region-main .osep-inpagenav .osep-inpagenavbutton .fa-plus {
+        transform: scale(1) !important;
+    }
+
+    #region-main .osep-inpagenav .osep-inpagenavbutton .fa-plus:before,
+    #region-main .osep-inpagenav .osep-inpagenavbutton .fa-plus[src$=switch_plus] {
+        content: url([[pix:core|t/switch_plus]]) !important;
+    }
+
+    #region-main .osep-inpagenav .osep-inpagenavbutton .fa-plus[src$=switch_minus] {
+        content: url([[pix:core|t/switch_minus]]) !important;
+    }
+
+    .osep-inpagenav > .osep-inpagenavrow {
+        display: none;
+    }
+
+    .osep-inpagenav li,
+    .osep-inpagenav .osep-inpagenavbutton {
+        display: block;
+        width: 100%;
+    }
+
+
+    .osep-inpagenav li a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .osep-inpagenav .nav-pills > li > a:hover,
+    .osep-inpagenav .nav-pills > li > a:focus {
+        color: #002158;
+        background: #bfe2ef;
+        text-decoration: underline;
+    }
+
+    .osep-inpagenav .dropdown-toggle .smallicon,
+    .osep-inpagenav .divider {
+        display: none;
+    }
+
+    .osep-inpagenav .dropdown-menu {
+        display: block;
+        position: static;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        float: none;
+        z-index: inherit;
+        min-width: 0px;
+        background: none;
+    }
+
+    .osep-inpagenav .nav-pills > li > a,
+    .osep-inpagenav .dropdown-menu li a,
+    .osep-inpagenav .dropdown-menu li.level3 a,
+    .osep-inpagenav .osep-inpagenavbutton {
+        padding: 6px 20px;
+        border-radius: 3px;
+        white-space: normal;
+        font-size: 1.28571em;
+        line-height: 1.5em;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton {
+        text-align: left;
+        border: none;
+        padding-right: 14px;
+        margin-bottom: 2.5px;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton:active {
+        box-shadow: none;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton:focus {
+        outline: 1px dotted gray;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton .currentlabel {
+        display: inline-block;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton .smallicon,
+    .osep-inpagenav .osep-inpagenavbutton .icon {
+        width: 16px;
+        float: right;
+        margin-top: 7px;
+    }
+
+    .osep-inpagenav .nav-pills > li > a,
+    .osep-inpagenav .dropdown-menu li a {
+        border: 1px solid #eaf6fa;
+        background-color: #eaf6fa;
+    }
+
+    .osep-inpagenav .dropdown-menu li a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .osep-inpagenav .dropdown-menu li.last a {
+        margin-bottom: 2.5px;
+    }
+
+    .osep-inpagenav .dropdown-menu li.level2 a {
+        padding-left: 40px;
+    }
+
+    .osep-inpagenav .dropdown-menu li.level3 a {
+        padding-left: 60px;
+    }
+
+    .osep-inpagenav .nav-pills > li.selected {
+        display: none;
+    }
+
+    .osep-inpagenav .osep-inpagenavbutton .icon {
+        margin-top: 5px;
+        padding-right: 1px;
+    }
+}

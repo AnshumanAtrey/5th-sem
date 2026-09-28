@@ -1,0 +1,1773 @@
+/* Layout style for all page.*/
+#ou-site-body.osep {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#ou-site #ou-site-body #page {
+    margin-top: 12px;
+    position: relative;
+}
+
+#osep-mainwrapper {
+    float: left;
+    width: 100%;
+}
+
+#osep-mainwrapper #osep-maincol {
+    margin-right: 350px;
+    padding-right: 30px;
+    margin-bottom: 160px;
+    position: relative;
+    border: none;
+    padding-top: 0;
+    overflow: visible;
+}
+
+.osep-layoutcourse #osep-mainwrapper #osep-maincol {
+    padding-left: 52px;
+}
+
+.osep-layoutcourse form,
+.oustudyplan-areapage form {
+    margin: 0;
+}
+
+body.osep-layoutnoblocks #osep-mainwrapper {
+    padding-bottom: 15px;
+}
+
+body.osep-layoutnoblocks #osep-mainwrapper #osep-maincol {
+    margin: 0;
+    padding-right: 33px;
+}
+
+#osep-footer {
+    float: left;
+    width: 100%;
+}
+
+.clearer {
+    margin-top: -1px;
+}
+
+/* Misc content. */
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: '';
+    line-height: 0;
+}
+
+.coursebox {
+    border: 1px dotted #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+
+.courses .coursebox.even {
+    background-color: transparent;
+}
+
+.coursebox > .info > h3.coursename {
+    line-height: 1;
+}
+
+ul.section.img-text {
+    padding-left: 0;
+}
+
+.section .activityinstance > a > .instancename {
+    font-weight: 700;
+    font-size: 1.14286em;
+}
+
+#osep-maincol #region-main .generalbox {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.activity img.activityicon {
+    margin-right: 12px;
+}
+
+/* Styling for pages other than course page without activity nav. */
+body:not(.osep-hasactivitynav):not(.osep-layoutcourse) #page {
+    background-image: linear-gradient(to bottom, #7cc7e0 100%, #e5f0f9);
+    background-size: 216px 216px;
+    background-repeat: repeat-x;
+    background-color: #E5F0F9;
+}
+
+body:not(.osep-hasactivitynav):not(.osep-layoutcourse):not(.pagelayout-embedded) #page #osep-pagewrapper,
+body:not(.osep-hasactivitynav):not(.osep-layoutcourse):not(.pagelayout-embedded) #page #region-main,
+body:not(.osep-hasactivitynav):not(.osep-layoutcourse):not(.pagelayout-embedded) #page #osep-maincol {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+body:not(.osep-layoutcourse) #osep-pagewrapper {
+    background: white;
+}
+
+/* Background effects on most pages. */
+#osep-pagewrapper {
+    margin: 26px 65px 0;
+    border-left: 1px solid #d4d2d2;
+    border-bottom: 1px solid #d4d2d2;
+    border-right: 1px solid #d4d2d2;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .5);
+}
+
+.osep-hasactivitynav #osep-pagewrapper {
+    margin-top: 0 !important;
+}
+
+#page-content {
+    padding-bottom: 136px;
+    position: relative;
+}
+
+#page-content #region-main {
+    padding: 11px 0 30px 33px;
+    border: none;
+    overflow: visible;
+}
+
+/* Fonts */
+body {
+    /* Using important to prevent font change when fetching CSS from tutor header. */
+    font-size: 1em !important;
+    color: black;
+    -webkit-font-smoothing: auto;
+    /* Boost theme makes body left-align, so we override to make text's direction works. */
+    text-align: inherit;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+body #ou-site-body,
+body .moodle-dialogue-base,
+body .modal,
+body .yui-panel-container {
+    font-family: Arial, sans-serif;
+    font-size: 0.875em; /* = 14 pixels */
+    line-height: 1.5; /* Minimum allowed for accessibility */
+}
+
+/* Background colour */
+body #ou-site-body {
+    background: #e5f0f9;
+}
+
+.osep-hasactivitynav #page-header {
+    background: #7cc7e0;
+    margin-bottom: 0;
+}
+
+/* Heading sizes. */
+h1 {
+    font-size: 3.42857em;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 2.42857em;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+/* Styles for module headings. */
+img.osep-heading-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 9px;
+}
+
+#region-main h2.osep-heading-text {
+    font-size: 2em;
+    color: #002158;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#maincontent + h2 {
+    margin-top: 10px;
+}
+
+#maincontent + h2 > img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1px;
+}
+
+.osep-layoutcourse .clearer {
+    height: 0;
+}
+
+#osep-mobileheading {
+    display: none;
+}
+
+/* Links */
+a,
+a:hover,
+a:active {
+    color: #0b55a8;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* General block layout. */
+.block {
+    border: 1px solid #d7eef5;
+    box-shadow: none;
+    border-radius: 0;
+    background: #d7eef5;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 28px !important;
+}
+
+.block.osep-resourcessettings {
+    margin-top: 37px;
+}
+
+.osep-resourcessettings a span {
+    vertical-align: middle;
+}
+
+.block .card-text.content {
+    padding-right: 14px;
+    padding-left: 14px;
+    margin-bottom: 11px;
+}
+
+.block .card-text.content .tree_item > a {
+    color: #000;
+    position: relative;
+}
+
+.block .card-text.content .tree_item > span:hover {
+    text-decoration: underline;
+}
+
+.block .card-body {
+    padding: 0 !important;
+}
+
+.block .menubar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.block h5.card-title {
+    text-shadow: none;
+    color: #002158;
+    font-size: 1.28571em;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: none;
+    display: block !important; /* Override parent to display text as a header. */
+    background: #7cc7e0;
+    border: 1px solid #7cc7e0;
+    padding: 1px 14px 2px 14px;
+    margin: -1px; /* To cover the parent's border. */
+}
+
+body.editing .block:not(.block_osep_arealinklist) h5.card-title {
+    height: 58px;
+}
+
+body.editing .block .menubar {
+    top: 35px;
+    right: 25px;
+}
+
+.block ul#frontpagesettings_group {
+    margin-left: 18px;
+}
+
+.block .block-controls {
+    cursor: pointer;
+}
+
+.block .osep-showhide-desktop,
+.block .osep-showhide-mobile {
+    position: absolute;
+}
+.block .osep-showhide-desktop {
+    top: 7px;
+    right: 9px;
+}
+.block .osep-showhide-mobile {
+    top: 16px;
+    right: 15px;
+}
+
+.osep-nonavbar #page-navbar,
+.block.desktop-hide .content,
+.block .osep-showhide-mobile,
+.block .osep-showhide-desktop .osep-showblock,
+.desktop-hide.block .osep-showhide-desktop .osep-hideblock,
+.action-menu-trigger .dropdown-toggle:after,
+.osep-mobileclose {
+    display: none;
+}
+
+.block .osep-showhide-desktop .osep-hideblock,
+.block.desktop-hide .osep-showhide-desktop .osep-showblock {
+    display: block;
+}
+
+.block-control-actions .moodle-core-dragdrop-draghandle img {
+    width: 12px;
+    height: 12px;
+    padding-top: 2px;
+    margin-right: 6px;
+}
+.editing .block .header .commands .dropdown-toggle img.icon {
+    width: 22px;
+    margin-right: 6px;
+}
+
+/* Right blocks layout. */
+.osep-layoutright #osep-mainwrapper {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.osep-layoutright #osep-mainwrapper #osep-maincol {
+    margin-right: 351px;
+    padding-right: 40px;
+}
+
+.osep-layoutright #osep-sidecol {
+    float: right;
+    width: 351px;
+    margin-left: -351px;
+    padding-top: 103px;
+    padding-right: 33px;
+}
+
+/* Left blocks layout. */
+body.osep-layoutleft #osep-pagewrapper,
+body.osep-layoutnoblocks #osep-pagewrapper,
+body.osep-layoutsubject #osep-pagewrapper {
+    margin-top: 0;
+}
+
+.osep-layoutleft #osep-sidecol {
+    float: left;
+    width: 25%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: -25%;
+}
+
+.osep-layoutleft #osep-mainwrapper #osep-mainwrapper {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.osep-layoutleft #osep-maincol {
+    margin-left: 25%;
+    margin-right: 0;
+}
+
+.osep-layoutleft #page-content #region-main {
+    padding: 33px 30px 80px;
+}
+
+.osep-layoutleft .block {
+    margin-right: 4px !important;
+    border-bottom: 1px solid #fff; /* For high contrast mode. */
+    margin-bottom: 28px !important;
+}
+
+.osep-layoutleft .block .card-body {
+    background-color: white;
+}
+
+.osep-layoutleft .block {
+    border: 1px solid #fff;
+    border-left: 0;
+}
+
+.osep-layoutleft .block .osep-showhide-desktop,
+.osep-layoutleft .block .osep-showhide-mobile {
+    top: 7px;
+    right: 9px;
+}
+
+.osep-layoutleft .block .action-menu-trigger .dropdown-toggle > .fa.fa-cog {
+    margin-right: 21px;
+}
+
+/* Right blocks layout with wide content (blocks under like on tablet) */
+.osep-widecontent.osep-layoutright #osep-mainwrapper #osep-maincol {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.osep-widecontent.osep-layoutright #osep-pagewrapper #osep-sidecol {
+    float: none;
+    margin-left: 0;
+    clear: both;
+    padding-top: 33px;
+}
+
+/* No blocks layout. */
+.oustudyplan-areapage.osep-layoutnoblocks #osep-mainwrapper #osep-maincol {
+    padding-right: 33px;
+}
+.osep-layoutnoblocks #region-main-box,
+.osep-layoutnoblocks #region-main {
+    width: auto;
+}
+.osep-layoutnoblocks #osep-mainwrapper {
+    padding-bottom: 15px;
+}
+
+/* User picture. */
+img.userpicture {
+    border-radius: 0;
+}
+
+body.osep-layoutleft #osep-mainwrapper #osep-maincol {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.oseplayoutleft body.editing .menubar {
+    top: 36px;
+    right: 15px;
+}
+
+/* Course block layout. */
+body.osep-layoutcourse #osep-maincol,
+body.osep-layoutcourse #osep-sidecol {
+    margin-bottom: 160px;
+}
+
+body.osep-layoutcourse #osep-sidecol {
+    float: left;
+    width: 280px;
+    margin-left: -330px;
+    margin-top: 280px;
+    padding-top: 0;
+    padding-right: 70px;
+}
+
+body.osep-layoutcourse #osep-pagewrapper {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+body.osep-layoutcourse #osep-sidecol {
+    width: 329px;
+    padding-right: 50px;
+}
+
+/* Report block layout. */
+.pagelayout-report #ou-site-body.osep {
+    max-width: none;
+}
+
+.pagelayout-report #osep-pagewrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.pagelayout-report #osep-mainwrapper #osep-maincol {
+    margin-right: 250px;
+    margin-bottom: 20px;
+    padding-right: 16px;
+}
+
+.pagelayout-report #osep-sidecol {
+    width: 250px;
+    padding-right: 10px;
+    padding-top: 80px;
+    margin-left: -351px;
+}
+
+/* Styles for header. */
+body #ou-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 8px
+}
+
+#ou-header #ou-service-links ul li.ou-search input {
+    height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Styles for footer. */
+body #page-footer #ou-org-footer #ou-ia-student {
+    visibility: visible;
+    display: block;
+}
+
+body .ou-footer .ou-container .ou-footer-nav {
+    margin-top: 13px;
+}
+
+body .ou-footer .ou-container .ou-footer-nav #ou-ia-student h4.ou-collapsible-footer {
+    margin-bottom: 1.2em;
+}
+
+#page-footer #ou-org-footer {
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+
+#page-footer #ou-org-footer a {
+    text-decoration: none;
+    color: #0E56A7;
+}
+
+#page-footer #ou-org-footer a:hover,
+#page-footer #ou-org-footer a:focus {
+    text-decoration: underline;
+}
+
+#page-footer .container {
+    padding: 0;
+}
+
+#page-footer {
+    background-color: transparent !important;
+}
+
+#page-footer #ou-footer-statement {
+    line-height: 1.8;
+}
+
+#ou-header .ou-container,
+#ou-org-footer .ou-container,
+.ou-cookies-bar .ou-container {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.layout-option-noheader #page-header,
+.layout-option-nonavbar #page-navbar,
+.layout-option-nofooter #page-footer,
+.layout-option-nocourseheader .course-content-header,
+.layout-option-nocoursefooter .course-content-footer {
+    display: none;
+}
+
+.osep-showhidecontrols {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+.osep-showhidecontrols.osep-hidden .osep-hideblock,
+.osep-showhidecontrols.osep-visible .osep-showblock,
+.osep-showhidecontrols.osep-mobilehidden .osep-showblock,
+.osep-showhideblock.osep-hidden {
+    display: none;
+}
+@media (min-width: 576px) {
+    #page-footer .container {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: 992px) {
+    #page-footer .container {
+        max-width: 1180px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #page-footer .container {
+        max-width: 1190px;
+    }
+}
+
+/* Breadcrumbs */
+.breadcrumb-nav {
+    font-size: 0.85714em;
+    margin: 12px 0 7px 65px;
+    color: #002158;
+}
+
+.breadcrumb-nav li:last-child {
+    font-weight: bold;
+}
+
+.breadcrumb-nav ul,
+.breadcrumb-nav li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-nav li {
+    display: inline;
+}
+
+.breadcrumb-nav a {
+    text-decoration: none;
+    color: #002158;
+}
+
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-nav img {
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    margin-right: 3px;
+    vertical-align: 0;
+}
+
+.osep-mobilenavpull {
+    display: none;
+    position: absolute;
+    top: 6px;
+    transition: opacity 0.5s;
+    left: 0;
+}
+
+/* Bottom button styling */
+.osep-bottombuttons a {
+    display: inline-block;
+    text-align: center;
+    margin-left: 29px;
+    margin-right: -5px;
+}
+
+.osep-bottombuttons a:hover {
+    color: black;
+}
+
+.osep-bottombuttons a > img {
+    width: 40px;
+    height: 40px;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.osep-bottombuttons a > span {
+    display: block;
+    padding-top: 8px;
+    color: black;
+    font-size: 0.85714em;
+}
+
+.osep-bottombuttons {
+    position: absolute;
+    right: 70px;
+    padding-top: 29px;
+}
+.section .activity .contentafterlink p {
+    margin: 0;
+}
+
+.osep-layoutsubject #osep-pagewrapper #osep-bottombuttons-upper,
+body.noheader #page-header, #osep-bottombuttons-upper {
+    display: none;
+}
+#osep-pagewrapper #osep-bottombuttons-upper,
+.osep-layoutsubject #osep-bottombuttons-upper {
+    display: block;
+}
+
+body.pagelayout-embedded #ou-site-body.osep {
+    max-width: none;
+}
+
+body.pagelayout-embedded #osep-pagewrapper {
+    margin: 0;
+    border: 0;
+}
+
+body.pagelayout-embedded #ou-site #ou-site-body #page {
+    margin: 0;
+}
+
+body.pagelayout-embedded #osep-pagewrapper #osep-mainwrapper {
+    padding-right: 14px;
+}
+
+/* Arrow links */
+a.arrow_link {
+    display: inline-block;
+    height: auto;
+    border: 1px solid #002158;
+    border-radius: 2.5px;
+    background: white;
+    padding: 3px 10px 3px 5px;
+    /* Must use hard-coded px size here */
+    font-size: 12px;
+}
+a.arrow_link.rightarrow {
+    padding: 3px 5px 3px 10px;
+}
+a.arrow_link:hover,
+a.arrow_link:active,
+a.arrow_link:focus {
+    text-decoration: none;
+}
+
+a.arrow_link span.arrow_text {
+    vertical-align: middle;
+}
+a.arrow_link:hover span.arrow_text,
+a.arrow_link:active span.arrow_text,
+a.arrow_link:focus span.arrow_text {
+    text-decoration: underline;
+}
+a.arrow_link img.icon {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    padding-right: 0;
+}
+
+/* Special break point belong to boost theme. */
+@media only screen and (max-width: 1180px), screen and (max-device-width: 1180px) {
+    body #ou-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+body.pagelayout-embedded #osep-bottombuttons,
+body.pagelayout-popup #osep-bottombuttons {
+    display: none;
+}
+
+/* Scroll indicators */
+#osep-sidecol-canscrollup,
+#osep-sidecol-canscrolldown,
+.osep-canscrollleft,
+.osep-canscrollright {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+#osep-sidecol-canscrollup,
+#osep-sidecol-canscrolldown {
+    left: 0;
+    right: 0;
+    height: 16px;
+}
+
+.osep-canscrollleft,
+.osep-canscrollright {
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    height: 100%;
+}
+
+#osep-sidecol-canscrollup.osep-showing,
+#osep-sidecol-canscrolldown.osep-showing,
+.osep-canscrollleft.osep-showing,
+.osep-canscrollright.osep-showing {
+    opacity: 1;
+}
+
+.osep-canscrollleft.osep-showing,
+.osep-canscrollright.osep-showing {
+    /* Make sure this is above any content */
+    z-index: 2;
+}
+
+/* Scroll indicator. */
+#osep-sidecol-canscrollup {
+    top: 0;
+    /* Prefixed (must be first) for Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+#osep-sidecol-canscrolldown {
+    bottom: 0;
+    /* Prefixed (must be first) for Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.osep-canscrollleft {
+    left: 0;
+    /* Prefixed (must be first) for Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.osep-canscrollright {
+    right: 0;
+    /* Prefixed (must be first) for Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+/* Scroll containers added by scrollindicator.js */
+.pagelayout-report div.no-overflow.scrollparent {
+    max-height: none;
+    overflow: visible;
+}
+
+.osep-scrollparent {
+    position: relative;
+    width: auto;
+    clear: both;
+}
+
+.osep-scrollcontainer {
+    width: 100%;
+    overflow: auto;
+}
+
+.osep-scrollcontainer pre,
+.path-mod-oucontent .osep-scrollcontainer .oucontent-computerdisplay {
+    overflow-x: visible;
+}
+
+.pagelayout-report:not(#page-mod-quiz-report) div.no-overflow .osep-scrollcontainer {
+    max-height: 90vh;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.well-small {
+    padding: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.well-large {
+    padding: 24px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/* Overwrite parent theme. */
+.accesshide {
+    height: auto;
+    width: auto;
+    left: -10000px;
+    clip: unset;
+    clip-path: unset;
+    white-space: normal;
+}
+
+@media (max-width: 767px) {
+    .path-mod-oucontent .oucontent-sidenote-inner .osep-scrollcontainer > .accesshide {
+        position: static;
+    }
+
+    .osep-mobileclose {
+        position: absolute;
+        cursor: pointer;
+        right: 9px;
+        top: 7px;
+        display: block;
+    }
+    .osep-mobileclose > img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .osep-mobileclose > img:focus {
+        outline: 1px dotted #7cc7e0;
+    }
+
+    .oustudyplan-areapage.osep-layoutnoblocks #osep-mainwrapper #osep-maincol {
+        padding-right: 0;
+    }
+}
+
+.safari .osep-scrollcontainer {
+    padding-bottom: 2px;
+}
+
+/* Paging */
+div.paging {
+    word-spacing: .5em;
+}
+div.paging span.current-page {
+    font-weight: bold;
+}
+div.paging a.next {
+    color: #0b55a8;
+    background-image: url([[pix:theme|link-decorator]]);
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-position: right;
+}
+div.paging a.previous {
+    color: #0b55a8;
+    background-image: url([[pix:theme|link-back-decorator]]);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+/* Back to top links (mobile only) */
+#osep-backtotop {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+}
+
+#osep-backtotop img {
+    width: 32px;
+    height: 32px;
+}
+
+#osep-backtotop a:focus img {
+    outline: 1px dotted black;
+}
+
+body#page-lib-editor-atto-plugins-managefiles-manage #page #osep-pagewrapper {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Style for skip element text. */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    font-size: 0.85em;
+    text-decoration: underline;
+    padding: 0;
+    display: block;
+    color: #003d5c;
+    outline-offset: 0;
+}
+
+.sr-only-focusable[href="#maincontent"] {
+    display: none;
+}
+
+label {
+    cursor: auto;
+}
+
+#region-main > div[role="main"] h2.oustudyplan-areaheading,
+#region-main > div[role="main"] h2.osep-heading-text,
+#region-main > div[role="main"] h2.osep-moduleheading,
+#region-main > div[role="main"] h2.mod_forumng_maintitle {
+    min-height: 67px;
+    line-height: 33px;
+    padding-top: 21px;
+    margin-bottom: 4px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#region-main > div[role="main"] h2.oustudyplan-areaheading img:not(.iconlarge),
+#region-main > div[role="main"] h2.osep-heading-text img:not(.iconlarge),
+#region-main > div[role="main"] h2.osep-moduleheading img:not(.iconlarge),
+#region-main > div[role="main"] h2.mod_forumng_maintitle img:not(.iconlarge) {
+    min-width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    margin-top: -21px;
+}
+
+#page-course-view-oustudyplan .oustudyplan .oucontent .activityinstance .instancename b,
+#osep-weektabs .osep-modname b {
+    font-weight: 800;
+    font-family: Arial Black, Arial, sans-serif;
+}
+
+/* Embedded page to display in iframe. */
+body.pagelayout-embedded #page-content,
+body.pagelayout-popup #page-content {
+    padding-top: 0;
+}
+body.pagelayout-embedded #page-content #region-main,
+body.pagelayout-popup #page-content #region-main {
+    padding-bottom: 0;
+    padding-right: 0;
+}
+body.pagelayout-embedded #osep-footer,
+body.pagelayout-popup #osep-footer,
+body.pagelayout-embedded #osep-bottombuttons,
+body.pagelayout-popup #osep-bottombuttons {
+    display: none;
+}
+/* Minimal page layouts */
+body.pagelayout-embedded #ou-site-body,
+body.pagelayout-popup #ou-site-body {
+    position: static;
+}
+body.pagelayout-embedded #osep-pagewrapper,
+body.pagelayout-popup #osep-pagewrapper {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+body.pagelayout-embedded #osep-maincol,
+body.pagelayout-popup #osep-maincol {
+    position: static;
+}
+body.pagelayout-embedded #page-content,
+body.pagelayout-popup #page-content {
+    padding-bottom: 0;
+}
+body.pagelayout-embedded #ou-site-body.osep,
+body.pagelayout-popup #ou-site-body.osep {
+    max-width: none;
+}
+
+.inplaceeditable.inplaceeditingon .editinstructions {
+    margin-top: -40px;
+}
+.alert {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: black;
+    background-color: #e6d3e6;
+    border: none;
+}
+
+.alert .close {
+    opacity: .2;
+}
+
+.alert .close:hover {
+    opacity: .4;
+}
+
+.alert:focus {
+    outline: none;
+}
+
+body.editing #region-main #maincontent + h2 a {
+    margin-left: 0.625em;
+}
+
+#osep-bottombutton-bookmarks-upper {
+    margin-left: 0;
+    width: 50px;
+}
+
+#osep-bottombutton-print-upper {
+    width: 50px;
+}
+.alert-danger,
+.alert-error {
+    color: black;
+    background-color: #e6d3e6;
+    border: none;
+    border-radius: 4px;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+
+.label-info[href],
+.label-info[href]:hover,
+.badge-info[href],
+.badge-info[href]:hover {
+    background-color: #2d6987;
+    padding: 3px 4px;
+    font-size: 0.85714em;
+    color: #fff;
+}
+
+.alert-danger,
+.alert-error {
+    color: black;
+    background-color: #e6d3e6;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Alerts */
+.alert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.alert:focus {
+    outline: none;
+}
+.alert-block {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #3a87ad;
+}
+
+.alert .close {
+    opacity: 0.2;
+}
+
+.alert .close:hover {
+    opacity: 0.4;
+}
+
+.vle-topnav-container {
+    margin-bottom: -11px;
+    margin-top: 10px;
+}
+
+.vle-topnav-container div.th-topnav ul.ou-sections li a {
+    font-size: 0.91429em;
+}
+
+/* Make TH header font-size match TH site */
+.vle-topnav-container .th-topnav {
+    font-size: .91428em;
+}
+
+#region-main .osep-inpagenavrow.nav,
+#region-main .osep-inpagenavrow.nav {
+    margin-bottom: 20px;
+}
+
+img.iconsmall {
+    height: 12px;
+    margin: 0;
+    padding: .3em;
+    vertical-align: middle;
+    width: 12px;
+}
+
+form .initialbar ul.pagination {
+    margin-bottom: 0;
+}
+
+form .initialbar .initialbarlabel {
+    display: inline-block;
+    width: 6em;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+form .initialbar ul.pagination li.page-item {
+    display: inline-block;
+    height: 1.35em;
+    min-width: 1.35em;
+    text-align: center;
+    color: #0070a8;
+    background: #fff;
+    border: 1px solid #dddddd;
+    box-sizing: content-box;
+}
+
+form .initialbar ul.pagination li.page-item .page-link {
+    padding: 0;
+    border: 0;
+}
+
+form .initialbar ul.pagination li.page-item.initialbarall {
+    float: left;
+    width: 4em;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+form .initialbar ul.pagination li.page-item.active,
+form .initialbar ul.pagination li.page-item:hover,
+form .initialbar ul.pagination li.page-item.active .page-link,
+form .initialbar ul.pagination li.page-item .page-link:hover {
+    color: #ffffff;
+    background-color: #0070a8;
+}
+
+/* Style for tablet horizonal. */
+@media (max-width: 1023px) {
+    .breadcrumb-nav {
+        margin-left: 19px;
+    }
+
+    body.osep-layoutleft #osep-pagewrapper,
+    body.osep-layoutnoblocks #osep-pagewrapper,
+    body.osep-layoutsubject #osep-pagewrapper,
+    body.osep-layoutright #osep-pagewrapper {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    #osep-pagewrapper,
+    body.pagelayout-embedded #osep-pagewrapper,
+    body.pagelayout-popup #osep-pagewrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    :not(.osep-layoutcourse) #osep-mainwrapper #osep-maincol {
+        margin-right: 250px;
+        padding-left: 0;
+    }
+
+    .path-mod-oucontent #osep-bottombuttons-upper {
+        display: none;
+    }
+
+    /* Style for course layout. */
+    body.osep-layoutright #osep-sidecol,
+    body.osep-layoutcourse #osep-sidecol {
+        width: 250px;
+        padding-right: 10px;
+    }
+
+    body.osep-layoutcourse #osep-mainwrapper {
+        float: none;
+    }
+
+    body.osep-layoutcourse #osep-mainwrapper #osep-maincol {
+        margin-right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 20px;
+    }
+
+    body.osep-layoutcourse #osep-sidecol {
+        float: none;
+        width: auto;
+        margin: 0;
+        padding-left: 14px;
+        padding-right: 14px;
+        background-color: #E5F0F9;
+    }
+
+    body.osep-layoutcourse .block {
+        margin-right: 15px !important;
+        margin-bottom: 7px;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 10px);
+    }
+
+    body.osep-layoutcourse.safari .block {
+        float: left;
+    }
+
+    body.osep-layoutcourse .block:nth-of-type(2n) {
+        margin-right: 0 !important;
+    }
+
+    body.osep-layoutcourse .skip-block-to {
+        display: inline;
+    }
+
+    body.osep-layoutcourse .osep-bottombuttons {
+        position: static;
+        text-align: right;
+        background: #e5f0f9;
+        padding: 20px 20px;
+        margin-top: 20px;
+    }
+
+    body.osep-layoutcourse #osep-bottombuttons {
+        display: block;
+    }
+
+    /* Style for right layout. */
+    body.osep-layoutright #osep-pagewrapper {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    body.osep-layoutright #osep-mainwrapper #osep-maincol {
+        margin-right: 250px;
+    }
+
+    body.osep-layoutright #page {
+        background-size: 180px 180px;
+    }
+
+    .osep-bottombuttons {
+        right: 16px;
+    }
+
+    /* Style for left layout. */
+    body.osep-layoutleft .block {
+        margin-right: 13px !important;
+    }
+
+    body.osep-bottombuttons {
+        right: 16px;
+    }
+
+    /* On course page only, bottom buttons go in static position. */
+    body.osep-layoutcourse .osep-bottombuttons {
+        position: static;
+        text-align: right;
+        background: #e5f0f9;
+        padding: 20px 20px;
+        margin-top: 20px;
+    }
+
+    #osep-bottombuttons-upper {
+        display: block;
+    }
+    #osep-pagewrapper #osep-bottombuttons-upper {
+        display: none;
+    }
+}
+
+/* Style for mobile and table portrait. */
+@media (max-width: 767px) {
+    body #osep-pagewrapper {
+        background: transparent;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .osep-layoutright #page-content,
+    .osep-layoutnoblocks #page-content {
+        background: #ffffff;
+    }
+
+    .osep-layoutright #page-content #region-main,
+    .osep-layoutnoblocks #page-content #region-main {
+        padding: 0 0 30px;
+    }
+
+    /* Style for general layout. */
+    body.osep-layoutleft #osep-pagewrapper,
+    body.osep-layoutsubject #osep-pagewrapper,
+    body.osep-layoutright #osep-pagewrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #ou-site #ou-site-body #page {
+        margin-top: 0;
+    }
+
+    body:not(.oustudyplan-areapage) .breadcrumb-nav {
+        margin-top: 12px;
+    }
+
+    body.pagelayout-incourse:not(.osep-hasactivitynav) .breadcrumb-nav {
+        margin-top: 0;
+        padding-top: 12px;
+    }
+
+    body.pagelayout-incourse:not(.osep-hasactivitynav) #page-content {
+        margin-top: -8px;
+    }
+
+    body:not(.osep-hasactivitynav):not(.osep-layoutcourse):not(.pagelayout-embedded) #page #osep-pagewrapper,
+    body:not(.osep-hasactivitynav):not(.osep-layoutcourse):not(.pagelayout-embedded) #page #osep-maincol {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    #osep-sidecol {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #page-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #page-content #region-main {
+        margin-bottom: 0;
+        padding-bottom: 13px;
+    }
+
+    #osep-mainwrapper #osep-maincol,
+    body.osep-layoutcourse #osep-mainwrapper #osep-maincol {
+        margin: 0;
+        padding: 0;
+    }
+
+    #page-content #region-main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .block {
+        margin-bottom: 17px !important;
+    }
+
+    .oustudyplan-areapage .block {
+        margin-bottom: 15px !important;
+    }
+
+    .block h5.card-title {
+        padding: 10px 14px 10px 14px;
+    }
+
+    .block .osep-showhide-mobile {
+        top: 16px;
+        right: 14px;
+    }
+
+    .osep-mobilenavpull,
+    .block.desktop-hide .content,
+    .block .osep-showhide-mobile,
+    .block .osep-showhide-mobile .osep-hideblock,
+    .block.mobile-hide .osep-showhide-mobile .osep-showblock {
+        display: block;
+    }
+
+    .block .osep-showhide-desktop,
+    .block.mobile-hide .card-text.content,
+    .block .osep-showhide-mobile .osep-showblock,
+    .block.mobile-hide .osep-showhide-mobile .osep-hideblock {
+        display: none;
+    }
+
+    body:not(.osep-hasactivitynav) #page-navbar {
+        min-height: 60px;
+        padding-right: 50px;
+        background-color: #E5F0F9;
+    }
+
+    #osep-sidecol > .osep-mobilenavpull {
+        position: absolute;
+        left: auto;
+        right: -18px;
+        top: 0;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .5);
+    }
+
+    #osep-leftscrollfader {
+        position: fixed;
+        background: #464542;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    /* Styles for layout right and course. */
+    body.osep-layoutright #osep-sidecol,
+    body.osep-layoutcourse #osep-sidecol {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px 15px 20px;
+    }
+
+    body.osep-layoutright #osep-sidecol {
+        padding-bottom: 18px;
+    }
+
+    body.osep-layoutright.osep-courseformat-oustudyplan #osep-sidecol {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.osep-layoutcourse #osep-sidecol {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .pagelayout-report #osep-pagewrapper,
+    body.osep-layoutright #osep-pagewrapper,
+    body.osep-layoutcourse #osep-pagewrapper {
+        margin: 0;
+        padding-top: 15px;
+        box-shadow: none;
+        border: none;
+    }
+
+    body.osep-layoutcourse .block .osep-showhide-mobile {
+        top: 17px;
+        right: 9px;
+    }
+
+    body.osep-layoutcourse .block {
+        margin-bottom: 16px;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+    }
+
+    /* Styles for layout left. */
+    body.osep-layoutleft #osep-sidecol {
+        display: none;
+        position: fixed;
+        top: 30px;
+        width: calc(100vw - 45px);
+        bottom: 30px;
+        background: white;
+        min-height: 250px;
+        z-index: 3;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .5);
+    }
+
+    body.osep-layoutleft #osep-sidecol > .block-region {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    body.osep-layoutleft .block {
+        border-bottom: 0;
+        background-color: white;
+        margin-right: 0 !important;
+    }
+
+    body.osep-layoutleft.editing .block h5.card-title {
+        height: 76px;
+    }
+
+    body.osep-layoutleft.editing .menubar {
+        top: 45px;
+        right: 15px;
+    }
+
+    body.osep-layoutleft .block .osep-showhide-mobile {
+        top: 17px;
+        right: 9px;
+    }
+
+    /* Bottom buttons go in static position and are slightly smaller */
+    .osep-bottombuttons {
+        position: static;
+        text-align: center;
+        background: #e5f0f9;
+        padding: 20px 0;
+        margin-top: 0px;
+    }
+
+    .osep-courseformat-ousubject .osep-bottombuttons {
+        background: transparent;
+    }
+
+    body.osep-layoutcourse .osep-bottombuttons {
+        position: static;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 16px;
+    }
+
+    .osep-bottombuttons a {
+        margin-left: 22px;
+    }
+
+    .osep-bottombuttons a > img.icon {
+        padding: 0;
+    }
+
+    .osep-bottombuttons a:first-of-type {
+        margin-left: 0px;
+    }
+
+    body.osep-layoutcourse #osep-bottombuttons {
+        display: block;
+    }
+
+    body.osep-layoutright #osep-mainwrapper #osep-maincol {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    body.osep-layoutright #osep-mainwrapper #osep-maincol,
+    body.osep-layoutnoblocks #osep-mainwrapper #osep-maincol {
+        padding: 0;
+        margin-right: 0;
+    }
+
+    #osep-mainwrapper #osep-maincol form {
+        margin: 0;
+    }
+    #region-main > div[role="main"] h2.oustudyplan-areaheading {
+        display: none;
+    }
+    .oustudyplan-areapage #osep-mainwrapper #osep-maincol,
+    .path-blocks-news #osep-mainwrapper #osep-maincol {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* Mobile heading for AreaPages (hidden except on mobile). */
+    #osep-mobileheading {
+        display: block;
+    }
+
+    #osep-mobileheading h2 {
+        font-size: 1.85714em;
+        color: #002158;
+        margin: -5px 20px 0 20px;
+        padding-top: 0;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    #osep-sidecol aside section.block:not(.oucontent-contents) {
+        margin: 15px 0 0 !important;
+    }
+
+    .osep-mobileclose > img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .osep-mobileclose > img:focus {
+        outline: 1px dotted #7cc7e0;
+    }
+
+    .osep-layoutleft #osep-pagewrapper {
+        background: transparent;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .osep-layoutright .block {
+        margin-top: 0;
+    }
+
+    .osep-layoutright #page-content,
+    .osep-layoutnoblocks #page-content {
+        background: white;
+    }
+
+    .osep-layoutright #page-content #osep-pagewrapper,
+    .osep-layoutnoblocks #page-content #osep-pagewrapper {
+        background: transparent;
+    }
+
+    body.osep-courseformat-oustudyplan #osep-mobileheading h2 {
+        margin: 0;
+    }
+
+    body.osep-courseformat-oustudyplan #page-content #region-main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.osep-layoutleft #page-content #region-main {
+        padding: 15px 20px 40px;
+    }
+
+    #osep-sidecol aside section.block.oucontent-contents .card-body .card-title {
+        border: none;
+        height: auto;
+    }
+
+    body.format-ousubject #osep-sidecol aside section.block.oucontent-contents .card-body .card-text.content {
+        padding-top: 0;
+    }
+
+    .vle-topnav-container {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    /* Fix TutorHome nav bar hamburger clash */
+    .vle-topnav-container {
+        width: calc(100% - 45px);
+    }
+}
+
+@media (max-width: 640px) {
+    .vle-topnav-container .th-topnav {
+        /* Fix TH (note their mis-match breakpoint) mobile font-size. */
+        font-size: .85714em;
+    }
+    /* Fix TutorHome nav bar hamburger clash. */
+    .vle-topnav-container {
+        width: calc(10em);
+    }
+    .vle-topnav-container .th-topnav a#menu-icon + div {
+        width: 100vw;
+    }
+
+    img.osep-heading-icon {
+        display: none;
+    }
+}
+
+@media print {
+    * {
+        text-shadow: none !important;
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    body,
+    .container {
+        min-width: 0 !important; /* Override parent theme. */
+    }
+
+    @page {
+        size: auto;
+        margin: 0.19in;
+    }
+
+    /* Prevent link from being underline when printing. */
+    a {
+        text-decoration: none !important;
+    }
+}

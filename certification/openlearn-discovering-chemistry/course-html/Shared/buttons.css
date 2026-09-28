@@ -1,0 +1,212 @@
+/* Generic styling for buttons, including links that look like buttons. */
+
+/* Standard button style */
+input[type=submit],
+input[type=reset],
+input[type=button],
+button,
+button.btn,
+a.osep-button,
+a.osep-smallbutton,
+li.osep-smallbutton a,
+    /* Moodle theme overrides: */
+#notice .singlebutton + .singlebutton input,
+input.form-submit,
+input#id_submitbutton,
+input#id_submitbutton2,
+.path-admin .buttons input[type="submit"],
+td.submit input,
+.yui3-widget-buttons .yui3-button {
+    display: inline-block;
+    line-height: 1.5;
+    background: white;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #002158;
+    margin: 0 10px 0 0;
+    border-radius: 3px;
+    padding: 3px 10px;
+    font-size: 1.14286em;
+    font-weight: normal;
+    text-shadow: none;
+    box-shadow: none;
+    transition: background-color 0.25s, color 0.25s;
+    background-position: 0% 0%;
+    cursor: pointer;
+}
+
+/* Hover, active, focus style. */
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:hover,
+button.btn:hover,
+a.osep-button:hover,
+a.osep-smallbutton:hover,
+li.osep-smallbutton a:hover,
+input[type=submit]:focus,
+input[type=reset]:focus,
+input[type=button]:focus,
+button:not([form=ou-search]):focus,
+button.btn:focus,
+a.osep-button:focus,
+a.osep-smallbutton:focus,
+li.osep-smallbutton a:focus,
+input[type=submit]:active,
+input[type=reset]:active,
+input[type=button]:active,
+button:active,
+button.btn:active,
+a.osep-button:active,
+a.osep-smallbutton:active,
+li.osep-smallbutton a:active,
+    /* Moodle theme overrides: */
+input.form-submit:hover,
+input#id_submitbutton:hover,
+input#id_submitbutton2:hover,
+.path-admin .buttons input[type="submit"]:hover,
+td.submit input:hover,
+#notice .singlebutton + .singlebutton input:hover,
+input.form-submit:focus,
+input#id_submitbutton:focus,
+input#id_submitbutton2:focus,
+.path-admin .buttons input[type="submit"]:focus,
+td.submit input:focus,
+#notice .singlebutton + .singlebutton input:focus,
+#notice .singlebutton + .singlebutton input:active,
+input.form-submit:active,
+input#id_submitbutton:active,
+input#id_submitbutton2:active,
+.path-admin .buttons input[type="submit"]:active,
+td.submit input:active,
+input.form-submit.active,
+input#id_submitbutton.active,
+input#id_submitbutton2.active,
+.path-admin .buttons input.active[type="submit"],
+td.submit input.active,
+body#page-course-view-oustudyplan section#region-main div.userprofile ul li.editprofile span a:hover,
+body#page-course-view-oustudyplan section#region-main div.userprofile ul li.editprofile span a:focus,
+body#page-course-view-oustudyplan section#region-main div.userprofile ul li.editprofile span a:active,
+body#page-user-profile section#region-main div.userprofile ul li.editprofile span a:hover,
+body#page-user-profile section#region-main div.userprofile ul li.editprofile span a:focus,
+body#page-user-profile section#region-main div.userprofile ul li.editprofile span a:active,
+.yui3-button:hover,
+.yui3-button:focus,
+.yui3-button:active {
+    background: #002158;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-default:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.fp-viewbar:not(.disabled) a.checked:not(:disabled):not(.disabled),
+.btn-default:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle,
+.show > .btn-default.dropdown-toggle {
+    background-color: #002158;
+    border-color: #002158;
+    outline: none;
+    color: #fff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+/* Disabled style. */
+input[type=submit][disabled],
+input[type=reset][disabled],
+input[type=button][disabled],
+button[disabled],
+input[type=submit][disabled]:hover,
+input[type=reset][disabled]:hover,
+input[type=button][disabled]:hover,
+button[disabled]:hover,
+a.osep-button:not([href]),
+a.osep-smallbutton:not([href]),
+    /* Moodle theme overrides: */
+button.disabled,
+button.btn.disabled,
+input.form-submit.disabled,
+input.disabled[type="button"],
+input.disabled[type="submit"],
+input.disabled[type="reset"],
+input.form-submit[disabled],
+#fgroup_id_buttonar > .felement > input[type="submit"][disabled],
+input#id_submitbutton.disabled,
+input#id_submitbutton2.disabled,
+.path-admin .buttons input.disabled[type="submit"],
+td.submit input.disabled, input.form-submit[disabled],
+input#id_submitbutton[disabled],
+input#id_submitbutton2[disabled],
+.path-admin .buttons input[type="submit"][disabled],
+#notice .singlebutton + .singlebutton input[disabled],
+td.submit input[disabled],
+.yui3-button[disabled],
+.btn-primary[disabled] {
+    cursor: default;
+    background: #f0f0f1;
+    color: #676463;
+    border-color: #d4d2d2;
+    opacity: 1.0;
+    font-weight: normal;
+}
+
+/* Hide button focus in forms as already shown with background. */
+div.felement input[type=submit]:focus,
+div.felement input[type=reset]:focus,
+div.felement input[type=button]:focus,
+div.felement button:focus {
+    border: 1px solid #002158;
+}
+
+/* Small button sizing. */
+input[type=submit].osep-smallbutton,
+input[type=reset].osep-smallbutton,
+input[type=button].osep-smallbutton,
+button.osep-smallbutton,
+a.osep-smallbutton,
+li.osep-smallbutton a {
+    font-size: 1em;
+    padding: 2px 8px 3px;
+}
+
+/* It should be possible to left-align a single-button. */
+.singlebutton div {
+    margin-left: 0;
+}
+
+/* Buttons immediately following an input: make them line up better. Selector copied from core. */
+input[name="searchwikicontent"] + input[type="submit"],
+select + input[type="submit"],
+input[type="text"] + input[type="button"],
+input[type="password"] + input[type="submit"],
+input[type="text"] + button,
+input[type="text"] + input[type="submit"] {
+    margin: 0;
+}
+
+input[name="searchwikicontent"] + input[type="submit"].m-x-1,
+select + input[type="submit"].m-x-1,
+input[type="text"] + input[type="button"].m-x-1,
+input[type="password"] + input[type="submit"].m-x-1,
+input[type="text"] + button.m-x-1,
+input[type="text"] + input[type="submit"].m-x-1 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Alignment search button with search field */
+fieldset.coursesearchbox input[type="submit"] {
+    margin: 0 0 10px 5px;
+}
+

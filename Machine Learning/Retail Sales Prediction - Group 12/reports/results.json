@@ -1,0 +1,297 @@
+{
+  "data": {
+    "rows": 2160,
+    "train_rows": 1728,
+    "test_rows": 432,
+    "train_stores": 48,
+    "test_stores": 12,
+    "test_store_ids": [
+      "S01",
+      "S06",
+      "S13",
+      "S14",
+      "S34",
+      "S37",
+      "S46",
+      "S47",
+      "S49",
+      "S51",
+      "S55",
+      "S58"
+    ]
+  },
+  "comparison": {
+    "Linear Regression": {
+      "cv_new_store": {
+        "R2": 0.832,
+        "R2_std": 0.067,
+        "MSE": 5.151,
+        "RMSE": 2.245,
+        "MAE": 1.777
+      },
+      "cv_random_rows": {
+        "R2": 0.886,
+        "RMSE": 2.132
+      },
+      "train": {
+        "R2": 0.889,
+        "MSE": 4.435,
+        "RMSE": 2.106,
+        "MAE": 1.652
+      },
+      "test_unseen_stores": {
+        "R2": 0.814,
+        "MSE": 4.552,
+        "RMSE": 2.134,
+        "MAE": 1.648
+      }
+    },
+    "Polynomial Regression (deg 2)": {
+      "cv_new_store": {
+        "R2": 0.852,
+        "R2_std": 0.041,
+        "MSE": 4.636,
+        "RMSE": 2.142,
+        "MAE": 1.692
+      },
+      "cv_random_rows": {
+        "R2": 0.906,
+        "RMSE": 1.935
+      },
+      "train": {
+        "R2": 0.911,
+        "MSE": 3.574,
+        "RMSE": 1.891,
+        "MAE": 1.479
+      },
+      "test_unseen_stores": {
+        "R2": 0.849,
+        "MSE": 3.713,
+        "RMSE": 1.927,
+        "MAE": 1.513
+      }
+    },
+    "Decision Tree": {
+      "cv_new_store": {
+        "R2": 0.506,
+        "R2_std": 0.243,
+        "MSE": 14.446,
+        "RMSE": 3.791,
+        "MAE": 3.081
+      },
+      "cv_random_rows": {
+        "R2": 0.844,
+        "RMSE": 2.497
+      },
+      "train": {
+        "R2": 0.884,
+        "MSE": 4.637,
+        "RMSE": 2.153,
+        "MAE": 1.669
+      },
+      "test_unseen_stores": {
+        "R2": 0.643,
+        "MSE": 8.754,
+        "RMSE": 2.959,
+        "MAE": 2.344
+      }
+    },
+    "Random Forest": {
+      "cv_new_store": {
+        "R2": 0.613,
+        "R2_std": 0.175,
+        "MSE": 11.352,
+        "RMSE": 3.358,
+        "MAE": 2.759
+      },
+      "cv_random_rows": {
+        "R2": 0.903,
+        "RMSE": 1.966
+      },
+      "train": {
+        "R2": 0.961,
+        "MSE": 1.571,
+        "RMSE": 1.253,
+        "MAE": 0.954
+      },
+      "test_unseen_stores": {
+        "R2": 0.801,
+        "MSE": 4.88,
+        "RMSE": 2.209,
+        "MAE": 1.715
+      }
+    },
+    "Gradient Boosting": {
+      "cv_new_store": {
+        "R2": 0.756,
+        "R2_std": 0.091,
+        "MSE": 7.467,
+        "RMSE": 2.715,
+        "MAE": 2.22
+      },
+      "cv_random_rows": {
+        "R2": 0.935,
+        "RMSE": 1.606
+      },
+      "train": {
+        "R2": 0.962,
+        "MSE": 1.539,
+        "RMSE": 1.24,
+        "MAE": 0.943
+      },
+      "test_unseen_stores": {
+        "R2": 0.786,
+        "MSE": 5.251,
+        "RMSE": 2.292,
+        "MAE": 1.746
+      }
+    }
+  },
+  "best_model": "Polynomial Regression (deg 2)",
+  "residuals": {
+    "mean": 0.41,
+    "std": 1.883,
+    "abs_p50": 1.29,
+    "abs_p80": 2.356,
+    "abs_p90": 3.11,
+    "mape_pct": 7.379
+  },
+  "linear_residual_by_promo_bin": {
+    "(0, 40]": -1.012,
+    "(40, 80]": 0.091,
+    "(80, 120]": 0.772,
+    "(120, 160]": 1.176,
+    "(160, 200]": 1.304,
+    "(200, 240]": 1.279,
+    "(240, 280]": 0.773,
+    "(280, 320]": 0.415,
+    "(320, 360]": 0.15,
+    "(360, 400]": -0.379,
+    "(400, 440]": 0.751,
+    "(440, 480]": -1.163,
+    "(480, 520]": -0.677
+  },
+  "promo_saturation": {
+    "Linear Regression": {
+      "0→100k": 1.15,
+      "100→200k": 1.15,
+      "200→300k": 1.15,
+      "300→400k": 1.15
+    },
+    "Polynomial Regression (deg 2)": {
+      "0→100k": 2.62,
+      "100→200k": 1.75,
+      "200→300k": 0.88,
+      "300→400k": 0.01
+    },
+    "TRUE hidden rule": {
+      "0→100k": 3.49,
+      "100→200k": 1.51,
+      "200→300k": 0.66,
+      "300→400k": 0.29
+    }
+  },
+  "importance_rmse_increase": {
+    "store_size_sqft": 5.31,
+    "num_staff": 1.577,
+    "month": 1.495,
+    "location_type": 1.451,
+    "promo_spend_k": 1.036,
+    "competitor_distance_km": 0.296
+  },
+  "noise_floor": {
+    "R2": 0.869,
+    "MSE": 3.203,
+    "RMSE": 1.79,
+    "MAE": 1.384
+  },
+  "whatif": {
+    "store_id": "S34",
+    "year": 2024,
+    "month": 6,
+    "inputs": {
+      "store_size_sqft": 6950.0,
+      "num_staff": 10,
+      "promo_spend_k": 82.5,
+      "competitor_distance_km": 1.15,
+      "location_type": "Urban",
+      "month": 6
+    },
+    "actual_sales": 18.81,
+    "predicted_sales": 18.91,
+    "scenarios": [
+      {
+        "scenario": "Promo +₹50k",
+        "model_pred": 19.99,
+        "model_change": 1.08,
+        "true_rule_change": 1.0
+      },
+      {
+        "scenario": "Promo cut to ₹0",
+        "model_pred": 16.66,
+        "model_change": -2.26,
+        "true_rule_change": -2.89
+      },
+      {
+        "scenario": "Promo raised to ₹400k",
+        "model_pred": 22.07,
+        "model_change": 3.16,
+        "true_rule_change": 2.72
+      },
+      {
+        "scenario": "Store +1,000 sq ft",
+        "model_pred": 20.97,
+        "model_change": 2.05,
+        "true_rule_change": 1.28
+      },
+      {
+        "scenario": "+2 staff",
+        "model_pred": 18.31,
+        "model_change": -0.6,
+        "true_rule_change": 0.48
+      },
+      {
+        "scenario": "Competitor 2 km farther",
+        "model_pred": 19.35,
+        "model_change": 0.43,
+        "true_rule_change": 0.77
+      },
+      {
+        "scenario": "Competitor opens next door (0.2 km)",
+        "model_pred": 18.69,
+        "model_change": -0.22,
+        "true_rule_change": -0.68
+      },
+      {
+        "scenario": "Location → Rural",
+        "model_pred": 13.62,
+        "model_change": -5.29,
+        "true_rule_change": -4.13
+      },
+      {
+        "scenario": "Same store in November",
+        "model_pred": 24.17,
+        "model_change": 5.26,
+        "true_rule_change": 4.79
+      }
+    ]
+  },
+  "feature_ranges": {
+    "store_size_sqft": [
+      2300.0,
+      14600.0
+    ],
+    "num_staff": [
+      5.0,
+      21.0
+    ],
+    "promo_spend_k": [
+      0.4,
+      519.7
+    ],
+    "competitor_distance_km": [
+      0.1,
+      18.61
+    ]
+  }
+}

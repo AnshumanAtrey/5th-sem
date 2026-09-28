@@ -1,0 +1,2921 @@
+@media print {
+    .ie7.path-mod-oucontent #page {
+        width:640px;
+    }
+    .path-mod-oucontent #page {
+        min-width:0;
+    }
+}
+.path-mod-oucontent .middle-column {
+    line-height:1.4;
+    padding-right:170px;
+}
+.path-mod-oucontent #content {
+    margin-top:5px;
+    word-wrap:break-word;
+}
+.path-mod-oucontent #content .oucontent-caption {
+    word-wrap:normal;
+}
+.ie7.path-mod-oucontent #content .oucontent-caption {
+    word-wrap:break-word;
+}
+.ie.path-mod-oucontent #content {
+    margin-top:-3px;
+}
+.ie6.path-mod-oucontent #content,
+.ie6.path-mod-oucontent #middle-column {
+    height:1px;
+}
+.ie6.path-mod-oucontent #left-column {
+    display:inline;
+    height:1px;
+}
+
+.path-mod-oucontent #middle-column p,
+.path-mod-oucontent .oucontent-h1,
+.path-mod-oucontent #middle-column .oucontent-h2,
+.path-mod-oucontent .oucontent-caption,
+.path-mod-oucontent .oucontent-h3,
+.path-mod-oucontent #middle-column li,
+.path-mod-oucontent #middle-column ul {
+    margin:0.5em 0;
+}
+
+.path-mod-oucontent .oucontent-caption {    font-weight:bold;
+    color:#003366;
+}
+
+.path-mod-oucontent .oucontent-omquestion {
+    margin-left:-8px;
+}
+
+.path-mod-oucontent .oucontent-title-0 {
+    font-size: 1.37em;
+    font-weight:bold;
+    color:#003366;
+    margin:0.333em 0;
+}
+.path-mod-oucontent .oucontent-title-1 {
+    font-size: 1.37em;
+    font-weight:normal;
+    color:#003366;
+    margin:0.333em 0;
+}
+.path-mod-oucontent .oucontent-title-2 {
+    font-size: 1.189em;
+    color:#0094af;
+    font-weight:normal;
+    margin:0.384em 0;
+}
+.path-mod-oucontent .oucontent-title-3 {
+    font-size:1.097em;
+    color:black;
+    font-weight:normal;
+    margin:0.417em 0;
+}
+
+.path-mod-oucontent #middle-column .oucontent-h2 {
+    font-size:1.0em;
+}
+.path-mod-oucontent .oucontent-h3 {
+    color:#000000;
+    font-size:1.0em;
+}
+.path-mod-oucontent #middle-column .oucontent-saq .oucontent-h2, .path-mod-oucontent .oucontent-saq .oucontent-h3{
+    margin-bottom:0;
+}
+
+.path-mod-oucontent #middle-column.oucontent-extrapage,
+.path-mod-oucontent.oucontent-longdesc #middle-column,
+.path-mod-oucontent.oucontent-transcript #middle-column {
+    margin:0;
+    padding-right:0;
+}
+.path-mod-oucontent #middle-column.oucontent-extrapage,
+body.path-mod-oucontent.oucontent-longdesc #content,
+body.path-mod-oucontent.oucontent-transcript #content {
+    margin:5px;
+}
+body.path-mod-oucontent.oucontent-transcript .oucontent-dialogue {
+    margin-top:0;
+    width:auto;
+    float:none;
+}
+
+.path-mod-oucontent.oucontent-longdesc #page,
+.path-mod-oucontent.oucontent-transcript #page {
+    width:auto;
+    min-width:0;
+}
+
+
+.oucontent-contents .content li {
+    margin-top: 4px;
+}
+
+.oucontent-contents .content ul {
+    margin-top: -4px;
+}
+
+.path-mod-oucontent .sideblock .content {
+    background:none;
+}
+.oucontent-contents ul,
+.oucontent-contents li,
+.path-mod-oucontent .oucontent-altcontent ul,
+.path-mod-oucontent .oucontent-altcontent li,
+.path-mod-oucontent .oucontent-printablelink ul,
+.path-mod-oucontent .oucontent-printablelink li {
+    list-style-type:none;
+    margin:0 0 0.2em 0;
+    padding:0;
+}
+.oucontent-contents ul ul {
+    margin-top:0.2em;
+    margin-left:1em;
+}
+.oucontent-contents ul ul ul {
+    margin-top:0.2em;
+    margin-left:2em;
+}
+.path-mod-oucontent #middle-column ol ul li,
+.path-mod-oucontent #middle-column ul ul li {
+    list-style-type:circle;
+}
+.path-mod-oucontent #middle-column ol ul.oucontent-numbered li,
+.path-mod-oucontent #middle-column ul ul.oucontent-numbered li {
+    list-style-type: none;
+}
+.path-mod-oucontent #left-column {
+    float:left;
+}
+.oucontent-prev {
+    margin-bottom:1em;
+}
+.oucontent-prev strong {
+    font-weight:normal;
+}
+.oucontent-next {
+    clear:right;
+    margin-top:1em;
+    text-align:right;
+}
+.path-mod-oucontent table {
+    text-align:left;
+}
+
+.path-mod-oucontent table .oucontent-tablemiddle {
+    text-align:center;
+}
+.path-mod-oucontent table .oucontent-tableright {
+    text-align:right;
+}
+.path-mod-oucontent table .oucontent-tabledecimal {
+    text-align:right;
+}
+.path-mod-oucontent .oucontent-table-wrapper table {
+    margin-bottom: 0;
+}
+.path-mod-oucontent .oucontent-table-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Work around browser bugs with edges of table */
+    padding: 1px;
+    margin: -1px;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-normal .oucontent-table-wrapper {
+    margin-bottom: 0;
+}
+
+.path-mod-oucontent .filter-maths-equation img,
+.path-mod-oucontent .filter_oumaths_equation svg {
+    opacity: 0.8;
+}
+
+.ie7.path-mod-oucontent .oucontent-table-wrapper {
+    overflow-x: visible;
+}
+.oucontent-s-accounts .oucontent-negative .oucontent-total-single.oucontent-total-below,
+.oucontent-s-accounts .oucontent-total-single.oucontent-total-below .oucontent-rawnumber,
+.oucontent-total-single.oucontent-total-below {
+    border-bottom:1px solid #333;
+}
+.oucontent-s-accounts .oucontent-total-single.oucontent-total-above {
+    border: none;
+}
+.oucontent-total-single.oucontent-total-above {
+    padding-top:4px;
+    border-top:1px solid #333;
+}
+.oucontent-s-type2 .oucontent-total-single.oucontent-total-above,
+.oucontent-s-narrow .oucontent-total-single.oucontent-total-above,
+.oucontent-s-landscape .oucontent-total-single.oucontent-total-above {
+    padding-top: 6px;
+}
+.ie8 .oucontent-s-narrow .oucontent-total-single.oucontent-total-above,
+.ie9 .oucontent-s-narrow .oucontent-total-single.oucontent-total-above {
+    padding-top: 5px;
+}
+.oucontent-total-double.oucontent-total-below,
+.oucontent-s-accounts .oucontent-total-double.oucontent-total-below .oucontent-rawnumber,
+.oucontent-s-accounts .oucontent-negative .oucontent-total-double.oucontent-total-below {
+    border-bottom: 3px double #333;
+}
+.oucontent-total-double.oucontent-total-above {
+    padding-top:3px;
+    border-top:3px double #333;
+}
+.oucontent-s-type2 .oucontent-total-double.oucontent-total-above,
+.oucontent-s-narrow .oucontent-total-double.oucontent-total-above,
+.oucontent-s-landscape .oucontent-total-double.oucontent-total-above {
+    padding-top: 5px;
+}
+.ie8 .oucontent-s-type2 .oucontent-total-double.oucontent-total-above,
+.ie9 .oucontent-s-type2 .oucontent-total-double.oucontent-total-above,
+.ie9 .oucontent-s-landscape .oucontent-total-double.oucontent-total-above {
+    padding-top: 4px;
+}
+.ie7 .oucontent-s-type2 .oucontent-total-above,
+.ie7 .oucontent-s-narrow .oucontent-total-above,
+.ie7 .oucontent-s-landscape .oucontent-total-above {
+    position:relative;
+    z-index:100;
+}
+
+.oucontent-contents li.oucontent-tree-current {
+    font-weight:bold;
+}
+.oucontent-contents li.oucontent-tree-current ul {
+    font-weight:normal;
+}
+
+.oucontent-sidenote {
+    float:right;
+    clear:right;
+    margin-right:-170px;
+    margin-top:1px;
+    overflow: hidden;
+}
+.ie7 .oucontent-sidenote {
+    margin-top:-1.3em;
+}
+.ie7 .oucontent-sidenote.oucontent-resource-icons {
+    margin-top:1px;
+}
+.oucontent-s-box .oucontent-inner-box .oucontent-sidenote {
+    margin-right:-180px;
+}
+.ie7 .oucontent-s-box .oucontent-inner-box .oucontent-sidenote {
+    margin-left:10px;
+}
+.oucontent-sidenote-atstart {
+    margin-top:0;
+}
+.oucontent-sidenote.oucontent-sidenote-intitle {
+    margin-top: -25px;
+}
+.oucontent-sidenote-inner {
+    display:block;
+    padding-top:2px;
+    padding-bottom:2em;
+    position:relative;
+    top:-3px;
+    width:150px;
+    margin-left:20px;
+    line-height:140%;
+    /* These rules are to override heading styling if needed. */
+    color: #1a1a1a;
+    font-weight: normal;
+}
+
+.oucontent-icon .oucontent-sidenote-inner {
+    padding-bottom: 2px;
+}
+.oucontent-icon .oucontent-icon-text {
+    margin-left: 20px;
+    padding-bottom: 2em;
+}
+.oucontent-media .oucontent-resource-icons {
+    min-height:32px;
+}
+.oucontent-media .oucontent-resource-icons .oucontent-sidenote-inner {
+    position:absolute;
+    right:0px;
+    width:171px;
+    top:auto;
+}
+.oucontent-file-link img {
+    height: 16px;
+    width: 16px;
+    vertical-align: text-top;
+}
+.oucontent-file-description {
+    font-size: 0.8em;
+    color: #555;
+}
+.oucontent-sidenote-head {
+    display:block;
+    font-weight:bold;
+}
+.oucontent-sidenote-para {
+    display:block;
+    margin-bottom:0.5em;
+}
+.oucontent-linktip .oucontent-sidenote-inner {
+    color:#555;
+    font-size: 0.8em;
+    font-weight:normal;
+    white-space: normal;
+}
+.path-mod-oucontent #middle-column {
+    padding-right:170px;
+    line-height:1.4;
+}
+
+.oucontent-linkwithtip {
+    white-space: nowrap;
+}
+.oucontent-linkwithtip a.oucontent-hyperlink {
+    white-space: normal;
+}
+
+.oucontent-printable .oucontent-saq-timing {
+   padding-left:0px;
+}
+
+.oucontent-itq-toggle-link {
+    font-size: 0.8em;
+}
+
+.oucontent-saq-interactiveanswer, .oucontent-saq-interactivediscussion, .oucontent-saq-printable-correct {
+    margin-top:10px;
+    border-top:1px dotted #aaa;
+    padding-top:0.5em;
+    padding-bottom:3px;
+}
+.oucontent-saq-discussion .oucontent-h4,.oucontent-saq-answer .oucontent-h4, .oucontent-saq-interactiveanswer .oucontent-h4, .oucontent-saq-interactivediscussion .oucontent-h4 {
+    margin:0;
+}
+
+.oucontent-saq-head,
+.oucontent-box-head,
+.oucontent-figure-caption {
+    margin-left:0.5em;
+    font-weight:normal;
+}
+.oucontent-table-head {
+    margin-left:5px;
+}
+.oucontent-nonumber .oucontent-saq-head,
+.oucontent-nonumber .oucontent-box-head,
+.oucontent-nonumber .oucontent-table-head {
+    margin-left:0;
+    font-weight:bold;
+}
+
+.oucontent-nonumber .oucontent-figure-caption {
+    margin-left:0;
+}
+
+/* Padding only apply for 3 question type multiplechoice, singlechoice, matching */
+.path-mod-oucontent .oucontent-printable .oucontent-saqwith-multiplechoice .oucontent-saq-question,
+.path-mod-oucontent .oucontent-printable .oucontent-saqwith-singlechoice .oucontent-saq-question,
+.path-mod-oucontent .oucontent-printable .oucontent-saqwith-matching .oucontent-saq-question,
+.path-mod-oucontent .oucontent-printable .oucontent-saqtype-part .oucontent-saq-question,
+.oucontent-saqwith-multiplechoice .oucontent-saq-question,
+.oucontent-saqwith-singlechoice .oucontent-saq-question,
+.oucontent-saqwith-matching .oucontent-saq-question,
+.oucontent-saqtype-part .oucontent-saq-question {
+    padding: 10px 0 0 0;
+}
+
+.oucontent-saq-withtoggle .oucontent-saq-question {
+    padding-bottom:0;
+}
+.oucontent-saq-toggle {
+    font-size: 0.8em;
+    text-align:right;
+    padding-bottom:1em;
+}
+.oucontent-saq-toggle-link {
+    text-decoration:underline;
+    cursor:pointer;
+}
+a.oucontent-saq-toggle-link,a:visited.oucontent-saq-toggle-link {
+    color:black;
+}
+
+.oucontent-box-source { /* SAVLE1 legacy */
+    margin-top:1em;
+    text-align:right;
+}
+
+.oucontent-figure,
+.oucontent-itq,
+.oucontent-table,
+.oucontent-dialogue,
+.oucontent-media,
+.oucontent-equation {
+    margin:10px 0;
+}
+.oucontent-equation {
+    overflow:auto;
+}
+.oucontent-equation span.oucontent-display-mathml {
+    display: inline-block;
+}
+/* IE7 crash bug */
+.ie7 .oucontent-printable .oucontent-figure,
+.ie7 .oucontent-printable .oucontent-itq,
+.ie7 .oucontent-printable .oucontent-table,
+.ie7 .oucontent-printable .oucontent-dialogue,
+.ie7 .oucontent-printable .oucontent-media,
+.ie7 .oucontent-printable .oucontent-equation {
+    margin:5px 0;
+}
+
+/* See comment in filter/maths/styles.css */
+.oucontent-inlinemathml,
+.oucontent-inlinefigure {
+    white-space: nowrap;
+}
+
+.path-mod-oucontent .oucontent-figure-text .oucontent-h3,
+.path-mod-oucontent .oucontent-figure-text .oucontent-caption {
+    margin-top:5px;
+}
+
+.oucontent-figure-text {
+    display: inline-block;
+    width: 100%;
+}
+.oucontent-media-mini .oucontent-figure-text {
+    display: block;
+    width: auto;
+}
+.oucontent-figure-source, /* SAVLE1 legacy (-source) */
+.oucontent-thumbnaillink,
+.oucontent-transcriptlink,
+.oucontent-media-download {
+    float:right;
+    margin-top: 6px;
+    margin-left:1em;
+    font-size: 0.8em;
+}
+.oucontent-thumbnaillink {
+    float:none;
+}
+.ie7 .oucontent-figure-source,
+.ie7 .oucontent-thumbnaillink,
+.ie7 .oucontent-transcriptlink,
+.ie7 .oucontent-media-download {
+    margin-top:6px;
+}
+
+.oucontent-audio-video.omp-version1 > .oucontent-figure-text > .oucontent-media-download,
+.oucontent-audio-video.omp-version1 > .oucontent-figure-text > .oucontent-transcriptlink,
+.oucontent-audio-video.omp-version2 > .oucontent-figure-text > .oucontent-media-download,
+.oucontent-audio-video.omp-version2 > .oucontent-figure-text > .oucontent-transcriptlink {
+    display: none;
+}
+
+.oucontent-table-thumbnaillink {
+    font-size: 0.8em;
+}
+.path-mod-oucontent #middle-column ul {
+    padding-left:0;
+    margin-left:0.9em;
+    margin-right: 0;
+}
+.path-mod-oucontent #middle-column ol {
+    margin-left:0.8em;
+    padding-left:0;
+    margin-right: 0;
+}
+.ie.path-mod-oucontent #middle-column ol {
+    margin-left:0.85em;
+    padding-left:0;
+}
+.path-mod-oucontent #middle-column ul[dir=rtl] {
+    margin-right: 0.9em;
+    margin-left: 0;
+}
+.path-mod-oucontent #middle-column ol[dir=rtl] {
+    margin-right: 0.8em;
+    margin-left: 0;
+}
+.ie.path-mod-oucontent #middle-column ol[dir=rtl] {
+    margin-right: 0.85em;
+    margin-left:0;
+}
+.path-mod-oucontent #middle-column ul > li {
+    margin-left:1.2em;
+    padding-left:0.3em;
+    margin-bottom:0.5em;
+}
+.path-mod-oucontent #middle-column ol > li {
+    margin-left:1.6em;
+    padding-left:0em;
+    margin-bottom:0.5em;
+}
+
+ul.oucontent-unnumbered,
+ul.oucontent-unnumbered li,
+.path-mod-oucontent #middle-column ul ul.oucontent-unnumbered li,
+.path-mod-oucontent #middle-column ol ul.oucontent-unnumbered li {
+    list-style-type:none;
+}
+
+ul.oucontent-unnumbered ol.oucontent-numbered,
+ul.oucontent-unnumbered ol.oucontent-numbered li {
+    list-style-type:decimal;
+}
+ul.oucontent-unnumbered ul.oucontent-bulleted,
+ul.oucontent-unnumbered ul.oucontent-bulleted li {
+    list-style-type:disc;
+}
+.ie.path-mod-oucontent #middle-column .oucontent-sublist ul,
+.ie.path-mod-oucontent #middle-column .oucontent-sublist ol {
+    margin-top:-1.9em;
+    padding-top:0;
+}
+.ie7.path-mod-oucontent #middle-column .oucontent-sublist ul,
+.ie7.path-mod-oucontent #middle-column .oucontent-sublist ol {
+    margin-top:-1.8em;
+}
+.oucontent-authorcomment {
+    color:#ff5500;
+    font-style:italic;
+}
+.oucontent-editorcomment {
+    color:#ff0077;
+    font-style:italic;
+}
+.oucontent-comment {
+    color:red;
+    font-style:italic;
+}
+
+.oucontent-warning {
+    display:block;
+    color:red;
+    margin:1.5em 0;
+    font-weight:normal;
+}
+
+.oucontent-flashjswarning {
+    border:1px solid #ccc;
+    padding:4px;
+    margin-bottom:0.5em;
+}
+
+.jsenabled .oucontent-flashjswarning {
+    display: none;
+}
+
+.oucontent-wide {
+    width:512px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-h2.oucontent-subsubsection,
+.path-mod-oucontent #middle-column .oucontent-h2.oucontent-internalsection-head {
+    margin-top:1em;
+}
+
+.path-mod-oucontent .oucontent-internalsection .oucontent-h3.oucontent-basic {
+    font-size: 1.14285em;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.oucontent-basic {
+    padding-top:5px;
+    margin:0;
+}
+
+/* This should be the same as pre in ou_layout.css. */
+.oucontent-computerdisplay {
+    font-size: 0.857em;
+    margin:1.5em 0;
+}
+.path-mod-oucontent .oucontent-computerdisplay p {
+    margin-bottom:0;
+    white-space:pre;
+}
+
+.oucontent-dialogue {
+    margin:10px 0 10px 0;
+    float:left;
+    width:100%;
+}
+
+.oucontent-part-first {
+    margin-top:0;
+}
+.oucontent-part-last {
+    margin-bottom:0;
+}
+.oucontent-dialogue-line {
+    clear:left;
+    margin-left:10px;
+    margin-right:10px;
+}
+.oucontent-dialogue-remark {
+    margin-left:11em;
+    margin-bottom:0.5em;
+}
+.oucontent-dialogue-speaker {
+    float:left;
+    width:10em;
+    font-weight: bold;
+}
+.filter_transcript_box .oucontent-dialogue-speaker {
+    width: 9.64em; /* ~135px on desktop view. */
+    word-break: break-all;
+}
+.filter_transcript_box .oucontent-dialogue-remark {
+    margin-left: 8em;
+}
+.filter_transcript_box .oucontent-dialogue-line {
+    margin: 0;
+}
+.ie7.path-mod-oucontent .oucontent-printable .oucontent-dialogue-speaker {
+    float:none;
+
+}
+.ie7.path-mod-oucontent .oucontent-printable .oucontent-dialogue-remark {
+    margin-left:0;
+}
+
+.path-mod-oucontent .oucontent-printable .oucontent-dialogue {
+    float:none;
+}
+.oucontent-glossary dt {
+    padding-bottom:2px;
+    color:#003366;
+}
+
+.oucontent-glossary dd {
+    padding-bottom:6px;
+}
+.oucontent-glossaryterm-styling {
+    font-weight: bold;
+}
+.oucontent-glossaryterm {
+    cursor:help;
+    color: #1a1a1a;
+}
+.oucontent-glossaryterm:hover {
+    text-decoration:none;
+}
+.oucontent-computercode,
+.oucontent-computerdisplay {
+    font-family:"Lucida Console", "Monaco", "DejaVu Sans Mono", monospace;
+}
+.oucontent-computercode {
+    font-size:1.071em;
+    line-height:1.307;
+}
+.oucontent-computerui {
+    color: #000;
+    letter-spacing: 1px;
+    background-color: #eee;
+    padding: 0 2px;
+}
+.oucontent-problem {
+    width:50em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.path-mod-oucontent div.oucontent-longdesconly a {
+    position:absolute;
+    left:-1000px;
+}
+.path-mod-oucontent div.oucontent-longdesconly a:focus {
+    position:static;
+}
+
+.path-mod-oucontent div.oucontent-longdescsecond {
+    display:none;
+}
+.oucontent-problem li {
+    margin-bottom:0.5em;
+}
+.oucontent-problem h1 {
+    font-size: 1.37em;
+    font-weight:normal;
+}
+.oucontent-problem-footer {
+    margin-top:1.5em;
+}
+
+.oucontent-contents ul.oucontent-savetolist {
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+.oucontent-save-noperm {
+    color:#888;
+}
+
+
+#page-mod-oucontent-save h1 {
+    font-size: 1.37em;
+    font-weight:normal;
+    margin:0 0 0.5em 0;
+}
+.oucontent-saveoptions {
+    margin-bottom:0.5em;
+}
+#page-mod-oucontent-save #content {
+    width:50em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.oucontent-savetolist {
+    margin-top:0;
+    margin-bottom:5px;
+}
+
+.oucontent-haswarnings {
+    color:red;
+}
+
+#page-mod-oucontent-preflight table {
+    border:1px solid #ddd;
+    margin:1em 0;
+    width:100%;
+}
+#page-mod-oucontent-preflight th,
+#page-mod-oucontent-preflight td {
+    padding:2px 6px;
+}
+#page-mod-oucontent-preflight th {
+    border-bottom:1px solid #aaa;
+    text-align:left;
+}
+#page-mod-oucontent-preflight td {
+    border-bottom:1px solid #ddd;
+}
+.oucontent-preflight-error {
+    color: #800000;
+}
+.oucontent-preflight-ok {
+    color: #008000;
+}
+#page-mod-oucontent-preflight .oucontent-preflight-notpage td {
+    border-top:4px solid #ddd;
+}
+
+
+#page-mod-oucontent-preflight .oucontent-rerender {
+    margin-top:30px;
+    border:1px solid #aaa;
+    padding:2px 10px 5px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    font-size: 0.8em;
+    color:#333;
+    background-color:#e5f2ff;
+
+}
+#page-mod-oucontent-preflight .oucontent-rerender a {
+    color:#333;
+}
+
+.path-mod-oucontent .oucontent-thumbnailpage {
+    margin-top:1em;
+}
+
+.path-mod-oucontent .oucontent-hqmessage ul {
+    margin:0;
+}
+.path-mod-oucontent .oucontent-hqmessage ul li {
+    list-style-type: none;
+}
+.path-mod-oucontent .oucontent-hqmessage ul li.oucontent-hq-on {
+    font-weight:bold;
+    padding-left:20px;
+    background-repeat: no-repeat;
+    background-image:url([[pix:mod_oucontent|sqhq_selected]]);
+}
+.path-mod-oucontent .oucontent-hqmessage ul li.oucontent-hq-off a {
+    padding-left:20px;
+    background-repeat: no-repeat;
+    background-image:url([[pix:mod_oucontent|sqhq_unselected]]);
+}
+.path-mod-oucontent .oucontent-hqmessage ul li.oucontent-hq-first {
+    margin-bottom:10px;
+}
+body.path-mod-oucontent.oucontent-hq-withvideo {
+    min-width:1103px;
+}
+.path-mod-oucontent .oucontent-content {
+    color:#333333;
+}
+.path-mod-oucontent #middle-column table th p {
+    font-weight: bold;
+}
+.path-mod-oucontent #middle-column table p {
+    margin-top: 0;
+}
+.path-mod-oucontent #middle-column table p:last-child {
+    margin-bottom: 0;
+}
+.oucontent-default-filter .mediaplugin_qt {
+    text-align: left;
+}
+.oucontent-rightsinfo {
+    display:block;
+    text-align:left;
+    color:#888;
+}
+.oucontent-figure .oucontent-rightsinfo,
+.oucontent-media .oucontent-rightsinfo {
+    display:block;
+    text-align:left;
+    color:#888;
+    width:150px;
+}
+
+.oucontent-source-reference {
+    text-align:left;
+    font-size: 0.8em;
+    padding-top:5px;
+    padding-right:5px;
+}
+
+.oucontent-figure .oucontent-source-reference,
+.oucontent-media .oucontent-source-reference {
+    float: right;
+    clear: right;
+    margin-top: 1px;
+    padding-top: 0;
+    margin-left: 1em;
+    padding-right: 0;
+}
+
+.ie7 .oucontent-figure .oucontent-source-reference,
+.ie7 .oucontent-media .oucontent-source-reference {
+    margin-top: 5px;
+}
+
+.oucontent-media-mini .oucontent-figure-source,  /* SAVLE1 legacy (-source) */
+.oucontent-media-mini .oucontent-source-reference,
+.oucontent-media-mini .oucontent-transcriptlink,
+.oucontent-media-mini .oucontent-media-download,
+.oucontent-media-mini .oucontent-thumbnaillink,
+.oucontent-figure-text .oucontent-thumbnaillink,
+.safari .oucontent-figure .oucontent-source-reference,
+.safari .oucontent-media .oucontent-source-reference {
+    margin-left:0;
+    margin-top:0;
+    float:none;
+    text-align:left;
+}
+
+.path-mod-oucontent .oucontent-media-mini .oucontent-caption.oucontent-caption-placeholder {
+    margin: 0;
+    height: 5px;
+}
+
+.path-mod-oucontent .oucontent-printablelink,
+.path-mod-oucontent .oucontent-alterformat {
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    padding-top:8px;
+}
+.path-mod-oucontent .oucontent-printablelink ul li:first-child .oucontent-singlepage {
+    padding-left: 0;
+}
+.oucontent-printablelink a img.smallicon {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+a.oucontent-glossaryterm {
+    border-bottom:1px dotted rgb(69,32,110);
+}
+a.oucontent-hyperlink,
+a.oucontent-olink,
+a.oucontent-crossref,
+a.oucontent-glossaryterm-notfound {
+    text-decoration:underline;
+}
+.ie6 a:visited.oucontent-hyperlink,
+.ie6 a:visited.oucontent-olink,
+.ie6 a:visited.oucontent-crossref,
+.ie6 a:visited.oucontent-glossaryterm-notfound {
+    text-decoration:underline;
+}
+
+.path-mod-oucontent .oucontent-h3.oucontent-internalsection-head,
+.path-mod-oucontent .oucontent-h4.oucontent-internalsection-head,
+.path-mod-oucontent .oucontent-h5.oucontent-internalsection-head {
+        font-weight:normal;
+        font-style:italic;
+        margin:1em 0 0.5em;
+}
+
+.oucontent-hidespace {
+    font-size:0;
+}
+
+.ie6.path-mod-oucontent .block_navigation.sideblock ul ul {
+    margin-left:0;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+.path-mod-oucontent .oucontent-printable-header {
+    border-bottom:1px dotted #aaa;
+    padding-bottom:4px;
+    margin: 10px 10px 2em 10px;
+}
+.path-mod-oucontent .oucontent-printable-footer {
+    border-top:1px dotted #aaa;
+    padding-top:4px;
+    margin: 2em 10px 0 10px;
+}
+.path-mod-oucontent .oucontent-printable-backlink {
+    float:left;
+}
+.path-mod-oucontent .oucontent-printable-date,
+.path-mod-oucontent .oucontent-printable-copyright {
+    float:right;
+}
+.path-mod-oucontent .oucontent-printable-copyright p {
+    margin-top:0;
+    margin-bottom:0.5em;
+}
+.path-mod-oucontent #middle-column.oucontent-printable {
+    margin-left:0;
+}
+.ie6.path-mod-oucontent #page #content .oucontent-printable {
+    margin-left:0;
+}
+
+
+/* bug 5300 - IE doesn't print border properly */
+.ie.path-mod-oucontent .oucontent-printable .oucontent-saq {
+    margin-left:2em;
+    border:none;
+}
+.path-mod-oucontent .oucontent-printable .oucontent-rightsinfo {
+    display:none;
+}
+
+/* Bug 5302 - Firefox printed images are too big */
+@media print {
+    .gecko.path-mod-oucontent .oucontent-printable img,
+    .gecko.path-mod-oucontent .oucontent-printable .oucontent-figure-text {
+        max-width:415px;
+    }
+}
+
+/* Apply for tablet and horizontal screen in mobile phone.*/
+@media(max-device-width: 1024px) {
+    .path-mod-oucontent .oucontent-singlechoice-radio input[type="radio"],
+    .path-mod-oucontent .oucontent-multichoice-checkbox input[type="checkbox"]{
+        border:1px solid #cccccc;
+    }
+}
+
+.path-mod-oucontent .oucontent-interaction {
+    position:relative;
+    margin:0.5em 0px;
+}
+.ie7.path-mod-oucontent .oucontent-interaction {
+    padding-top:10px;
+}
+.path-mod-oucontent .oucontent-interactionbuttons {
+    margin:0.5em 5px 0.5em 0;
+    text-align:right;
+    padding: 12px 0 0 0;
+}
+.path-mod-oucontent .oucontent-interactionrightwrong {
+    padding-top: 8px;
+    margin:0.5em 0;
+}
+
+.path-mod-oucontent .invalid-input-container,
+.path-mod-oucontent .wrong-answer-container,
+.path-mod-oucontent .retry-singular-container {
+    margin-bottom: 21px;
+}
+
+.path-mod-oucontent .correct-answer-container {
+    margin-bottom: 27px;
+}
+
+.path-mod-oucontent .retry-plural-container {
+    margin-bottom: 20px;
+}
+
+.path-mod-oucontent .invalid-input-interfaction,
+.path-mod-oucontent .retry-singular-interfaction {
+    padding-top: 3px;
+}
+
+.path-mod-oucontent .wrong-answer-interfaction,
+.path-mod-oucontent .retry-plural-interfaction{
+    padding-top: 2px;
+}
+
+.path-mod-oucontent .correct-answer-interfaction {
+    padding-top: 8px;
+}
+.path-mod-oucontent .oucontent-interactionrightwrong .wrong-answer,
+.path-mod-oucontent .oucontent-interactionrightwrong .invalid-input,
+.path-mod-oucontent .oucontent-interactionrightwrong .retry {
+    height: 14px;
+    width: 14px;
+    margin-right:6px;
+}
+
+.path-mod-oucontent .oucontent-interactionrightwrong .invalid-input {
+    margin-bottom: 5px;
+}
+
+.path-mod-oucontent .oucontent-interactionrightwrong .retry {
+    margin-bottom: 3px;
+}
+
+.path-mod-oucontent .oucontent-interactionrightwrong .wrong-answer {
+    margin-bottom: 3px;
+}
+
+.path-mod-oucontent .oucontent-interactionrightwrong .right-answer {
+    height: 16px;
+    width: 16px;
+    margin-right:4px;
+}
+
+.path-mod-oucontent .oucontent-guestmessage {
+    background: #fff;
+    padding: 14px;
+    border: 1px solid #ccc;
+}
+
+.path-mod-oucontent .oucontent-radio-button:checked + .oucontent-singlechoice-radio-answer label,
+.path-mod-oucontent .oucontent-checkbox:checked + .oucontent-multichoice-checkbox-answer label {
+    font-weight: bold;
+}
+
+.path-mod-oucontent  .oucontent-checkbox:checked + .oucontent-multichoice-checkbox-answer .oucontent-multichoice-answer-feedback {
+    font-weight:normal;
+}
+
+/*Change the display from relative to inline to fix a bug in IE7 which makes it
+always jump to the top of the page when the radio button receives focus by tabbing onto it*/
+.path-mod-oucontent .oucontent-singlechoice-radio-answer,
+.path-mod-oucontent .oucontent-multichoice-checkbox-answer{
+    display:inline-block;
+    vertical-align:3px;
+    padding-left: 20px;
+}
+
+.ie6.path-mod-oucontent .oucontent-singlechoice-answers,
+.ie7.path-mod-oucontent .oucontent-singlechoice-answers {
+    margin-top:-13px;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-answer-button {
+    margin:0.5em 0;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-radio,
+.path-mod-oucontent .oucontent-multichoice-checkbox {
+    margin:4px 0 4px 0;
+    position:relative;
+}
+
+.path-mod-oucontent .oucontent-saq-printable-question {
+    margin:3px 0 10px -3px;
+    padding-top:2px;
+    position:relative;
+}
+
+.path-mod-oucontent .oucontent-checkbox,
+.path-mod-oucontent .oucontent-radio-button,
+.oucontent-saq-printable-number {
+    left:0;
+}
+
+.path-mod-oucontent .oucontent-saq-printable-number {
+  width:20px;
+  text-align:right;
+}
+
+.ie6.path-mod-oucontent .oucontent-multichoice-answers,
+.ie7.path-mod-oucontent .oucontent-multichoice-answers {
+    margin-top:-13px;
+}
+
+.path-mod-oucontent .oucontent-multichoice-answer-button {
+    margin:0.5em 0;
+}
+
+.path-mod-oucontent .oucontent-choice-answer {
+    display:block;
+}
+
+.path-mod-oucontent .oucontent-choice-feedback {
+    margin:0.5em 0;
+
+}
+
+.path-mod-oucontent .oucontent-choice-feedback .right-answer {
+    height: 16px;
+    width: 16px;
+    margin-right:4px;
+}
+
+.path-mod-oucontent .oucontent-choice-feedback .wrong-answer,
+.path-mod-oucontent .oucontent-choice-feedback .invalid-input,
+.path-mod-oucontent .oucontent-choice-feedback .retry {
+    height: 14px;
+    width: 14px;
+    margin-right:6px;
+}
+
+.path-mod-oucontent .oucontent-choice-answer-button {
+    margin:0.5em 0;
+
+}
+
+.ie.path-mod-oucontent sup,
+.ie.path-mod-oucontent sub {
+    line-height:2;
+}
+
+#mod-oucontent-medialib .generalbox .sysmsg {
+    text-align:center;
+}
+
+#mod-oucontent-medialib .generalbox {
+    margin-bottom:30px;
+}
+
+#mod-oucontent-medialib .mediatable th,
+#mod-oucontent-medialib .mediatable td {
+    border: 1px solid #ccc;
+}
+
+#mod-oucontent-medialib .mediatable th {
+    font-weight: bold;
+    text-align: left;
+}
+
+#mod-oucontent-medialib .mediatable td p {
+    margin-bottom: 0;
+}
+#mod-oucontent-medialib .mediatable .mediatable-testitem {
+    background-color: #eee;
+}
+#mod-oucontent-medialib label {
+    width: 15em;
+    float: left;
+    text-align: left;
+    margin-right: 0.5em;
+    display: block
+}
+
+.oucontent-medialib-commands {
+    margin-bottom: 12px;
+}
+
+.oucontent-medialib-commands a {
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: url([[pix:theme|button_bg]]);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    color: #1f536b;
+    border: 1px solid #c6c6c5;
+    padding: 5px;
+    margin: 0 12px 0 0;
+    text-decoration: none;
+}
+
+#mod-oucontent-medialib .submit input {
+    margin-left: 15.5em;
+}
+#mod-oucontent-medialib .field {
+        margin-bottom: 0.5em
+}
+#page-mod-oucontent-upload .field label {
+    float:left;
+    width:18em;
+    padding-top:4px;
+}
+#page-mod-oucontent-upload .field,
+#page-mod-oucontent-upload .checkbox,
+#page-mod-oucontent-upload .button {
+    clear:left;
+    padding-top:0.5em;
+}
+
+#page-mod-oucontent-upload .button,
+#page-mod-oucontent-upload .checkbox {
+    text-align:left;
+    margin-left:18em;
+}
+#page-mod-oucontent-upload form {
+    margin-bottom: 1em;
+}
+
+.path-mod-oucontent .oucontent_export {
+    margin-top:0.5em;
+}
+
+.path-mod-oucontent .oucontent-smallcaps {
+    font-variant:small-caps;
+}
+
+.path-mod-oucontent .oucontent-equation.oucontent-nocaption {
+    margin-left:25px;
+}
+.path-mod-oucontent .oucontent-label {
+    position:relative;
+}
+.ie6.path-mod-oucontent .oucontent-label {
+    height:1px;
+}
+
+.path-mod-oucontent .oucontent-label .oucontent-inner {
+    position:absolute;
+    bottom:0px;
+    right:0;
+    background:transparent;
+    padding-left:2px;
+}
+
+.oucontent-if-printable {
+    display:none;
+}
+.oucontent-printable .oucontent-if-printable {
+    display:block;
+}
+.oucontent-printable .oucontent-if-notprintable {
+    display:none;
+}
+
+.oucontent_div {
+    display:block;
+}
+
+.path-mod-oucontent .oucontent-checkbox,
+.path-mod-oucontent .oucontent-radio-button {
+    position: absolute;
+    left:0;
+    top: 4px;
+}
+
+.oucontent-singlechoice-answer-feedback .oucontent_paragraph,
+.oucontent-multichoice-answer-feedback .oucontent_paragraph {
+    color: #003366;
+    display: block;
+    margin-top: 0;
+}
+
+.saq_printable_list_item {
+  float:left;
+  margin-left:5px;
+  line-height:1.2;
+}
+.saq_printable_list_item p {
+  margin:0px;
+}
+.ie7 .saq_printable_list_item {
+  float:none;
+}
+
+.clearall {
+  clear:both;
+}
+
+.oucontent-freeresponse .oucontent-wait,
+.oucontent-wait-cell {
+  display:inline;
+}
+.oucontent-freeresponse .oucontent-wait img,
+.oucontent-wait-cell img {
+  vertical-align:-3px;
+}
+.ie .oucontent-freeresponse .oucontent-wait img,
+.ie .oucontent-wait-cell img {
+  vertical-align:1px;
+}
+.oucontent-buttons-freeresponse-cell {
+    margin-top: 10px;
+}
+.oucontent-buttons-freeresponse-cell input[type=submit] {
+    margin-bottom: 0;
+}
+
+.path-mod-oucontent .oucontent-word-count {
+    display: none;
+}
+
+.oucontent-buttons-freeresponse-cell .oucontent-word-count {
+    margin-left: 5px;
+}
+
+.oucontent-table-wrapper .oucontent-freeresponse-savebutton {
+  margin: 0 10px;
+}
+
+.oucontent-freeresponse .oucontent-freeresponse-field,
+.oucontent-cellfreeresponse .oucontent-cellfreeresponse-field,
+.oucontent-cellfreeresponse .oucontent-freeresponse-field,
+.oucontent-freeresponse textarea,
+.oucontent-cellfreeresponse textarea {
+  width:95%;
+}
+
+#mystuffreferencesform {
+    display:inline;
+    margin:5px;
+    margin-top:0px;
+    margin-bottom:5px;
+    margin-right:15px;
+    padding-right:5px;
+    vertical-align:top;
+}
+
+div.oucontent-refexporticon {
+    vertical-align:bottom;
+    display:inline;
+    margin-left:5px;
+    margin-right:10px;
+    display:inline;
+}
+
+div.oucontent-referenceitem{
+    margin-top:5px;
+    padding-top:5px;
+    text-align:left;
+    text-indent:0;
+}
+
+div.oucontent-referenceitem form,
+div.oucontent-referenceitem div {
+display:inline;
+text-align:left;
+}
+
+div.oucontent-referenceitem form,
+div.oucontent-referenceitem img {
+    padding-top:5px;
+    padding-left:3px;
+}
+
+div.oucontent-printable div.oucontent-reference img,
+div.oucontent-printable .refimage1,
+div.oucontent-printable .oucontent-refexporticon {
+    display:none;
+}
+
+div.oucontent-reference #refexportlink {
+    display:inline;
+}
+
+div.oucontent-reference #refkeydiv {
+    float:right;
+    display:inline-block;
+    font-size: 0.8em;
+    vertical-align:top;
+    display:inline-block;
+    margin-top:0px;
+    padding-top:0px;
+    clear:none;
+}
+.oucontent-printable div.oucontent-reference #refkeydiv,
+.oucontent-printable div.oucontent-reference form,
+.oucontent-printable div.oucontent-reference #refexportlink {
+    display:none;
+}
+
+.path-mod-oucontent span.oucontent-size {
+    color:#5A595A;
+}
+
+/* Module:oucontent from outheme.css */
+.path-mod-oucontent .block_adminblock {
+    display:none;
+}
+
+.path-mod-oucontent .sideblock ul a {
+    text-decoration:none;
+    color:black;
+}
+.path-mod-oucontent .sideblock ul a:hover {
+    text-decoration:underline;
+}
+.path-mod-oucontent .sideblock.oucontent-contents {
+    background-color:#F5F5F5;
+    margin-bottom:0;
+    padding-bottom:10px;
+}
+.path-mod-oucontent .sideblock.oucontent-contents .header {
+    background-image:url([[pix:mod_oucontent|sideblock_bg_righthand]]);
+    background-color:#ebebeb;
+}
+.path-mod-oucontent .sideblock.oucontent-nextactivity .header {
+    background-image:url([[pix:mod_oucontent|sideblock_bg_lefthand_nextactivity]]);
+    background-color:#efeff7;
+}
+.path-mod-oucontent .sideblock.oucontent-contents .oucontent-h2 {
+    font-weight:normal;
+    color:#333333;
+}
+.ie6.path-mod-oucontent #middle-column {
+    margin-left:208px;
+}
+.ie6.path-mod-oucontent.oucontent-transcript #middle-column {
+    margin-left:0;
+}
+
+.path-mod-oucontent div.oucontent-startpagebox {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.path-mod-oucontent .oucontent-autobookmark {
+    padding-top: 10px;
+    border-top: 1px dotted #ccc;
+    margin-top: 10px;
+}
+.path-mod-oucontent .oucontent-autobookmark:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+}
+
+.path-mod-oucontent .oucontent-skiptodownloads a {
+    text-decoration: none;
+    border-bottom: 1px dotted #1F536B;
+}
+
+.path-mod-oucontent .oucontent-skiptodownloads a span {
+    vertical-align: 2px;
+}
+
+.path-mod-oucontent .oucontent-matching-option p {
+    margin: 0;
+}
+
+.path-mod-oucontent .oucontent-matching-match p {
+    margin: 0;
+}
+
+.path-mod-oucontent .oucontent-matching-match {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.path-mod-oucontent .oucontent-matching-option {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    background-color: #c4daf0;
+    padding: 5px 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    cursor: move;
+    z-index: 0;
+}
+.path-mod-oucontent .oucontent-matching-option-bgoriginal {
+    background-color: #c4daf0;
+}
+
+.path-mod-oucontent .oucontent-matching-option-bgondrop {
+    background-color: #7cc7e0;
+}
+
+.path-mod-oucontent .oucontent-matching-slot {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border: solid #b8dbff 1px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+
+.path-mod-oucontent .oucontent-matching-slot-bgoriginal {
+    background-color: #ffffff;
+}
+
+.path-mod-oucontent .oucontent-matching-slot-bgondrop {
+    background-color: #7cc7e0;
+}
+
+.path-mod-oucontent .oucontent-interactionbuttons input[type=button]{
+    margin-bottom: 6px;
+}
+
+.path-mod-oucontent .oucontent-matching-slot.yui3-dd-drop-over {
+    background-color: #00b0ad;
+}
+
+.path-mod-oucontent .oucontent-matching-focus {
+    border: 3px solid #dbedff;
+}
+
+.path-mod-oucontent .oucontent-matching-blur {
+    border: 1px solid #dbedff;
+}
+
+.path-mod-oucontent .oucontent-interaction-print p.oucontent-intro {
+    margin-top:1em;
+}
+.path-mod-oucontent .oucontent-interaction-print .oucontent-matching-lr {
+    float:left;
+    width:49.9%;
+}
+.ie7.path-mod-oucontent .oucontent-interaction-print .oucontent-matching-lr,
+.ie6.path-mod-oucontent .oucontent-interaction-print .oucontent-matching-lr {
+    float:none;
+    width:100%;
+}
+.path-mod-oucontent .oucontent-interaction-print ol {
+    margin-top:0;
+    margin-right:5px;
+}
+
+.path-mod-oucontent #middle-column ul.oucontent-numbered {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.path-mod-oucontent .oucontent-matching-matches li,
+.path-mod-oucontent ul.oucontent-numbered > li {
+    list-style-type: none;
+    position: relative;
+}
+
+.path-mod-oucontent li.oucontent-markerdirect,
+.path-mod-oucontent p.oucontent-markerpara {
+    text-indent: -54px;
+}
+.path-mod-oucontent li.oucontent-markerdirect > *,
+.path-mod-oucontent p.oucontent-markerpara > * {
+    text-indent: 0;
+}
+.path-mod-oucontent li.oucontent-markerdirect > span.oucontent-listmarker,
+.path-mod-oucontent li.oucontent-markerinside > p > span.oucontent-listmarker {
+    display: inline-block;
+    width: 46px;
+    padding-right: 8px;
+    text-align: right;
+}
+/* The default space between number and item is different in Firefox */
+.gecko.path-mod-oucontent li.oucontent-markerdirect > span.oucontent-listmarker,
+.gecko.path-mod-oucontent li.oucontent-markerinside > p > span.oucontent-listmarker {
+    width: 50px;
+    padding-right: 4px;
+}
+/* And in IE */
+.ie.path-mod-oucontent li.oucontent-markerdirect > span.oucontent-listmarker,
+.ie.path-mod-oucontent li.oucontent-markerinside > p > span.oucontent-listmarker {
+    width: 47px;
+    padding-right: 7px;
+}
+
+
+.path-mod-oucontent li.oucontent-markeroutside > span.oucontent-listmarker {
+    position: absolute;
+    left: -10.35em;
+    width: 10.1em;
+    text-align: right;
+}
+
+.path-mod-oucontent #middle-column ul.oucontent-matching-answers {
+    display:inline;
+    margin:0;
+}
+.path-mod-oucontent #middle-column ul.oucontent-matching-answers li {
+    list-style-type:none;
+    display:inline;
+    margin:0 1em 0 0;
+    padding-left:0;
+}
+
+.ie6.oucontent-contents ul ul {
+    padding-left:1em;
+}
+.ie6.oucontent-contents ul ul ul {
+    padding-left:2em;
+}
+
+.path-mod-oucontent .oucontent-h4,
+.path-mod-oucontent .oucontent-h5 {
+    color:#333333;
+    font-size:1em;
+}
+
+.path-mod-oucontent #middle-column .oucontent-table li,
+.path-mod-oucontent #middle-column .oucontent-table ul {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.oucontent-saq-timing {
+    font-size: 0.8em;
+    padding:1px 0 0;
+}
+
+
+.path-mod-oucontent .oucontent-part-head {
+    padding:0;
+    margin:10px 0 0;
+}
+.path-mod-oucontent .oucontent-printable .oucontent-saq-question {
+      padding:0;
+}
+
+
+.oucontent-tabledescription {
+    padding:5px 10px;
+    margin:0;
+    text-align:right;
+}
+.oucontent-s-narrow .oucontent-tabledescription {
+    text-align:left;
+    padding-left:0;
+}
+.path-mod-oucontent .oucontent-s-type2 table,
+.path-mod-oucontent .oucontent-s-normal table {
+    /* Note: Using this rather than 100% avoids problems in Chrome. */
+    width: 99.99999%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.path-mod-oucontent .oucontent-s-normal .oucontent-source-reference {
+    padding-left:10px;
+}
+.path-mod-oucontent .oucontent-s-landscape table {
+    width:780px;
+    border:none;
+}
+
+.path-mod-oucontent .oucontent-printable .oucontent-table-thumbnail .oucontent-s-landscape table {
+    width:600px;
+    font-size:75%;
+}
+
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-s-landscape,
+.path-mod-oucontent .oucontent-printable .oucontent-table-thumbnail .oucontent-table-printhide {
+    display:none;
+}
+
+.path-mod-oucontent .oucontent-printable  .oucontent-table-thumbnail .oucontent-s-landscape {
+    display:block;
+    margin-right:-170px;
+}
+
+.path-mod-oucontent td,.path-mod-oucontent th {
+    padding:2px 10px;
+    text-align:left;
+    border:none;
+}
+.path-mod-oucontent .oucontent-table th,
+.path-mod-oucontent .oucontent-table td {
+    border-top:1px solid #999999;
+    border-bottom:1px solid #999999;
+    padding:5px 5px 5px 5px;
+    vertical-align:top;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-accounts td {
+    white-space: nowrap;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-norules th,
+.path-mod-oucontent .oucontent-table.oucontent-s-norules td {
+    border-top: none;
+    border-bottom: none;
+}
+.path-mod-oucontent div.editor_atto_content td,
+.path-mod-oucontent div.editor_atto_content th,
+.path-mod-oucontent div.editor_atto_content caption {
+    border: 1px dashed #BBB;
+    position: relative;
+    min-width: 30px;
+    height: 13px;
+}
+.path-mod-oucontent div.editor_atto_content caption {
+    height: auto;
+}
+
+/*
+// Horrific IE7 bug. See oucontentIE7BotchedTables() which basically
+// undoes this style in a complex manner that doesn't cause tables to drop
+// below floats for no reason.
+*/
+.ie7.path-mod-oucontent .oucontent-table {
+    overflow-x:hidden;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-normal th,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal td {
+    border:none;
+    padding-left:10px;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderleft,
+.path-mod-oucontent .oucontent-table td.oucontent-tablecell-borderleft {
+    border-left: 1px solid #999999;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderright,
+.path-mod-oucontent .oucontent-table td.oucontent-tablecell-borderright {
+    border-right: 1px solid #999999;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-bordertop,
+.path-mod-oucontent .oucontent-table td.oucontent-tablecell-bordertop {
+    border-top: 1px solid #999999;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderbottom,
+.path-mod-oucontent .oucontent-table td.oucontent-tablecell-borderbottom {
+    border-bottom: 1px solid #999999;
+}
+.oucontent-tablecell-highlight {
+    background-color: #FFFAC2;
+}
+.oucontent-table-source {  /* SAVLE1 legacy */
+    float:right;
+    margin-top:2px;
+    font-size: 0.8em;
+}
+.oucontent-table-footnote {
+    margin-top:2px;
+    font-size: 0.8em;
+    padding:5px 5px 5px 0px;
+}
+.oucontent-s-normal .oucontent-table-footnote {
+    padding-left:10px;
+}
+
+.path-mod-oucontent .oucontent-saq-toggle-link{
+    background-color:#ffffff;
+    border:1px solid #cccccc;
+    position:relative;
+    vertical-align:top;
+    padding:4px;
+    margin:10px 10px 10px 10px;
+    text-decoration:none;
+}
+.path-mod-oucontent .oucontent-saq-toggle {
+    padding-top:0.5em;
+}
+.path-mod-oucontent .oucontent-saq-answer,
+.path-mod-oucontent .oucontent-saq-interactiveanswer,
+.path-mod-oucontent .oucontent-saq-discussion,
+.path-mod-oucontent .oucontent-saq-interactivediscussion {
+    padding:5px 0px 2px;
+    border-top:1px dotted #999999;
+    margin-top:10px;
+}
+.path-mod-oucontent .oucontent-printable .oucontent-saq-interactiveanswer,
+.path-mod-oucontent .oucontent-printable .oucontent-saq-discussion,
+.path-mod-oucontent .oucontent-printable .oucontent-saq-interactivediscussion {
+    border-top:1px dotted #AAA;
+    padding:0;
+}
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-interactiveanswer,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-discussion,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-interactivediscussion,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-answer {
+    border-bottom:1px dotted #999999;
+}
+.path-mod-oucontent .oucontent-part-last .oucontent-saq-interactiveanswer,
+.path-mod-oucontent .oucontent-part-last .oucontent-saq-discussion,
+.path-mod-oucontent .oucontent-part-last .oucontent-saq-interactivediscussion,
+.path-mod-oucontent .oucontent-part-last .oucontent-saq-answer {
+    border-bottom:none;
+}
+
+.path-mod-oucontent .oucontent-saq-answer .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-interactiveanswer .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-discussion .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-interactivediscussion .oucontent-h4,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-h4 {
+    color:#003366;
+}
+
+.oucontent-prev strong {
+    font-weight:bold;
+}
+
+a.oucontent-glossaryterm,
+a.oucontent-glossaryterm:link,
+a.oucontent-glossaryterm:visited {
+    border-bottom:1px dotted #003366;
+    text-decoration:none;
+    cursor:help;
+}
+
+.oucontent-viewonlineactivity a {
+    background-image:url([[pix:mod_oucontent|breadcrumb]]);
+    background-position:right 2px;
+    background-repeat:no-repeat;
+    padding-right:12px;
+}
+
+.path-mod-oucontent .oucontent-outer-box .oucontent-h3 {
+    padding:5px 10px;
+    margin:0;
+}
+
+.oucontent-box-byline {
+    font-style:italic;
+    padding:0 10px;
+}
+.path-mod-oucontent .oucontent-inner-box .oucontent-h4 {
+    margin:0;
+    padding:5px 0 0;
+    font-size:1em;
+}
+.path-mod-oucontent .oucontent-inner-box .oucontent-h5 {
+    font-size: 0.857em;
+}
+.path-mod-oucontent .oucontent-s-siderule .oucontent-inner-box,
+.path-mod-oucontent .oucontent-s-siderule .oucontent-inner-box .oucontent-h4 {
+    padding-top:0;
+}
+.path-mod-oucontent .oucontent-inner-box {
+    padding:1px 10px 5px;
+    margin:0;
+}
+.path-mod-oucontent .oucontent-s-siderule,
+.path-mod-oucontent .oucontent-s-heavybox1,
+.path-mod-oucontent .oucontent-s-heavybox2,
+.path-mod-oucontent .oucontent-s-lightbox1,
+.path-mod-oucontent .oucontent-s-hollowbox,
+.path-mod-oucontent .oucontent-s-hollowbox2,
+.path-mod-oucontent .oucontent-s-gradient,
+.path-mod-oucontent .oucontent-s-indent {
+    margin:15px 0;
+    padding:0;
+}
+
+.path-mod-oucontent .oucontent-s-siderule {
+    border-left:8px solid #c1e0ff;
+    /* Theme color for border-left-color */
+}
+.path-mod-oucontent .oucontent-s-siderule .oucontent-h3 {
+    padding-top:0;
+}
+.path-mod-oucontent .oucontent-s-siderule .oucontent-inner-box {
+    margin-top:0;
+    padding-bottom:0;
+}
+
+.path-mod-oucontent .oucontent-s-gradient {
+    background-image: url([[pix:mod_oucontent|oucontent-s-gradient]]);
+    background-position:top left;
+    background-repeat:repeat-x;
+    border:1px solid #cccccc;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -khtml-border-radius:5px;
+}
+.path-mod-oucontent .oucontent-s-gradient .oucontent-h3 {
+    padding-bottom:0;
+}
+.path-mod-oucontent .oucontent-s-heavybox1 .oucontent-h3 {
+    background-color:#E5F2FF;
+    background-image:url([[pix:mod_oucontent|oucontent-s-heavybox1]]);
+    background-position:top left;
+    background-repeat:repeat-x;
+    border:1px solid #cccccc;
+    border-bottom:none;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox1 .oucontent-inner-box {
+    background-color:#dcedff;
+    border:1px solid #cccccc;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox2 .oucontent-h3 {
+    background-color:#fefefd;
+    background-image:url([[pix:mod_oucontent|oucontent-s-heavybox2]]);
+    background-position:top left;
+    background-repeat:repeat-x;
+    border:1px solid #cccccc;
+    border-bottom:none;
+}
+.path-mod-oucontent .oucontent-s-heavybox2 .oucontent-inner-box {
+    background-color:#ecedd8;
+    border:1px solid #cccccc;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.path-mod-oucontent .oucontent-s-heavybox2.oucontent-s-noheading .oucontent-inner-box {
+    border-top:1px solid #cccccc;
+}
+.path-mod-oucontent .oucontent-s-hollowbox,
+.path-mod-oucontent .oucontent-s-box .oucontent-reading.oucontent-s-box .oucontent-outer-box {
+    border:1px solid #cccccc;
+    background-color:#ffffff;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.path-mod-oucontent .oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-s-hollowbox2 .oucontent-h3 {
+    margin-left:10px;
+    margin-right:10px;
+    padding-left:0;
+    padding-right:0;
+}
+.path-mod-oucontent .oucontent-s-hollowbox .oucontent-h3 {
+    border-bottom:2px solid #296E8F;
+    color:#296E8F;
+}
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-s-box .oucontent-reading.oucontent-s-hollowbox .oucontent-h3 {
+    border-bottom:2px solid #98ADC2;
+}
+.path-mod-oucontent .oucontent-s-hollowbox2 {
+    border:2px solid #cccccc;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.path-mod-oucontent .oucontent-s-hollowbox2 .oucontent-h3 {
+    border-bottom:2px solid #cccccc;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-s-hollowbox2 .oucontent-h3 {
+    margin-left:0px;
+}
+.path-mod-oucontent .oucontent-reading .oucontent-h3,
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h4,
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h5 {
+    color:#3F4F63;
+    font-family:Verdana;
+}
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h4 {
+    font-size:0.823em;
+}
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h5 {
+    font-size: 0.8em;
+}
+
+.path-mod-oucontent #middle-column .oucontent-itq ul {
+    margin-left:0;
+}
+.path-mod-oucontent #middle-column ul li.oucontent-saq-question {
+     padding-left:20px;
+     padding-bottom:0px;
+     background-image:url([[pix:mod_oucontent|bullet_itq]]);
+     background-repeat:no-repeat;
+     background-position:0px 4px;
+     margin-left:0;
+     list-style-type:none;
+}
+
+.path-mod-oucontent #middle-column ul li.oucontent-saq-answer {
+     padding-left:20px;
+     padding-top:2px;
+     padding-bottom:0;
+     background-image:url([[pix:mod_oucontent|bullet_ita]]);
+     background-repeat:no-repeat;
+     background-position:0px 12px;
+     margin-left:0;
+     list-style-type:none;
+     border:none;
+}
+
+.path-mod-oucontent #middle-column .oucontent-saqtype-part li.oucontent-saq-answer {
+    border-bottom:1px dotted #999999;
+    padding-bottom:10px;
+}
+.path-mod-oucontent #middle-column .oucontent-part-last li.oucontent-saq-answer {
+     border:none;
+     padding-bottom:0;
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-h3,
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-h3 {
+    color:#000000;
+    padding-left:0;
+}
+
+.path-mod-oucontent .oucontent-s-normal {
+    background-color:#dcedff;
+    border:1px solid #cccccc;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -khtml-border-radius:5px;
+    padding-bottom:10px;
+}
+.path-mod-oucontent .oucontent-s-normal .oucontent-h3 {
+    padding-left:10px;
+}
+.oucontent-quote,
+.oucontent-verse {
+    margin:10px 10px 10px 25px;
+}
+.path-mod-oucontent .oucontent-outer-box .oucontent-quote .oucontent-h3,
+.path-mod-oucontent .oucontent-outer-box .oucontent-verse .oucontent-h3,
+.path-mod-oucontent .oucontent-outer-box .oucontent-dialogue .oucontent-h3 {
+    padding-left:0;
+}
+
+.oucontent-quote blockquote {
+    margin:0;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box .oucontent-h3 {
+    border:none;
+    background:none;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box,
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box .oucontent-outer-box,
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box .oucontent-inner-box {
+    border:none;
+    background:none;
+}
+
+.path-mod-oucontent .oucontent-printable .oucontent-s-box,
+.path-mod-oucontent .oucontent-printable .oucontent-s-box .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-s-box .oucontent-inner-box {
+    background:none;
+    border:none;
+}
+.path-mod-oucontent .oucontent-nextactivity a {
+    display:block;
+    margin-left:10px;
+    text-indent:-10px;
+    color:#333333;
+    font-size: 0.8em;
+    text-decoration:none;
+}
+
+.path-mod-oucontent .oucontent-nextactivity .oucontent_nexttext {
+    font-weight:normal;
+}
+
+.path-mod-oucontent .oucontent-nextactivity a:hover .oucontent_nextactivityname {
+    text-decoration:underline;
+}
+.path-mod-oucontent .oucontent-nextactivity a img {
+    border:none;
+    position:relative;
+    top:2px;
+}
+
+
+sup.oucontent-footnote {
+    margin-left:1px;
+}
+
+.path-mod-oucontent ul.oucontent-footnotes {
+    margin:3em 0 2.5em 0;
+    padding:2px 0 0 0;
+    border-top:1px dotted #0094af;
+    font-size: 0.8em;
+    display:block;
+}
+.path-mod-oucontent li.oucontent-footnote {
+    margin-top:4px;
+    margin-bottom:0;
+    margin-left:22px;
+    padding:0;
+    display:block;
+    position:relative;
+    list-style-type:none;
+}
+span.oucontent-footnote-num {
+    position:absolute;
+    left:-22px;
+    top:0;
+}
+
+.path-mod-oucontent .oucontent-printable#middle-column ul.oucontent-footnotes {
+    margin:0;
+    padding:0;
+    border-top:none;
+}
+.oucontent-allfootnotes {
+    margin-top:10em;
+    border-top:1px dotted #aaa;
+    padding-top:1em;
+    margin-bottom:10em;
+}
+
+.oucontent-listitemspacer {
+    margin-bottom:-2em;
+}
+
+/* Uses full 512px unless it is within a box-type activity */
+.oucontent-multicol {
+    margin:10px -170px 10px 0;
+}
+.oucontent-inner-box .oucontent-multicol {
+    margin-right: 0;
+}
+
+.path-mod-oucontent .oucontent-multicol td,
+.path-mod-oucontent .oucontent-multicol th {
+    border-left:10px solid transparent;
+    padding:2px 0;
+    vertical-align:top;
+    overflow:hidden;
+}
+.path-mod-oucontent .oucontent-multicol td.oucontent-firstcol,
+.path-mod-oucontent .oucontent-multicol th.oucontent-firstcol {
+    border-left:none;
+}
+
+.oucontent-multicol-2 .oucontent-narrowcol {
+    width:140px;
+}
+.oucontent-multicol-2 .oucontent-widecol {
+    width:362px;
+}
+.oucontent-multicol-2 .oucontent-equalcol {
+    width:251px;
+}
+
+.oucontent-multicol-3 .oucontent-narrowcol {
+    width:110px;
+}
+.oucontent-multicol-3 .oucontent-widecol {
+    width:191px;
+}
+.oucontent-multicol-3 .oucontent-equalcol {
+    width:164px;
+}
+
+.oucontent-multicol-4 .oucontent-narrowcol {
+    width:71px;
+}
+.oucontent-multicol-4 .oucontent-widecol {
+    width:137px;
+}
+.oucontent-multicol-4 .oucontent-equalcol {
+    width:120px;
+}
+.oucontent-multicol-4 .oucontent-equalcol.oucontent-firstcol {
+    width:122px;
+}
+
+.oucontent-s-box .oucontent-multicol-2 .oucontent-narrowcol {
+    width:130px;
+}
+.oucontent-s-box .oucontent-multicol-2 .oucontent-widecol {
+    width:352px;
+}
+.oucontent-s-box .oucontent-multicol-2 .oucontent-equalcol {
+    width:241px;
+}
+
+.oucontent-s-box .oucontent-multicol-3 .oucontent-narrowcol {
+    width:100px;
+}
+.oucontent-s-box .oucontent-multicol-3 .oucontent-widecol {
+    width:186px;
+}
+.oucontent-s-box .oucontent-multicol-3 .oucontent-equalcol {
+    width:157px;
+}
+.oucontent-s-box .oucontent-multicol-3 .oucontent-equalcol.oucontent-firstcol {
+    width:158px;
+}
+
+.oucontent-s-box .oucontent-multicol-4 .oucontent-narrowcol {
+    width:60px;
+}
+.oucontent-s-box .oucontent-multicol-4 .oucontent-widecol {
+    width:134px;
+}
+.oucontent-s-box .oucontent-multicol-4 .oucontent-equalcol {
+    width:115px;
+}
+.oucontent-s-box .oucontent-multicol-4 .oucontent-equalcol.oucontent-firstcol {
+    width:117px;
+}
+
+
+.path-mod-oucontent.oucontent-show-descriptions div.oucontent-longdesconly a { position:static; }
+.path-mod-oucontent.oucontent-show-descriptions div.oucontent-longdescsecond { display:block; }
+
+/*
+ * Code for debugging language support. Makes language markers visually obvious
+ * (we should really provide a way to do this for any language!)
+ */
+span[lang='xx'],
+input[lang='xx'],
+textarea[lang='xx'] {
+    background:#cfc;
+}
+
+/*
+ * Styles that only apply when JS is enabled.
+ */
+.jsenabled .oucontent-saq-discussion,
+.jsenabled .oucontent-saq-answer,
+.jsenabled .oucontent-saq-interactiveanswer,
+.jsenabled .oucontent-saq-interactivediscussion,
+.jsenabled .oucontent-saq-printable,
+.jsenabled .oucontent-interaction-print {
+    display:none;
+}
+.ie8 .oucontent-interaction-print {
+    display:block;
+}
+.jsenabled .oucontent-printable .oucontent-saq-discussion,
+.jsenabled .oucontent-printable .oucontent-saq-answer,
+.jsenabled .oucontent-printable .oucontent-saq-interactiveanswer,
+.jsenabled .oucontent-printable .oucontent-saq-interactivediscussion,
+.jsenabled .oucontent-printable .oucontent-saq-printable,
+.jsenabled .oucontent-printable .oucontent-interaction-print {
+    display:none;
+}
+.jsenabled .oucontent-printable .oucontent-voicerecorder-disable ~ .oucontent-interaction-print {
+    display: block;
+}
+.jsenabled .oucontent-saqwith-voicerecorder .oucontent-saq-interactiveanswer,
+.jsenabled .oucontent-saqwith-voicerecorder .oucontent-saq-interactivediscussion {
+    display:block;
+}
+
+.jsenabled .oucontent-source-reference {
+    position:relative;
+}
+
+.path-mod-oucontent.jsenabled .oucontent-rightsinfo {
+    display:none;
+    position:absolute;
+    color:black;
+    right:0;
+    width:200px;
+    margin-top:2px;
+    border-bottom:1px solid rgb(221,221,221);
+    border-top:1px solid rgb(221,221,221);
+    background:rgb(234,234,213);
+    padding:2px 4px;
+    z-index: 1;
+}
+.ie.path-mod-oucontent.jsenabled .oucontent-rightsinfo {
+    margin-top:1.5em;
+}
+.path-mod-oucontent .oucontent-alternatives h3 {
+    margin:0;
+}
+.path-mod-oucontent .oucontent-altcontent ul {
+    margin-top:5px;
+}
+.path-mod-oucontent.jsenabled .oucontent-alternatives h3 {
+    font-weight:normal;
+}
+.path-mod-oucontent.jsenabled .oucontent-altcontent {
+    display:none;
+}
+.path-mod-oucontent a[id]:empty::before {
+    display: none;
+}
+.path-course-view .oucontent-preferred-format {
+    padding-left: 5px;
+}
+
+.path-course-view .block_course_resources .oucontent-preferred-format {
+    top: 0px;
+}
+
+.ie6 .block_course_resources .oucontent-preferred-format {
+    right:10px;
+}
+
+.path-mod-subpage .oucontent-preferred-format {
+    text-indent: 0;
+    margin-left: 5px;
+}
+
+.modtype_oucontent .mod-indent {
+    margin-right:20px;
+}
+
+.path-course-view .block_course_resources .modtype_oucontent .mod-indent {
+    margin-right:5px;
+}
+
+ul.oucontent-preview-assets {
+    margin: 0 0 5px 0;
+    font-size: 0.8em;
+}
+ul.oucontent-preview-assets li {
+    list-style-type: none;
+    display: block;
+    margin: 5px 0 0;
+    padding: 0;
+    color: #808080;
+}
+ul.oucontent-preview-assets li span.name,
+ul.oucontent-preview-assets li.totaltime {
+    color: #1a1a1a;
+}
+ul.oucontent-preview-assets li span.data.huge {
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+body.oucontent-starthidden.jsenabled {
+    display: none;
+}
+
+#page-mod-oucontent-preview .continuebutton {
+    display: none;
+}
+
+.path-mod-oucontent .refboxes {
+    display: none;
+}
+
+.path-mod-oucontent.jsenabled .refboxes {
+    display: inline;
+}
+
+#page-mod-oucontent-api-viewdata td {
+}
+#page-mod-oucontent-api-viewdata td pre {
+    margin: 2px 0 0 0;
+    whitespace: pre-wrap;
+}
+#page-mod-oucontent-api-viewdata .oucontent-activitydata td {
+    vertical-align: top;
+}
+/* Tidy up the user link */
+#page-mod-oucontent-api-viewdata .c0 a img {
+    vertical-align: middle;
+}
+#page-mod-oucontent-api-viewdata .c0 a {
+    text-decoration: none;
+}
+#page-mod-oucontent-api-viewdata .c0 a span {
+    text-decoration: underline;
+}
+
+.path-mod-oucontent .oucontent-validationdisabled,
+.path-mod-oucontent .oucontent-preflightlink {
+    font-size: 0.8em;
+}
+.path-mod-oucontent .oucontent-savedinfo ul {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.path-mod-oucontent .oucontent-savedinfo li {
+    list-style-type: none;
+    display: block;
+}
+
+#page-mod-oucontent-owned ul.oucontent-owned,
+#page-mod-oucontent-manageowned ul.oucontent-owned {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1em;
+}
+#page-mod-oucontent-owned ul.oucontent-owned li,
+#page-mod-oucontent-manageowned ul.oucontent-owned li {
+    padding: 0;
+    margin: 0 0 0.5em;
+}
+#page-mod-oucontent-owned .region-content h2 {
+    margin-top: 0;
+}
+#page-mod-oucontent-manageowned h3 {
+    margin: 1em 0 -1em;
+}
+#page-mod-oucontent-manageowned .oucontent-errorplace {
+    margin-bottom: -1.5em;
+}
+
+.oucontent-secondvoice {
+    background-image: url([[pix:mod_oucontent|secondvoiceleft]]);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    color: #4040A0;
+}
+.oucontent-secondvoice > span {
+    background-image: url([[pix:mod_oucontent|secondvoiceright]]);
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-right: 20px;
+    margin-right: 5px;
+}
+
+.oucontentJavaAutofocusBefore,
+.oucontentJavaAutofocusAfter {
+    outline: none;
+}
+
+.oucontent-analytic .oucontent-item {
+    text-align: right;
+}
+.oucontent-analytic dl {
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+}
+.oucontent-analytic dd {
+    margin: 0 0 5px;
+    padding: 0;
+    font-weight: bold;
+}
+.oucontent-analytic dt {
+    margin: 0;
+    padding: 0;
+}
+.oucontent-analytic .oucontent-subhead {
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    color: #555;
+}
+.oucontent-nosvgsupport {
+    font-style: italic;
+    max-width: 650px;
+    padding: 5px 0 10px;
+}
+
+#page-mod-oucontent-assemblypreview table a {
+    text-decoration: none;
+}
+#page-mod-oucontent-assemblypreview table a span {
+    text-decoration: underline;
+}
+#page-mod-oucontent-assemblypreview .oucontent-haswarnings {
+    color: red;
+    font-weight: bold;
+}
+#page-mod-oucontent-assemblypreview .oucontent-courselist {
+    width: 200px;
+    margin-right: 20px;
+    background: #eee;
+    padding: 5px;
+    height: 300px;
+    overflow-y: auto;
+    float: left;
+}
+#page-mod-oucontent-assemblypreview .oucontent-courselist.oucontent-matchingwebsites {
+    width: 407px;
+}
+#page-mod-oucontent-assemblypreview .oucontent-courselist h3 {
+    margin: 0 0 5px;
+}
+#page-mod-oucontent-assemblypreview .oucontent-courselist ul,
+#page-mod-oucontent-assemblypreview .oucontent-courselist li {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#page-mod-oucontent-assemblysave .oucontent-willdelete,
+#page-mod-oucontent-assemblysave .oucontent-overwrite,
+#page-mod-oucontent-assemblysave .oucontent-usedid {
+    color: red;
+}
+#page-mod-oucontent-assemblysave .oucontent-button {
+    margin-top: 5px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox {
+    padding: 10px;
+    margin-top: 20px;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-help,
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions {
+    font-size: 0.8em;
+    clear: left;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions a {
+    margin-right: 1em;
+}
+.path-mod-oucontent .oucontent-downloadsbox h2 {
+    font-size: 1em;
+    margin: 0;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files > p {
+    font-style: italic;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files .smallicon {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files a:hover span {
+    text-decoration: underline;
+}
+.path-mod-oucontent .oucontent-files a img,
+#page-mod-oucontent-editdownloads .oucontent-download-type img,
+#page-mod-oucontent-coursedownloadzip .oucontent-downloadziplink img {
+    position: relative;
+    top: 3px;
+}
+.path-mod-oucontent .oucontent-downloadsbox ul,
+.path-mod-oucontent .oucontent-downloadsbox li,
+.path-mod-oucontent #middle-column .oucontent-downloadsbox ul,
+.path-mod-oucontent #middle-column .oucontent-downloadsbox li {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.path-mod-oucontent .oucontent-downloadsbox ul,
+.path-mod-oucontent #middle-column .oucontent-downloadsbox ul {
+    margin: 10px 0;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-second,
+.path-mod-oucontent #middle-column .oucontent-downloadsbox .oucontent-second {
+    clear: left;
+    padding-top: 10px;
+    border-top: 1px dotted #ccc;
+}
+.path-mod-oucontent .oucontent-downloadsbox li,
+.path-mod-oucontent #middle-column .oucontent-downloadsbox li {
+    float: left;
+    width: 45%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-typeandsize {
+    display: block;
+    margin-left: 20px;
+    font-size: 0.8em;
+}
+#page-mod-oucontent-editdownloads .oucontent-download-visible {
+    padding-top: 1px;
+}
+.oucontent-downloadziplink {
+    margin: 15px 0;
+}
+.oucontent-downloadziplink a span {
+    margin: 0 5px;
+}
+#page-mod-oucontent-coursedownloads .oucontent-intro p {
+    margin-bottom: 5px;
+}
+#page-mod-oucontent-coursedownloads .oucontent-intro ul {
+    margin-top: 0;
+    font-size: 0.8em;
+}
+#page-mod-oucontent-coursedownloads .generaltable {
+    margin-top: 15px;
+}
+#page-mod-oucontent-coursedownloads .generaltable a,
+#page-mod-oucontent-coursedownloads .generaltable .oucontent-download-title a span {
+    text-decoration: none;
+}
+#page-mod-oucontent-coursedownloads .generaltable .c2 a {
+    text-decoration: underline;
+}
+#page-mod-oucontent-coursedownloads .generaltable .oucontent-download-title a span {
+    color: #1a1a1a;
+}
+#page-mod-oucontent-coursedownloads .generaltable .oucontent-download-title a:hover span {
+    text-decoration: underline;
+}
+#page-mod-oucontent-coursedownloads .generaltable a span {
+    text-decoration: underline;
+}
+#page-mod-oucontent-coursedownloads .generaltable label {
+    margin-left: 5px;
+    display: inline;
+}
+#page-mod-oucontent-coursedownloads .generaltable tr.oucontent-download-separator {
+    border-top: 2px solid #ccc;
+}
+#page-mod-oucontent-coursedownloads .generaltable img.smallicon {
+    vertical-align: -3px;
+}
+#page-mod-oucontent-coursedownloads .generaltable .c2 a.oucontent-iconlink {
+    text-decoration: none;
+}
+#page-mod-oucontent-coursedownloads a.oucontent-iconlink span {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+#page-mod-oucontent-coursedownloads a.oucontent-iconlink:hover .oucontent-linktext {
+    text-decoration: underline;
+}
+#page-mod-oucontent-coursedownloads .oucontent-backlink {
+    margin-top: 15px;
+}
+
+/* Disable select when target section is defined. */
+.path-mod-oucontent .oucontent-saveoptions #menusection[readonly] {
+    pointer-events: none;
+}
+
+.oucontent-coursedownload-buttons input {
+    margin-right: 5px;
+}
+.oucontent-coursedownload-buttons input.oucontent-downloadzip {
+    margin-right: 15px;
+}
+.oucontent-coursedownload-select-buttons {
+    display: none;
+    float: left;
+    margin-right: 1em;
+}
+.oucontent-coursedownload-jsmessage {
+    margin-bottom: 10px;
+}
+.oucontent-assetfailure-reason {
+    color: #a35c5c;
+}
+
+.path-mod-oucontent .oucontent-free-response-display,
+.path-mod-oucontent .oucontent-interaction-unavailable {
+    margin: 10px 0;
+    border: 1px dotted #888;
+    background: #f8f8f8;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-inner,
+.path-mod-oucontent .oucontent-interaction-unavailable {
+    padding: 10px;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-notfound {
+    color: #444;
+    font-style: italic;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-linkback {
+      font-size: 0.8em;
+      padding: 0 10px 10px;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-linkback a {
+    text-decoration: none;
+    color: #444;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-linkback a:hover span {
+    text-decoration: underline;
+}
+.path-mod-oucontent .oucontent-free-response-display .oucontent-linkback a img {
+    vertical-align: middle;
+    padding-right: 0;
+}
+
+#page-mod-oucontent-exportfreeresponse .oucontent-infobox {
+    margin-left: 20px;
+    max-width: 620px;
+}
+#page-mod-oucontent-exportfreeresponse .mform .fitem .felement {
+    margin-left: 0;
+}
+
+.path-mod-oucontent .oucontent-error {
+    color: red;
+}
+
+.path-mod-oucontent .oucontent_html5vr {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.path-mod-oucontent .oucontent_html5vr input[type=button] {
+    font-size: 12px;
+}
+.path-mod-oucontent .oucontent_html5vr .oucontent_html5vr_holder {
+    top: 5px;
+    margin-left: 5px;
+    position: relative;
+    min-width: 60px;
+    text-align: center;
+    float: left;
+}
+.path-mod-oucontent .oucontent_html5vr .oucontent_html5vr_box {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+@font-face {
+    font-family: "OU Special Sans";
+    src: url('[[font:mod_oucontent|ouspecialsans.eot]]?') format('ie8'),
+            url('[[font:mod_oucontent|ouspecialsans.woff]]') format('woff'),
+            url('[[font:mod_oucontent|ouspecialsans.eot]]') format('embedded-opentype');
+}
+.oucontent-specialcharacters {
+    font-family: "OU Special Sans";
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+}
+
+.oucontent-voicerecorder .notifyproblem {
+    text-align: left;
+}
+
+/* These rules are to hide specific Atto editor options if needed. */
+form.oucontent-freeresponse .atto_emoticon_button,
+form.oucontent-freeresponse .atto_oumaths_button,
+form.oucontent-cellfreeresponse .atto_emoticon_button,
+form.oucontent-cellfreeresponse .atto_oumaths_button {
+    display: none;
+}
+
+/* Atto resizing fails in the free response fields (at least in Firefox), so disabled here. */
+.oucontent-freeresponse .editor_atto_content,
+.oucontent-cellfreeresponse .editor_atto_content {
+    resize: vertical;
+}
+
+.oucontent-proofheadingpara {
+    margin: 0.5em 0;
+}
+
+.path-mod-oucontent .proof .oucontent-proofheadingpara > .oucontent-h3,
+.path-mod-oucontent .proof .oucontent-proofheading > .oucontent-h3,
+.path-mod-oucontent .oucontent-example .proof .oucontent-proofheading > .oucontent-h3,
+.path-mod-oucontent .oucontent-reading .proof .oucontent-proofheading > .oucontent-h3 {
+    display: inline;
+    margin: 0 20px 0 0;
+    padding: 0;
+    color: #296e8f;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: "Arial", serif;
+    border: none;
+    background: none;
+}
+
+.oucontent-proofending {
+    display: inline;
+    margin: 0 0 0 10px;
+    color: #296e8f;
+}
+
+.path-mod-oucontent .proof div > span.oucontent-prooflastpara {
+    margin-right: 10px;
+}
+
+.path-mod-oucontent .proof div > span.oucontent-prooflastpara + .oucontent-proofending,
+.path-mod-oucontent .oucontent-itq-withtoggle .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 0;
+}
+
+.path-mod-oucontent .oucontent-noproofending {
+    display: none;
+}
+
+.path-mod-oucontent .oucontent-proofheading .oucontent-h3 {
+    color: #296e8f;
+    margin: 0;
+}
+
+.oucontent-errorlog {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.oucontent-errorlink {
+    margin: 15px 0px 15px 0px;
+}
+
+/* Editing controls */
+
+.oucontent-savedinfo .oucontent-edit {
+    margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+    .oucontent-oembed iframe {
+        max-width: 100%;
+    }
+}
+
+.oucontent-media.oucontent-responsive {
+    margin-right: -170px;
+}
+.oucontent-inner-box .oucontent-media.oucontent-responsive,
+table .oucontent-media.oucontent-responsive {
+    margin-right: 0;
+}
+.oucontent-media.oucontent-responsive iframe {
+    width: 100%;
+}
+
+/* Equation labels moved to separate line by equationlabels.js. */
+.oucontent-content .oucontent-eqlabel-moved {
+    margin-left: 25px;
+}
+.oucontent-content .oucontent-eqlabel-moved div.oucontent-inner {
+    position: relative;
+}
+
+#course-structure-uploaded .oucontent-renderer {
+    margin-top: 30px;
+    border: 1px solid #aaa;
+    padding: 2px 10px 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: #333;
+}
+
+.oucontent_html5vr_holder button.pause_button,
+.oucontent_html5vr_holder button.pause_button:focus {
+    background: url([[pix:mod_oucontent|pause]]);
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: none;
+    margin: 17px auto 0 auto;
+    z-index: 1;
+    position: relative;
+    border: 0;
+}
+
+.oucontent_html5vr_holder button.pause_button.play {
+    background: url([[pix:mod_oucontent|play]]);
+}
+
+.oucontent_html5vr_holder button.pause_button:focus {
+    background-color: #0A246A;
+}
+
+.oucontent_html5vr_overlay {
+    background-color: #EFEFEF;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+/* Apply for SVG Equation in Interactive Display */
+.path-mod-oucontent .MathJax_SVG_Display {
+    margin: 0;
+}
+
+#page-mod-oucontent-view .oucontent-content > h1 b {
+    font-weight: 800;
+    font-family: Arial Black, Arial, sans-serif;
+}
+
+/* Equation image has text should not change the font size because it will cause the equation image to break */
+.path-mod-oucontent .oucontent-h3 .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-title-0 .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-title-1 .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-title-2 .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-internalsection .oucontent-h3.oucontent-basic .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-title-3 .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent #middle-column p .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent #middle-column .oucontent-markerdirect .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-equation .oucontent-display-mathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-bulleted .oucontent-inlinemathml .filter_oumaths_equation text,
+.path-mod-oucontent .oucontent-tablemiddle  .oucontent-inlinemathml .filter_oumaths_equation text {
+    font-size: 0.85em;
+    font-weight: normal;
+}
+/* For only equation image with text */
+.path-mod-oucontent #middle-column p .oucontent-inlinemathml .filter_oumaths_equation svg > g > text {
+    font-size: 0.75em;
+}

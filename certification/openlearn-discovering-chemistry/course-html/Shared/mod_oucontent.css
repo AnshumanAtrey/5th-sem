@@ -1,0 +1,2570 @@
+/* Override mod_oucontent style */
+body.path-mod-oucontent.oucontent-hq-withvideo {
+    min-width:0;
+}
+
+/* Styling for contents menu - note this is shared by local_ouauthoring plugin */
+.block.oucontent-contents h5 {
+    position: absolute;
+    left: -10000px;
+    font-size: 1em;
+    font-weight: normal;
+}
+.block.oucontent-contents {
+    border-top: 0;
+    margin-left: 1px;
+}
+
+.block.oucontent-contents .content {
+    padding-top: 0;
+    margin-top: 0 !important;
+}
+.oucontent-contents .content li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.block.oucontent-contents .header {
+    padding: 0;
+    border: 0;
+}
+.oucontent-contents li.oucontent-tree-current {
+    font-weight: normal;
+}
+.oucontent-contents .content > ul {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 0;
+}
+
+.oucontent-contents .content .oucontent-tree-item {
+    display: block;
+    padding: 6px 15px 6px 15px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    color: #312b39;
+    border-bottom: 1px solid #e7eff7;
+}
+.oucontent-printablelink,
+.oucontent-alterformat {
+    border-top: 1px solid #ddd;
+}
+.oucontent-printablelink {
+    margin-top: 10px;
+    padding-top: 7px;
+}
+.block.oucontent-preflightlink {
+    margin-bottom: 25px !important;
+    margin-top: 18px !important;
+}
+.oucontent-contents .content .osep-hasexpandcollapse > .oucontent-tree-item {
+    padding-right: 34px;
+}
+.oucontent-contents .oucontent-tree-item > a {
+    text-decoration: none;
+    color: #312b39;
+}
+.oucontent-contents .content ul {
+    margin-top: 0;
+}
+
+.oucontent-contents .content > ul ul li > .oucontent-tree-item {
+    padding-left: 30px;
+}
+.oucontent-contents .content > ul ul ul li > .oucontent-tree-item {
+    padding-left: 45px;
+}
+.oucontent-contents .content a[href]:hover {
+    text-decoration: underline;
+}
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor,
+.oucontent-contents .content > ul > li.oucontent-tree-current {
+    margin-top: -1px;
+}
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor:first-child,
+.oucontent-contents .content > ul > li.oucontent-tree-current:first-child {
+    margin-top: 0;
+}
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor > .oucontent-tree-item,
+.oucontent-contents .content > ul > li.oucontent-tree-current > .oucontent-tree-item {
+    color: white;
+    background: #0b55a8;
+    border-bottom: none;
+    padding-top: 7px;
+}
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor > .oucontent-tree-item > a:focus {
+    outline: 1px dotted white;
+}
+
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor > .oucontent-tree-item a,
+.oucontent-contents .content > ul > li.oucontent-tree-current > .oucontent-tree-item a {
+    color: white;
+}
+.oucontent-contents .content > ul > li li.oucontent-tree-current > .oucontent-tree-item {
+    border-left: 5px solid #0B55A8;
+    background: #e7eff7;
+    color: #002158;
+    padding-left: 25px;
+    border-bottom: none;
+    margin-top: -1px;
+    padding-top: 7px;
+}
+.oucontent-contents .content > ul > li li li.oucontent-tree-current > .oucontent-tree-item {
+    padding-left: 40px;
+}
+.oucontent-contents ul ul {
+    margin-left: 0;
+}
+.oucontent-contents ul ul ul {
+    margin-left: 0;
+}
+
+.path-mod-oucontent .osep-expandcollapse {
+    position: absolute;
+    right: 16px;
+    top: 6px;
+}
+.path-mod-oucontent .osep-expandcollapse img {
+    width: 14px;
+    height: 14px;
+}
+.path-mod-oucontent .osep-expandcollapse a:focus {
+    outline: none;
+}
+.path-mod-oucontent .osep-expandcollapse a:focus img {
+    outline: 1px dotted black;
+    outline-offset: 2px;
+}
+.oucontent-contents .content > ul > li.oucontent-tree-ancestor .osep-expandcollapse a:focus img {
+    outline: 1px dotted white;
+    outline-offset: 2px;
+}
+
+.path-mod-oucontent #osep-pagewrapper a[id]:empty::before,
+.path-mod-oucontent .osep-collapse,
+.oucontent-tree-ancestor .osep-expand,
+.oucontent-tree-current .osep-expand,
+.oucontent-contents .content > ul > li > ul {
+    display: none;
+}
+.oucontent-tree-ancestor .osep-collapse,
+.oucontent-tree-current .osep-collapse {
+    display: inline;
+}
+
+.oucontent-contents .content > ul > .oucontent-tree-ancestor > ul,
+.oucontent-contents .content > ul > .oucontent-tree-current > ul {
+    display: block;
+}
+
+.path-mod-oucontent .osep-bottombuttons .icon {
+    margin-right: 0;
+}
+
+.path-mod-oucontent .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd {
+    padding-left: 14px;
+    padding-top: 8px;
+    box-sizing: content-box;
+}
+
+.path-mod-oucontent .moodle-dialogue-base .moodle-dialogue .moodle-dialogue-bd {
+    padding-top: 17px;
+    padding-left: 14px;
+}
+
+.path-mod-oucontent .bookmarks-navigate a {
+    margin-top: 3px;
+    display: block;
+}
+
+.path-mod-oucontent .bookmarks-navigate span.icon {
+    margin-right: -8px;
+}
+
+.path-mod-oucontent .bookmarks-navigate {
+    margin-bottom: 10px;
+}
+
+#osep-sidecol div.oucontent-startpagebox {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    /* Mobile view has larger text and padding inside contents items */
+    .oucontent-contents .content .oucontent-tree-item {
+        font-size: 1.28571em;
+    }
+    .oucontent-contents .content .oucontent-tree-item {
+        padding-top: 8px;
+        padding-bottom: 9px;
+    }
+    .oucontent-contents .content > ul > li.oucontent-tree-ancestor > .oucontent-tree-item,
+    .oucontent-contents .content > ul > li.oucontent-tree-current > .oucontent-tree-item {
+        padding-top: 8px;
+    }
+    .oucontent-contents .content > ul > li li.oucontent-tree-current > .oucontent-tree-item {
+        padding-top: 8px;
+    }
+
+    /* The contents heading displays */
+    .path-mod-oucontent .block.oucontent-contents .title {
+        position: static;
+    }
+
+    /* Styling for contents header in mobile view */
+    .block.oucontent-contents .header {
+        background: #002158;
+    }
+    .block.osep-hastitle.oucontent-contents .header .osep-showhide {
+        display: none;
+    }
+    .block.oucontent-contents .card-body h5.card-title {
+        color: white;
+        font-size: 1.28571em;
+        font-weight: bold;
+        padding: 8px 15px 10px;
+        position: static;
+        background-color: #002158;
+        border-right: #002158;
+    }
+
+    /* Unselected contents items are black */
+    .oucontent-contents .oucontent-tree-item > a,
+    .oucontent-contents .content .oucontent-tree-item {
+        color: black;
+    }
+
+    /* The current page is clickable */
+    .path-mod-oucontent .oucontent-tree-current > .oucontent-tree-item:hover > span {
+        text-decoration: underline;
+    }
+    .path-mod-oucontent .oucontent-tree-current > .oucontent-tree-item:hover {
+        cursor: pointer;
+    }
+
+    /* Expand/collapse icons are bigger */
+    .path-mod-oucontent .osep-expandcollapse img {
+        width: 20px;
+        height: 20px;
+    }
+    .path-mod-oucontent .osep-expandcollapse {
+        top: 8px;
+    }
+
+    /* Larger text in the links below contents, and they appear closer to contents. */
+    .path-mod-oucontent .oucontent-printablelink {
+        font-size: 1.28571em;
+        border-top: none;
+        padding-top: 0;
+        margin-top: -11px;
+    }
+
+    /* Start page box does not appear in main page, and gets cloned into the contents */
+    #osep-maincol .oucontent-startpagebox {
+        display: none;
+    }
+    #osep-sidecol div.oucontent-startpagebox {
+        display: block;
+        border-radius: 0;
+        margin: 0 -15px;
+        padding: 10px 15px;
+        font-size: 1.14286em;
+    }
+    .oucontent-autobookmark {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .path-mod-oucontent .block.oucontent-preflightlink {
+        margin-top: 13px;
+    }
+}
+
+/* Styling for downloads list page */
+#page-mod-oucontent-coursedownloads .oucontent-download-list {
+    padding-top: 11px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable {
+    border-bottom: 4px solid #bfe2ef;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable.oucontent-export-on {
+    margin-bottom: 120px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable th.c1 {
+    padding-left: 45px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c2 a {
+    text-decoration: none;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable td,
+#page-mod-oucontent-coursedownloads .generaltable td label,
+#page-mod-oucontent-coursedownloads .generaltable td span {
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable td.cell a,
+#page-mod-oucontent-coursedownloads .generaltable td.cell a span {
+    text-decoration: none;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable td.cell a:not(.oucontent-iconlink):hover {
+    text-decoration: underline;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable td {
+    padding-right: 7px;
+    padding-left: 6px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c0 {
+    width: 1%;
+    padding-left: 20px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable label {
+    margin-left: 0;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable label a {
+    margin-left: 8px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable th.c0,
+#page-mod-oucontent-coursedownloads .generaltable td img {
+    height: 24px;
+    width: 24px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable img.checkboxheader {
+    height: 17px;
+    width: 17px;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c1 label {
+    display: table;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c1 label a {
+    display: table-row;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c1 label a > span {
+    display: table-cell;
+}
+
+#page-mod-oucontent-coursedownloads .generaltable .c1 label a > span.oucontent-title {
+    padding-left: 13px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-download-hidden td {
+    /* This is the palest grey allowed against the blue background within contrast guidelines */
+    color: #737373;
+}
+#page-mod-oucontent-coursedownloads .generaltable .oucontent-download-hidden td.cell a,
+#page-mod-oucontent-coursedownloads .generaltable .oucontent-download-hidden td.cell a span {
+    /* This is the palest blue allowed against the blue background within contrast guidelines */
+    color: #2e73c1;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-download-hidden img {
+    opacity: .3;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-coursedownload-buttons {
+    margin-top: 20px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-coursedownload-select-buttons {
+    display: none;
+    float: left;
+    margin-right: 35px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-coursedownload-select-buttons button {
+    margin-right: 15px;
+    margin-bottom: 12px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-downloadzip {
+    margin-right: 0px;
+    margin-bottom: 12px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-downloaddesc {
+    font-size: 1em;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-coursedownload-jsmessage:not(:empty) {
+    font-size: 0.85714em;
+    color: #312b39;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+#page-mod-oucontent-coursedownloads .oucontent-download-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#page-mod-oucontent-coursedownloads .osep-scrollcontainer .dropdown-menu .dropdown-item {
+    color: #0b55a8;
+    background-color: white;
+}
+
+#page-mod-oucontent-coursedownloads .osep-scrollcontainer .dropdown-menu .dropdown-item:hover {
+    color: #0b55a8;
+    background-color: #7cc7e0;
+}
+
+@media (max-width: 767px) {
+    /* Hide select/submit buttons and Location/Restriction table columns in Mobile view */
+    #page-mod-oucontent-coursedownloads .oucontent-coursedownload-buttons,
+    #page-mod-oucontent-coursedownloads .oucontent-downloaddescalt,
+    #page-mod-oucontent-coursedownloads .oucontent-download-list table .c0,
+    #page-mod-oucontent-coursedownloads .oucontent-download-list:not(.oucontent-export-on) table .c3,
+    #page-mod-oucontent-coursedownloads .oucontent-download-list table .c4,
+    #page-mod-oucontent-coursedownloads .oucontent-download-list table .c5 {
+        display: none;
+    }
+
+    #page-mod-oucontent-coursedownloads .oucontent-download-list,
+    #page-mod-oucontent-coursedownloads p.oucontent-downloaddesc {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+    #page-mod-oucontent-coursedownloads .moodle-actionmenu[data-enhanced] .menu.align-tl-tl {
+        top: -5px;
+        right: -6px;
+        left: auto;
+    }
+}
+
+/* Downloads box */
+.path-mod-oucontent #middle-column .oucontent-downloadsbox {
+    display: none;
+}
+
+.path-mod-oucontent:not(.jsenabled) #middle-column .oucontent-downloadsbox {
+    display: block;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox {
+    box-sizing: border-box;
+    max-width: 700px;
+    font-size: 1em;
+    color: black;
+    padding: 0;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-help,
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-typeandsize,
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions {
+    font-size: 0.85714em;
+    line-height: 3em;
+    margin-top: 1px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox ul {
+    border-bottom: 1px solid #bfe2ef;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 24px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox ul::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox ul.oucontent-second {
+    margin-top: 0px;
+    border-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files .smallicon {
+    height: 20px;
+    width: 20px;
+    margin-right: -4px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-title {
+    margin-left: 16px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-nodesc .oucontent-title {
+    margin-left: 8px;
+}
+
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-files {
+    margin-top: -4px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-typeandsize {
+    margin-left: 30px;
+    line-height: 1.5em;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-size {
+    color: #676463;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions {
+    padding-top: 4px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions a {
+    margin-right: 20px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions a:first-child::before {
+    content: url([[pix:mod_oucontent|downloads]]);
+    margin-right: 8px;
+}
+
+.path-mod-oucontent .oucontent-downloadsbox .oucontent-actions a:last-child:not(:first-child)::before {
+    content: url([[pix:mod_oucontent|edit]]);
+    margin-right: 8px;
+}
+
+.path-mod-oucontent .path-mod-oucontent .oucontent-downloadsbox li {
+    margin-right: 16px;
+    margin-bottom: 11px;
+}
+
+.path-mod-oucontent.pagelayout-embedded #osep-pagewrapper > .clearer {
+    display: none;
+}
+
+#page-mod-oucontent-preflight th,
+#page-mod-oucontent-preflight td {
+    padding: 5px 6px;
+}
+
+@media (max-width: 767px) {
+    .path-mod-oucontent .oucontent-downloadsbox {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .path-mod-oucontent .oucontent-downloadsbox li {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* Document styles */
+.path-mod-oucontent #middle-column {
+    padding-left: 32px;
+    padding-right: 189px;
+}
+
+.path-mod-oucontent #middle-column.oucontent-extrapage {
+    padding: 0px;
+    margin: 0px;
+}
+
+.path-mod-oucontent #middle-column::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.path-mod-oucontent .proof .oucontent-proofheadingpara > .oucontent-h3,
+.path-mod-oucontent .proof .oucontent-proofheading > .oucontent-h3,
+.path-mod-oucontent .oucontent-example .proof .oucontent-proofheading > .oucontent-h3,
+.path-mod-oucontent .oucontent-reading .proof .oucontent-proofheading > .oucontent-h3 {
+    color: #002158;
+    margin: 0 16px 0 0;
+}
+
+.path-mod-oucontent .proof .oucontent-display-mathml + .oucontent-proofending {
+    position: absolute;
+    bottom: 6px;
+    right: 1px;
+    background: transparent;
+}
+
+.path-mod-oucontent.edge .proof .oucontent-display-mathml + .oucontent-proofending,
+.path-mod-oucontent.ie .proof .oucontent-display-mathml + .oucontent-proofending {
+    right: 2px;
+    padding-bottom: 8px;
+}
+
+.path-mod-oucontent.ie .proof .oucontent-equation {
+    position: relative;
+}
+
+/*Reading > Proof > BulletedList Proofending*/
+/*Example > Proof > BulletedList Proofending*/
+.path-mod-oucontent .oucontent-reading .proof .oucontent-proofheadingpara > .oucontent-h3,
+.path-mod-oucontent .oucontent-example .proof .oucontent-proofheadingpara > .oucontent-h3 {
+    border: none;
+    font-size: 1em;
+    background: none;
+}
+
+/*SAQ > Answer > Proof > BulletedList Proofending*/
+.path-mod-oucontent .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 25px;
+}
+.path-mod-oucontent.gecko .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.gecko .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 28px;
+}
+
+.path-mod-oucontent .proof .oucontent-proofending {
+    display: inline;
+    content: url([[pix:mod_oucontent|bullet_ita]]);
+    width: 8px;
+    height: 8px;
+    margin: 0 0 0 16px;
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-noproofending {
+    display: inline-block;
+    height: 8px;
+    margin-left: 24px;
+}
+
+.path-mod-oucontent.edge .oucontent-noproofending,
+.path-mod-oucontent.ie .oucontent-noproofending {
+    margin-left: 27px;
+}
+
+.path-mod-oucontent .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 14px;
+}
+
+.path-mod-oucontent .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 18px;
+}
+
+/*Question > Question > Proof > BulletedList Proofending*/
+/*Question > Answer > Proof > BulletedList Proofending*/
+.path-mod-oucontent .oucontent-itq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.edge .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.edge .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.ie .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 12px;
+}
+
+.path-mod-oucontent.safari .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.gecko .oucontent-itq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted +  div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.gecko .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted +  div.oucontent-contentempty > .oucontent-proofending,
+.path-mod-oucontent.gecko .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+    margin-left: 15px;
+}
+
+.path-mod-oucontent .proof div > span.oucontent-prooflastpara {
+    margin-right: 16px;
+}
+
+.path-mod-oucontent.ie .proof div > span.oucontent-prooflastpara,
+.path-mod-oucontent.edge .proof div > span.oucontent-prooflastpara {
+    margin-right: 14px;
+}
+
+.path-mod-oucontent .proof .oucontent-equation span.oucontent-display-mathml {
+    margin-bottom: 4px;
+}
+
+.path-mod-oucontent .proof .oucontent-equation span.oucontent-display-mathml + .oucontent-label > .oucontent-inner .accesshide ~ .oucontent-proofending {
+    right: 0;
+    bottom: 0;
+}
+
+.path-mod-oucontent .proof .oucontent-equation .oucontent-proofending-outside {
+    position: absolute;
+    right: 0px;
+}
+
+@media (max-width: 1023px) {
+    .path-mod-oucontent #region-main {
+        padding-left: 20px;
+    }
+    .path-mod-oucontent #middle-column {
+        padding-left: 0px;
+        padding-right: 140px;
+    }
+}
+
+.path-mod-oucontent .oucontent-s-gradient,
+.path-mod-oucontent .oucontent-printable .oucontent-s-gradient {
+    background-image: none;
+    background-color: #f6f6f6;
+    border: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-bottom: 24px;
+}
+
+.oucontent-prev,
+.oucontent-next {
+    max-width: calc(50% - 10px);
+    margin-top: 23px;
+    margin-bottom: 60px;
+}
+
+.oucontent-prev {
+    float: left;
+}
+
+.path-mod-oucontent .oucontent-prev > a.arrow_link {
+    padding-left: 3px;
+}
+
+.path-mod-oucontent .arrow_link .arrow .icon {
+    transform: scale(1);
+    vertical-align: middle;
+    margin-right: 0;
+    width: 10px;
+}
+
+body.edge.path-mod-oucontent .arrow_link .arrow .icon {
+    width: 14px;
+    transform: scale(0.7);
+}
+
+.oucontent-next {
+    float: right;
+    clear: none;
+}
+
+.oucontent-prevnext-title {
+    margin-top: 12px;
+    color: rgb(103, 100, 99);
+    font-size: 0.85714em;
+}
+
+@media (max-width: 1023px) {
+    .oucontent-prevnext-title {
+        display: none;
+    }
+}
+
+.path-mod-oucontent .oucontent-content {
+    color: #000;
+}
+
+/* Override line height from module styles.css */
+.path-mod-oucontent #middle-column {
+    line-height: 1.5;
+}
+
+.path-mod-oucontent .oucontent-title-0 {
+    /* Item > Title */
+    font-size: 1.71428em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #bfe2ef;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent .oucontent-title-1 {
+    /* Session > Title */
+    font-size: 1.57142em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-title-2 {
+    /* Section > Title */
+    font-size: 1.48571em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-title-3 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.path-mod-oucontent .oucontent-title-3,
+.path-mod-oucontent #middle-column .oucontent-h2.oucontent-internalsection-head {
+    /* SubSection > Title
+       InternalSection > Heading */
+    font-size: 1.28571em;
+    line-height: 1.5;
+    font-weight: normal;
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-h2.oucontent-subsubsection,
+.path-mod-oucontent .oucontent-h3.oucontent-internalsection-head {
+    /* SubSubSection > Heading
+       InternalSection > SubHeading */
+    font-size: 1.14285em;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.path-mod-oucontent .oucontent-h4.oucontent-internalsection-head {
+    /* InternalSection > SubSubHeading */
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold;
+    font-style: italic;
+    color: #464542;
+}
+
+.path-mod-oucontent .oucontent-h4.oucontent-basic {
+    /* SubSubSection > SubHeading */
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #464542;
+}
+
+.path-mod-oucontent .oucontent-h5.oucontent-basic {
+    /* SubSubSection > SubSubHeading */
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold;
+    font-style: italic;
+    color: #676463;
+}
+
+.path-mod-oucontent #middle-column .oucontent-h2,
+.path-mod-oucontent #middle-column .oucontent-h3,
+.path-mod-oucontent #middle-column .oucontent-h4,
+.path-mod-oucontent #middle-column .oucontent-h5,
+.path-mod-oucontent #middle-column .oucontent-h2.oucontent-subsubsection,
+.path-mod-oucontent #middle-column .oucontent-h2.oucontent-internalsection-head {
+    /* Remove extra margins on all internal/subheadings */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-byline,
+.path-mod-oucontent .oucontent-box-byline {
+    /* ByLine */
+    font-size: 1em;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent #middle-column p {
+    /* Paragraph */
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent .oucontent-saq .oucontent-inner-box,
+.path-mod-oucontent .oucontent-printable .oucontent-saq .oucontent-inner-box {
+    /* SAQ */
+    font-size: 1em;
+    background-color: #f1f8fc;
+}
+
+.path-mod-oucontent .oucontent-studynote.oucontent-s-gradient {
+    /* StudyNote */
+    background-image: none;
+    border: 0px;
+    font-size: 1em;
+    background-color: #edf5ec;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px 15px 5px;
+    margin-bottom: 18px;
+}
+
+.path-mod-oucontent .oucontent-studynote .oucontent-heading.oucontent-nonumber {
+    padding-left: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-box {
+    /* Box */
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.path-mod-oucontent .oucontent-inner-box {
+    padding: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox1 .oucontent-inner-box,
+.path-mod-oucontent .oucontent-s-heavybox2 .oucontent-inner-box,
+.path-mod-oucontent .oucontent-s-hollowbox,
+.path-mod-oucontent .oucontent-s-hollowbox2 {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 0px;
+    padding: 10px 15px 5px;
+}
+
+.path-mod-oucontent .oucontent-outer-box .oucontent-h3 {
+    /* Box > Heading */
+    font-size: 1.14285em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    background-image: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-saq .oucontent-h3 {
+    background-color: #ddeff8;
+    border: 0px;
+}
+
+.ie.path-mod-oucontent .oucontent-printable .oucontent-saq {
+    margin-left: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox1 .oucontent-inner-box,
+.path-mod-oucontent .oucontent-printable .oucontent-s-heavybox1 .oucontent-inner-box {
+    background-color: #f1f8fc;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox2 .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-s-heavybox2 .oucontent-h3 {
+    background-color: #edece0;
+    border: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox2 .oucontent-inner-box,
+.path-mod-oucontent .oucontent-printable .oucontent-s-heavybox2 .oucontent-inner-box {
+    background-color: #faf7f4;
+    border: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-heavybox2.oucontent-s-noheading .oucontent-inner-box {
+    border-top: none;
+}
+
+.path-mod-oucontent .oucontent-s-hollowbox2,
+.path-mod-oucontent .oucontent-printable .oucontent-s-hollowbox2 {
+    border: 1px solid #7cc7e0;
+    padding: 0px;
+}
+
+.path-mod-oucontent .oucontent-s-hollowbox2 .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-s-hollowbox2 .oucontent-h3 {
+    border-bottom: 1px solid #bfe2ef;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.path-mod-oucontent .oucontent-s-siderule,
+.path-mod-oucontent .oucontent-printable .oucontent-s-siderule {
+    border-left: 5px solid #7cc7e0;
+}
+
+.path-mod-oucontent .oucontent-s-siderule .oucontent-inner-box,
+.path-mod-oucontent .oucontent-s-hollowbox2 .oucontent-inner-box {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-s-box .oucontent-s-box .oucontent-h3 {
+    /* Box > Activity > Heading */
+    padding-bottom: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-s-box .oucontent-inner-box {
+    padding-top: 0px;
+}
+
+.path-mod-oucontent .oucontent-box-byline {
+    /* Box > ByLine */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 23px;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-figure > img,
+.path-mod-oucontent .oucontent-s-box .oucontent-figure > a > img,
+.path-mod-oucontent .oucontent-s-box .oucontent-audio-video .omp-wrapper {
+    /* Box > Figure > Image
+       Box > Figure > Thumbnail link > Image
+       Activity > Figure > Image
+       Reading > Figure > Image
+       Extract > Figure > Image
+          "    > MediaContent
+    */
+    width: 100%;
+}
+.path-mod-oucontent .oucontent-s-box .oucontent-media > a > img,
+.path-mod-oucontent .oucontent-s-box .oucontent-thumbnaillink.oucontent-viewonlineactivity > a > img {
+    max-width: 100%;
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-figure > img {
+    width: auto;
+}
+
+.path-mod-oucontent .oucontent-quote {
+    /* Quote */
+    margin-top: 8px;
+}
+
+.path-mod-oucontent .oucontent-quote .oucontent-heading,
+.path-mod-oucontent .oucontent-verse .oucontent-heading {
+    /* Quote > Heading */
+    /* Verse > Heading */
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 14px;
+}
+
+.path-mod-oucontent .oucontent-verse .oucontent-heading {
+    /* Verse > Heading */
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-source-reference {
+    /* SourceReference */
+    font-size: 0.85714em;
+    color: #464542;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox {
+    /* Reading */
+    background-color: #f1f8fc;
+    font-size: 1em;
+    padding-top: 5px;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-reading.oucontent-s-hollowbox .oucontent-h3 {
+    /* Reading > Heading */
+    font-size: 1.14285em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    border-bottom: 1px solid #bfe2ef;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h4 {
+    /* Reading > Subheading */
+    font-size: 1em;
+    padding: 0px;
+    margin-top: 7px;
+    margin-bottom: 11px;
+}
+
+.path-mod-oucontent .oucontent-reading .oucontent-inner-box .oucontent-h5 {
+    /* Reading > SubSubHeading */
+    font-size: 1em;
+    line-height: 1.5;
+    color: #464542;
+    padding: 0px;
+    margin-bottom: 9px;
+}
+
+.path-mod-oucontent .oucontent-sidenote {
+    /* SideNote */
+    margin-right: -186px;
+    margin-top: 0px;
+}
+
+.path-mod-oucontent .oucontent-sidenote-inner {
+    padding: 0px;
+    top: 0;
+    margin-left: 30px;
+    width: 156px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+@media (max-width: 1023px) {
+    .path-mod-oucontent .oucontent-sidenote-inner {
+        width: 135px;
+    }
+    .path-mod-oucontent .oucontent-sidenote {
+        margin-right: -165px;
+    }
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-inner-box .oucontent-sidenote {
+    margin-right: -201px;
+}
+
+.path-mod-oucontent .oucontent-sidenote-inner {
+    /* SideNoteParagraph */
+    font-size: 1em;
+    color: #676463;
+}
+
+.path-mod-oucontent .oucontent-sidenote-head {
+    /* SideNote > Heading */
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #676463;
+}
+
+.path-mod-oucontent .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-printable .oucontent-example .oucontent-inner-box {
+    /* Example */
+    background-color: #f0fbfb;
+}
+
+.path-mod-oucontent .oucontent-example.oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-example.oucontent-s-heavybox1 .oucontent-h3 {
+    /* Example > Heading */
+    font-size: 1.14285em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #002158;
+    background-color: #d5f4f4;
+}
+
+.path-mod-oucontent .oucontent-example .oucontent-h4.oucontent-basic {
+    /* Example > SubHeading */
+    color: #000;
+    margin-top: 7px;
+    padding-top: 0px;
+    margin-bottom: 11px;
+}
+
+.path-mod-oucontent .oucontent-excercise.oucontent-s-heavybox1 .oucontent-inner-box {
+    /* Exercise */
+    border-left: 5px solid #d8d6d6;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 0;
+}
+
+.path-mod-oucontent .oucontent-excercise .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise .oucontent-h3 {
+    /* Exercise > Heading */
+    border-left: 5px solid #d8d6d6;
+    font-size: 1.14285em;
+    line-height: 1.5;
+    color: #002158;
+    background-color: #e9e8e8;
+}
+
+.path-mod-oucontent .oucontent-saq-timing {
+    /* Timing */
+    font-size: 0.85714em;
+    font-style: italic;
+    color: #002158;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.path-mod-oucontent .oucontent-saq-timing::before {
+    content: url([[pix:mod_oucontent|timing]]);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: -19px;
+    vertical-align: bottom;
+}
+
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule,
+.path-mod-oucontent .oucontent-printable .oucontent-extract.oucontent-s-siderule {
+    /* Extract */
+    border-left: none;
+    border-top: 5px solid #b7d9d4;
+    border-bottom: 2px solid #b7d9d4;
+}
+
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule {
+    margin-top: 22px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-extract.oucontent-s-siderule,
+.path-mod-oucontent .oucontent-printable .oucontent-activity .oucontent-extract.oucontent-s-siderule,
+.path-mod-oucontent .oucontent-excercise .oucontent-extract.oucontent-s-siderule,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise .oucontent-extract.oucontent-s-siderule,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy,
+.path-mod-oucontent .oucontent-activity .oucontent-example,
+.path-mod-oucontent .oucontent-excercise .oucontent-example {
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-extract.oucontent-s-siderule .oucontent-h3.oucontent-heading,
+.path-mod-oucontent #middle-column.oucontent-printable .oucontent-extract.oucontent-s-siderule .oucontent-h3.oucontent-heading {
+    margin-top: 5px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-box-byline {
+    margin-bottom: 12px;
+}
+
+.path-mod-oucontent .oucontent-extract .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-extract .oucontent-h3 {
+    /* Extract > Heading */
+    font-size: 1.14285em;
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-extract .oucontent-h4.oucontent-basic {
+    /* Extract > SubHeading */
+    color: #000;
+    margin-bottom: 11px;
+}
+
+.path-mod-oucontent .oucontent-extract .oucontent-h5.oucontent-basic {
+    /* Extract > SubSubHeading */
+    color: #464542;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    padding: 0px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-h3 {
+    /* ITQ > Heading */
+    font-weight: bold;
+    line-height: 1.5;
+    color: #002158;
+    border-bottom: 1px solid #bfe2ef;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    padding-top: 11px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-h4 {
+    padding-top: 11px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-saq-timing {
+    /* ITQ > Timing */
+    margin-top: -14px;
+    float: left;
+    background-color: white;
+    padding-right: 10px;
+    margin-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-saq-timing::before {
+    width: 19px;
+    margin-right: 0px;
+    background-color: white;
+}
+
+.path-mod-oucontent #middle-column ul.oucontent-itq-withtoggle {
+    /* ITQ > Question */
+    margin-top: 0px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #bfe2ef;
+}
+
+.path-mod-oucontent #middle-column ul li.oucontent-saq-question {
+    background-image: none;
+    clear: both;
+    padding-left: 0px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-saq-question::before {
+    content: url([[pix:mod_oucontent|bullet_itq]]);
+    float: left;
+    margin-left: -14px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-itq-withtoggle .oucontent-saq-question p {
+    /* ITQ > Question > Paragraph */
+    margin-top: 15px;
+    margin-bottom: 14px;
+}
+
+.path-mod-oucontent .oucontent-itq-withtoggle::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-itq-toggle {
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-itq .oucontent-saq-answer {
+    /* ITQ > Answer */
+    background-image: none;
+    clear: both;
+    padding-left: 0px;
+    margin-left: 15px;
+}
+
+.path-mod-oucontent .oucontent-itq .oucontent-saq-answer::before {
+    content: url([[pix:mod_oucontent|bullet_ita]]);
+    width: 8px;
+    margin-left: -14px;
+    display: block;
+    float: left;
+}
+
+.path-mod-oucontent.ie .oucontent-itq .oucontent-saq-answer::before {
+    height: 14px;
+    vertical-align: top;
+}
+
+.path-mod-oucontent #middle-column .oucontent-saq-question .oucontent-bulleted li,
+.path-mod-oucontent #middle-column .oucontent-saq-answer .oucontent-bulleted li {
+    /* ITQ > Question > ItemList,
+       ITQ > Answer > Itemlist */
+    margin-left: 28px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-saq-question .oucontent-bulleted li:first-child,
+.path-mod-oucontent #middle-column .oucontent-saq-answer .oucontent-bulleted li:first-child {
+    margin-top: -6px;
+}
+
+.path-mod-oucontent .oucontent-excercise .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-interactiveanswer .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-answer .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-discussion .oucontent-h4,
+.path-mod-oucontent .oucontent-saq-interactivediscussion .oucontent-h4 {
+    /* Exercise > Answer
+       Activity > Interaction > Answer
+       Activity > Answer
+       Activity > Discussion
+       (need bold specified when box has no heading) */
+    font-weight: bold;
+    line-height: 1.5;
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-interaction .osep-smallbutton {
+    margin-right: 10px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-itq-withtoggle .oucontent-saq-answer p {
+    /* ITQ > Answer > Paragraph */
+    margin-top: 0px;
+    margin-bottom: 23px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-saqtype-part li.oucontent-saq-answer {
+    /* ITQ > Multipart > Part > Answer */
+    padding: 0px;
+    border-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-casestudy.oucontent-s-heavybox2 .oucontent-inner-box {
+    /* CaseStudy */
+    border-top: 0px;
+    background-color: #eef6f5;
+}
+
+.path-mod-oucontent .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise .oucontent-casestudy .oucontent-h3 {
+    /* CaseStudy > Heading */
+    background-color: #dbece9;
+}
+
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent #middle-column.oucontent-printable .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent #middle-column.oucontent-printable .oucontent-excercise .oucontent-casestudy .oucontent-h3 {
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-example.oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-activity .oucontent-printable .oucontent-example.oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-excercise .oucontent-example.oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-excercise .oucontent-printable .oucontent-example.oucontent-s-heavybox1 .oucontent-h3,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-activity .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise .oucontent-casestudy .oucontent-h3,
+.path-mod-oucontent .oucontent-activity .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-example .oucontent-inner-box {
+    padding-bottom: 5px;
+}
+
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-reading.oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-reading.oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-activity.oucontent-s-box .oucontent-reading.oucontent-s-hollowbox .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise.oucontent-s-box .oucontent-reading.oucontent-s-hollowbox .oucontent-h3 {
+    border-bottom: 1px solid #bfe2ef;
+}
+
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-casestudy .oucontent-sidenote.oucontent-resource-icons,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-casestudy .oucontent-sidenote.oucontent-resource-icons,
+.path-mod-oucontent .oucontent-printable .oucontent-activity.oucontent-s-box .oucontent-casestudy .oucontent-sidenote.oucontent-resource-icons,
+.path-mod-oucontent .oucontent-printable .oucontent-excercise.oucontent-s-box .oucontent-casestudy .oucontent-sidenote.oucontent-resource-icons {
+    margin: 0 15px 0 0;
+}
+
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-casestudy,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-casestudy,
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-casestudy .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-casestudy .oucontent-inner-box,
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-example,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-example,
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-reading,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-reading {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-extract.oucontent-s-box,
+.path-mod-oucontent .oucontent-activity .oucontent-extract.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-extract.oucontent-s-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-extract.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy.oucontent-s-box,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy.oucontent-s-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-activity .oucontent-example.oucontent-s-box,
+.path-mod-oucontent .oucontent-activity .oucontent-example.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-example.oucontent-s-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-example.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-activity .oucontent-reading.oucontent-s-box,
+.path-mod-oucontent .oucontent-activity .oucontent-reading.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-reading.oucontent-s-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-reading.oucontent-s-box .oucontent-inner-box {
+    background-color: #ffffff;
+}
+
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-casestudy.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-extract.oucontent-s-siderule .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-reading .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-casestudy.oucontent-s-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-extract.oucontent-s-siderule .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-reading .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-example .oucontent-inner-box {
+    border-left: none;
+}
+
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box,
+.path-mod-oucontent .oucontent-printable .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box {
+    padding-bottom: 6px;
+    margin-top: 7px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box p:last-of-type,
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box p:last-of-type,
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-source-reference,
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox .oucontent-source-reference,
+.path-mod-oucontent .oucontent-activity .oucontent-reading.oucontent-s-hollowbox .oucontent-source-reference {
+    margin-bottom: 10px;
+}
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-source-reference,
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox .oucontent-source-reference,
+.path-mod-oucontent .oucontent-activity .oucontent-example .oucontent-source-reference,
+.path-mod-oucontent .oucontent-excercise .oucontent-example .oucontent-source-reference {
+    padding-top: 1px;
+}
+.path-mod-oucontent .oucontent-activity .oucontent-example .oucontent-source-reference,
+.path-mod-oucontent .oucontent-excercise .oucontent-example .oucontent-source-reference {
+    margin-top: -5px;
+}
+.path-mod-oucontent #middle-column .oucontent-saqtype-part .oucontent-saq-question .oucontent-extract p:first-child {
+    margin-top: 5px;
+}
+.path-mod-oucontent #middle-column .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-h4.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-example .oucontent-outer-box .oucontent-h4.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-example .oucontent-outer-box .oucontent-h4.oucontent-basic {
+    margin-top: -3px;
+}
+.path-mod-oucontent #middle-column .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-example .oucontent-outer-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-example .oucontent-outer-box .oucontent-h5.oucontent-basic {
+    margin-bottom: -2px;
+    margin-top: -6px;
+}
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-example .oucontent-outer-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-example .oucontent-outer-box .oucontent-h5.oucontent-basic {
+    padding-top: 0;
+}
+.path-mod-oucontent .oucontent-activity .oucontent-example .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-example .oucontent-inner-box {
+    margin-top: 15px;
+    padding-bottom: 2px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-example.oucontent-s-noheading .oucontent-inner-box,
+.path-mod-oucontent .oucontent-excercise .oucontent-example.oucontent-s-noheading .oucontent-inner-box,
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox.oucontent-s-noheading,
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy.oucontent-s-noheading .oucontent-outer-box,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy.oucontent-s-noheading .oucontent-outer-box {
+    padding-top: 10px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy.oucontent-s-noheading .oucontent-outer-box,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy.oucontent-s-noheading .oucontent-outer-box {
+    padding-top: 10px;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox .oucontent-inner-box {
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox.oucontent-s-noheading .oucontent-inner-box,
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule.oucontent-s-noheading .oucontent-outer-box .oucontent-inner-box {
+    margin-top: 0;
+}
+
+.path-mod-oucontent .oucontent-activity.oucontent-s-box .oucontent-reading.oucontent-s-box .oucontent-outer-box,
+.path-mod-oucontent .oucontent-excercise.oucontent-s-box .oucontent-reading.oucontent-s-box .oucontent-outer-box {
+    border: none;
+}
+
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box .oucontent-h4.oucontent-basic,
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box .oucontent-h4.oucontent-basic,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy .oucontent-outer-box .oucontent-inner-box .oucontent-h4.oucontent-basic,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy .oucontent-outer-box .oucontent-inner-box .oucontent-h4.oucontent-basic {
+    color: #000000;
+}
+
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent .oucontent-casestudy .oucontent-outer-box .oucontent-inner-box .oucontent-h5.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box .oucontent-source-reference,
+.path-mod-oucontent #middle-column .oucontent-extract.oucontent-s-siderule .oucontent-outer-box .oucontent-inner-box .oucontent-source-reference {
+    color: #464562;
+}
+
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box .oucontent-h4.oucontent-basic {
+    margin-top: -3px;
+    margin-bottom: 5px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-reading.oucontent-s-hollowbox .oucontent-outer-box .oucontent-inner-box .oucontent-h5.oucontent-basic {
+    margin-top: -6px;
+    margin-bottom: -2px;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox {
+    padding-bottom: 7px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-reading.oucontent-s-hollowbox,
+.path-mod-oucontent .oucontent-excercise .oucontent-reading.oucontent-s-hollowbox {
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-reading.oucontent-s-hollowbox:last-child,
+.path-mod-oucontent .oucontent-excercise .oucontent-reading.oucontent-s-hollowbox:last-child,
+.path-mod-oucontent .oucontent-activity .oucontent-casestudy:last-child,
+.path-mod-oucontent .oucontent-excercise .oucontent-casestudy:last-child,
+.path-mod-oucontent .oucontent-activity .oucontent-extract.oucontent-s-siderule:last-child,
+.path-mod-oucontent .oucontent-excercise .oucontent-extract.oucontent-s-siderule:last-child,
+.path-mod-oucontent .oucontent-activity .oucontent-example:last-child,
+.path-mod-oucontent .oucontent-excercise .oucontent-example:last-child {
+    margin-bottom: 25px;
+}
+
+.path-mod-oucontent .oucontent-reading .oucontent-h3.oucontent-heading,
+.path-mod-oucontent .oucontent-reading .oucontent-h4.oucontent-basic,
+.path-mod-oucontent .oucontent-reading .oucontent-h5.oucontent-basic {
+    font-family: "Arial", serif;
+}
+
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox,
+.path-mod-oucontent .oucontent-reading.oucontent-s-hollowbox.oucontent-s-noheading {
+    margin-top: 22px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy .oucontent-h4.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy .oucontent-h4.oucontent-basic {
+    padding-top: 0;
+    margin-top: -3px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy .oucontent-h5.oucontent-basic,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy .oucontent-h5.oucontent-basic {
+    padding-top: 0;
+    margin-top: -6px;
+    margin-bottom: -2px;
+}
+
+.path-mod-oucontent #middle-column .oucontent-activity .oucontent-casestudy .oucontent-inner-box p:last-of-type,
+.path-mod-oucontent #middle-column .oucontent-excercise .oucontent-casestudy .oucontent-inner-box p:last-of-type {
+    margin-bottom: 12px;
+}
+
+.path-mod-oucontent .oucontent-activity,
+.path-mod-oucontent .oucontent-printable .oucontent-activity {
+    /* Activity */
+    border-left: 5px solid #7bc5df;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-inner-box {
+    border-bottom-left-radius: 0px;
+}
+
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-interactiveanswer,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-discussion,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-interactivediscussion,
+.path-mod-oucontent .oucontent-saqtype-part .oucontent-saq-answer {
+    border-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-saqtype-part {
+    /* Activity > Multipart > Part */
+    border-bottom: 1px solid #bfe2ef;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-saqtype-part.oucontent-part-last {
+    border-bottom: none;
+}
+
+.path-mod-oucontent #middle-column .oucontent-saqtype-part .oucontent-saq-question p:first-child {
+    /* Activity > Multipart > Part > Question > Paragraph */
+    margin-top: 0px;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-radio,
+.path-mod-oucontent .oucontent-multichoice-checkbox {
+    /* Activity > Interaction > Right/Wrong */
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-radio-answer,
+.path-mod-oucontent .oucontent-multichoice-checkbox-answer {
+    vertical-align: 0px;
+}
+
+.path-mod-oucontent .oucontent-activity .oucontent-interaction label,
+.path-mod-oucontent .oucontent-itq .oucontent-interaction label {
+    /* Activity > Interaction > Right/Wrong > Paragraph */
+    display: inline;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-answer-button,
+.path-mod-oucontent .oucontent-multichoice-answer-button,
+.path-mod-oucontent .oucontent-freeresponse-savebutton {
+    /* Activity > Interaction > Answer */
+    margin-bottom: 20px;
+}
+
+.path-mod-oucontent .oucontent-freeresponse-savebutton {
+    margin-top: 0px;
+}
+
+.path-mod-oucontent .oucontent-singlechoice-answer-button,
+.path-mod-oucontent .oucontent-multichoice-answer-button,
+.path-mod-oucontent .editor_atto_wrap .oucontent-freeresponse-savebutton {
+    margin-top: 15px;
+}
+
+.path-mod-oucontent .oucontent-freeresponse textarea {
+    /* FreeResponse */
+    padding: 9px;
+    margin-bottom: 20px;
+}
+
+.path-mod-oucontent .oucontent-dialogue {
+    float: none;
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-buttons-freeresponse-cell {
+    /* Table > FreeResponse */
+    padding-left: 15px;
+}
+
+.oucontent-cellfreeresponse textarea[cols] {
+    width: 95%;
+}
+
+.path-mod-oucontent .oucontent-dialogue .oucontent-h3 {
+    /* Dialogue > Heading */
+    font-size: 1em;
+    color: #000;
+    padding-bottom: 0px;
+    margin-bottom: 11px;
+}
+
+.path-mod-oucontent .oucontent-dialogue-line {
+    /* Dialogue > Speaker/Remark */
+    margin: 18px 0px 16px 0px;
+}
+
+.path-mod-oucontent .oucontent-dialogue-line > .clearer {
+    clear: left;
+}
+
+.path-mod-oucontent .oucontent-dialogue-remark {
+    /* Dialogue > Remark */
+    margin-left: 160px;
+    margin-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-figure {
+    /* Figure */
+    margin-top: 13px;
+    margin-bottom: 28px;
+}
+
+.path-mod-oucontent .oucontent-figure > img,
+.path-mod-oucontent .oucontent-audio-video .omp-wrapper {
+    /* Figure > Image MediaContent */
+    width: calc(100% - -186px);
+    height: auto;
+}
+
+/* This will make video/audio fixed in the center column and not overlap the sidenote */
+.path-mod-oucontent .oucontent-audio-video .omp-smart,
+.path-mod-oucontent .oucontent-audio-video .omp-default {
+    width: auto !important;
+}
+
+.path-mod-oucontent .oucontent-figure > img {
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-thumbnailpage.oucontent-figure > img {
+    width: 100%;
+}
+
+.path-mod-oucontent .oucontent-figure .oucontent-source-reference {
+    /* Figure > SourceReference */
+    margin-bottom: 10px;
+}
+
+.path-mod-oucontent .oucontent-figure .oucontent-caption {
+    /* Figure > Caption */
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #312b39;
+}
+
+.path-mod-oucontent .oucontent-figure .oucontent-figure-caption {
+    margin-left: 10px;
+}
+
+.path-mod-oucontent .oucontent-figure .oucontent-nonumber .oucontent-figure-caption {
+    margin-left: 0px;
+}
+
+.path-mod-oucontent .oucontent-figure-text {
+    display: block;
+}
+
+.path-mod-oucontent .oucontent-computerdisplay,
+.path-mod-oucontent .oucontent-computercode {
+    /* ComputerCode,
+       ComputerDisplay,
+       ProgramListing */
+    font-family: 'Ubuntu Mono', monospace;
+    word-wrap: normal;
+}
+
+.path-mod-oucontent .oucontent-computercode {
+    /* ComputerCode */
+    font-size: 1.14285em;
+}
+
+.path-mod-oucontent .oucontent-computerui {
+    /* ComputerUI */
+    background-color: #fff2d8;
+}
+
+.oucontent-computerdisplay {
+    /* Override parent css */
+    margin:0px;
+}
+
+.path-mod-oucontent .oucontent-computerdisplay {
+    /* ComputerDisplay, ProgramListing */
+    overflow-x: auto;
+    font-size: 0.92857em; /* 13px, special case for code to fit 80 chars per line */
+}
+
+.path-mod-oucontent div.oucontent-referenceitem {
+    /* References > Reference */
+    margin-top: 10px;
+}
+
+.path-mod-oucontent .oucontent-inlinemathml .filter_oumaths_equation > img {
+    /* InlineEquation > Image */
+    vertical-align: baseline;
+}
+
+/* Tables */
+.path-mod-oucontent .oucontent-table.oucontent-s-box,
+.path-mod-oucontent .oucontent-printable .oucontent-table.oucontent-s-box {
+    border: none;
+    border-radius: 0px;
+    background-color: #f4fafc;
+    padding-bottom: 14px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #bfe2ef;
+}
+
+.path-mod-oucontent .oucontent-table-thumbnail {
+    margin-bottom: 30px;
+}
+
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-table.oucontent-s-landscape {
+    display: none;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-wide table,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape table {
+    width: 100%;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-wide {
+    width: calc(100% - -186px); /* Work around for YUI Compressor bug https://github.com/yui/yuicompressor/issues/59 */
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-h3,
+.path-mod-oucontent .oucontent-printable .oucontent-table .oucontent-h3,
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-h3 {
+    line-height: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #e7f4fa;
+    border-top: 2px solid #bfe2ef;
+    padding: 7px 15px;
+    margin: 0px
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-h3,
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-h3 {
+    color: #002158;
+}
+
+/* VaSP Landscape table Styles elements */
+.path-mod-oucontent .oucontent-printable .oucontent-table-thumbnail .oucontent-table-printhide {
+    display: block;
+}
+
+.path-mod-oucontent .oucontent-tabledescription {
+    padding: 0px;
+}
+
+.path-mod-oucontent .oucontent-table th {
+    color: #000;
+}
+
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-accounts th:not(.oucontent-tablecell-highlight),
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-normal td:not(.oucontent-tablecell-highlight),
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-wide td:not(.oucontent-tablecell-highlight),
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-type2 td:not(.oucontent-tablecell-highlight),
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-narrow td:not(.oucontent-tablecell-highlight),
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-landscape td:not(.oucontent-tablecell-highlight) {
+    background-color: #fff;
+}
+
+#page-mod-oucontent-view .oucontent-s-box:not(.oucontent-reading) .oucontent-table.oucontent-s-box.oucontent-s-normal:not(.oucontent-s-accounts) h3,
+#page-mod-oucontent-view .oucontent-s-box:not(.oucontent-reading) .oucontent-table.oucontent-s-box.oucontent-s-wide h3,
+#page-mod-oucontent-view .oucontent-s-box:not(.oucontent-reading) .oucontent-table.oucontent-s-box.oucontent-s-type2 h3,
+#page-mod-oucontent-view .oucontent-s-box:not(.oucontent-reading) .oucontent-table.oucontent-s-box.oucontent-s-narrow h3,
+#page-mod-oucontent-view .oucontent-s-box:not(.oucontent-reading) .oucontent-table.oucontent-s-box.oucontent-s-landscape h3 {
+    margin-bottom: 7px;
+}
+
+#page-mod-oucontent-view .oucontent-s-box .oucontent-table.oucontent-s-box.oucontent-s-accounts .oucontent-table-wrapper {
+    padding: 0;
+}
+
+.path-mod-oucontent .oucontent-s-box .oucontent-table.oucontent-s-wide {
+    width: 100%;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-normal,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-normal .oucontent-h3,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-wide,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-wide .oucontent-h3,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-type2,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-type2 .oucontent-h3,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-narrow,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-narrow .oucontent-h3,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-landscape,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-landscape .oucontent-h3,
+.path-mod-oucontent .oucontent-table-thumbnail .oucontent-h3 {
+    background-color: transparent;
+    padding-left: 0px;
+    border-top: 0px;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow .oucontent-table-wrapper {
+    display: inline-block;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-wide,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-normal:not(.oucontent-s-accounts),
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-type2,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-narrow,
+.path-mod-oucontent .oucontent-table.oucontent-s-box.oucontent-s-landscape {
+    border: 0;
+}
+
+.path-mod-oucontent .oucontent-table .oucontent-table-wrapper {
+    padding: 4px 0px 0px;
+    margin: 0px;
+    border-top: 2px solid #bfe2ef;
+    font-size: 0.92857em; /* 13px, special case for tables to fit more before scrolling */
+    max-width: 100%;
+    overflow-x: auto;
+}
+.path-mod-oucontent .oucontent-table:not(.oucontent-s-accounts) .oucontent-table-wrapper {
+    border-bottom: 2px solid #bfe2ef;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 .oucontent-table-wrapper table,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal .oucontent-table-wrapper table {
+    width: 100%;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts) .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table .oucontent-table-wrapper:first-child {
+    padding-top: 0;
+}
+.path-mod-oucontent .oucontent-table.noborder .oucontent-table-wrapper,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2.oucontent-s-norules .oucontent-table-wrapper {
+    padding-bottom: 14px;
+    background-color: #FFF;
+}
+.path-mod-oucontent.safari .oucontent-table:not(.noborder):not(.oucontent-s-norules) .oucontent-table-wrapper .osep-scrollcontainer {
+    padding-bottom: 0;
+}
+
+.path-mod-oucontent .oucontent-table-wrapper .oucontent-h3 {
+    color: #002158;
+}
+
+.path-mod-oucontent .oucontent-table th,
+.path-mod-oucontent .oucontent-table td {
+    color: #000;
+    padding: 10px 10px 9px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.path-mod-oucontent .oucontent-table th:first-child,
+.path-mod-oucontent .oucontent-table td:first-child {
+    padding-left: 15px;
+}
+
+.path-mod-oucontent .oucontent-table th:last-child,
+.path-mod-oucontent .oucontent-table td:last-child {
+    padding-right: 15px;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-type2.oucontent-s-norules td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom),
+.path-mod-oucontent .oucontent-table.oucontent-s-wide.noborder td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom),
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape.noborder td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom),
+.path-mod-oucontent .oucontent-table.oucontent-s-type2.noborder td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom),
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow.noborder td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom),
+.path-mod-oucontent .oucontent-table.oucontent-s-normal.noborder td:not(.oucontent-tablecell-borderleft):not(.oucontent-tablecell-borderright):not(.oucontent-tablecell-bordertop):not(.oucontent-tablecell-borderbottom) {
+    border: 0;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-normal.noborder:not(.oucontent-s-accounts) tr:first-child td.oucontent-tablecell-bordertop {
+    border-top: 0;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-wide th,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide td,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts):not(.noborder) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts):not(.noborder) td,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 th,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 td,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow th,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow td,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape th,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape td {
+    border-top: 0px;
+    padding: 7px 15px;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-wide:not(.noborder) tr:not(:last-child) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide:not(.noborder) tr:not(:last-child) td,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts):not(.noborder) tr:not(:last-child) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts):not(.noborder) tr:not(:last-child) td,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2:not(.noborder):not(.oucontent-s-norules) tr:not(:last-child) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2:not(.noborder):not(.oucontent-s-norules) tr:not(:last-child) td,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow:not(.noborder) tr:not(:last-child) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow:not(.noborder) tr:not(:last-child) td,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape:not(.noborder) tr:not(:last-child) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape:not(.noborder) tr:not(:last-child) td {
+    border-bottom: 1px solid #bfe2ef;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 th,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow th,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts) th,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide th,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape th {
+    background-color: #e7f4fa;
+    border-bottom: 2px solid #bfe2ef;
+}
+
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderbottom {
+    border-bottom-color: #d4d2d2;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-bordertop {
+    border-top-color: #d4d2d2;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderleft {
+    border-left-color: #d4d2d2;
+}
+.path-mod-oucontent .oucontent-table th.oucontent-tablecell-borderright {
+    border-right-color: #d4d2d2;
+}
+
+.oucontent-total-double.oucontent-total-below {
+    border-color: #676463;
+}
+
+.path-mod-oucontent .oucontent-tablecell-highlight {
+    background-color: #fff2d8;
+}
+
+.path-mod-oucontent .oucontent-table > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table .oucontent-table-footnote {
+    /* Table > SourceReference, Table > TableFootnote */
+    color: #464542;
+    margin: 11px 15px 9px;
+    padding: 0;
+    font-size: 0.85714em;
+}
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table.oucontent-s-narrow .oucontent-table-footnote {
+    margin-top: 9px;
+    margin-left: 0;
+}
+
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts) > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape > .oucontent-source-reference,
+.path-mod-oucontent .oucontent-table.oucontent-s-normal:not(.oucontent-s-accounts) .oucontent-table-footnote,
+.path-mod-oucontent .oucontent-table.oucontent-s-wide .oucontent-table-footnote,
+.path-mod-oucontent .oucontent-table.oucontent-s-type2 .oucontent-table-footnote,
+.path-mod-oucontent .oucontent-table.oucontent-s-landscape .oucontent-table-footnote {
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.path-mod-oucontent #osep-mainwrapper #osep-maincol,
+.path-mod-oucontent #page-content #region-main {
+    overflow: visible;
+}
+
+#page-mod-oucontent-view .arrow_link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.path-mod-oucontent #middle-column ul,
+.path-mod-oucontent #middle-column ol {
+    /* BulletedList, NumberedList */
+    margin-bottom: 15px;
+}
+
+/* Resource Icons */
+.path-mod-oucontent .oucontent-inner-box .oucontent-sidenote.oucontent-resource-icons,
+.path-mod-oucontent .oucontent-sidenote.oucontent-resource-icons {
+    margin-right: auto;
+}
+
+.path-mod-oucontent #middle-column .oucontent-inner-box .oucontent-saqtype-part:not(.oucontent-part-first) .oucontent-part-head {
+    padding-top: 10px;
+}
+
+.path-mod-oucontent .oucontent-inner-box .oucontent-resource-icons .oucontent-sidenote-inner {
+    padding-right: 5px;
+}
+
+.path-mod-oucontent .oucontent-s-noheading .oucontent-sidenote.oucontent-resource-icons {
+    position: static;
+    margin: 15px 15px 15px 6px;
+}
+
+.path-mod-oucontent .oucontent-resource-icons .oucontent-sidenote-inner {
+    width: auto;
+    padding-right: 20px;
+    font-size: 0px;
+    margin-left: 0px;
+}
+.path-mod-oucontent .oucontent-s-noheading .oucontent-sidenote.oucontent-resource-icons .oucontent-sidenote-inner {
+    margin: 0px;
+    padding: 0px;
+}
+
+.path-mod-oucontent .oucontent-resource-icons img {
+    width: 20px;
+    height: 20px;
+    margin-top: 7px;
+    margin-left: 8px;
+}
+
+/* "Reveal answer" button overrides */
+.path-mod-oucontent .oucontent-saq-toggle {
+    font-size: 1em;
+    padding: 0px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.path-mod-oucontent .oucontent-saq-toggle-link.osep-smallbutton {
+    border-color: #002158;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 2px 8px 3px;
+}
+
+.path-mod-oucontent .oucontent-saq-toggle-link:hover,
+.path-mod-oucontent .oucontent-saq-toggle-link:focus {
+    background-color: #002158;
+}
+
+/* Single page view */
+.path-mod-oucontent #middle-column.oucontent-printable {
+    max-width: 58em;
+    box-sizing: content-box;
+}
+
+.path-mod-oucontent .oucontent-inlinefigure > img.oucontent-inlinefigure-image {
+    vertical-align: baseline;
+}
+
+/* Get rid of margin on the first items on page. */
+.path-mod-oucontent .oucontent-content > h1 {
+    margin-top: 0;
+}
+.path-mod-oucontent div.oucontent-startpagebox.oucontent-s-gradient {
+    background-color: #e7eff7;
+    margin-top: 0;
+    padding: 10px 15px;
+    border-radius: 0;
+}
+
+.path-mod-oucontent .oucontent-autobookmark img.icon {
+    width: 18px;
+    margin-top: -4px;
+}
+
+/* Change settings on responsive HTML activities to match right margin. */
+.oucontent-media.oucontent-responsive {
+    margin-right: -187px;
+}
+
+.path-mod-oucontent .oucontent-figure img.oucontent-figure-image:not(.oucontent-media-wide) {
+    width: 100%;
+}
+
+.omp-wrapper .omp-features-wrapper .omp-features-fixed .oucontent-authorcomment,
+.omp-wrapper .omp-features-fixed .oucontent-authorcomment {
+    color: #f50;
+}
+
+.omp-wrapper .omp-features-wrapper .omp-features-fixed .oucontent-editorcomment,
+.omp-wrapper .omp-features-fixed .oucontent-editorcomment {
+    color: #f07;
+}
+
+.path-mod-oucontent .oucontent-keypoints .oucontent-inner-box {
+    padding: 10px 15px 5px 15px;
+}
+
+.path-mod-oucontent .oucontent-file-description {
+    border-left:1px dotted grey;
+    margin-left: 8px;
+    padding-left: 8px;
+}
+
+.path-mod-oucontent .oucontent-interactionrightwrong,
+.path-mod-oucontent  .oucontent-checkbox:checked + .oucontent-multichoice-checkbox-answer .oucontent-multichoice-answer-feedback,
+.path-mod-oucontent .oucontent-choice-feedback p,
+.oucontent-singlechoice-answer-feedback .oucontent_paragraph,
+.oucontent-multichoice-answer-feedback .oucontent_paragraph,
+.path-mod-oucontent .oucontent-radio-button:checked + .oucontent-singlechoice-radio-answer label,
+.path-mod-oucontent .oucontent-checkbox:checked + .oucontent-multichoice-checkbox-answer label {
+    color: #002158;
+}
+
+.oucontent-config-block.block .content {
+    padding: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.path-mod-oucontent .oucontent-config-block.block.oucontent-printablelink {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 1px solid #e7eff7;
+    border-bottom: 1px solid #e7eff7;
+}
+
+.path-mod-oucontent .oucontent-config-block.block.oucontent-printablelink .content .oucontent-tree-item {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    position: relative;
+    color: #312b39;
+}
+
+.path-mod-oucontent .oucontent-config-block ul,
+.path-mod-oucontent .oucontent-config-block ul li {
+    margin-bottom: 0;
+}
+
+#block-region-side-post .oucontent-config-block.block {
+    margin-bottom: 20px !important;
+    padding: 0 12px 0;
+    background-color: #fff;
+}
+
+.oucontent-config-block img.icon-viewed {
+    height: 24px;
+    width: 16px;
+    vertical-align: middle;
+    padding-right: 9px;
+    margin-left: -1px;
+    background: transparent;
+    float: left;
+    box-sizing: content-box;
+}
+
+.oucontent-config-content-block.block {
+    margin-bottom: 21px !important;
+}
+
+
+/* Stying for document's info block. */
+.path-mod-oucontent .oucontent-savedinfo .content {
+    margin-top: 12px !important;
+}
+
+body.editing.path-mod-oucontent .oucontent-savedinfo h5 {
+    height: unset;
+}
+
+/* Styles for bookmarks. */
+.path-mod-oucontent .oucontent-content > h1 {
+    padding-right: 15px;
+}
+.path-mod-oucontent .oucontent-content {
+    position: relative;
+}
+
+/* Style for structured content preflight link. */
+.path-mod-oucontent .oucontent-preflightlink .card-text {
+    margin-top: 5px !important;
+}
+
+#osep-bottombutton-bookmarks {
+    margin-left: 0;
+    width: 50px;
+}
+
+#osep-bottombutton-bookmarks img.icon,
+#osep-bottombutton-calexport img.icon {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+#osep-bottombutton-calexport {
+    margin-left: 29px;
+    width: 52px;
+}
+
+.path-mod-oucontent #osep-mainwrapper #osep-maincol {
+    margin-bottom: 0;
+}
+
+.path-mod-oucontent #page-content #region-main {
+    padding-bottom: 15px;
+}
+
+.path-mod-oucontent h1,
+.path-mod-oucontent h2,
+.path-mod-oucontent h3 {
+    line-height: 40px;
+}
+
+.path-mod-oucontent .oucontent_html5vr_box,
+.path-mod-oucontent .oucontent-content,
+.path-mod-oucontent .oucontent-content table td,
+.path-mod-oucontent .oucontent-content ul,
+.path-mod-oucontent .oucontent-content span {
+    box-sizing: content-box;
+}
+
+.path-mod-oucontent b {
+    font-weight: bold;
+}
+
+.path-mod-oucontent #middle-column ol[dir=rtl],
+.path-mod-oucontent #middle-column ul[dir=rtl] {
+    padding-right: 0;
+}
+
+.path-mod-oucontent .oucontent-media {
+    overflow: auto;
+}
+
+@media (max-width: 1023px) {
+    .path-mod-oucontent .oucontent-table.oucontent-s-wide {
+        width: 100%;
+    }
+
+    /* Set FreeResponse textareas to relative width on tablets/phones to prevent them
+      spilling out of the column */
+    .path-mod-oucontent .oucontent-freeresponse textarea[cols] {
+        width: 90%;
+    }
+
+    /* Video scaling */
+    .path-mod-oucontent .oucontent-audio-video .omp-wrapper {
+        width: calc(100% - -140px); /* Double negative to work around YUI Compressor bug https://github.com/yui/yuicompressor/issues/59 */
+    }
+    /* Image or thumbnail image should always the same width as parent in tablet mode. */
+    .path-mod-oucontent .oucontent-figure > img,
+    .path-mod-oucontent .oucontent-figure > a > img {
+        width: 100%;
+    }
+
+    /* Responsive activities */
+    .oucontent-media.oucontent-responsive {
+        margin-right: 0;
+    }
+
+    /* Display SideNotes inline on tablets/phones */
+    .path-mod-oucontent #middle-column {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .path-mod-oucontent .oucontent-s-box .oucontent-inner-box .oucontent-sidenote {
+        margin-right: 0;
+    }
+
+    .path-mod-oucontent .oucontent-sidenote:not(.oucontent-resource-icons) {
+        float: none;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .path-mod-oucontent .oucontent-sidenote-inner {
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+    }
+
+    .path-mod-oucontent .oucontent-sidenote-head,
+    .path-mod-oucontent .oucontent-sidenote-para {
+        display: block;
+        width: 150px;
+        text-align: center;
+    }
+
+    .path-mod-oucontent .oucontent-sidenote-inner > .accesshide,
+    .path-mod-oucontent .oucontent-sidenote.oucontent-resource-icons {
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    #page-mod-oucontent-coursedownloads p.oucontent-downloaddesc {
+        margin-top: 20px;
+    }
+
+    .path-mod-oucontent .oucontent-download-list {
+        padding-left: 20px;
+    }
+
+    .path-mod-oucontent .oucontent-printable-backlink a.arrow_link {
+        height: auto;
+        padding-bottom: 4px;
+    }
+
+    /* Remove left padding from wrappers to prevent horizonal scrolling on phones */
+    #page-mod-oucontent-coursedownloads #osep-maincol,
+    #page-mod-oucontent-coursedownloads #region-main {
+        padding-left: 0px;
+    }
+
+    /* Don't float dialogue in mobile view as there isn't room */
+    .path-mod-oucontent .oucontent-dialogue-speaker {
+        float: none;
+    }
+
+    .path-mod-oucontent .oucontent-dialogue-remark {
+        margin-left: 0px;
+    }
+
+    /* Left block has no margin above */
+    .path-mod-oucontent .block.oucontent-contents {
+        margin-top: 0;
+    }
+
+    /* Image/Video scaling */
+    .path-mod-oucontent .oucontent-figure img.oucontent-figure-image,
+    .path-mod-oucontent .oucontent-audio-video .omp-wrapper {
+        width: 100%;
+    }
+
+    /* Responsive activities */
+    .oucontent-media.oucontent-responsive {
+        margin-right: 0;
+    }
+
+    .path-mod-oucontent #middle-column.oucontent-printable {
+        margin: 0px 10px;
+    }
+
+    /* Stop the thing about multicol running into margin */
+    .path-mod-oucontent .oucontent-multicol {
+        margin-right: 0;
+    }
+
+    .path-mod-oucontent .oucontent-equation.oucontent-nocaption {
+        padding-bottom: 8px;
+    }
+
+    .oucontent-config-content-block.block {
+        border-bottom: none;
+    }
+    .path-mod-oucontent .oucontent-config-block.block.oucontent-printablelink {
+        border-top: none;
+        border-bottom: none;
+    }
+}
+
+/* Galaxy S7 */
+@media (max-device-width: 640px) {
+    .path-mod-oucontent.android .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 20px;
+    }
+    .path-mod-oucontent.android .oucontent-s-hollowbox2 .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 18px;
+    }
+}
+/* Nexus9, Nexus7 */
+@media (max-device-width: 662px) {
+    .path-mod-oucontent.android .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 18px;
+    }
+    /*SAQ > Answer > Proof > BulletedList Proofending*/
+    .path-mod-oucontent.android .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 30px;
+    }
+    /*Question > Question > Proof > BulletedList Proofending*/
+    /*Question > Answer > Proof > BulletedList Proofending*/
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-saq-withtoggle .oucontent-saq-discussion .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 16px;
+    }
+}
+
+/* Nexus7 */
+@media (device-width: 600px) {
+    .path-mod-oucontent.android .proof ul.oucontent-bulleted > li {
+        /* Using !important is bad practice but it is necessary here because it overwrite .path-mod-oucontent #middle-column ul > li*/
+        margin-left: 17px!important;
+    }
+    .path-mod-oucontent.android .proof ol.oucontent-numbered > li {
+        /* Using !important is bad practice but it is necessary here because it overwrite .path-mod-oucontent #middle-column ol > li*/
+        margin-left: 22px!important;
+    }
+    .path-mod-oucontent.android .proof .oucontent-numbered + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-s-hollowbox2 .proof .oucontent-bulleted + div.oucontent-contentempty>.oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty>.oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty>.oucontent-proofending {
+        margin-left: 15px;
+    }
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 2px;
+    }
+}
+
+@media (min-device-width: 768px) {
+    .path-mod-oucontent.android .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 18px;
+    }
+    /*Question > Question > Proof > BulletedList Proofending*/
+    /*Question > Answer > Proof > BulletedList Proofending*/
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-itq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending {
+        margin-left: 16px;
+    }
+
+    .path-mod-oucontent.android .oucontent-saq-withtoggle .oucontent-saq-answer .proof .oucontent-bulleted + div.oucontent-contentempty > .oucontent-proofending,
+    .path-mod-oucontent.android .oucontent-saq-withtoggle .oucontent-saq-question .proof .oucontent-bulleted + div.oucontent-contentempty >.oucontent-proofending {
+        margin-left: 28px;
+    }
+}
+
+@media print {
+    .path-mod-oucontent .oucontent-figure img.oucontent-figure-image:not(.oucontent-media-wide),
+    .path-mod-oucontent .oucontent-figure > img.oucontent-figure-image,
+    .path-mod-oucontent .oucontent-s-box .oucontent-figure > img {
+        width: auto;
+    }
+    /* Using !important is bad practice but it is necessary here because we have to override a
+       stupid rule in bootstrapbase (reset.less) that itself uses !important. */
+    .path-mod-oucontent .oucontent-authorcomment {
+        color: #ff5500 !important;
+        font-style: italic;
+    }
+    .path-mod-oucontent .oucontent-editorcomment {
+        color: #ff0077 !important;
+        font-style: italic;
+    }
+}
