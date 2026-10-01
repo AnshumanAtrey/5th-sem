@@ -140,3 +140,43 @@ describe("OCR fallback (scanned PDFs)", async () => {
     expect(screen(p, job).outcome).not.toBe("manual_review");
   }, 30_000);
 });
+
+describe("half-credit fallbacks (fields found outside their section)", () => {
+  const item = (str: string, y: number) => ({ str, x: 50, y, w: str.length * 5, h: 10, page: 1 });
+  const filler = "Engineer who builds dependable web products for growing teams across many cities in India and abroad";
+
+  test("skills without a skills heading count at half weight", () => {
+    const layout: PdfLayout = { pages: [{ width: 595, height: 842, items: [
+      item("Kiran Rao", 800), item("Pune, India · kiran@example.com", 780), item(`${filler}. Works with React and TypeScript daily.`, 760),
+      item("EXPERIENCE", 740), item("Engineer — Zoho", 725), item("Jan 2020 – Jan 2024", 710), item(filler, 695),
+    ] }] };
+    const p = parseLayout(layout, { referenceDate: ref });
+    expect(p.skills).toEqual(expect.arrayContaining(["react", "typescript"]));
+    expect(p.breakdown.fields.skills).toMatchObject({ found: true, weight: 0.15 });
+    expect(p.confidence).toBe(0.85);
+  });
+
+  test("dates without an experience heading count at half weight", () => {
+    const layout: PdfLayout = { pages: [{ width: 595, height: 842, items: [
+      item("Kiran Rao", 800), item("Pune, India · kiran@example.com", 780), item("SKILLS", 760), item("React, TypeScript", 745),
+      item("PROFILE", 730), item(`${filler}. Engineer at Zoho, Jan 2020 – Jan 2024.`, 715), item(filler, 700),
+    ] }] };
+    const p = parseLayout(layout, { referenceDate: ref });
+    expect(p.yearsExperience).toBe(4);
+    expect(p.breakdown.fields.experience).toMatchObject({ found: true, weight: 0.15 });
+  });
+});
+
+test("parseResume parses a rendered PDF end to end", async () => {
+  const { parseResume } = await import("../src/parsing/parser");
+  const p = await parseResume(new Uint8Array(await renderResume(profile(), rng(1))), { referenceDate: ref });
+  expect(p.confidence).toBe(1);
+});
+
+test("legacy score rewards university tier (the bias the internal review found)", async () => {
+  const { legacyScore } = await import("../src/legacy/legacy");
+  const base = { skills: ["react", "typescript"], yearsExperience: 4, location: "Pune" };
+  const t1 = legacyScore({ ...base, university: "IIT Bombay" });
+  const t3 = legacyScore({ ...base, university: "Anna University" });
+  expect(t1 - t3).toBe(30); // identical candidates, 30 points apart purely on university
+});

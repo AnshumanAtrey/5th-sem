@@ -59,6 +59,18 @@ describe("remaining branch outcomes", () => {
     expect(d.tentativeOutcome).toBe("shortlist");
   });
 
+  test("remote shortlist withheld by low confidence: N1→N3→N4→N6→N7→N9→N10", () => {
+    const d = screen(parsed({ location: "Pune", confidence: 0.4 }), criteria());
+    expect([d.outcome, d.tentativeOutcome]).toEqual(["manual_review", "shortlist"]);
+    expect(path(d)).toBe("N1→N3→N4→N6→N7→N9→N10");
+  });
+
+  test("waitlist withheld by low confidence: N1→N3→N4→N6→N8→N9→N10", () => {
+    const d = screen(parsed({ yearsExperience: 3, confidence: 0.4 }), criteria());
+    expect([d.outcome, d.tentativeOutcome]).toEqual(["manual_review", "waitlist"]);
+    expect(path(d)).toBe("N1→N3→N4→N6→N8→N9→N10");
+  });
+
   test("unknown location never matches the job city", () => {
     const d = screen(parsed({ location: null }), criteria({ remoteAllowed: false }));
     expect(d.outcome).toBe("waitlist");

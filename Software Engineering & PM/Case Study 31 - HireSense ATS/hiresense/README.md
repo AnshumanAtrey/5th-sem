@@ -20,10 +20,12 @@ Requires [Bun](https://bun.sh) ≥ 1.3.
 ```bash
 bun run setup      # install api + web, then seed 2,000 synthetic applications (~3 min)
 bun run dev        # API on http://localhost:8787/api, web on http://localhost:3000
-bun run test       # 75 tests with coverage
+bun run test       # 82 tests with coverage
 ```
 
 **OCR** for scanned PDFs is on by default: PP-OCRv6 tiny on ONNX Runtime (`ppu-paddle-ocr`), with pages rasterised by pdf.js on `@napi-rs/canvas`. The models (~5 MB) download on first use into `~/.cache/ppu-paddle-ocr`. The packages are `optionalDependencies`. Without them, or with `HIRESENSE_OCR=0`, scanned résumés go to manual review instead.
+
+**Deliverables:** `cd docs && bun install && bun run build` regenerates the seven PDFs in `../deliverables/` from live data: the database, a fresh test run with coverage, and screenshots of the running web app if it is up.
 
 **Optional:** the small local model for AI-assisted review. HireSense runs without it; the button just reports that the model isn't running.
 

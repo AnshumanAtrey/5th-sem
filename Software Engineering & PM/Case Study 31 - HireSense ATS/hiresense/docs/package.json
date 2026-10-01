@@ -1,0 +1,11 @@
+{
+  "name": "hiresense-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build.ts"
+  },
+  "dependencies": {
+    "mermaid": "^12.0.0"
+  }
+}
