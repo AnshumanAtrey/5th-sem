@@ -1,0 +1,58 @@
+name: hotstar_clone
+description: "Hotstar Clone — a Flutter OTT streaming app (CPAD case study 144)."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  cloud_firestore: ^6.10.0
+  crypto: ^3.0.7
+  firebase_auth: ^6.7.0
+  firebase_core: ^4.15.0
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^3.4.3
+  go_router: ^18.0.2
+  hive_ce: ^2.20.1
+  hive_ce_flutter: ^2.4.0
+  http: ^1.6.0
+  path_provider: ^2.1.6
+  video_player: ^2.14.0
+  wakelock_plus: ^1.8.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
+    - assets/images/
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-400.ttf
+          weight: 400
+        - asset: assets/fonts/Manrope-500.ttf
+          weight: 500
+        - asset: assets/fonts/Manrope-600.ttf
+          weight: 600
+        - asset: assets/fonts/Manrope-700.ttf
+          weight: 700
+        - asset: assets/fonts/Manrope-800.ttf
+          weight: 800
+    # Latin Extended subset: carries the ₹ sign, used as a fallback font.
+    - family: ManropeExt
+      fonts:
+        - asset: assets/fonts/ManropeExt-400.ttf
+          weight: 400
+        - asset: assets/fonts/ManropeExt-500.ttf
+          weight: 500
+        - asset: assets/fonts/ManropeExt-600.ttf
+          weight: 600
+        - asset: assets/fonts/ManropeExt-700.ttf
+          weight: 700
+        - asset: assets/fonts/ManropeExt-800.ttf
+          weight: 800

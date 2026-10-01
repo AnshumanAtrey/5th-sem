@@ -13,6 +13,7 @@ folder → source. drop notes / certs / exports inside each.
 | `google-skills-cloud-lab-18219` | Google Skills (Cloud Skills Boost) — focus/lab 18219 | https://www.skills.google/focuses/18219 |
 | `ibm-skillsbuild-plan-business` | IBM SkillsBuild — learning plan PLAN-B2DE5C927EEC (business) | https://skills.yourlearning.ibm.com/activity/PLAN-B2DE5C927EEC?topic=business |
 | `ibm-quantum-learning` | IBM Quantum Learning — courses | https://quantum.cloud.ibm.com/learning/en/courses |
+| `flutter-quiz` | Cross Platform App Development (ISU · Lisa) — Flutter quiz, aced ✅ | cert PDF: [`flutter-quiz/flutter-quiz-certificate.pdf`](flutter-quiz/flutter-quiz-certificate.pdf) |
 
 ## skipped
 

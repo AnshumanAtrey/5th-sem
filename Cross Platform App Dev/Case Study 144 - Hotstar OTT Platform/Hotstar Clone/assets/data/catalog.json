@@ -1,0 +1,260 @@
+{
+  "titles": [
+    {
+      "id": "tears-of-steel",
+      "title": "Tears of Steel",
+      "tagline": "Save the world. Fix the past.",
+      "synopsis": "In a future Amsterdam overrun by robots, a group of warriors and scientists stage a desperate gamble: recreate the moment a young scientist broke up with the man who would go on to build the machines. A live-action sci-fi short with Blender-made visual effects.",
+      "kind": "movie",
+      "year": 2012,
+      "runtimeSeconds": 734,
+      "rating": "ua13",
+      "ratingReason": "Sci-fi violence",
+      "genres": ["Sci-Fi", "Action", "Live Action"],
+      "tags": ["robots", "time", "vfx", "amsterdam", "open-movie"],
+      "audioLanguages": ["English", "Italian"],
+      "minPlan": "mobile",
+      "featured": true,
+      "popularity": 92,
+      "poster": "assets/images/tears_of_steel_poster.jpg",
+      "backdrop": "assets/images/tears_of_steel_backdrop.jpg",
+      "stream": {
+        "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel-multi-lang.ism/.m3u8",
+        "adaptive": true,
+        "note": "This demo stream burns the current bitrate into the top-left corner, so you can watch adaptive quality switching happen."
+      },
+      "subtitles": [
+        {"language": "en", "label": "English", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-en.srt"},
+        {"language": "de", "label": "Deutsch", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-de.srt"},
+        {"language": "es", "label": "Español", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-es.srt"},
+        {"language": "fr", "label": "Français", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-fr-orig.srt"},
+        {"language": "it", "label": "Italiano", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-it.srt"},
+        {"language": "nl", "label": "Nederlands", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-nl.srt"},
+        {"language": "pt-BR", "label": "Português (BR)", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-PT-BR.srt"},
+        {"language": "ru", "label": "Русский", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-ru.srt"},
+        {"language": "ja", "label": "日本語", "url": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-JP.srt"}
+      ],
+      "download": {
+        "url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+        "label": "720p",
+        "sizeMb": 372
+      },
+      "credits": [
+        {"personId": "ian-hubert", "role": "Director"},
+        {"personId": "ian-hubert", "role": "Writer"},
+        {"personId": "derek-de-lint", "role": "Cast"},
+        {"personId": "sergio-hasselbaink", "role": "Cast"},
+        {"personId": "rogier-schippers", "role": "Cast"},
+        {"personId": "vanja-rukavina", "role": "Cast"},
+        {"personId": "denise-rebergen", "role": "Cast"},
+        {"personId": "jody-bhe", "role": "Cast"},
+        {"personId": "chris-haley", "role": "Cast"},
+        {"personId": "ton-roosendaal", "role": "Producer"},
+        {"personId": "joram-letwory", "role": "Music"},
+        {"personId": "joris-kerbosch", "role": "Cinematography"}
+      ],
+      "license": "CC BY 3.0 · © Blender Foundation · mango.blender.org"
+    },
+    {
+      "id": "sintel",
+      "title": "Sintel",
+      "tagline": "A lonely search for a lost friend.",
+      "synopsis": "A young woman named Sintel crosses deserts, snowfields and a vast walled city searching for Scales, the baby dragon she once rescued and raised. The Blender Foundation's third open movie.",
+      "kind": "movie",
+      "year": 2010,
+      "runtimeSeconds": 888,
+      "rating": "ua13",
+      "ratingReason": "Fantasy violence, peril",
+      "genres": ["Animation", "Fantasy", "Adventure"],
+      "tags": ["dragon", "quest", "loss", "open-movie"],
+      "audioLanguages": ["English"],
+      "minPlan": "super",
+      "featured": true,
+      "popularity": 88,
+      "poster": "assets/images/sintel_poster.jpg",
+      "backdrop": "assets/images/sintel_backdrop.jpg",
+      "stream": {
+        "url": "https://storage.googleapis.com/shaka-demo-assets/sintel-fmp4-aes/master.m3u8",
+        "adaptive": true,
+        "note": "AES-128 encrypted HLS: the player fetches the key and decrypts each segment."
+      },
+      "subtitles": [
+        {"language": "bn", "label": "বাংলা", "url": "https://download.blender.org/durian/subs/sintel_bn.srt"},
+        {"language": "ml", "label": "മലയാളം", "url": "https://download.blender.org/durian/subs/sintel_ml.srt"},
+        {"language": "pa", "label": "ਪੰਜਾਬੀ", "url": "https://download.blender.org/durian/subs/sintel_pa.srt"},
+        {"language": "fr", "label": "Français", "url": "https://download.blender.org/durian/subs/sintel_fr.srt"},
+        {"language": "nl", "label": "Nederlands", "url": "https://download.blender.org/durian/subs/sintel_nl.srt"},
+        {"language": "ru", "label": "Русский", "url": "https://download.blender.org/durian/subs/sintel_ru.srt"}
+      ],
+      "credits": [
+        {"personId": "colin-levy", "role": "Director"},
+        {"personId": "esther-wouda", "role": "Writer"},
+        {"personId": "halina-reijn", "role": "Voice", "character": "Sintel"},
+        {"personId": "thom-hoffman", "role": "Voice", "character": "Shaman"},
+        {"personId": "ton-roosendaal", "role": "Producer"},
+        {"personId": "jan-morgenstern", "role": "Music"},
+        {"personId": "david-revoy", "role": "Art Direction"}
+      ],
+      "license": "CC BY 3.0 · © Blender Foundation · durian.blender.org"
+    },
+    {
+      "id": "big-buck-bunny",
+      "title": "Big Buck Bunny",
+      "tagline": "Never mess with a big, gentle bunny.",
+      "synopsis": "A giant, good-natured rabbit just wants to enjoy a sunny morning in the meadow. Three rodent bullies have other plans, and they're about to learn that even the gentlest bunny has his limits.",
+      "kind": "movie",
+      "year": 2008,
+      "runtimeSeconds": 635,
+      "rating": "u",
+      "ratingReason": "Slapstick comedy",
+      "genres": ["Animation", "Comedy", "Family"],
+      "tags": ["animals", "revenge", "slapstick", "open-movie"],
+      "audioLanguages": ["No dialogue"],
+      "minPlan": "free",
+      "featured": true,
+      "popularity": 95,
+      "poster": "assets/images/big_buck_bunny_poster.jpg",
+      "backdrop": "assets/images/big_buck_bunny_backdrop.jpg",
+      "stream": {
+        "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+        "adaptive": true
+      },
+      "subtitles": [],
+      "download": {
+        "url": "https://cf-sf-video.wmspanel.com/local/raw/BigBuckBunny_320x180.mp4",
+        "label": "180p",
+        "sizeMb": 65
+      },
+      "credits": [
+        {"personId": "sacha-goedegebure", "role": "Director"},
+        {"personId": "sacha-goedegebure", "role": "Writer"},
+        {"personId": "ton-roosendaal", "role": "Producer"},
+        {"personId": "jan-morgenstern", "role": "Music"}
+      ],
+      "license": "CC BY 3.0 · © Blender Foundation · bigbuckbunny.org"
+    },
+    {
+      "id": "elephants-dream",
+      "title": "Elephants Dream",
+      "tagline": "The machine is only what you believe it is.",
+      "synopsis": "Emo and Proog wander an endless, shifting machine that Proog believes he understands completely, until Emo starts to see it differently. The world's first open movie, made entirely with open-source tools.",
+      "kind": "movie",
+      "year": 2006,
+      "runtimeSeconds": 658,
+      "rating": "ua7",
+      "ratingReason": "Surreal imagery, mild peril",
+      "genres": ["Animation", "Sci-Fi", "Surreal"],
+      "tags": ["machine", "perception", "open-movie"],
+      "audioLanguages": ["English"],
+      "minPlan": "free",
+      "featured": false,
+      "popularity": 71,
+      "poster": "assets/images/elephants_dream_poster.jpg",
+      "backdrop": "assets/images/elephants_dream_backdrop.jpg",
+      "stream": {
+        "url": "https://download.blender.org/ED/elephantsdream-720-h264-st-aac.mov",
+        "adaptive": false,
+        "note": "Progressive file, not HLS, so it plays at one fixed quality (720p)."
+      },
+      "subtitles": [],
+      "download": {
+        "url": "https://download.blender.org/ED/elephantsdream-480-h264-st-aac.mov",
+        "label": "480p",
+        "sizeMb": 104
+      },
+      "credits": [
+        {"personId": "bassam-kurdali", "role": "Director"},
+        {"personId": "pepijn-zwanenberg", "role": "Screenplay"},
+        {"personId": "andreas-goralczyk", "role": "Story"},
+        {"personId": "cas-jansen", "role": "Voice"},
+        {"personId": "tygo-gernandt", "role": "Voice"},
+        {"personId": "ton-roosendaal", "role": "Producer"},
+        {"personId": "jan-morgenstern", "role": "Music"}
+      ],
+      "license": "CC BY 2.5 · © Blender Foundation · orange.blender.org"
+    },
+    {
+      "id": "natgeo-4k",
+      "title": "Shark Dive 360°",
+      "tagline": "4K test stream, up to 3840×2048.",
+      "synopsis": "A 360° dive among sharks off the ocean floor. It's here as the app's 4K showcase: the adaptive ladder goes from 480p all the way to 3840×2048. The footage is equirectangular VR, so it looks stretched in a flat player.",
+      "kind": "documentary",
+      "runtimeSeconds": 134,
+      "rating": "u",
+      "ratingReason": "Nature footage",
+      "genres": ["Documentary", "Nature", "4K"],
+      "tags": ["ocean", "sharks", "vr", "4k"],
+      "audioLanguages": ["English"],
+      "minPlan": "premium",
+      "featured": true,
+      "popularity": 64,
+      "poster": "assets/images/natgeo_4k_poster.jpg",
+      "backdrop": "assets/images/natgeo_4k_backdrop.jpg",
+      "stream": {
+        "url": "https://demo.theoplayer.com/hubfs/videos/natgeo/playlist.m3u8",
+        "adaptive": true,
+        "note": "Public 4K HLS test stream. Premium unlocks the 2160p rendition."
+      },
+      "subtitles": [],
+      "credits": [],
+      "license": "© National Geographic · public test stream hosted by THEOplayer (not Creative Commons)"
+    }
+  ],
+  "live": [
+    {
+      "id": "shaka-live",
+      "title": "Shaka Live Test Channel",
+      "subtitle": "A real 24×7 live HLS stream",
+      "kind": "live",
+      "url": "https://storage.googleapis.com/shaka-live-assets/player-source.m3u8",
+      "backdrop": "assets/images/shaka_live_backdrop.jpg",
+      "rating": "u",
+      "minPlan": "free",
+      "credit": "Live test stream from the Shaka Player project (Google)"
+    },
+    {
+      "id": "bbb-watch-party",
+      "title": "Big Buck Bunny Watch Party",
+      "subtitle": "Everyone watches the same second, on every device",
+      "kind": "watchParty",
+      "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+      "loopSeconds": 635,
+      "backdrop": "assets/images/bbb_watch_party_backdrop.jpg",
+      "rating": "u",
+      "minPlan": "free",
+      "credit": "CC BY 3.0 · © Blender Foundation"
+    }
+  ],
+  "rails": [
+    {"title": "Blender Open Movies", "ids": ["tears-of-steel", "sintel", "big-buck-bunny", "elephants-dream"]},
+    {"title": "Animation", "ids": ["big-buck-bunny", "sintel", "elephants-dream"]},
+    {"title": "Sci-Fi & Fantasy", "ids": ["tears-of-steel", "elephants-dream", "sintel"]},
+    {"title": "Free to Watch", "ids": ["big-buck-bunny", "elephants-dream"]},
+    {"title": "Premium 4K", "ids": ["natgeo-4k"]}
+  ],
+  "people": {
+    "ian-hubert": {"name": "Ian Hubert", "bio": "Filmmaker and VFX artist. He wrote and directed Tears of Steel."},
+    "derek-de-lint": {"name": "Derek de Lint", "bio": "Dutch actor, known for Soldier of Orange and the Oscar-winning The Assault."},
+    "sergio-hasselbaink": {"name": "Sergio Hasselbaink", "bio": "Actor in the Tears of Steel ensemble."},
+    "rogier-schippers": {"name": "Rogier Schippers", "bio": "Actor in the Tears of Steel ensemble."},
+    "vanja-rukavina": {"name": "Vanja Rukavina", "bio": "Actor in the Tears of Steel ensemble."},
+    "denise-rebergen": {"name": "Denise Rebergen", "bio": "Actor in the Tears of Steel ensemble."},
+    "jody-bhe": {"name": "Jody Bhe", "bio": "Actor in the Tears of Steel ensemble."},
+    "chris-haley": {"name": "Chris Haley", "bio": "Actor in the Tears of Steel ensemble."},
+    "ton-roosendaal": {"name": "Ton Roosendaal", "bio": "Dutch software developer who created Blender. As chairman of the Blender Foundation he produced its open movies."},
+    "joram-letwory": {"name": "Joram Letwory", "bio": "Composer of the Tears of Steel score."},
+    "joris-kerbosch": {"name": "Joris Kerbosch", "bio": "Director of photography on Tears of Steel."},
+    "colin-levy": {"name": "Colin Levy", "bio": "Filmmaker who directed Sintel and co-directed Agent 327: Operation Barbershop."},
+    "esther-wouda": {"name": "Esther Wouda", "bio": "Screenwriter of Sintel."},
+    "halina-reijn": {"name": "Halina Reijn", "bio": "Dutch actor and director, known for Black Book. She directed Bodies Bodies Bodies and Babygirl."},
+    "thom-hoffman": {"name": "Thom Hoffman", "bio": "Dutch actor. He voices the Shaman in Sintel."},
+    "jan-morgenstern": {"name": "Jan Morgenstern", "bio": "German composer who scored Elephants Dream, Big Buck Bunny and Sintel."},
+    "david-revoy": {"name": "David Revoy", "bio": "French illustrator and art director of Sintel."},
+    "sacha-goedegebure": {"name": "Sacha Goedegebure", "bio": "Director and writer of Big Buck Bunny."},
+    "bassam-kurdali": {"name": "Bassam Kurdali", "bio": "Animator and director of Elephants Dream, the first Blender open movie."},
+    "pepijn-zwanenberg": {"name": "Pepijn Zwanenberg", "bio": "Screenwriter of Elephants Dream."},
+    "andreas-goralczyk": {"name": "Andreas Goralczyk", "bio": "Blender artist. He co-wrote the story of Elephants Dream and later directed Spring."},
+    "cas-jansen": {"name": "Cas Jansen", "bio": "Dutch actor who voices a lead in Elephants Dream."},
+    "tygo-gernandt": {"name": "Tygo Gernandt", "bio": "Dutch actor who voices a lead in Elephants Dream."}
+  }
+}

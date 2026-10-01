@@ -1,0 +1,5 @@
+name: assignment_1_library_system
+description: Dart basics assignment - a simple library system built with variables, loops, functions and OOP (inheritance).
+version: 1.0.0
+environment:
+  sdk: ^3.0.0

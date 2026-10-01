@@ -33,7 +33,7 @@ def messages(at):
 def test_default_view_is_a_real_next_week_forecast():
     at = app()
     assert at.metric[0].label == "Forecast weekly sales" and dollars(at.metric[0].value) > 0
-    assert at.metric[2].value == "not known"
+    assert at.metric[2].value == "future week" and "data ends" in at.metric[2].delta
     assert "genuine forecast" in messages(at)
 
 
@@ -75,7 +75,7 @@ def test_what_if_changes_forecast_and_hides_actual():
     before = dollars(at.metric[0].value)
     at.number_input(key="lag1").set_value(at.number_input(key="lag1").value * 2).run()
     assert dollars(at.metric[0].value) != before
-    assert at.metric[2].value == "not known"  # actual no longer applies to a made-up week
+    assert at.metric[2].value == "n/a (what-if)"  # actual no longer applies to a made-up week
 
 
 def test_new_week_resets_the_what_if_inputs():

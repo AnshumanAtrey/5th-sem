@@ -3,7 +3,7 @@
 **Machine Learning Fundamentals · Mini Project · Group 12** · B.Tech CSE 2024–28 · Semester V
 Brief: [`problem-statement.pdf`](problem-statement.pdf) (Group 12 – Retail Sales Prediction + the rules for all groups)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnshumanAtrey/5th-sem/blob/main/Machine%20Learning/Retail%20Sales%20Prediction%20-%20Group%2012/Retailligence.ipynb)
+[![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://retail-intelligence-ml.streamlit.app/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnshumanAtrey/5th-sem/blob/main/Machine%20Learning/Retail%20Sales%20Prediction%20-%20Group%2012/Retailligence.ipynb)
 
 Retailligence forecasts **next week's sales for one department of one Walmart store**. It uses the department's
 sales history, the store, the product group, promotions (markdowns), the month and the holiday calendar, so a manager can
@@ -15,7 +15,7 @@ order stock and plan staff a week ahead.
 | **Model** | Polynomial Regression (degree 2) on engineered history, date/time, holiday and store features |
 | **Test (17 unseen weeks)** | MAE **$1,277** per department-week · RMSE $2,544 · R² **0.987** |
 | **vs rules of thumb** | 17.9% lower error than "next week = last week", 7.9% lower than the best seasonal rule |
-| **Deliverables** | [notebook](Retailligence.ipynb) · [presentation (9 slides)](Retailligence-Presentation.pdf) · [full report (37 slides)](Retailligence-Report.pdf) · [Streamlit app](app.py) · [tests](tests/) · [contributions](CONTRIBUTIONS.md) |
+| **Deliverables** | [notebook](Retailligence.ipynb) · [presentation (9 slides)](Retailligence-Presentation.pdf) · [full report (37 slides)](Retailligence-Report.pdf) · [live app](https://retail-intelligence-ml.streamlit.app/) · [app code](app.py) · [tests](tests/) · [contributions](CONTRIBUTIONS.md) |
 
 ## Run it
 
@@ -35,9 +35,10 @@ python report/screenshots.py      # needs the app running on port 8765
 python report/build_report.py     # → Retailligence-Report.pdf + Retailligence-Presentation.pdf
 ```
 
-**Live demo:** open the notebook in Colab with the badge above, then *Runtime → Run all*. The first cell clones this repo and
-installs the pinned libraries. The app can go live on [Streamlit Community Cloud](https://share.streamlit.io) straight from
-this repo, with main file `Machine Learning/Retail Sales Prediction - Group 12/app.py`.
+**Live app:** **https://retail-intelligence-ml.streamlit.app/** (Streamlit Community Cloud, deployed from this repo through the root `streamlit_app.py`).
+
+**Live notebook:** open it in Colab with the badge above, then *Runtime → Run all*. The first cell clones this repo and installs
+the pinned libraries.
 
 ## How it works
 

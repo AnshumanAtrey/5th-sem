@@ -1,0 +1,11 @@
+{
+  "name": "hiresense",
+  "private": true,
+  "scripts": {
+    "setup": "bun install --cwd api && bun install --cwd web && bun run --cwd api seed",
+    "dev": "bun run --cwd api dev & bun run --cwd web dev; wait",
+    "seed": "bun run --cwd api seed",
+    "test": "bun run --cwd api test",
+    "build": "bun run --cwd web build"
+  }
+}

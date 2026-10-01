@@ -3,3 +3,11 @@ __pycache__/
 *.pyc
 node_modules/
 .venv/
+
+# dart build artifacts
+.dart_tool/
+pubspec.lock
+build/
+
+# screenshot harness fonts (regenerable, PNGs already committed)
+.screenshot_fonts/

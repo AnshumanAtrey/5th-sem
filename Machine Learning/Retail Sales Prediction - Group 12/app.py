@@ -122,9 +122,15 @@ m1.metric("Forecast weekly sales", f"${pred:,.0f}", border=True, delta_color="of
                "The test weeks had no Thanksgiving or Christmas, so holiday misses can be larger.")
 m2.metric("Rule-of-thumb check", f"${rule:,.0f}", border=True,
           help="Average of the last 4 weeks + how much this week jumped last year.")
-m3.metric("Actual sales that week", "not known" if actual is None else f"${actual:,.0f}", border=True,
-          delta=None if actual is None else f"model {'over' if pred > actual else 'under'} by ${abs(pred - actual):,.0f}",
-          delta_color="off", delta_arrow="off")
+if actual is not None:
+    shown, note = f"${actual:,.0f}", f"model {'over' if pred > actual else 'under'} by ${abs(pred - actual):,.0f}"
+elif week == next_week:
+    shown, note = "future week", f"data ends {(next_week - pd.Timedelta(weeks=1)).date()}"
+elif changed:
+    shown, note = "n/a (what-if)", "you changed an input"
+else:
+    shown, note = "not recorded", "no sales row that week"
+m3.metric("Actual sales that week", shown, note, border=True, delta_color="off", delta_arrow="off")
 
 if week == next_week:
     st.success(f"{week.date()} is after the last week in the data: this is a genuine forecast.")

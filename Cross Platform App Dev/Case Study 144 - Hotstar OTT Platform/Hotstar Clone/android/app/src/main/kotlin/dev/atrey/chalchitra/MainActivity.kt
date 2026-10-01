@@ -1,0 +1,5 @@
+package dev.atrey.chalchitra
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

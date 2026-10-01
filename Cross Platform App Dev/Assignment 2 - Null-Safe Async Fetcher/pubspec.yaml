@@ -1,0 +1,5 @@
+name: assignment_2_async_fetcher
+description: Null-safe async fetcher - Dart program using null safety, Future and async/await to fetch mock API data with error handling.
+version: 1.0.0
+environment:
+  sdk: ^3.0.0
