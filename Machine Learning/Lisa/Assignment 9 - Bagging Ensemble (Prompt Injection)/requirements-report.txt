@@ -1,0 +1,9 @@
+# running it on kaggle: executing the notebook, testing the app, the screenshots and the report
+# (pandoc 3.9.0.2 and chromium get installed inside the kaggle session, see kaggle/kernel_job.py)
+kaggle
+ipykernel
+nbformat
+nbconvert==7.17.1
+pytest
+playwright==1.63.0
+weasyprint

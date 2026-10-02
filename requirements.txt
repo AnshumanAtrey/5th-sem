@@ -1,5 +1,5 @@
-# For the Streamlit Cloud deploy (streamlit_app.py). Keep in sync with
-# Machine Learning/Lisa/Retail Sales Prediction - Group 12/requirements.txt
+# For the Streamlit Cloud deploys from the repo root: streamlit_app.py (Group 12), a9_streamlit_app.py and
+# a10_streamlit_app.py (Lisa assignments 9 and 10). Keep in sync with the requirements.txt in those folders
 numpy==2.5.3
 pandas==3.0.6
 scikit-learn==1.9.1
