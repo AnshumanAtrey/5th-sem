@@ -6,5 +6,5 @@ where requirements.txt has no spaces in its path. The real app lives in the proj
 import runpy
 from pathlib import Path
 
-runpy.run_path(str(Path(__file__).parent / "Machine Learning" / "Retail Sales Prediction - Group 12" / "app.py"),
+runpy.run_path(str(Path(__file__).parent / "Machine Learning" / "Lisa" / "Retail Sales Prediction - Group 12" / "app.py"),
                run_name="__main__")

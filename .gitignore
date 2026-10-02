@@ -11,3 +11,6 @@ build/
 
 # screenshot harness fonts (regenerable, PNGs already committed)
 .screenshot_fonts/
+
+# course-access notes can hold account passwords (public repo), keep them local
+certification/**/STATUS.md

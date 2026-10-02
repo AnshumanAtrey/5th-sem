@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/tmp/phys/style.css"></head><body>
+<div class="head">
+  <h1>Physics Assignment 6: Transformations</h1>
+  <div class="meta">Anshuman Atrey &middot; 2024.anshumana@isu.ac.in &middot; B.Tech Sem V &middot; Total Marks: 5</div>
+</div>
+
+<p class="q">Q1. Write a short note on Translation Transformation. Explain how the position of a 2D object changes using the translation matrix. <span class="marks">[2]</span></p>
+<p class="a"><b>Translation</b> moves every point of an object by the same amount in the x and y directions, without rotating, resizing or distorting it. The shape slides to a new position but stays identical. Example: dragging an icon across the screen.</p>
+<p class="a">A point (x, y) shifted by (t<sub>x</sub>, t<sub>y</sub>) becomes:</p>
+<div class="calc">x' = x + t<sub>x</sub>
+y' = y + t<sub>y</sub></div>
+<p class="a">Translation is an <i>addition</i>, not a multiplication, so to keep all transformations as matrix multiplications we use <b>homogeneous coordinates</b> (add a 1 as a third coordinate). The translation matrix is:</p>
+<div class="calc">[ x' ]   [ 1  0  t<sub>x</sub> ] [ x ]
+[ y' ] = [ 0  1  t<sub>y</sub> ] [ y ]
+[ 1  ]   [ 0  0   1 ] [ 1 ]</div>
+<p class="a">Multiplying this out gives x' = x + t<sub>x</sub> and y' = y + t<sub>y</sub>, which is exactly the slide. Writing it as a matrix lets us chain translation with rotation and scaling in one combined matrix.</p>
+
+<p class="q">Q2. Write a short note on Rotation Transformation. Mention the role of the angle of rotation and the centre of rotation. <span class="marks">[2]</span></p>
+<p class="a"><b>Rotation</b> turns an object about a fixed point by a given angle. The shape and size stay the same; only its orientation changes. Example: rotating a photo by 90&deg;.</p>
+<p class="a">Rotating a point (x, y) by angle &theta; about the <b>origin</b> (anticlockwise positive):</p>
+<div class="calc">x' = x&middot;cos&theta; &minus; y&middot;sin&theta;
+y' = x&middot;sin&theta; + y&middot;cos&theta;
+
+[ x' ]   [ cos&theta;  &minus;sin&theta; ] [ x ]
+[ y' ] = [ sin&theta;   cos&theta; ] [ y ]</div>
+<p class="a"><b>Role of the angle of rotation (&theta;):</b> it sets how much the object turns, and its sign sets the direction (positive = anticlockwise, negative = clockwise). At &theta; = 0 nothing moves.</p>
+<p class="a"><b>Role of the centre of rotation:</b> it is the pivot the object turns around. The formulas above assume the pivot is the origin. To rotate about any other point (a, b), you first translate the object so that point moves to the origin, then rotate, then translate back:</p>
+<div class="calc">translate(&minus;a, &minus;b)  &rarr;  rotate(&theta;)  &rarr;  translate(+a, +b)</div>
+<p class="a">So the centre decides <i>where</i> the turn happens, and the angle decides <i>how far</i>.</p>
+
+<p class="q">Q3. What is the purpose of Scaling Transformation in computer graphics? Would you prefer these as easy/basic or application-based questions? <span class="marks">[1]</span></p>
+<p class="a"><b>Scaling</b> changes the size of an object by multiplying its coordinates by scale factors s<sub>x</sub> and s<sub>y</sub> (x' = s<sub>x</sub>&middot;x, y' = s<sub>y</sub>&middot;y). s &gt; 1 enlarges, 0 &lt; s &lt; 1 shrinks, and equal s<sub>x</sub> = s<sub>y</sub> keeps the proportions while unequal values stretch the shape. Its purpose is to zoom in and out, fit objects to different screen sizes, and build models at the right relative dimensions. Like translation and rotation, it is done with a matrix so it can be combined with the others.</p>
+<p class="a"><b>Preference:</b> I would prefer a mix that leans application-based. The basic definitions are quick to memorise, but you only really understand transformations when you apply them, for example working out the matrix to rotate a shape about a corner instead of the origin, or combining scale-then-translate to zoom toward the mouse pointer. Application questions test whether you can actually use the maths, not just recall it.</p>
+
+</body></html>

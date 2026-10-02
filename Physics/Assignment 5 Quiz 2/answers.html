@@ -1,0 +1,90 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@page { size: A4; margin: 1.6cm 2cm; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10.5pt; line-height: 1.4; color: #15171c; }
+.head { border-bottom: 2px solid #15171c; padding-bottom: 8px; margin-bottom: 12px; }
+.head h1 { font-size: 15pt; margin: 0 0 3px; }
+.head .meta { font-size: 9pt; color: #555; }
+.idbox { background:#f4f5f7; border-radius:6px; padding:8px 10px; font-size:9.5pt; margin-bottom:14px; }
+.q { font-weight: 700; margin: 11px 0 3px; }
+.q .n { color:#2563eb; }
+ul { list-style:none; margin: 2px 0 0; padding: 0; }
+li { margin: 1px 0; padding-left: 20px; position: relative; color:#555; }
+li.correct { color:#0b7a34; font-weight:700; }
+li.correct:before { content:"\2714"; position:absolute; left:0; color:#0b7a34; }
+li.opt:before { content:"\25CB"; position:absolute; left:2px; color:#bbb; font-size:8pt; }
+.summary { margin-top:16px; font-size:9.5pt; color:#444; border-top:1px solid #ddd; padding-top:8px;}
+</style></head><body>
+<div class="head">
+  <h1>Physics Assignment 5: Quiz 2 (Transformations)</h1>
+  <div class="meta">My responses &middot; 20 MCQs &middot; Computer-graphics transformations</div>
+</div>
+<div class="idbox">
+  <b>Name:</b> Anshuman Atrey &nbsp;&middot;&nbsp; <b>Email:</b> 2024.anshumana@isu.ac.in &nbsp;&middot;&nbsp;
+  <b>Cohort:</b> EM
+</div>
+
+<div class="q"><span class="n">1.</span> What is the main purpose of transformations in computer graphics?</div>
+<ul><li class="correct">To scale, translate, rotate, reflect and shear shapes and objects</li><li class="opt">To store images</li><li class="opt">To compress videos</li><li class="opt">To create databases</li></ul>
+
+<div class="q"><span class="n">2.</span> Which transformation moves an object from one position to another without changing its shape?</div>
+<ul><li class="correct">Translation</li><li class="opt">Scaling</li><li class="opt">Reflection</li><li class="opt">Shearing</li></ul>
+
+<div class="q"><span class="n">3.</span> In a translation, what happens to the coordinates of an object?</div>
+<ul><li class="correct">They are shifted by specified amounts</li><li class="opt">They are always doubled</li><li class="opt">They are converted into angles</li><li class="opt">They are changed into three coordinates</li></ul>
+
+<div class="q"><span class="n">4.</span> What is the effect of increasing the x-coordinate during translation?</div>
+<ul><li class="correct">The object moves horizontally to the right</li><li class="opt">The object moves vertically upward</li><li class="opt">The object rotates</li><li class="opt">The object becomes smaller</li></ul>
+
+<div class="q"><span class="n">5.</span> What is the effect of increasing the y-coordinate during translation?</div>
+<ul><li class="correct">The object moves vertically upward</li><li class="opt">The object moves horizontally to the right</li><li class="opt">The object rotates</li><li class="opt">The object is reflected</li></ul>
+
+<div class="q"><span class="n">6.</span> Which transformation changes the size of an object?</div>
+<ul><li class="correct">Scaling</li><li class="opt">Translation</li><li class="opt">Reflection</li><li class="opt">Rotation</li></ul>
+
+<div class="q"><span class="n">7.</span> Scaling in the given 2D transformation example is performed relative to which point?</div>
+<ul><li class="correct">The origin</li><li class="opt">The center of the screen</li><li class="opt">The top-left corner</li><li class="opt">The midpoint of the object</li></ul>
+
+<div class="q"><span class="n">8.</span> What happens to a point located at the origin during scaling relative to the origin?</div>
+<ul><li class="correct">It does not change its position</li><li class="opt">It always moves right</li><li class="opt">It always moves up</li><li class="opt">It is reflected</li></ul>
+
+<div class="q"><span class="n">9.</span> Which transformation reverses the sign of the x-coordinate while keeping the y-coordinate unchanged?</div>
+<ul><li class="correct">Reflection about the y-axis</li><li class="opt">Reflection about the x-axis</li><li class="opt">Translation</li><li class="opt">Scaling</li></ul>
+
+<div class="q"><span class="n">10.</span> Which coordinate remains unchanged when reflecting a point about the y-axis?</div>
+<ul><li class="correct">The y-coordinate</li><li class="opt">The x-coordinate</li><li class="opt">Both coordinates</li><li class="opt">Neither coordinate</li></ul>
+
+<div class="q"><span class="n">11.</span> What is the basic idea of reflection in computer graphics?</div>
+<ul><li class="correct">Creating a mirror-like image of a shape</li><li class="opt">Changing only the size of a shape</li><li class="opt">Moving a shape without changing orientation</li><li class="opt">Converting a shape into a point</li></ul>
+
+<div class="q"><span class="n">12.</span> Homogeneous coordinates are used to represent a point in a plane using?</div>
+<ul><li class="correct">Three coordinates instead of two</li><li class="opt">One coordinate instead of two</li><li class="opt">Two coordinates only</li><li class="opt">Four coordinates only</li></ul>
+
+<div class="q"><span class="n">13.</span> Which of the following is a possible homogeneous representation of the point (3, 4)?</div>
+<ul><li class="opt">(6, 8, 2)</li><li class="correct">(3, 4, 1)</li><li class="opt">(6, 4, 2)</li><li class="opt">(3, 8, 2)</li></ul>
+
+<div class="q"><span class="n">14.</span> Why can more than one homogeneous coordinate set represent the same point?</div>
+<ul><li class="correct">The coordinates can be scaled proportionally</li><li class="opt">The point changes its location each time</li><li class="opt">Only the first coordinate matters</li><li class="opt">Only the second coordinate matters</li></ul>
+
+<div class="q"><span class="n">15.</span> Which mathematician is mentioned in connection with homogeneous coordinates?</div>
+<ul><li class="correct">August M&ouml;bius</li><li class="opt">Isaac Newton</li><li class="opt">Albert Einstein</li><li class="opt">James Clerk Maxwell</li></ul>
+
+<div class="q"><span class="n">16.</span> What is the main advantage of using homogeneous coordinates in transformations?</div>
+<ul><li class="correct">They provide a convenient representation for geometric transformations</li><li class="opt">They eliminate the need for coordinates</li><li class="opt">They are used only for storing images</li><li class="opt">They prevent all shape changes</li></ul>
+
+<div class="q"><span class="n">17.</span> Which transformation changes the orientation of an object by turning it through an angle?</div>
+<ul><li class="correct">Rotation</li><li class="opt">Translation</li><li class="opt">Scaling</li><li class="opt">Reflection</li></ul>
+
+<div class="q"><span class="n">18.</span> In 3D transformations, roll is defined as rotation about which axis?</div>
+<ul><li class="correct">The z-axis</li><li class="opt">The x-axis</li><li class="opt">The y-axis</li><li class="opt">No axis</li></ul>
+
+<div class="q"><span class="n">19.</span> In 3D transformations, pitch is defined as rotation about which axis?</div>
+<ul><li class="correct">The x-axis</li><li class="opt">The y-axis</li><li class="opt">The z-axis</li><li class="opt">No axis</li></ul>
+
+<div class="q"><span class="n">20.</span> In 3D transformations, yaw is defined as rotation about which axis?</div>
+<ul><li class="correct">The y-axis</li><li class="opt">The x-axis</li><li class="opt">The z-axis</li><li class="opt">No axis</li></ul>
+
+<div class="summary"><b>Answer summary:</b> 1-A, 2-A, 3-A, 4-A, 5-A, 6-A, 7-A, 8-A, 9-A, 10-A, 11-A, 12-A, 13-B, 14-A, 15-A, 16-A, 17-A, 18-A, 19-A, 20-A (letters follow the option order shown above).</div>
+
+</body></html>

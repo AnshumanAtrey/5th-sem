@@ -1,0 +1,9 @@
+# what the notebook needs. all of it comes preinstalled on kaggle's python image, where it runs
+# (versions as printed by the notebook on kaggle, 2 oct 2026)
+sentence-transformers==5.4.1
+torch==2.10.0
+scipy==1.16.3
+scikit-learn==1.6.1
+pandas==2.3.3
+numpy
+matplotlib

@@ -1,0 +1,5 @@
+# running it on kaggle + rebuilding the report locally (pandoc and weasyprint come from brew)
+kaggle
+nbformat
+nbconvert==7.17.1
+playwright==1.63.0

@@ -27,7 +27,7 @@
 - [x] Enrol / Enter course — "You have joined these courses: Discovering chemistry"
 - [x] Work sections — all 143 sections visited, 0 failures
 - [x] Pass quizzes — **Week 4 badge: 45/45** · **Week 8 badge: 39/45** (pass = 22.50/45), both first attempt
-- [ ] Download Statement of Participation + badge into this folder — badge appears in My OpenLearn within 24h of meeting criteria
+- [x] Download Statement of Participation into this folder — `DC_1_statement_of_participation.pdf` (issued 21 Sep 2026, filed 2026-10-02 from Downloads / the OpenLearn email to anshumanatrey@gmail.com)
 
 ### Quiz mechanics learned
 - Only the **two badge quizzes** (Week 4 = quiz id 76514, Week 8 = id 76515) count toward the badge; sessions 1/2/3/5/6/7 quizzes are practice only.

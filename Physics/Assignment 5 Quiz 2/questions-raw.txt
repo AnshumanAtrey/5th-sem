@@ -1,0 +1,174 @@
+Physics Assignment 5 Quiz 2
+Quiz created automatically from Google Sheets.
+2024.anshumana@isu.ac.in Switch account
+ 
+* Indicates required question
+Email
+*
+Record 2024.anshumana@isu.ac.in as the email to be included with my response
+Roll No
+*
+Your answer
+Name of the student
+*
+Your answer
+Email Id
+*
+Your answer
+Cohort
+*
+Choose
+EM
+JH
+MZ
+What is the main purpose of transformations in computer graphics?
+*
+1 point
+To scale, translate, rotate, reflect and shear shapes and objects
+To store images
+To compress videos
+To create databases
+Which transformation moves an object from one position to another without changing its shape?
+*
+1 point
+Translation
+Scaling
+Reflection
+Shearing
+In a translation, what happens to the coordinates of an object?
+*
+1 point
+They are shifted by specified amounts
+They are always doubled
+They are converted into angles
+They are changed into three coordinates
+What is the effect of increasing the x-coordinate during translation?
+*
+1 point
+The object moves horizontally to the right
+The object moves vertically upward
+The object rotates
+The object becomes smaller
+What is the effect of increasing the y-coordinate during translation?
+*
+1 point
+The object moves vertically upward
+The object moves horizontally to the right
+The object rotates
+The object is reflected
+Which transformation changes the size of an object?
+*
+1 point
+Scaling
+Translation
+Reflection
+Rotation
+Scaling in the given 2D transformation example is performed relative to which point?
+*
+1 point
+The origin
+The center of the screen
+The top-left corner
+The midpoint of the object
+What happens to a point located at the origin during scaling relative to the origin?
+*
+1 point
+It does not change its position
+It always moves right
+It always moves up
+It is reflected
+Which transformation reverses the sign of the x-coordinate while keeping the y-coordinate unchanged?
+*
+1 point
+Reflection about the y-axis
+Reflection about the x-axis
+Translation
+Scaling
+Which coordinate remains unchanged when reflecting a point about the y-axis?
+*
+1 point
+The y-coordinate
+The x-coordinate
+Both coordinates
+Neither coordinate
+What is the basic idea of reflection in computer graphics?
+*
+1 point
+Creating a mirror-like image of a shape
+Changing only the size of a shape
+Moving a shape without changing orientation
+Converting a shape into a point
+What are homogeneous coordinates used to represent a point in a plane?
+*
+1 point
+Three coordinates instead of two
+One coordinate instead of two
+Two coordinates only
+Four coordinates only
+Which of the following is a possible homogeneous representation of the point (3, 4)?
+*
+1 point
+(6, 8, 2)
+(3, 4, 1)
+(6, 4, 2)
+(3, 8, 2)
+Why can more than one homogeneous coordinate set represent the same point?
+*
+1 point
+The coordinates can be scaled proportionally
+The point changes its location each time
+Only the first coordinate matters
+Only the second coordinate matters
+Which mathematician is mentioned in the material in connection with homogeneous coordinates?
+*
+1 point
+August Möbius
+Isaac Newton
+Albert Einstein
+James Clerk Maxwell
+What is the main advantage of using homogeneous coordinates in transformations?
+*
+1 point
+They provide a convenient representation for geometric transformations
+They eliminate the need for coordinates
+They are used only for storing images
+They prevent all shape changes
+Which transformation changes the orientation of an object by turning it through an angle?
+*
+1 point
+Rotation
+Translation
+Scaling
+Reflection
+In 3D transformations, roll is defined as rotation about which axis?
+*
+1 point
+The z-axis
+The x-axis
+The y-axis
+No axis
+In 3D transformations, pitch is defined as rotation about which axis?
+*
+1 point
+The x-axis
+The y-axis
+The z-axis
+No axis
+In 3D transformations, yaw is defined as rotation about which axis?
+*
+1 point
+The y-axis
+The x-axis
+The z-axis
+No axis
+Send me a copy of my responses.
+Submit
+Clear form
+Never submit passwords through Google Forms.
+This form was created inside of Institute for Technology & Management. - Contact form owner
+
+Does this form look suspicious? Report
+
+ Forms
+ 
+Help and feedback

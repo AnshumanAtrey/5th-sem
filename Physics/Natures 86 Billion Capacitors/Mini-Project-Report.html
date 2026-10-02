@@ -1,0 +1,201 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@page { size: A4; margin: 2cm 2.2cm; }
+@page:first { margin: 0; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11pt;
+  line-height: 1.55; color: #15171c; }
+.title-page { height: 26cm; display: flex; flex-direction: column; justify-content: center;
+  align-items: center; text-align: center; padding: 3cm; page-break-after: always;
+  background: linear-gradient(160deg, #0b0c10 0%, #1a1c2e 100%); color: #fff; }
+.title-page .eyebrow { letter-spacing: 3px; font-size: 10pt; color: #8ab4ff; text-transform: uppercase; }
+.title-page h1 { font-size: 30pt; margin: 14px 0 6px; line-height: 1.15; }
+.title-page h2 { font-size: 14pt; font-weight: 400; color: #c7cbe0; margin: 0 0 40px; border: 0; }
+.title-page .by { font-size: 11pt; color: #e8eaf2; line-height: 1.9; }
+.title-page .tag { margin-top: 36px; font-size: 10.5pt; color: #8ab4ff; font-style: italic; }
+h2 { font-size: 14pt; margin: 22px 0 6px; border-bottom: 2px solid #15171c; padding-bottom: 3px; }
+h3 { font-size: 11.5pt; margin: 14px 0 3px; color: #2a2d34; }
+p { margin: 5px 0; }
+.lead { font-size: 11.5pt; color: #333; }
+.eq { font-family: "SF Mono", Menlo, monospace; background: #f4f5f7; padding: 8px 12px;
+  border-radius: 6px; margin: 7px 0; font-size: 10.5pt; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 10pt; }
+th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+ul, ol { margin: 5px 0 5px 18px; } li { margin: 3px 0; }
+.fig { text-align: center; margin: 12px 0; }
+.fig figcaption { font-size: 9.5pt; color: #666; margin-top: 4px; }
+.refs { font-size: 9pt; color: #333; line-height: 1.4; }
+.refs li { margin: 2px 0; }
+.small { font-size: 9.5pt; color: #666; }
+b, strong { color: #0b0c10; }
+.title-page .by b { color: #ffffff; }
+</style></head><body>
+
+<div class="title-page">
+  <div class="eyebrow">Physics Mini Project &middot; B.Tech Semester V</div>
+  <h1>Nature's 86 Billion Capacitors</h1>
+  <h2>The Physics of a Thought</h2>
+  <div class="by">
+    <b>Anshuman Atrey</b><br>
+    2024.anshumana@isu.ac.in<br>
+    Cross-disciplinary Physics &middot; ISU
+  </div>
+  <div class="tag">"A thought is charge moving across 86 billion capacitors, and physics has learned to read it."</div>
+</div>
+
+<h2>1. Introduction</h2>
+<p class="lead">In 1791 Luigi Galvani watched a dead frog's leg twitch when touched with metal and argued that living things make their own electricity. Alessandro Volta disagreed, and in trying to prove Galvani wrong he invented the first battery in 1800, calling it an "artificial electric organ." Both were right: the body <i>is</i> electrical, and it runs on the same physics as a battery.</p>
+<p>This project takes that idea to its limit. The human brain has about <b>86 billion neurons</b>, and every one of them is, in physics terms, a <b>capacitor</b> with its own tiny battery, switches and wiring. The claim of this report is simple: you already know every part of a neuron from the Semester-V physics syllabus. A thought is not magic, it is charge moving across membranes, and the same equations that describe a capacitor, a battery and a transmission line describe how you are reading this sentence.</p>
+
+<h2>2. Objectives of the Mini Project</h2>
+<ul>
+<li>To show that a neuron is a physical electric circuit, and to map each biological part onto a standard circuit element.</li>
+<li>To apply core physics concepts, capacitance, electric fields, the Nernst potential and the cable equation, to a real, living system.</li>
+<li>To explain how the action potential (a nerve "spike") is generated and how it travels.</li>
+<li>To connect the theory to real technology that reads and writes brain signals (EEG, MEG, fMRI, PET, TMS, brain implants).</li>
+<li>To keep every claim quantitative and sourced, so the physics is verifiable rather than hand-waved.</li>
+</ul>
+
+<h2>3. Concept / Theory: the neuron as a circuit</h2>
+<p>The whole project rests on one mapping. Each part of a neuron behaves like a circuit element you have already studied:</p>
+<table>
+<tr><th>Neuron part</th><th>Circuit element</th><th>Physics concept</th></tr>
+<tr><td>Cell membrane</td><td>Capacitor</td><td>C = &epsilon;A/d, E = V/d, Q = CV</td></tr>
+<tr><td>Ion concentration gradients</td><td>Battery</td><td>Nernst equation, thermodynamics</td></tr>
+<tr><td>Ion channels</td><td>Switches / variable resistors</td><td>Hodgkin&ndash;Huxley circuit</td></tr>
+<tr><td>Axon</td><td>Leaky transmission line</td><td>Cable equation</td></tr>
+<tr><td>Myelin sheath</td><td>Added insulation</td><td>C = &epsilon;A/d (larger d &rarr; smaller C)</td></tr>
+</table>
+
+<h3>3.1 The capacitor (the membrane)</h3>
+<p>The cell membrane is a fatty layer about <b>5 nm</b> thick with conducting salt water on both sides. That is exactly a parallel-plate capacitor: two conducting plates (the ions) separated by a thin insulator (the dielectric). Its capacitance works out to about <b>1 &micro;F/cm&sup2;</b> (measured about 0.9 &micro;F/cm&sup2;). At the resting voltage of about &minus;70 mV across just 5 nm, the electric field is enormous:</p>
+<div class="eq">E = V / d = 0.07 V / (5 &times; 10&#8315;&#8313; m) &asymp; 1.4 &times; 10&#8311; V/m</div>
+<p>That is about <b>5&times; stronger</b> than the field that makes air spark (3 &times; 10&#8310; V/m). Yet because C is small, Q = CV means only about <b>6,000 ions per &micro;m&sup2;</b> need to move to set up that field, roughly 1 in 100,000 of the ions present, so a single spike barely changes the concentrations.</p>
+
+<h3>3.2 The battery (ion gradients)</h3>
+<p>The cell spends energy to keep different ion concentrations inside and outside. That difference stores energy exactly like a charged battery, and its voltage is given by the <b>Nernst equation</b>:</p>
+<div class="eq">V = (RT / zF) &middot; ln(C<sub>out</sub> / C<sub>in</sub>)</div>
+<p>At body temperature RT/F &asymp; 26.7 mV, which gives about <b>61.5 mV per tenfold concentration ratio</b>. Using the real numbers (K&#8314;: ~140 mM in / ~5 mM out; Na&#8314;: ~10&ndash;15 mM in / ~145 mM out):</p>
+<ul>
+<li>E<sub>K</sub> &asymp; <b>&minus;90 mV</b></li>
+<li>E<sub>Na</sub> &asymp; <b>+60 to +70 mV</b></li>
+</ul>
+<p>The "charger" is the <b>Na&#8314;/K&#8314; pump</b>, which pushes 3 Na&#8314; out and 2 K&#8314; in per ATP (Skou, Nobel 1997). Most of the brain's energy budget goes into keeping these batteries charged.</p>
+
+<h3>3.3 The switch (ion channels)</h3>
+<p>Ion channels are proteins that open and close, acting as voltage-controlled switches (really, variable resistors). When they open, ions flow down their battery gradient and the membrane capacitor charges or discharges. This is the element that makes the neuron <i>active</i> rather than a passive RC circuit.</p>
+
+<h2>4. Working Principle: the action potential</h2>
+<p>At rest the inside sits near E<sub>K</sub> (about &minus;70 mV) because K&#8314; channels leak. When a stimulus pushes the voltage up to a <b>threshold</b> of about &minus;55 mV, voltage-gated Na&#8314; channels snap open, Na&#8314; rushes in, and the voltage spikes to about <b>+30 to +50 mV</b> in about 1 ms. Then Na&#8314; channels shut, K&#8314; channels open, and the membrane resets. The spike is <b>all-or-none</b>, like a digital pulse.</p>
+<p>Hodgkin and Huxley (1952, Nobel 1963) wrote this as a single circuit equation, treating the membrane as a capacitor in parallel with three battery-and-resistor branches:</p>
+<div class="eq">C<sub>m</sub> dV/dt = &minus;g<sub>Na</sub>(V &minus; E<sub>Na</sub>) &minus; g<sub>K</sub>(V &minus; E<sub>K</sub>) &minus; g<sub>L</sub>(V &minus; E<sub>L</sub>) + I</div>
+<p>The power of this is that it is pure physics. Their equations predicted a signal speed of <b>18.8 m/s</b>, and the measured speed in the same squid axon was <b>21.2 m/s</b>, within about 10%.</p>
+
+<div class="fig">
+<svg width="430" height="250" viewBox="0 0 430 250" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica" font-size="11">
+  <!-- rails -->
+  <line x1="30" y1="30" x2="400" y2="30" stroke="#15171c" stroke-width="2"/>
+  <line x1="30" y1="220" x2="400" y2="220" stroke="#15171c" stroke-width="2"/>
+  <text x="34" y="22" fill="#555">Inside (&minus;70 mV)</text>
+  <text x="330" y="238" fill="#555">Outside (0 V)</text>
+  <!-- capacitor branch -->
+  <line x1="70" y1="30" x2="70" y2="110" stroke="#15171c" stroke-width="2"/>
+  <line x1="50" y1="110" x2="90" y2="110" stroke="#15171c" stroke-width="2.5"/>
+  <line x1="50" y1="124" x2="90" y2="124" stroke="#15171c" stroke-width="2.5"/>
+  <line x1="70" y1="124" x2="70" y2="220" stroke="#15171c" stroke-width="2"/>
+  <text x="96" y="121" fill="#0b4">C<tspan baseline-shift="sub">m</tspan> (membrane)</text>
+  <!-- three ion branches: battery + resistor -->
+  <g stroke="#15171c" stroke-width="2" fill="none">
+    <!-- Na -->
+    <line x1="180" y1="30" x2="180" y2="70"/>
+    <circle cx="180" cy="95" r="22"/><line x1="180" y1="117" x2="180" y2="160"/>
+    <rect x="168" y="160" width="24" height="34"/><line x1="180" y1="194" x2="180" y2="220"/>
+    <!-- K -->
+    <line x1="265" y1="30" x2="265" y2="70"/>
+    <circle cx="265" cy="95" r="22"/><line x1="265" y1="117" x2="265" y2="160"/>
+    <rect x="253" y="160" width="24" height="34"/><line x1="265" y1="194" x2="265" y2="220"/>
+    <!-- Leak -->
+    <line x1="350" y1="30" x2="350" y2="70"/>
+    <circle cx="350" cy="95" r="22"/><line x1="350" y1="117" x2="350" y2="160"/>
+    <rect x="338" y="160" width="24" height="34"/><line x1="350" y1="194" x2="350" y2="220"/>
+  </g>
+  <text x="172" y="99" font-size="10">E<tspan baseline-shift="sub">Na</tspan></text>
+  <text x="258" y="99" font-size="10">E<tspan baseline-shift="sub">K</tspan></text>
+  <text x="344" y="99" font-size="10">E<tspan baseline-shift="sub">L</tspan></text>
+  <text x="196" y="182" font-size="10">g<tspan baseline-shift="sub">Na</tspan></text>
+  <text x="281" y="182" font-size="10">g<tspan baseline-shift="sub">K</tspan></text>
+  <text x="366" y="182" font-size="10">g<tspan baseline-shift="sub">L</tspan></text>
+</svg>
+<figcaption>Fig 1. The Hodgkin&ndash;Huxley equivalent circuit: the membrane capacitor C<sub>m</sub> in parallel with three branches, each an ion battery (E) in series with a variable-conductance channel (g).</figcaption>
+</div>
+
+<h3>4.1 The wire and myelin (how the signal travels)</h3>
+<p>The axon is not a copper wire; it is a <b>leaky RC transmission line</b>. William Thomson (later Lord Kelvin) derived the <b>cable equation</b> in 1854&ndash;55 for undersea telegraph cables, and neuroscience reused it. Because passive signals spread out and die with distance (delay grows with length&sup2;), the neuron re-fires the full spike at every patch. <b>Myelin</b> is insulation: wrapping many layers makes d larger, so C = &epsilon;A/d gets smaller and the spike only regenerates at gaps (nodes of Ranvier), appearing to jump between them (<b>saltatory conduction</b>). This raises speed from about 0.5&ndash;2 m/s (bare) to <b>80&ndash;120 m/s</b> (thickly myelinated).</p>
+
+<h2>5. Important Laws, Principles and Equations</h2>
+<table>
+<tr><th>Law / Principle</th><th>Equation</th><th>Where it applies here</th></tr>
+<tr><td>Parallel-plate capacitance</td><td>C = &epsilon;A/d</td><td>Membrane (and why myelin lowers C)</td></tr>
+<tr><td>Electric field in a capacitor</td><td>E = V/d</td><td>The 1.4 &times; 10&#8311; V/m across the membrane</td></tr>
+<tr><td>Charge on a capacitor</td><td>Q = CV</td><td>~6,000 ions/&micro;m&sup2; move per spike</td></tr>
+<tr><td>Nernst potential</td><td>V = (RT/zF) ln(C<sub>out</sub>/C<sub>in</sub>)</td><td>The ion "batteries" E<sub>K</sub>, E<sub>Na</sub></td></tr>
+<tr><td>Hodgkin&ndash;Huxley membrane eq.</td><td>C<sub>m</sub> dV/dt = &minus;&Sigma; g(V&minus;E) + I</td><td>The action potential</td></tr>
+<tr><td>Cable equation (Kelvin)</td><td>&lambda;&sup2; &part;&sup2;V/&part;x&sup2; = &tau; &part;V/&part;t + V</td><td>Signal spread along the axon</td></tr>
+</table>
+
+<h2>6. Real-Life Applications: reading the capacitors</h2>
+<p>Each brain-imaging tool is literally a different chapter of the physics syllabus applied to these capacitors:</p>
+<table>
+<tr><th>Tool</th><th>Signal measured</th><th>Physics used</th></tr>
+<tr><td>EEG (Berger, 1924)</td><td>10&ndash;100 &micro;V on the scalp; alpha waves 8&ndash;13 Hz</td><td>Electrostatics</td></tr>
+<tr><td>MEG (with a SQUID, 1972)</td><td>10 fT&ndash;1 pT, ~10&#8312;&ndash;10&#8313;&times; weaker than Earth's field</td><td>Superconductivity (SQUIDs)</td></tr>
+<tr><td>fMRI (BOLD)</td><td>Proton spin; &gamma;/2&pi; = 42.58 MHz/T (~128 MHz at 3 T)</td><td>Quantum spin, magnetism</td></tr>
+<tr><td>PET</td><td>Positron&ndash;electron &rarr; two 511 keV gamma rays</td><td>Antimatter, E = mc&sup2;</td></tr>
+</table>
+<p>A striking natural application: the <b>electric eel</b> stacks about 6,000 of these cells <i>in series</i> to reach <b>860 V</b>, while the torpedo ray wires them <i>in parallel</i> for high current. Evolution solved the series/parallel circuit problem and even did impedance matching to the water.</p>
+
+<h2>7. Advantages and Limitations of the model</h2>
+<h3>Advantages</h3>
+<ul>
+<li><b>It is quantitative and predictive.</b> The circuit model predicted conduction speed to within 10% of measurement, from physics alone.</li>
+<li><b>It unifies biology and physics.</b> One set of equations (capacitor, battery, resistor, transmission line) explains a living signal.</li>
+<li><b>Astonishing efficiency.</b> The whole brain runs on about <b>20 W</b> (20% of the body's energy). An NVIDIA H100 GPU draws 700 W, about 35&times; more, for far narrower tasks.</li>
+</ul>
+<h3>Limitations</h3>
+<ul>
+<li>The circuit model covers <b>signalling</b>, not the chemistry of the synapse, memory, or consciousness, which are outside physics.</li>
+<li>fMRI is <b>indirect</b>: it measures blood oxygenation, not neurons firing.</li>
+<li>Scaling the capacitor idea to "air sparking" is only a sense of scale; a 5 nm gap is far too short for an air-style spark, and the membrane only tears (electroporation) at several times its resting voltage.</li>
+<li>The "quantum brain" idea is not supported: Tegmark (2000) estimated quantum states in the brain would decohere in about 10&#8315;&sup1;&sup3; s, far faster than the ~10&#8315;&sup3; s a neuron takes to fire.</li>
+</ul>
+
+<h2>8. Recent and Modern Applications: writing back</h2>
+<ul>
+<li><b>TMS (Faraday's law):</b> a ~1.5 T pulse in ~200 &micro;s induces currents that make neurons fire (Barker, 1985). FDA-cleared in 2008 for medication-resistant depression.</li>
+<li><b>Focused ultrasound:</b> 1,024 emitters, each phase-corrected from a CT of the skull, add up at one millimetre-sized point in the thalamus to treat tremor without surgery (FDA 2016). Same principle as phased-array radar.</li>
+<li><b>Cochlear implants:</b> about 1 million implants by 2022, the most successful neural implant so far.</li>
+<li><b>Brain&ndash;computer interfaces:</b> a paralysed man moved a cursor by thought in 2006 (BrainGate); in 2023 implants decoded speech at 62&ndash;78 words per minute (Stanford, UCSF); in January 2024 Neuralink implanted its first human patient.</li>
+</ul>
+
+<h2>9. Conclusion</h2>
+<p>From a twitching frog's leg to a cursor moved by thought, the story is one of physics, not magic. Every neuron is a capacitor charged by ion batteries, switched by protein channels and wired as a leaky transmission line. The capacitance, the electric field, the Nernst voltage and the cable equation are the same ones taught in the Semester-V syllabus. The brain is the most efficient computer we know, running 86 billion of these capacitors on 20 watts, and physics has now learned to both read and write their signals.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>Galvani, L. (1791). <i>De viribus electricitatis in motu musculari commentarius</i>. Bologna.</li>
+<li>Volta, A. (1800). Letter to Sir Joseph Banks. <i>Phil. Trans. R. Soc.</i> 90:403&ndash;431.</li>
+<li>Thomson, W. (1855). On the theory of the electric telegraph. <i>Proc. R. Soc. Lond.</i> 7:382&ndash;399.</li>
+<li>Hodgkin, A.L. &amp; Huxley, A.F. (1952). <i>J. Physiol.</i> 117:500&ndash;544. (18.8 vs 21.2 m/s, p. 528.)</li>
+<li>Gentet, L.J. et al. (2000). <i>Biophys. J.</i> 79:314&ndash;320. (C<sub>m</sub> &asymp; 0.9 &micro;F/cm&sup2;.)</li>
+<li>Azevedo, F.A.C. et al. (2009). <i>J. Comp. Neurol.</i> 513:532&ndash;541. (86 billion neurons.)</li>
+<li>de Santana, C.D. et al. (2019). <i>Nat. Commun.</i> 10:4000. (Electric eel, 860 V.)</li>
+<li>Attwell, D. &amp; Laughlin, S.B. (2001). <i>J. Cereb. Blood Flow Metab.</i> 21:1133&ndash;1145. (Brain energy budget.)</li>
+<li>Barker, A.T. et al. (1985). <i>Lancet</i> 1:1106&ndash;1107. FDA 510(k) K061053 (NeuroStar, 2008).</li>
+<li>Hochberg, L.R. et al. (2006). <i>Nature</i> 442:164&ndash;171. Willett, F.R. et al. (2023). <i>Nature</i> 620:1031&ndash;1036.</li>
+<li>Tegmark, M. (2000). <i>Phys. Rev. E</i> 61:4194&ndash;4206. (Decoherence in the brain.)</li>
+<li>Nobel Prize summaries: Physiology/Medicine 1932, 1963, 1991; Chemistry 1997, 2003. nobelprize.org</li>
+</ol>
+<p class="small">The accompanying presentation slide deck is attached with this submission.</p>
+
+</body></html>

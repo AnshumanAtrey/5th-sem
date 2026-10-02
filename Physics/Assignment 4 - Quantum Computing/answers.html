@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/tmp/phys/style.css"></head><body>
+<div class="head">
+  <h1>Physics Assignment 4: Quantum Computing</h1>
+  <div class="meta">Anshuman Atrey &middot; 2024.anshumana@isu.ac.in &middot; B.Tech Sem V &middot; Total Marks: 10</div>
+</div>
+
+<p class="q">Q1. What is Quantum Computing? Explain its basic principles, key characteristics, and applications. <span class="marks">[3]</span></p>
+<p class="a">Quantum computing is a model of computation that uses the rules of quantum mechanics to process information. A normal computer stores data in bits that are either 0 or 1. A quantum computer uses <b>qubits</b>, which can be 0, 1, or a blend of both at the same time, and this lets it explore many possibilities in parallel.</p>
+<p class="a"><b>Basic principles:</b></p>
+<ul>
+<li><b>Superposition.</b> A qubit can hold a combination of 0 and 1 at once. n qubits can represent 2&#8319; states together, so the information grows exponentially. Think of a spinning coin that is neither heads nor tails until it lands.</li>
+<li><b>Entanglement.</b> Two qubits can be linked so that measuring one instantly tells you about the other, no matter the distance. This correlation is what gives quantum algorithms their power.</li>
+<li><b>Interference.</b> Qubit states have amplitudes (like waves) that can add up or cancel out. A good quantum algorithm is designed so the wrong answers cancel and the right answer is amplified.</li>
+<li><b>Measurement.</b> Reading a qubit collapses its superposition to a definite 0 or 1, with a probability set by its amplitudes.</li>
+</ul>
+<p class="a"><b>Key characteristics:</b> massive parallelism from superposition, exponential state space, reversible (unitary) gates, and the no-cloning rule (an unknown qubit cannot be copied). The catch is <b>decoherence</b>: qubits lose their quantum state very quickly when disturbed, so they need heavy error correction and near-absolute-zero cooling.</p>
+<p class="a"><b>Applications:</b> factoring large numbers and breaking RSA (Shor's algorithm), fast database search (Grover's algorithm), simulating molecules for drug and material discovery, optimization problems in logistics and finance, and quantum-secure communication.</p>
+
+<p class="q">Q2. Explain the Deutsch&ndash;Jozsa Algorithm: its objective, working principle, and significance. <span class="marks">[2]</span></p>
+<p class="a"><b>Objective.</b> You are given a function f(x) that is promised to be either <i>constant</i> (gives the same output for every input) or <i>balanced</i> (gives 0 for exactly half the inputs and 1 for the other half). The task is to find out which, using as few evaluations as possible.</p>
+<p class="a"><b>The classical cost.</b> In the worst case a normal computer may need to test just over half of all inputs, up to 2&#8319;&#8315;&#185; + 1 evaluations, to be sure.</p>
+<p class="a"><b>Working principle.</b> The quantum version puts all input states into superposition with Hadamard gates, applies the function once as a single quantum operation (an oracle), then applies Hadamard gates again. Interference is arranged so that if f is constant the final measurement is all zeros, and if f is balanced it is anything but all zeros. So <b>one</b> evaluation settles it.</p>
+<p class="a"><b>Significance.</b> It was one of the first algorithms to prove a quantum computer can beat a classical one with certainty (1 query vs exponentially many). The problem itself is a toy, but it showed the idea works and inspired the real speedups of Shor and Grover.</p>
+
+<p class="q">Q3. Explain Schr&ouml;dinger's Cat and the "Smiley" idea in the context of quantum computing. <span class="marks">[3]</span></p>
+<p class="a"><b>Schr&ouml;dinger's Cat.</b> This is a thought experiment Erwin Schr&ouml;dinger proposed in 1935. A cat is sealed in a box with a tiny bit of radioactive material, a detector, and a flask of poison. If an atom decays, the detector breaks the flask and the cat dies; if not, it lives. Since the atom's decay is a quantum event in superposition (decayed and not-decayed at once), the whole system, including the cat, is in a superposition of <i>alive and dead</i> until someone opens the box and observes it. The point is to show how strange superposition looks when scaled up to everyday objects, and it illustrates the <b>measurement problem</b>: observation forces the system to pick one definite outcome.</p>
+<p class="a">In quantum computing this is exactly what a <b>qubit</b> is. Before measurement a qubit is a blend of 0 and 1 (like the alive-and-dead cat), and the act of reading it collapses it to a single value. The cat is the famous picture everyone uses to explain why a qubit can hold more than a classical bit.</p>
+<p class="a"><b>The "Smiley" idea.</b> It is the friendly, visual way of saying the same thing: picture a face that is both smiling and frowning at the same time, and only when you look does it settle into one expression. It is a simple cartoon for <b>superposition and collapse on measurement</b>, the same lesson as Schr&ouml;dinger's cat but without the morbid cat. Both say: a quantum state is undecided until observed, and that undecided-ness is the resource a quantum computer runs on.</p>
+
+<p class="q">Q4. What is BB84? Explain the BB84 Quantum Key Distribution protocol, its steps, and its security. <span class="marks">[2]</span></p>
+<p class="a"><b>What it is.</b> BB84 (Bennett and Brassard, 1984) was the first quantum key distribution protocol. It lets two people, Alice and Bob, share a secret random key over an open channel, with physics itself guaranteeing that any eavesdropper is caught.</p>
+<p class="a"><b>Working steps:</b></p>
+<ol>
+<li>Alice encodes random bits on single photons, choosing randomly between two bases: rectilinear (&#8213; / &#124;) and diagonal (&#9585; / &#9586;).</li>
+<li>Bob measures each photon in a randomly chosen basis. When his basis matches Alice's he gets the right bit; when it does not, the result is random.</li>
+<li>Over a public channel they compare <i>which bases</i> they used (never the bit values) and keep only the bits where the bases matched. This shared subset is the <b>sifted key</b>.</li>
+<li>They sacrifice a few bits to check the error rate. A low error rate means the line is clean, and the rest becomes the secret key.</li>
+</ol>
+<p class="a"><b>Security.</b> It rests on two quantum facts: the <b>no-cloning theorem</b> (an unknown quantum state cannot be copied) and the fact that <b>measuring disturbs the state</b>. An eavesdropper (Eve) who intercepts the photons must guess the basis, and her wrong guesses change the photons. That shows up as a raised error rate when Alice and Bob compare their test bits, so they simply detect her and throw the key away. The security comes from the laws of physics, not from assuming a hard math problem.</p>
+
+</body></html>
