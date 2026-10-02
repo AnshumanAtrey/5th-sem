@@ -17,8 +17,8 @@ once its built. the "any dataset" ones use one shared problem: prompt-injection 
 | Assignment 8, Hierarchical clustering | 2026-09-10 | [Assignment 8 - Hierarchical Clustering (Prompt Injection)](Lisa/Assignment%208%20-%20Hierarchical%20Clustering%20(Prompt%20Injection)/) | built, not submitted |
 | Mini Project (Group 12) | 2026-09-18 | [Retail Sales Prediction - Group 12](Lisa/Retail%20Sales%20Prediction%20-%20Group%2012/) | built, contributions table to fill |
 | Certificate Submission | 2026-09-18 | [`certification/kaggle-*`](../certification/) | kaggle certificates to download |
-| Assignment 9, ensemble + UI | 2026-09-21 | | to build |
-| Assignment 10, Random Forest + deployment | 2026-09-21 | | to build |
+| Assignment 9, bagging ensemble + UI | 2026-09-21 | [Assignment 9 - Bagging Ensemble (Prompt Injection)](Lisa/Assignment%209%20-%20Bagging%20Ensemble%20(Prompt%20Injection)/) | built, live at [walrus-bagging](https://walrus-bagging.streamlit.app/), not submitted |
+| Assignment 10, Random Forest + deployment | 2026-09-21 | [Assignment 10 - Random Forest (Prompt Injection)](Lisa/Assignment%2010%20-%20Random%20Forest%20(Prompt%20Injection)/) | built, live at [walrus-random-forest](https://walrus-random-forest.streamlit.app/), not submitted |
 | Assignment-3 (upload slot) | 2026-09-30 | same task as Classroom assignment 3, see below | built (Classroom assignment 3), not submitted |
 | Assignment-4 (upload slot) | 2026-09-30 | same task as Classroom assignment 4, see below | built (Classroom assignment 4), not submitted |
 | Major Project, Case Study 148 | 2026-10-14 | [Case Study 148 - Network Intrusion Detection](Lisa/Case%20Study%20148%20-%20Network%20Intrusion%20Detection/) | to build |

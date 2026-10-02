@@ -167,12 +167,12 @@ with one:
                                  direction=np.where(pushes.push > 0, "towards attack", "towards normal"))
             chart = alt.Chart(bars).mark_bar(cornerRadiusEnd=4).encode(
                 x=alt.X("points:Q", title="change in attack probability when the word is removed (points)"),
-                y=alt.Y("word:N", sort=None, title=None),
+                y=alt.Y("word:N", sort=None, title=None, axis=alt.Axis(labelOverlap=False, labelLimit=220)),
                 color=alt.Color("direction:N", scale=alt.Scale(domain=["towards attack", "towards normal"],
                                                                range=[CORAL, TEAL]),
                                 legend=alt.Legend(title=None, orient="bottom")),
                 tooltip=["word", alt.Tooltip("points:Q", format=".1f")],
-            ).properties(height=34 * len(bars) + 30)
+            ).properties(height=44 * len(bars) + 80)   # tall enough that every word keeps its label
             st.altair_chart(chart, width="stretch")
 
 # ── A batch ───────────────────────────────────────────────────────────────

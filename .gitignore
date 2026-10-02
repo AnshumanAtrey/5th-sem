@@ -14,3 +14,9 @@ build/
 
 # course-access notes can hold account passwords (public repo), keep them local
 certification/**/STATUS.md
+
+# live session cookies / auth tokens — NEVER commit (public repo)
+cookie.json
+cookies.json
+*cookie*.json
+token.json
