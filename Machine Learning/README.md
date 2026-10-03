@@ -26,12 +26,12 @@ once its built. the "any dataset" ones use one shared problem: prompt-injection 
 
 | item | due | folder | status |
 |---|---|---|---|
-| Assignment 1, EDA and analysis | 2026-08-10 | [Assignment 1 - EDA and Analysis (Prompt Injection)](Assignment%201%20-%20EDA%20and%20Analysis%20(Prompt%20Injection)/) | built, not turned in |
-| Assignment 2, Bengaluru house prices | 2026-08-18 | [Assignment 2 - House Price Prediction (Bengaluru)](Assignment%202%20-%20House%20Price%20Prediction%20(Bengaluru)/) | built, not turned in |
-| Assignment 3, CarDekho used cars | 2026-08-18 | [Assignment 3 - Used Car Price Prediction (CarDekho)](Assignment%203%20-%20Used%20Car%20Price%20Prediction%20(CarDekho)/) | built, not turned in (submitted on Lisa as Assignment-3) |
-| Assignment 4, study habits exam scores | 2026-08-18 | [Assignment 4 - Student Exam Score Prediction (Study Habits)](Assignment%204%20-%20Student%20Exam%20Score%20Prediction%20(Study%20Habits)/) | built, not turned in (submitted on Lisa as Assignment-4) |
-| Assignment 5, KNN | 2026-08-21 | [Assignment 5 - KNN (Prompt Injection)](Assignment%205%20-%20KNN%20(Prompt%20Injection)/) | built, not turned in |
-| Assignment 6, Decision Tree Regressor | 2026-08-25 | [Assignment 6 - Decision Tree Regressor (CVE Severity)](Assignment%206%20-%20Decision%20Tree%20Regressor%20(CVE%20Severity)/) | built, not turned in |
+| Assignment 1, EDA and analysis | 2026-08-10 | [Assignment 1 - EDA and Analysis (Prompt Injection)](Assignment%201%20-%20EDA%20and%20Analysis%20(Prompt%20Injection)/) | turned in on Classroom 2026-10-03 (late) |
+| Assignment 2, Bengaluru house prices | 2026-08-18 | [Assignment 2 - House Price Prediction (Bengaluru)](Assignment%202%20-%20House%20Price%20Prediction%20(Bengaluru)/) | turned in on Classroom 2026-10-03 (late) |
+| Assignment 3, CarDekho used cars | 2026-08-18 | [Assignment 3 - Used Car Price Prediction (CarDekho)](Assignment%203%20-%20Used%20Car%20Price%20Prediction%20(CarDekho)/) | turned in on Classroom 2026-10-03 (late) (submitted on Lisa as Assignment-3) |
+| Assignment 4, study habits exam scores | 2026-08-18 | [Assignment 4 - Student Exam Score Prediction (Study Habits)](Assignment%204%20-%20Student%20Exam%20Score%20Prediction%20(Study%20Habits)/) | turned in on Classroom 2026-10-03 (late) (submitted on Lisa as Assignment-4) |
+| Assignment 5, KNN | 2026-08-21 | [Assignment 5 - KNN (Prompt Injection)](Assignment%205%20-%20KNN%20(Prompt%20Injection)/) | files attached + private comment posted 2026-10-03, but Classroom locks it: \"Work cannot be turned in after the due date\" (needs the teacher to reopen it) |
+| Assignment 6, Decision Tree Regressor | 2026-08-25 | [Assignment 6 - Decision Tree Regressor (CVE Severity)](Assignment%206%20-%20Decision%20Tree%20Regressor%20(CVE%20Severity)/) | files attached + private comment posted 2026-10-03, but Classroom locks it: \"Work cannot be turned in after the due date\" (needs the teacher to reopen it) |
 
 assignments 2, 3 and 4 come from one shared handout and use fixed kaggle datasets, filtered by name and roll number,
 so those three stay on their own datasets.
