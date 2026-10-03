@@ -51,7 +51,7 @@ Linear Regression on the kaggle [Vehicle dataset from CarDekho](https://www.kagg
 ## how to run it
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 3 - Used Car Price Prediction (CarDekho)"
+cd "Machine Learning/Assignment 3 - Used Car Price Prediction (CarDekho)"
 kaggle datasets download -d nehalbirla/vehicle-dataset-from-cardekho -p data --unzip
 pip install pandas numpy matplotlib scikit-learn nbconvert ipykernel
 jupyter nbconvert --to notebook --execute --inplace used_car_price_cardekho.ipynb

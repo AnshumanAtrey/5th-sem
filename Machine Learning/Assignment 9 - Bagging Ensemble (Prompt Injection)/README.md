@@ -98,7 +98,7 @@ notebook trains with, so the saved model loads unchanged.
 nothing heavy runs on my laptop. one command sends the whole job to a free kaggle CPU:
 
 ```bash
-cd "Machine Learning/Lisa/Assignment 9 - Bagging Ensemble (Prompt Injection)"
+cd "Machine Learning/Assignment 9 - Bagging Ensemble (Prompt Injection)"
 python3 kaggle/run_on_kaggle.py     # needs the kaggle CLI logged in, ~15 min
 ```
 

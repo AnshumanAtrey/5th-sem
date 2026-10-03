@@ -92,7 +92,7 @@ attaches it to the notebook directly.
 the embedding model is too heavy for my 8 GB laptop, so the notebook runs on kaggle:
 
 ```bash
-cd "Machine Learning/Lisa/Assignment 7 - K-Means Clustering (Prompt Injection)"
+cd "Machine Learning/Assignment 7 - K-Means Clustering (Prompt Injection)"
 python3 kaggle/run_on_kaggle.py     # needs the kaggle CLI logged in, takes ~5 min
 ```
 

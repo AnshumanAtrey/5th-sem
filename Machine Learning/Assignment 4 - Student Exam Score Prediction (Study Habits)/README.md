@@ -51,7 +51,7 @@ left only 80 students, so as the handout says it was dropped. the same task is a
 ## how to run it
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 4 - Student Exam Score Prediction (Study Habits)"
+cd "Machine Learning/Assignment 4 - Student Exam Score Prediction (Study Habits)"
 kaggle datasets download -d jayaantanaath/student-habits-vs-academic-performance -p data --unzip
 pip install pandas numpy matplotlib scikit-learn nbconvert ipykernel
 jupyter nbconvert --to notebook --execute --inplace exam_score_study_habits.ipynb

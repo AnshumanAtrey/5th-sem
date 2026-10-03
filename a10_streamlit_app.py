@@ -6,5 +6,5 @@ launched from the repo root, where requirements.txt has no spaces in its path. T
 import runpy
 from pathlib import Path
 
-runpy.run_path(str(Path(__file__).parent / "Machine Learning" / "Lisa" / "Assignment 10 - Random Forest (Prompt Injection)" / "app.py"),
+runpy.run_path(str(Path(__file__).parent / "Machine Learning" / "Assignment 10 - Random Forest (Prompt Injection)" / "app.py"),
                run_name="__main__")

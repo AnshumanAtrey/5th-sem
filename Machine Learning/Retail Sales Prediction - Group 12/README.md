@@ -3,7 +3,7 @@
 **Machine Learning Fundamentals · Mini Project · Group 12** · B.Tech CSE 2024–28 · Semester V
 Brief: [`problem-statement.pdf`](problem-statement.pdf) (Group 12 – Retail Sales Prediction + the rules for all groups)
 
-[![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://retail-intelligence-ml.streamlit.app/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnshumanAtrey/5th-sem/blob/main/Machine%20Learning/Lisa/Retail%20Sales%20Prediction%20-%20Group%2012/Retailligence.ipynb)
+[![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://retail-intelligence-ml.streamlit.app/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnshumanAtrey/5th-sem/blob/main/Machine%20Learning/Retail%20Sales%20Prediction%20-%20Group%2012/Retailligence.ipynb)
 
 Retailligence forecasts **next week's sales for one department of one Walmart store**. It uses the department's
 sales history, the store, the product group, promotions (markdowns), the month and the holiday calendar, so a manager can

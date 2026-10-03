@@ -51,7 +51,7 @@ my roll number), left only 1 row, so as the handout says it was dropped.
 ## how to run it
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 2 - House Price Prediction (Bengaluru)"
+cd "Machine Learning/Assignment 2 - House Price Prediction (Bengaluru)"
 kaggle datasets download -d amitabhajoy/bengaluru-house-price-data -p data --unzip
 pip install pandas numpy matplotlib scikit-learn nbconvert ipykernel
 jupyter nbconvert --to notebook --execute --inplace house_price_bengaluru.ipynb

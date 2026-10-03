@@ -60,7 +60,7 @@ for anyone who has never touched machine learning:
 this one is light (no model), so it runs on the laptop:
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 1 - EDA and Analysis (Prompt Injection)"
+cd "Machine Learning/Assignment 1 - EDA and Analysis (Prompt Injection)"
 kaggle datasets download -d chuneeb/ai-agent-cybersecurity-dataset-2026 \
   -f data/threat_intelligence/hf_prompt_injections.csv -p data
 pip install pandas numpy matplotlib scikit-learn nbconvert ipykernel

@@ -49,7 +49,7 @@ how dangerous they are): predict a vulnerability's **CVSS severity score** (0 to
 ## how to run it
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 6 - Decision Tree Regressor (CVE Severity)"
+cd "Machine Learning/Assignment 6 - Decision Tree Regressor (CVE Severity)"
 kaggle datasets download -d andrewkronser/cve-common-vulnerabilities-and-exposures -f cve.csv -p data
 pip install pandas numpy matplotlib scikit-learn nbconvert ipykernel
 jupyter nbconvert --to notebook --execute --inplace decision_tree_cve_severity.ipynb

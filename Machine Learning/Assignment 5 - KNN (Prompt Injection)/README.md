@@ -51,7 +51,7 @@ KNN fits it naturally: a new prompt is judged by the known prompts it looks most
 the embedding model is too heavy for my laptop, so the notebook runs on kaggle:
 
 ```bash
-cd "Machine Learning/Google Classroom/Assignment 5 - KNN (Prompt Injection)"
+cd "Machine Learning/Assignment 5 - KNN (Prompt Injection)"
 python3 kaggle/run_on_kaggle.py     # needs the kaggle CLI logged in, ~4 min
 python report/build_report.py       # light, runs locally (pandoc + weasyprint + playwright)
 ```

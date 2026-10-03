@@ -86,7 +86,7 @@ the distance table (67 million numbers) and the embedding model are too heavy fo
 notebook runs on kaggle:
 
 ```bash
-cd "Machine Learning/Lisa/Assignment 8 - Hierarchical Clustering (Prompt Injection)"
+cd "Machine Learning/Assignment 8 - Hierarchical Clustering (Prompt Injection)"
 python3 kaggle/run_on_kaggle.py     # needs the kaggle CLI logged in, takes ~5 min
 ```
 
