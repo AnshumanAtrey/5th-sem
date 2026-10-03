@@ -1,0 +1,271 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@page { size: A4; margin: 15mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; color:#111; font-size:10.5pt; line-height:1.45; }
+.hd { border-bottom:2px solid #222; padding-bottom:6px; margin-bottom:12px; }
+.hd .t { font-size:15pt; font-weight:700; }
+.hd .s { font-size:9pt; color:#444; margin-top:2px; }
+.anum { background:#f0f3f7; border-left:4px solid #2b5cab; padding:7px 10px; margin:14px 0 8px;
+        font-size:12.5pt; font-weight:700; }
+.q { background:#fcfcfd; border:1px solid #dde2ea; border-radius:5px; padding:8px 10px; margin:6px 0 10px; }
+.q b { color:#2b5cab; }
+.rule { background:#fffdf5; border:1px solid #ece3c4; border-radius:5px; padding:6px 9px; }
+.sub { margin:12px 0 4px; font-weight:700; color:#2b5cab; }
+.molrow { margin:8px 0; font-size:0; }
+.cell { border:1px solid #e3e6ec; border-radius:6px; padding:5px; text-align:center; background:#fff; }
+.molrow .cell { display:inline-block; vertical-align:top; width:32%; margin:0 0.6% 7px; page-break-inside:avoid; }
+.cell svg { max-width:100%; height:auto; }
+.a1row { border:1px solid #e3e6ec; border-radius:6px; padding:6px 8px; margin:8px 0; text-align:center; page-break-inside:avoid; }
+.a1row .cell { border:none; padding:0; }
+.q2 { font-weight:700; color:#2b5cab; font-size:10pt; margin-bottom:2px; }
+.cap, .txt { font-size:8.6pt; color:#333; margin-top:3px; }
+.txt b { color:#111; }
+table.deg { border-collapse:collapse; width:100%; margin:8px 0; font-size:9.3pt; }
+table.deg th, table.deg td { border:1px solid #cfd5df; padding:4px 6px; text-align:center; }
+table.deg th { background:#2b5cab; color:#fff; font-weight:600; }
+table.deg td.l { text-align:left; }
+ul.grid { columns:2; font-size:9.3pt; margin:4px 0; }
+.miss { color:#b00; font-size:8pt; }
+ol, ul { margin:4px 0 8px 18px; } li { margin:2px 0; }
+.foot { margin-top:16px; border-top:1px solid #ccc; padding-top:5px; font-size:7.6pt; color:#888; }
+</style></head><body><div class="hd"><div class="t">Chemistry &mdash; Assignment 10: Carbocation, Carbanion &amp; Free Radical</div><div class="s">Anshuman Atrey &middot; 150096724029 &middot; BTech CSE 2024-28<br>Chemistry (Foundational Chemistry) &middot; Semester 5</div></div><div class="q"><b>Question.</b> Differentiate carbocation, carbanion and free radical; explain stability; differentiate homolytic/heterolytic fission; explain a carbonium-ion reaction.</div><table class="deg"><tr><th></th><th>Carbocation</th><th>Carbanion</th><th>Free radical</th></tr><tr><td class="l">charge</td><td>+1</td><td>&minus;1</td><td>0</td></tr><tr><td class="l">valence e&ndash; on C</td><td>6</td><td>8</td><td>7</td></tr><tr><td class="l">hybridisation</td><td>sp2</td><td>sp3</td><td>sp2</td></tr><tr><td class="l">geometry</td><td>trigonal planar</td><td>pyramidal</td><td>~planar</td></tr><tr><td class="l">role</td><td>electrophile</td><td>nucleophile</td><td>highly reactive</td></tr></table><div class="molrow"><div class="item"><div class="cell">
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='140px' height='100px' viewBox='0 0 140 100'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='140.0' height='100.0' x='0.0' y='0.0'> </rect>
+<path class='atom-0' d='M 37.0 42.9
+Q 37.0 35.9, 40.3 32.2
+Q 43.6 28.5, 49.9 28.5
+Q 55.7 28.5, 58.8 32.6
+L 56.2 34.7
+Q 53.9 31.7, 49.9 31.7
+Q 45.6 31.7, 43.3 34.6
+Q 41.1 37.5, 41.1 42.9
+Q 41.1 48.5, 43.4 51.4
+Q 45.7 54.3, 50.3 54.3
+Q 53.4 54.3, 57.1 52.4
+L 58.2 55.4
+Q 56.7 56.3, 54.5 56.9
+Q 52.2 57.5, 49.7 57.5
+Q 43.6 57.5, 40.3 53.7
+Q 37.0 49.9, 37.0 42.9
+' fill='#000000'/>
+<path class='atom-0' d='M 62.5 28.8
+L 66.3 28.8
+L 66.3 40.8
+L 80.8 40.8
+L 80.8 28.8
+L 84.6 28.8
+L 84.6 57.1
+L 80.8 57.1
+L 80.8 44.0
+L 66.3 44.0
+L 66.3 57.1
+L 62.5 57.1
+L 62.5 28.8
+' fill='#000000'/>
+<path class='atom-0' d='M 99.0 61.4
+Q 100.9 61.9, 101.7 63.1
+Q 102.6 64.3, 102.6 66.1
+Q 102.6 67.7, 101.8 69.0
+Q 101.0 70.2, 99.6 70.9
+Q 98.1 71.5, 96.2 71.5
+Q 94.2 71.5, 92.7 70.8
+Q 91.2 70.1, 90.1 68.7
+L 91.6 67.2
+Q 92.7 68.4, 93.7 68.9
+Q 94.7 69.4, 96.2 69.4
+Q 97.9 69.4, 99.0 68.5
+Q 100.0 67.6, 100.0 66.1
+Q 100.0 64.2, 98.9 63.4
+Q 97.8 62.5, 95.6 62.5
+L 94.2 62.5
+L 94.2 60.6
+L 95.4 60.6
+Q 97.4 60.6, 98.5 59.7
+Q 99.6 58.8, 99.6 57.1
+Q 99.6 55.9, 98.7 55.2
+Q 97.8 54.5, 96.3 54.5
+Q 94.7 54.5, 93.7 55.0
+Q 92.8 55.6, 92.0 57.0
+L 90.2 56.0
+Q 90.9 54.5, 92.5 53.4
+Q 94.0 52.4, 96.3 52.4
+Q 99.0 52.4, 100.6 53.7
+Q 102.2 55.0, 102.2 57.1
+Q 102.2 58.6, 101.4 59.7
+Q 100.6 60.8, 99.0 61.4
+' fill='#000000'/>
+<path class='atom-0' d='M 90.2 33.9
+L 95.2 33.9
+L 95.2 28.6
+L 97.4 28.6
+L 97.4 33.9
+L 102.5 33.9
+L 102.5 35.8
+L 97.4 35.8
+L 97.4 41.1
+L 95.2 41.1
+L 95.2 35.8
+L 90.2 35.8
+L 90.2 33.9
+' fill='#000000'/>
+</svg>
+<div class="cap">methyl cation</div></div></div><div class="item"><div class="cell">
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='140px' height='100px' viewBox='0 0 140 100'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='140.0' height='100.0' x='0.0' y='0.0'> </rect>
+<path class='atom-0' d='M 37.1 42.9
+Q 37.1 35.9, 40.4 32.2
+Q 43.7 28.5, 50.0 28.5
+Q 55.8 28.5, 58.9 32.6
+L 56.3 34.7
+Q 54.0 31.7, 50.0 31.7
+Q 45.7 31.7, 43.4 34.6
+Q 41.2 37.5, 41.2 42.9
+Q 41.2 48.5, 43.5 51.4
+Q 45.8 54.3, 50.4 54.3
+Q 53.5 54.3, 57.2 52.4
+L 58.3 55.4
+Q 56.8 56.3, 54.6 56.9
+Q 52.3 57.5, 49.8 57.5
+Q 43.7 57.5, 40.4 53.7
+Q 37.1 49.9, 37.1 42.9
+' fill='#000000'/>
+<path class='atom-0' d='M 62.5 28.8
+L 66.3 28.8
+L 66.3 40.8
+L 80.8 40.8
+L 80.8 28.8
+L 84.6 28.8
+L 84.6 57.1
+L 80.8 57.1
+L 80.8 44.0
+L 66.3 44.0
+L 66.3 57.1
+L 62.5 57.1
+L 62.5 28.8
+' fill='#000000'/>
+<path class='atom-0' d='M 98.9 61.4
+Q 100.8 61.9, 101.6 63.1
+Q 102.5 64.3, 102.5 66.1
+Q 102.5 67.7, 101.7 69.0
+Q 100.9 70.2, 99.5 70.9
+Q 98.0 71.5, 96.1 71.5
+Q 94.1 71.5, 92.6 70.8
+Q 91.1 70.1, 90.0 68.7
+L 91.5 67.2
+Q 92.6 68.4, 93.6 68.9
+Q 94.6 69.4, 96.1 69.4
+Q 97.8 69.4, 98.9 68.5
+Q 99.9 67.6, 99.9 66.1
+Q 99.9 64.2, 98.8 63.4
+Q 97.7 62.5, 95.5 62.5
+L 94.1 62.5
+L 94.1 60.6
+L 95.3 60.6
+Q 97.3 60.6, 98.4 59.7
+Q 99.5 58.8, 99.5 57.1
+Q 99.5 55.9, 98.6 55.2
+Q 97.7 54.5, 96.2 54.5
+Q 94.6 54.5, 93.6 55.0
+Q 92.7 55.6, 91.9 57.0
+L 90.1 56.0
+Q 90.8 54.5, 92.4 53.4
+Q 93.9 52.4, 96.2 52.4
+Q 98.9 52.4, 100.5 53.7
+Q 102.1 55.0, 102.1 57.1
+Q 102.1 58.6, 101.3 59.7
+Q 100.5 60.8, 98.9 61.4
+' fill='#000000'/>
+<path class='atom-0' d='M 91.4 33.5
+L 101.1 33.5
+L 101.1 35.6
+L 91.4 35.6
+L 91.4 33.5
+' fill='#000000'/>
+</svg>
+<div class="cap">methyl anion</div></div></div><div class="item"><div class="cell">
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='140px' height='100px' viewBox='0 0 140 100'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='140.0' height='100.0' x='0.0' y='0.0'> </rect>
+<path class='atom-0' d='M 33.2 42.9
+Q 33.2 35.9, 36.4 32.2
+Q 39.8 28.5, 46.0 28.5
+Q 51.9 28.5, 55.0 32.6
+L 52.4 34.7
+Q 50.1 31.7, 46.0 31.7
+Q 41.8 31.7, 39.5 34.6
+Q 37.2 37.5, 37.2 42.9
+Q 37.2 48.5, 39.6 51.4
+Q 41.9 54.3, 46.5 54.3
+Q 49.6 54.3, 53.2 52.4
+L 54.4 55.4
+Q 52.9 56.3, 50.6 56.9
+Q 48.4 57.5, 45.9 57.5
+Q 39.8 57.5, 36.4 53.7
+Q 33.2 49.9, 33.2 42.9
+' fill='#000000'/>
+<path class='atom-0' d='M 58.7 28.8
+L 62.5 28.8
+L 62.5 40.8
+L 77.0 40.8
+L 77.0 28.8
+L 80.9 28.8
+L 80.9 57.1
+L 77.0 57.1
+L 77.0 44.0
+L 62.5 44.0
+L 62.5 57.1
+L 58.7 57.1
+L 58.7 28.8
+' fill='#000000'/>
+<path class='atom-0' d='M 95.3 61.4
+Q 97.2 61.9, 98.0 63.1
+Q 98.9 64.3, 98.9 66.1
+Q 98.9 67.7, 98.1 69.0
+Q 97.4 70.2, 95.9 70.9
+Q 94.4 71.5, 92.5 71.5
+Q 90.5 71.5, 89.0 70.8
+Q 87.6 70.1, 86.4 68.7
+L 87.9 67.2
+Q 89.0 68.4, 90.0 68.9
+Q 91.0 69.4, 92.5 69.4
+Q 94.2 69.4, 95.3 68.5
+Q 96.3 67.6, 96.3 66.1
+Q 96.3 64.2, 95.2 63.4
+Q 94.2 62.5, 91.9 62.5
+L 90.5 62.5
+L 90.5 60.6
+L 91.7 60.6
+Q 93.7 60.6, 94.8 59.7
+Q 95.9 58.8, 95.9 57.1
+Q 95.9 55.9, 95.0 55.2
+Q 94.1 54.5, 92.6 54.5
+Q 91.0 54.5, 90.0 55.0
+Q 89.1 55.6, 88.3 57.0
+L 86.5 56.0
+Q 87.2 54.5, 88.8 53.4
+Q 90.4 52.4, 92.6 52.4
+Q 95.3 52.4, 96.9 53.7
+Q 98.5 55.0, 98.5 57.1
+Q 98.5 58.6, 97.7 59.7
+Q 96.9 60.8, 95.3 61.4
+' fill='#000000'/>
+<path class='atom-0' d='M 106.9,42.8 L 106.9,43.0 L 106.9,43.1 L 106.9,43.3 L 106.8,43.5 L 106.8,43.6 L 106.7,43.8 L 106.6,43.9 L 106.5,44.1 L 106.4,44.2 L 106.2,44.3 L 106.1,44.4 L 106.0,44.5 L 105.8,44.6 L 105.6,44.7 L 105.5,44.7 L 105.3,44.8 L 105.1,44.8 L 105.0,44.8 L 104.8,44.8 L 104.6,44.8 L 104.5,44.7 L 104.3,44.7 L 104.1,44.6 L 104.0,44.5 L 103.8,44.5 L 103.7,44.4 L 103.6,44.2 L 103.4,44.1 L 103.3,44.0 L 103.2,43.8 L 103.2,43.7 L 103.1,43.5 L 103.0,43.4 L 103.0,43.2 L 103.0,43.0 L 102.9,42.9 L 102.9,42.7 L 103.0,42.5 L 103.0,42.4 L 103.0,42.2 L 103.1,42.0 L 103.2,41.9 L 103.2,41.7 L 103.3,41.6 L 103.4,41.5 L 103.6,41.3 L 103.7,41.2 L 103.8,41.1 L 104.0,41.0 L 104.1,41.0 L 104.3,40.9 L 104.5,40.8 L 104.6,40.8 L 104.8,40.8 L 105.0,40.8 L 105.1,40.8 L 105.3,40.8 L 105.5,40.9 L 105.6,40.9 L 105.8,41.0 L 106.0,41.1 L 106.1,41.2 L 106.2,41.3 L 106.4,41.4 L 106.5,41.5 L 106.6,41.7 L 106.7,41.8 L 106.8,42.0 L 106.8,42.1 L 106.9,42.3 L 106.9,42.4 L 106.9,42.6 L 106.9,42.8 L 104.9,42.8 Z' style='fill:#000000;fill-rule:evenodd;fill-opacity:1;stroke:#000000;stroke-width:0.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+</svg>
+<div class="cap">methyl radical</div></div></div></div><p><b>Carbocation stability:</b> 3&deg; &gt; 2&deg; &gt; 1&deg; &gt; methyl (+I of alkyl groups, hyperconjugation, resonance e.g. allyl/benzyl).</p><p><b>Carbonium-ion reactions:</b> react with a nucleophile; lose a &beta;-H to give an alkene; or rearrange by a 1,2-hydride/alkyl shift to a more stable carbocation.</p><div class="foot">Prepared by Anshuman Atrey &middot; structures rendered with RDKit.</div></body></html>

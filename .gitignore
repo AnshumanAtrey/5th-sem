@@ -20,3 +20,6 @@ cookie.json
 cookies.json
 *cookie*.json
 token.json
+
+# chemistry working notes name classmates (whose submissions were cross-read) and a classmate's login, keep local
+Chemistry/lisa-chemistry.json
