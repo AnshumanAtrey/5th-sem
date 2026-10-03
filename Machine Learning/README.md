@@ -14,8 +14,8 @@ once its built. the "any dataset" ones use one shared problem: prompt-injection 
 |---|---|---|---|
 | Assignment 7, K-Means | 2026-09-01 | [Assignment 7 - K-Means Clustering (Prompt Injection)](Assignment%207%20-%20K-Means%20Clustering%20(Prompt%20Injection)/) | built, not submitted |
 | Assignment 8, Hierarchical clustering | 2026-09-10 | [Assignment 8 - Hierarchical Clustering (Prompt Injection)](Assignment%208%20-%20Hierarchical%20Clustering%20(Prompt%20Injection)/) | built, not submitted |
-| Mini Project (Group 12) | 2026-09-18 | [Retail Sales Prediction - Group 12](Retail%20Sales%20Prediction%20-%20Group%2012/) | built, contributions table to fill |
-| Certificate Submission | 2026-09-18 | [`certification/kaggle-*`](../certification/) | kaggle certificates to download |
+| Mini Project (Group 12) | 2026-09-18 | [Retail Sales Prediction - Group 12](Retail%20Sales%20Prediction%20-%20Group%2012/) | built, contributions filled (me: model comparison, Shlok: deployment, Rajneesh: EDA), not submitted |
+| Certificate Submission | 2026-09-18 | [`certification/kaggle-*`](../certification/) | both kaggle certificates downloaded (Intro + Intermediate ML, Sep 21), not submitted |
 | Assignment 9, bagging ensemble + UI | 2026-09-21 | [Assignment 9 - Bagging Ensemble (Prompt Injection)](Assignment%209%20-%20Bagging%20Ensemble%20(Prompt%20Injection)/) | built, live at [walrus-bagging](https://walrus-bagging.streamlit.app/), not submitted |
 | Assignment 10, Random Forest + deployment | 2026-09-21 | [Assignment 10 - Random Forest (Prompt Injection)](Assignment%2010%20-%20Random%20Forest%20(Prompt%20Injection)/) | built, live at [walrus-random-forest](https://walrus-random-forest.streamlit.app/), not submitted |
 | Assignment-3 (upload slot) | 2026-09-30 | same task as Classroom assignment 3, see below | built (Classroom assignment 3), not submitted |
