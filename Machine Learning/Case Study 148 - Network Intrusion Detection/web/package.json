@@ -8,7 +8,7 @@
     "lint": "eslint",
     "test": "bun test tests",
     "export-model": "cd .. && python3 web/scripts/export_model.py",
-    "build:streamlit": "NEXT_PUBLIC_BASE_PATH=/app/static next build && rm -rf ../../../flow-sentinel/static && mkdir -p ../../../flow-sentinel && cp -R out ../../../flow-sentinel/static"
+    "build:streamlit": "NEXT_PUBLIC_BASE_PATH=/__stbase__ next build && bun scripts/streamlit_bundle.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
