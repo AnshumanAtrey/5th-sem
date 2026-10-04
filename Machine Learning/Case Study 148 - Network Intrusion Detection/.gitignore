@@ -1,0 +1,3 @@
+data/sample/
+.pytest_cache/
+report/*.html

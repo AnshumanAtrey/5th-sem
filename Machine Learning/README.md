@@ -75,7 +75,7 @@ explains what i did in simple bullets, with the GitHub link. done on **Oct 3, 20
 | [A9 bagging](Assignment%209%20-%20Bagging%20Ensemble%20(Prompt%20Injection)/) | Lisa | 200 decision trees vote, with a live app | 93.3% (one tree alone 92.0%) |
 | [A10 random forest](Assignment%2010%20-%20Random%20Forest%20(Prompt%20Injection)/) | Lisa | 400 trees that each look at different random words, with a live app | 96.8%, half of bagging's mistakes |
 | [Group 12 mini project](Retail%20Sales%20Prediction%20-%20Group%2012/) | Lisa | next-week Walmart sales forecast, with a live app | R² 0.987, average miss $1,277 per department-week |
-| [Case Study 148](Case%20Study%20148%20-%20Network%20Intrusion%20Detection/) | Lisa (major project) | network intrusion detection | to build, due Oct 14 |
+| [Case Study 148](Case%20Study%20148%20-%20Network%20Intrusion%20Detection/) | Lisa (major project) | network intrusion detection on CICIoT2023 (46.7M flows), all 11 classifiers from the syllabus compared, with a Next.js web app | 96.35% of attacks caught (bagging / random forest); deployed gradient boosting 95.95% |
 
 ## how it was done
 
@@ -89,5 +89,5 @@ explains what i did in simple bullets, with the GitHub link. done on **Oct 3, 20
 
 ## still to do
 
-- **major project, Case Study 148** (network intrusion detection), due **Oct 14** on Lisa
+- **major project, Case Study 148**: built (notebook, report, deck, web app); still to submit on Lisa, due **Oct 14**
 - **Classroom A5 and A6:** ask Prof. Karan Rathod to reopen them (or accept the attached files)

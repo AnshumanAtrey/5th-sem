@@ -1,0 +1,2 @@
+# Flow Sentinel's Streamlit host only shows the static site in static/; the model runs in the browser
+streamlit==1.64.0

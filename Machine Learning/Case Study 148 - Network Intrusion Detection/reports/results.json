@@ -1,0 +1,602 @@
+{
+ "flows_full": 46686579,
+ "flows_sample": 458995,
+ "flows_clean": 458995,
+ "duplicates_dropped": 0,
+ "conflicts_dropped": 0,
+ "n_train": 344246,
+ "n_test": 114749,
+ "features": 45,
+ "iat_trap": {
+  "IAT alone (1 column)": {
+   "accuracy, naming all 34 labels": 0.8770555555555556,
+   "macro F1": 0.8420926265338318
+  },
+  "traffic features without IAT (45)": {
+   "accuracy, naming all 34 labels": 0.7491666666666666,
+   "macro F1": 0.6362954637922437
+  },
+  "everything (46)": {
+   "accuracy, naming all 34 labels": 0.9017777777777778,
+   "macro F1": 0.8454830019557933
+  }
+ },
+ "comparison": [
+  {
+   "model": "Bagging",
+   "accuracy": 0.9481041229117465,
+   "precision": 0.9660059006836735,
+   "recall": 0.9635284941026308,
+   "F1": 0.9647656069723273,
+   "missed attacks": 3086.0,
+   "false alarms": 2869.0,
+   "miss rate": 0.03647150589736923,
+   "false alarm rate": 0.0952049112327858,
+   "module": "VIII",
+   "train s": 190.25717401504517,
+   "score s": 2.163672685623169,
+   "size MB": 22.659763,
+   "trained on": 344246
+  },
+  {
+   "model": "Random Forest",
+   "accuracy": 0.947345946369903,
+   "precision": 0.965033143939394,
+   "recall": 0.9635048573522113,
+   "F1": 0.9642683950938531,
+   "missed attacks": 3088.0,
+   "false alarms": 2954.0,
+   "miss rate": 0.03649514264778878,
+   "false alarm rate": 0.09802555168408827,
+   "module": "VIII",
+   "train s": 93.76449370384216,
+   "score s": 2.102935314178467,
+   "size MB": 106.502216,
+   "trained on": 344246
+  },
+  {
+   "model": "Gradient Boosting",
+   "accuracy": 0.9477293919772721,
+   "precision": 0.9693380456586111,
+   "recall": 0.9594629730304678,
+   "F1": 0.9643752301533564,
+   "missed attacks": 3430.0,
+   "false alarms": 2568.0,
+   "miss rate": 0.04053702696953223,
+   "false alarm rate": 0.0852165256346441,
+   "module": "VIII",
+   "train s": 23.576205253601074,
+   "score s": 1.3281011581420898,
+   "size MB": 0.543387,
+   "trained on": 344246
+  },
+  {
+   "model": "Neural Network (MLP)",
+   "accuracy": 0.9450627020714778,
+   "precision": 0.9667087823018976,
+   "recall": 0.9585056846384759,
+   "F1": 0.9625897572844342,
+   "missed attacks": 3511.0,
+   "false alarms": 2793.0,
+   "miss rate": 0.0414943153615241,
+   "false alarm rate": 0.09268292682926829,
+   "module": "IX",
+   "train s": 79.25088739395142,
+   "score s": 0.3231217861175537,
+   "size MB": 0.122771,
+   "trained on": 344246
+  },
+  {
+   "model": "Decision Tree",
+   "accuracy": 0.9243130659090711,
+   "precision": 0.9483131206971883,
+   "recall": 0.9490864395962842,
+   "F1": 0.9486996225568084,
+   "missed attacks": 4308.0,
+   "false alarms": 4377.0,
+   "miss rate": 0.050913560403715696,
+   "false alarm rate": 0.1452463912394226,
+   "module": "V",
+   "train s": 15.230050086975098,
+   "score s": 0.2171492576599121,
+   "size MB": 0.331148,
+   "trained on": 344246
+  },
+  {
+   "model": "KNN (k=5)",
+   "accuracy": 0.9226921367506471,
+   "precision": 0.9603821981254786,
+   "recall": 0.9336752783227362,
+   "F1": 0.9468404494382022,
+   "missed attacks": 5612.0,
+   "false alarms": 3259.0,
+   "miss rate": 0.0663247216772638,
+   "false alarm rate": 0.10814667330346772,
+   "module": "V",
+   "train s": 0.413313627243042,
+   "score s": 21.50794744491577,
+   "size MB": 5.587709,
+   "trained on": 50000
+  },
+  {
+   "model": "AdaBoost",
+   "accuracy": 0.9093325432029908,
+   "precision": 0.9428967031917688,
+   "recall": 0.933580731321058,
+   "F1": 0.9382155921896527,
+   "missed attacks": 5620.0,
+   "false alarms": 4784.0,
+   "miss rate": 0.06641926867894202,
+   "false alarm rate": 0.15875228140036501,
+   "module": "VIII",
+   "train s": 235.16126132011414,
+   "score s": 2.6884000301361084,
+   "size MB": 0.027635,
+   "trained on": 344246
+  },
+  {
+   "model": "Logistic Regression",
+   "accuracy": 0.9027093918029787,
+   "precision": 0.9507130409170124,
+   "recall": 0.91552225400052,
+   "F1": 0.9327858587804643,
+   "missed attacks": 7148.0,
+   "false alarms": 4016.0,
+   "miss rate": 0.08447774599947999,
+   "false alarm rate": 0.13326696532271445,
+   "module": "V",
+   "train s": 16.49385929107666,
+   "score s": 0.21975111961364746,
+   "size MB": 0.002984,
+   "trained on": 344246
+  },
+  {
+   "model": "Perceptron",
+   "accuracy": 0.8761819275113508,
+   "precision": 0.9545607148391095,
+   "recall": 0.8736733873827026,
+   "F1": 0.9123276851497611,
+   "missed attacks": 10689.0,
+   "false alarms": 3519.0,
+   "miss rate": 0.12632661261729738,
+   "false alarm rate": 0.11677451468392235,
+   "module": "IX",
+   "train s": 3.923666000366211,
+   "score s": 0.19153952598571777,
+   "size MB": 0.003122,
+   "trained on": 344246
+  },
+  {
+   "model": "K-Means detector",
+   "accuracy": 0.6854700258825785,
+   "precision": 0.9940335586869756,
+   "recall": 0.5769139858652232,
+   "F1": 0.7300967679215088,
+   "missed attacks": 35799.0,
+   "false alarms": 293.0,
+   "miss rate": 0.42308601413477676,
+   "false alarm rate": 0.009722913555666169,
+   "module": "VII",
+   "train s": 4.884430170059204,
+   "score s": 0.2747342586517334,
+   "size MB": 0.085964,
+   "trained on": 344246
+  },
+  {
+   "model": "Naive Bayes",
+   "accuracy": 0.46796050510244097,
+   "precision": 0.9986034110626772,
+   "recall": 0.2788663814498783,
+   "F1": 0.4359820034551888,
+   "missed attacks": 61018.0,
+   "false alarms": 33.0,
+   "miss rate": 0.7211336185501217,
+   "false alarm rate": 0.001095072175211548,
+   "module": "case study",
+   "train s": 3.3268423080444336,
+   "score s": 0.30219006538391113,
+   "size MB": 0.00382,
+   "trained on": 344246
+  }
+ ],
+ "best_recall_model": "Bagging",
+ "cv": {
+  "Gradient Boosting": {
+   "recall mean": 0.9584,
+   "recall std": 0.00112,
+   "precision mean": 0.96895,
+   "precision std": 0.00059,
+   "F1 mean": 0.96365,
+   "F1 std": 0.00078
+  },
+  "Random Forest": {
+   "recall mean": 0.96167,
+   "recall std": 0.00084,
+   "precision mean": 0.96499,
+   "precision std": 0.00055,
+   "F1 mean": 0.96333,
+   "F1 std": 0.00059
+  }
+ },
+ "top_features": {
+  "rst_count": {
+   "random forest (impurity)": 0.1403,
+   "gradient boosting (F1 drop when shuffled)": 0.08408
+  },
+  "urg_count": {
+   "random forest (impurity)": 0.11154,
+   "gradient boosting (F1 drop when shuffled)": 0.06536
+  },
+  "Number": {
+   "random forest (impurity)": 0.02653,
+   "gradient boosting (F1 drop when shuffled)": 0.04871
+  },
+  "flow_duration": {
+   "random forest (impurity)": 0.10299,
+   "gradient boosting (F1 drop when shuffled)": 0.04401
+  },
+  "Header_Length": {
+   "random forest (impurity)": 0.08957,
+   "gradient boosting (F1 drop when shuffled)": 0.03852
+  },
+  "Rate": {
+   "random forest (impurity)": 0.04517,
+   "gradient boosting (F1 drop when shuffled)": 0.01331
+  },
+  "syn_count": {
+   "random forest (impurity)": 0.01889,
+   "gradient boosting (F1 drop when shuffled)": 0.00922
+  },
+  "HTTP": {
+   "random forest (impurity)": 0.00615,
+   "gradient boosting (F1 drop when shuffled)": 0.00744
+  },
+  "fin_count": {
+   "random forest (impurity)": 0.01133,
+   "gradient boosting (F1 drop when shuffled)": 0.00353
+  },
+  "Max": {
+   "random forest (impurity)": 0.02697,
+   "gradient boosting (F1 drop when shuffled)": 0.00291
+  }
+ },
+ "family_report": {
+  "Benign": {
+   "precision": 0.92339,
+   "recall": 0.86315,
+   "F1": 0.89225,
+   "test flows": 30135
+  },
+  "DDoS": {
+   "precision": 0.95902,
+   "recall": 0.86226,
+   "F1": 0.90807,
+   "test flows": 35960
+  },
+  "DoS": {
+   "precision": 0.68934,
+   "recall": 0.89436,
+   "F1": 0.77858,
+   "test flows": 12013
+  },
+  "Mirai": {
+   "precision": 0.99877,
+   "recall": 0.99566,
+   "F1": 0.99721,
+   "test flows": 8979
+  },
+  "Recon": {
+   "precision": 0.83891,
+   "recall": 0.67612,
+   "F1": 0.74877,
+   "test flows": 12486
+  },
+  "Spoofing": {
+   "precision": 0.67974,
+   "recall": 0.65813,
+   "F1": 0.66876,
+   "test flows": 5976
+  },
+  "Web": {
+   "precision": 0.567,
+   "recall": 0.83049,
+   "F1": 0.6739,
+   "test flows": 6206
+  },
+  "BruteForce": {
+   "precision": 0.44489,
+   "recall": 0.70908,
+   "F1": 0.54674,
+   "test flows": 2994
+  }
+ },
+ "family_accuracy": 0.8396935921010205,
+ "family_macro_f1": 0.7767866214566277,
+ "imbalance": {
+  "recall, no weighting": {
+   "Benign": 0.94545,
+   "DDoS": 0.96632,
+   "DoS": 0.7228,
+   "Mirai": 0.99532,
+   "Recon": 0.67972,
+   "Spoofing": 0.53246,
+   "Web": 0.73042,
+   "BruteForce": 0.47027,
+   "macro F1": 0.77773,
+   "accuracy": 0.85813
+  },
+  "recall, balanced": {
+   "Benign": 0.86315,
+   "DDoS": 0.86226,
+   "DoS": 0.89436,
+   "Mirai": 0.99566,
+   "Recon": 0.67612,
+   "Spoofing": 0.65813,
+   "Web": 0.83049,
+   "BruteForce": 0.70908,
+   "macro F1": 0.77679,
+   "accuracy": 0.83969
+  }
+ },
+ "hardest_types": [
+  {
+   "family": "Recon",
+   "label": "Recon-OSScan",
+   "test_flows": 3014,
+   "missed": 993,
+   "miss rate": 0.3294625082946251
+  },
+  {
+   "family": "Spoofing",
+   "label": "DNS_Spoofing",
+   "test_flows": 2969,
+   "missed": 609,
+   "miss rate": 0.20511956887841024
+  },
+  {
+   "family": "Recon",
+   "label": "Recon-PingSweep",
+   "test_flows": 565,
+   "missed": 94,
+   "miss rate": 0.1663716814159292
+  },
+  {
+   "family": "Spoofing",
+   "label": "MITM-ArpSpoofing",
+   "test_flows": 3007,
+   "missed": 449,
+   "miss rate": 0.14931825739940138
+  },
+  {
+   "family": "Recon",
+   "label": "Recon-PortScan",
+   "test_flows": 2956,
+   "missed": 370,
+   "miss rate": 0.12516914749661706
+  },
+  {
+   "family": "BruteForce",
+   "label": "DictionaryBruteForce",
+   "test_flows": 2994,
+   "missed": 253,
+   "miss rate": 0.08450233800935204
+  },
+  {
+   "family": "Web",
+   "label": "BrowserHijacking",
+   "test_flows": 1465,
+   "missed": 73,
+   "miss rate": 0.049829351535836175
+  },
+  {
+   "family": "Web",
+   "label": "SqlInjection",
+   "test_flows": 1311,
+   "missed": 35,
+   "miss rate": 0.02669717772692601
+  },
+  {
+   "family": "DDoS",
+   "label": "DDoS-SlowLoris",
+   "test_flows": 2988,
+   "missed": 76,
+   "miss rate": 0.025435073627844713
+  },
+  {
+   "family": "Recon",
+   "label": "Recon-HostDiscovery",
+   "test_flows": 2969,
+   "missed": 58,
+   "miss rate": 0.01953519703603907
+  },
+  {
+   "family": "Web",
+   "label": "XSS",
+   "test_flows": 961,
+   "missed": 11,
+   "miss rate": 0.011446409989594173
+  },
+  {
+   "family": "Web",
+   "label": "Backdoor_Malware",
+   "test_flows": 804,
+   "missed": 9,
+   "miss rate": 0.011194029850746268
+  }
+ ],
+ "unseen": [
+  {
+   "family left out of training": "DDoS",
+   "caught when seen in training": 0.99994,
+   "caught when NEVER seen": 0.99905,
+   "false alarm rate on normal flows": 0.08409,
+   "K-Means detector (never saw ANY attack)": 0.73768
+  },
+  {
+   "family left out of training": "DoS",
+   "caught when seen in training": 1.0,
+   "caught when NEVER seen": 1.0,
+   "false alarm rate on normal flows": 0.08475,
+   "K-Means detector (never saw ANY attack)": 0.80504
+  },
+  {
+   "family left out of training": "Mirai",
+   "caught when seen in training": 1.0,
+   "caught when NEVER seen": 1.0,
+   "false alarm rate on normal flows": 0.08502,
+   "K-Means detector (never saw ANY attack)": 0.93997
+  },
+  {
+   "family left out of training": "Recon",
+   "caught when seen in training": 0.86353,
+   "caught when NEVER seen": 0.7852,
+   "false alarm rate on normal flows": 0.05668,
+   "K-Means detector (never saw ANY attack)": 0.2289
+  },
+  {
+   "family left out of training": "Spoofing",
+   "caught when seen in training": 0.8012,
+   "caught when NEVER seen": 0.46452,
+   "false alarm rate on normal flows": 0.07201,
+   "K-Means detector (never saw ANY attack)": 0.0676
+  },
+  {
+   "family left out of training": "Web",
+   "caught when seen in training": 0.96197,
+   "caught when NEVER seen": 0.83645,
+   "false alarm rate on normal flows": 0.06507,
+   "K-Means detector (never saw ANY attack)": 0.07138
+  },
+  {
+   "family left out of training": "BruteForce",
+   "caught when seen in training": 0.8998,
+   "caught when NEVER seen": 0.82532,
+   "false alarm rate on normal flows": 0.07586,
+   "K-Means detector (never saw ANY attack)": 0.15765
+  }
+ ],
+ "app_model_test": {
+  "accuracy": 0.9477293919772721,
+  "precision": 0.9693380456586111,
+  "recall": 0.9594629730304678,
+  "F1": 0.9643752301533564,
+  "missed attacks": 3430,
+  "false alarms": 2568,
+  "miss rate": 0.04053702696953223,
+  "false alarm rate": 0.0852165256346441
+ },
+ "kmeans_k": 20,
+ "by_family": {
+  "Bagging": {
+   "Benign": 0.9048,
+   "DDoS": 0.99725,
+   "DoS": 0.99975,
+   "Mirai": 0.99978,
+   "Recon": 0.87762,
+   "Spoofing": 0.82296,
+   "Web": 0.97696,
+   "BruteForce": 0.9155
+  },
+  "Random Forest": {
+   "Benign": 0.90197,
+   "DDoS": 0.99994,
+   "DoS": 1.0,
+   "Mirai": 1.0,
+   "Recon": 0.8717,
+   "Spoofing": 0.81643,
+   "Web": 0.98147,
+   "BruteForce": 0.90915
+  },
+  "Gradient Boosting": {
+   "Benign": 0.91478,
+   "DDoS": 0.99994,
+   "DoS": 1.0,
+   "Mirai": 1.0,
+   "Recon": 0.86353,
+   "Spoofing": 0.8012,
+   "Web": 0.96197,
+   "BruteForce": 0.8998
+  },
+  "Neural Network (MLP)": {
+   "Benign": 0.90732,
+   "DDoS": 0.99994,
+   "DoS": 1.0,
+   "Mirai": 1.0,
+   "Recon": 0.86313,
+   "Spoofing": 0.8012,
+   "Web": 0.94989,
+   "BruteForce": 0.89947
+  },
+  "Decision Tree": {
+   "Benign": 0.85475,
+   "DDoS": 0.9948,
+   "DoS": 0.99858,
+   "Mirai": 0.99944,
+   "Recon": 0.85231,
+   "Spoofing": 0.80924,
+   "Web": 0.89623,
+   "BruteForce": 0.84269
+  },
+  "KNN (k=5)": {
+   "Benign": 0.89185,
+   "DDoS": 0.99947,
+   "DoS": 0.99975,
+   "Mirai": 0.99978,
+   "Recon": 0.81483,
+   "Spoofing": 0.72607,
+   "Web": 0.84837,
+   "BruteForce": 0.76687
+  },
+  "AdaBoost": {
+   "Benign": 0.84125,
+   "DDoS": 1.0,
+   "DoS": 1.0,
+   "Mirai": 1.0,
+   "Recon": 0.83045,
+   "Spoofing": 0.63688,
+   "Web": 0.88866,
+   "BruteForce": 0.78557
+  },
+  "Logistic Regression": {
+   "Benign": 0.86673,
+   "DDoS": 0.99989,
+   "DoS": 1.0,
+   "Mirai": 0.99933,
+   "Recon": 0.8073,
+   "Spoofing": 0.51473,
+   "Web": 0.83613,
+   "BruteForce": 0.72779
+  },
+  "Perceptron": {
+   "Benign": 0.88323,
+   "DDoS": 0.99894,
+   "DoS": 1.0,
+   "Mirai": 0.99955,
+   "Recon": 0.70775,
+   "Spoofing": 0.44896,
+   "Web": 0.61344,
+   "BruteForce": 0.56379
+  },
+  "K-Means detector": {
+   "Benign": 0.99028,
+   "DDoS": 0.73768,
+   "DoS": 0.80504,
+   "Mirai": 0.93997,
+   "Recon": 0.2289,
+   "Spoofing": 0.0676,
+   "Web": 0.07138,
+   "BruteForce": 0.15765
+  },
+  "Naive Bayes": {
+   "Benign": 0.9989,
+   "DDoS": 0.44177,
+   "DoS": 0.37476,
+   "Mirai": 0.00501,
+   "Recon": 0.21272,
+   "Spoofing": 0.0077,
+   "Web": 0.00306,
+   "BruteForce": 0.14763
+  }
+ },
+ "pca_95": 20
+}

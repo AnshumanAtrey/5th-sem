@@ -1,0 +1,7 @@
+# the notebook, pinned to the same versions as my other ML assignments (web/scripts/export_model.py turns the
+# saved model into the web app's JSON, so it runs with these too)
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+matplotlib==3.11.2
+joblib==1.6.0

@@ -1,0 +1,9 @@
+# the local, light part: pushing to kaggle, the app screenshots, the report and the deck
+# (also needs pandoc 3.9.0.2 and `playwright install chromium`)
+kaggle
+ipykernel
+nbformat
+nbconvert==7.17.1
+pytest
+playwright==1.63.0
+weasyprint

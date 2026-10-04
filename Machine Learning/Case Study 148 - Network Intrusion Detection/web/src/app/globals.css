@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-normal: var(--normal);
+  --color-intrusion: var(--intrusion);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-host), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-azeret), ui-monospace, monospace;
+  --font-heading: var(--font-host), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-aleo), ui-serif, Georgia, serif;
+  --color-orange: var(--orange);
+  --color-orange-deep: var(--orange-deep);
+  --color-orange-soft: var(--orange-soft);
+  --color-graphite: var(--graphite);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* walrussecuritas.com brand tokens: white paper, ink, one orange. orange = intrusion / action, green = normal */
+  --paper: #ffffff;
+  --panel: #f4f4f4;
+  --ink: #141417;
+  --graphite: #3f3f44;
+  --orange: #fe5301;
+  --orange-deep: #d84600;
+  --orange-soft: #fe530114;
+  --normal: #1f7a4d;
+  --intrusion: #d84600;
+  /* categorical family hues: the validated dataviz reference palette, ordered so every neighbour passes the
+     colour-blind checks (scripts/validate_palette.js); always shown next to the family name, never alone */
+  --fam-benign: #1baf7a;
+  --fam-ddos: #e34948;
+  --fam-dos: #eda100;
+  --fam-mirai: #4a3aa7;
+  --fam-recon: #eb6834;
+  --fam-spoofing: #2a78d6;
+  --fam-web: #e87ba4;
+  --fam-bruteforce: #008300;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--panel);
+  --secondary-foreground: var(--ink);
+  --muted: var(--panel);
+  --muted-foreground: #14141799;
+  --accent: var(--orange-soft);
+  --accent-foreground: var(--ink);
+  --destructive: var(--orange-deep);
+  --border: #1414171a;
+  --input: #14141733;
+  --ring: #fe530166;
+  --chart-1: var(--orange);
+  --chart-2: var(--ink);
+  --chart-3: #c9c9ce;
+  --chart-4: var(--normal);
+  --chart-5: var(--graphite);
+  --radius: 0.125rem;
+  --sidebar: var(--panel);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--orange-soft);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: #1414171a;
+  --sidebar-ring: #fe530166;
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+@layer base {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* the brand's small uppercase mono labels (nav, buttons, section labels) */
+  .mono-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  /* the brand's notched buttons: bottom-right corner cut at 45 degrees */
+  .notch {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%);
+  }
+}

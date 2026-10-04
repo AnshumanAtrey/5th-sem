@@ -10,3 +10,7 @@ toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
+
+[server]
+# serves flow-sentinel/static/ at /app/static/ for the Case Study 148 web app (flow-sentinel/streamlit_app.py)
+enableStaticServing = true
