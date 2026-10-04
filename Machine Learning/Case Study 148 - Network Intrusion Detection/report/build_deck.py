@@ -169,8 +169,8 @@ slide("Class imbalance and unseen attacks", points([
      "but not the quiet ones."),
 ]), img("figures/15_unseen_families.png", "half") + img("figures/14_class_weighting.png", "half"), "3 · Results")
 
-slide("The prototype: Flow Sentinel (Next.js)", "<div class='quote'><b>Live:</b> walrus-flow-sentinel.pages.dev, in the "
-      "Walrus Securitas look (white and orange), hosted on Cloudflare Pages.</div>" + points([
+slide("The prototype: Flow Sentinel (Next.js)", "<div class='quote'><b>Live:</b> walrus-flow-sentinel.streamlit.app, in the "
+      "Walrus Securitas look (white and orange), hosted on Streamlit Community Cloud.</div>" + points([
     ("Detector", "pick one of 300 real test flows on the traffic tape, or type in its features: normal / intrusion, the "
      "intrusion score, the alarm threshold, and all 8 family probabilities."),
     ("Scan a file", "drop a CSV of up to 20,000 flows: verdicts, a sortable table, a download. Missing columns, text, "

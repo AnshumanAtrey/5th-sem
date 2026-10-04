@@ -9,7 +9,7 @@ advanced version, which attack category.
 |---|---|
 | **dataset** | [CICIoT2023](https://www.unb.ca/cic/datasets/iotdataset-2023.html) (Canadian Institute for Cybersecurity, 2023): 46,686,579 flows from a real network of 105 IoT devices, 33 attacks in 7 families + benign. on kaggle as [UNB CIC IOT 2023](https://www.kaggle.com/datasets/madhavmalhotra/unb-cic-iot-dataset) |
 | **models** | all 11 classifiers taught in the course: logistic regression, KNN, decision tree (module V), K-Means as an unsupervised detector (VII), random forest, bagging, AdaBoost, gradient boosting (VIII), perceptron, MLP neural network (IX), plus naive bayes, which the case study asks for |
-| **live app** | **[walrus-flow-sentinel.pages.dev](https://walrus-flow-sentinel.pages.dev/)** (Cloudflare Pages, Walrus Securitas look) |
+| **live app** | **[walrus-flow-sentinel.streamlit.app](https://walrus-flow-sentinel.streamlit.app/)** (Streamlit Community Cloud, Walrus Securitas look) |
 | **deliverables** | [the project in plain words + glossary](GLOSSARY.md) · [how it works, start to end, in detail](HOW-IT-WORKS.md) · [notebook](intrusion_detection.ipynb) · [report (PDF)](Case-Study-148-Network-Intrusion-Detection-Report.pdf) · [report (Word)](Case-Study-148-Network-Intrusion-Detection-Report.docx) · [viva deck (12 slides)](Case-Study-148-Presentation.pdf) · [web app](web/) · [figures](figures/) |
 
 ## results (114,749 locked test flows)
@@ -38,7 +38,7 @@ advanced version, which attack category.
   0.5 MB model instead of 23 / 106 MB
 - the six questions from the brief are answered in notebook section 19 and on the web app's *data and method* page
 
-## the web app: Flow Sentinel (`web/`), live at https://walrus-flow-sentinel.pages.dev/
+## the web app: Flow Sentinel (`web/`), live at https://walrus-flow-sentinel.streamlit.app/
 
 Next.js 16, React 19, Tailwind v4, shadcn/ui, Recharts, bun (the same stack as my SEPM project). no Python server:
 the gradient boosting models are exported as plain lists of trees (`web/public/model.json`) and evaluated in
@@ -51,8 +51,14 @@ method**.
 cd web && bun install && bun run dev      # http://localhost:3000
 bun test tests                            # browser model == sklearn, bad inputs, label mapping
 bun run build                             # static site in web/out, any static host serves it
-bun run deploy                            # uploads web/out to Cloudflare Pages (my personal account)
+bun run build:streamlit                   # builds into ../../../flow-sentinel/static; push, and Streamlit Cloud serves it
 ```
+
+**how it is hosted:** Streamlit Community Cloud runs [flow-sentinel/streamlit_app.py](../../flow-sentinel/streamlit_app.py)
+at the repo root. that page only shows the built site full-screen; Streamlit serves the site's files from
+`flow-sentinel/static/` (static file serving), and the model still runs in the visitor's browser. Cloud runs apps
+under `/~/+/`, and Next.js rejects `+` in its base path, so `bun run build:streamlit` builds with a placeholder and
+`web/scripts/streamlit_bundle.ts` swaps in `/~/+/app/static`.
 
 ## how to rerun everything
 

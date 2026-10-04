@@ -664,7 +664,7 @@ the website has a slider for exactly this.
    questions, cut-offs and answers, plus the medians, averages and spreads from step 6, into
    `web/public/model.json`. before writing, it redoes all the maths in plain NumPy and checks it against sklearn
    (largest difference: 0, and 4.4 × 10⁻¹⁶ for the family model)
-3. **the website** ([web/](web/), Next.js, live at [walrus-flow-sentinel.pages.dev](https://walrus-flow-sentinel.pages.dev/)) runs the same 4 cleaning steps and walks the same 300 trees in TypeScript,
+3. **the website** ([web/](web/), Next.js, live at [walrus-flow-sentinel.streamlit.app](https://walrus-flow-sentinel.streamlit.app/)) runs the same 4 cleaning steps and walks the same 300 trees in TypeScript,
    in the user's browser. a test (`bun test`) checks its answers against sklearn's on 300 exam rows (difference
    below 0.000000001)
 

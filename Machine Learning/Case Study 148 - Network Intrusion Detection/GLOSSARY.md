@@ -25,7 +25,7 @@ detailed version is [HOW-IT-WORKS.md](HOW-IT-WORKS.md).
 9. each rule then judged the 114,749 put-aside lines.
 10. we compared every judgement with the true tag and **counted**: attacks caught, attacks missed, false alarms.
 11. the best practical rule (gradient boosting: catches **95.95%** of attacks) was **saved as a file**.
-12. that file runs inside a **website** you can try at https://walrus-flow-sentinel.pages.dev/.
+12. that file runs inside a **website** you can try at https://walrus-flow-sentinel.streamlit.app/
 
 ---
 
@@ -364,4 +364,5 @@ a test proving that two implementations give the same output.
 **static site**
 a website that is only files (HTML, JS, JSON), with no server code. the model runs in the visitor's browser, so
 nothing they type is sent anywhere.
-*in our project:* built with Next.js, hosted free on Cloudflare Pages at https://walrus-flow-sentinel.pages.dev/.
+*in our project:* built with Next.js and hosted free on Streamlit Community Cloud at https://walrus-flow-sentinel.streamlit.app/. a tiny Streamlit page
+shows the built site full-screen; Streamlit only hands the files to your browser, and the model runs there.
