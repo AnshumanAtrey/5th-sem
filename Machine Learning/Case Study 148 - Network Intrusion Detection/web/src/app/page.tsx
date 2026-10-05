@@ -3,6 +3,7 @@ import Link from "next/link"
 import { FamiliesAccordion } from "@/components/data/families-accordion"
 import { ImbalanceChart } from "@/components/data/imbalance-chart"
 import { LabPipeline } from "@/components/data/lab-pipeline"
+import { RawPreview } from "@/components/data/raw-preview"
 import { RowCompare } from "@/components/data/row-compare"
 import { PageTitle } from "@/components/page-title"
 import { Section } from "@/components/section"
@@ -45,6 +46,11 @@ export default function Page() {
 
       <Section title="From a recording to a table" intro="How a smart home under attack became rows of numbers.">
         <LabPipeline />
+      </Section>
+
+      <Section title="Peek at the real file"
+        intro="The data is public. Here it is as the researchers published it, before we touched anything.">
+        <RawPreview />
       </Section>
 
       <Section title="What one row looks like"
