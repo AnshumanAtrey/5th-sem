@@ -1,4 +1,4 @@
-"""What runs inside the Kaggle session (run_on_kaggle.py prepends PACKED, NOTEBOOK and RESULTS).
+"""What runs inside the Kaggle session (run_on_kaggle.py prepends PACKED, NOTEBOOK, RESULTS and MODE).
 
 The heavy part runs here, in a fresh Python 3.12 env pinned to requirements.txt: the notebook reads all 169 CSV
 parts and trains the models. The web export, app screenshots, report and deck are light and run locally after.
@@ -39,6 +39,9 @@ try:
     sh("uv pip install -q --python /tmp/env/bin/python -r requirements.txt ipykernel nbconvert==7.17.1 pytest")
     sh("python -m ipykernel install --user --name cs148-env > /dev/null")
 
+    if MODE == "eda":  # noqa: F821 (prepended): only the Explore tab's numbers
+        sh("python kaggle/eda_export.py")
+        raise SystemExit(0)
     # 1. the notebook: samples the data, trains all 11 models, saves figures/, models/, reports/ and data/
     sh("jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=3600"
        f" --ExecutePreprocessor.kernel_name=cs148-env {NOTEBOOK}")  # noqa: F821
@@ -51,4 +54,5 @@ finally:
         if src.is_dir():
             shutil.copytree(src, OUT / name, dirs_exist_ok=True)
         elif src.exists():
+            (OUT / name).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy(src, OUT / name)

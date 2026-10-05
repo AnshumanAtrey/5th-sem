@@ -27,8 +27,11 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = "intrusion_detection.ipynb"
 KERNEL = "anshumanatrey/cs148-network-intrusion-detection"          # a private kaggle notebook
 DATASET = "madhavmalhotra/unb-cic-iot-dataset"     # CICIoT2023, the original 169 CSV parts
-SOURCES = [NOTEBOOK, "src", "requirements.txt", "tests"]
-RESULTS = [NOTEBOOK, "figures", "models", "reports", "data"]
+# `python3 kaggle/run_on_kaggle.py eda` runs only kaggle/eda_export.py (the Explore tab's numbers, ~10 minutes)
+MODE = sys.argv[1] if len(sys.argv) > 1 else "notebook"
+SOURCES = {"notebook": [NOTEBOOK, "src", "requirements.txt", "tests"],
+           "eda": ["kaggle/eda_export.py", "src", "requirements.txt"]}[MODE]
+RESULTS = {"notebook": [NOTEBOOK, "figures", "models", "reports", "data"], "eda": ["reports/eda.json"]}[MODE]
 
 
 def kaggle(*args):
@@ -48,7 +51,7 @@ def packed():
 def push():
     with tempfile.TemporaryDirectory() as tmp:
         job = Path(tmp)
-        header = f"PACKED = {packed()!r}\nNOTEBOOK = {NOTEBOOK!r}\nRESULTS = {RESULTS!r}\n"
+        header = f"PACKED = {packed()!r}\nNOTEBOOK = {NOTEBOOK!r}\nRESULTS = {RESULTS!r}\nMODE = {MODE!r}\n"
         (job / "runner.py").write_text(header + (ROOT / "kaggle" / "kernel_job.py").read_text())
         (job / "kernel-metadata.json").write_text(json.dumps({
             "id": KERNEL, "title": KERNEL.split("/")[1].replace("-", " "),

@@ -278,8 +278,8 @@ both are *supervised learning*: the model learns from rows where the answer is k
 EDA (*exploratory data analysis*) = looking at the data with counts and charts before training anything.
 
 **a) how the families differ.** box plots of 4 columns per family (`ax.boxplot`, on a log scale because the values
-range from 0 to millions). floods send packets very fast and small; web attacks and brute force look much more like
-normal browsing, which already hints at which attacks will be hard.
+range from 0 to millions). floods are not faster on average: what gives them away is tiny packets (about 55 bytes)
+and split-second connections. web attacks and brute force look much more like normal browsing, which already hints at which attacks will be hard.
 
 ![how the families differ](figures/02_feature_by_family.png)
 

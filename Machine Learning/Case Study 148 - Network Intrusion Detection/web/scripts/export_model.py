@@ -116,6 +116,9 @@ app["results"] = results
 app["counts"] = dataset_counts()
 (WEB / "src" / "data").mkdir(parents=True, exist_ok=True)
 (WEB / "src" / "data" / "app.json").write_text(json.dumps(app, indent=1, default=float, allow_nan=False))
+eda = json.loads((ROOT / "reports" / "eda.json").read_text())       # the Explore tab's numbers (kaggle/eda_export.py)
+assert eda["on_kaggle"] and eda["rows"] == results["flows_clean"], "eda.json must come from the full Kaggle sample"
+(WEB / "src" / "data" / "eda.json").write_text(json.dumps(eda))
 size = (WEB / "public" / "model.json").stat().st_size / 1e6
 print(f"wrote web/public/model.json ({size:.1f} MB), web/public/demo_flows.csv, web/tests/parity.json, "
       "web/src/data/app.json")

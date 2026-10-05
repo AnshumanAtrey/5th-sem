@@ -15,13 +15,13 @@ export const FAMILY_STORIES: Family[] = [
     key: "Benign", name: "Normal traffic", example: "Benign · BenignTraffic",
     what: "Everyday traffic with no attack going on: a camera streaming video, a smart plug checking in with its cloud, a speaker fetching music. Its label in the data is BenignTraffic (benign means harmless).",
     how: "Recorded while the devices were simply being used, with no attacker running.",
-    looks: "Moderate speeds, a mix of packet sizes, longer-lasting connections, mostly encrypted web traffic (HTTPS).",
+    looks: "A wide mix of packet sizes, and connections that last a while (half last over 25 seconds).",
   },
   {
     key: "DDoS", name: "DDoS: distributed denial of service", example: "DDoS · DDoS-PSHACK_Flood",
     what: "Many machines flood one target with junk traffic at the same time, until it can't answer real users.",
     how: "The attacker Raspberry Pis together, mostly with the hping3 flooding tool.",
-    looks: "Thousands of tiny packets per second, each connection lasting a split second.",
+    looks: "Tiny packets (about 55 bytes) in connections that last a split second. Surprisingly, not faster on average."
   },
   {
     key: "DoS", name: "DoS: denial of service", example: "DoS · DoS-UDP_Flood",
@@ -33,13 +33,13 @@ export const FAMILY_STORIES: Family[] = [
     key: "Mirai", name: "Mirai botnet", example: "Mirai · Mirai-udpplain",
     what: "Mirai is real malware that hijacks smart devices and turns them into a flooding army. It took down big parts of the internet in 2016.",
     how: "The researchers ran an adapted copy of the real Mirai source code.",
-    looks: "Heavy floods of mid-sized UDP or GRE packets.",
+    looks: "Every packet the same middle size (about 570 bytes), in very short connections."
   },
   {
     key: "Recon", name: "Recon: reconnaissance", example: "Recon · Recon-HostDiscovery",
     what: "Casing the house before breaking in: scanning to find which devices exist, which ports are open and which software they run.",
     how: "nmap, fping and a vulnerability scanner.",
-    looks: "Slow, small, polite-looking traffic. Easy to confuse with normal traffic.",
+    looks: "Small packets at normal-looking speeds, in long connections. Easy to confuse with normal traffic."
   },
   {
     key: "Spoofing", name: "Spoofing", example: "Spoofing · DNS_Spoofing",
@@ -51,7 +51,7 @@ export const FAMILY_STORIES: Family[] = [
     key: "Web", name: "Web attacks", example: "Web · Uploading_Attack",
     what: "Attacking a website through its forms and pages: SQL injection, cross-site scripting (XSS), command injection, malicious uploads, a backdoor, browser hijacking.",
     how: "A deliberately vulnerable test website (DVWA), BeEF for browser hijacking.",
-    looks: "Very little traffic, slow, long connections. The rarest family in the data.",
+    looks: "Long, slow connections with small packets. The rarest family in the data."
   },
   {
     key: "BruteForce", name: "Brute force", example: "BruteForce · DictionaryBruteForce",
