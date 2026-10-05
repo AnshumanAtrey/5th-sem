@@ -1,6 +1,6 @@
 "use client"
 
-import { Lightbulb, Wrench } from "lucide-react"
+import { BookOpen, Lightbulb, Wrench } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 /** The one thing to take away from a section. */
@@ -31,5 +31,27 @@ export function HowWeDidIt({ tool, children, code }: { tool: string; children: R
         </AccordionContent>
       </AccordionItem>
     </Accordion>
+  )
+}
+
+/** Exam keywords: the term, a one-line definition, and what it means in this project. */
+export function KeyTerms({ terms }: { terms: { term: string; means: string; ours: React.ReactNode }[] }) {
+  return (
+    <div className="rounded-md border">
+      <p className="mono-label flex items-center gap-2 border-b bg-panel px-4 py-2.5 text-muted-foreground">
+        <BookOpen className="size-4" aria-hidden /> Key words
+      </p>
+      <dl className="divide-y">
+        {terms.map((t) => (
+          <div key={t.term} className="grid gap-1 px-4 py-3 md:grid-cols-[13rem_1fr]">
+            <dt className="font-semibold">{t.term}</dt>
+            <dd className="grid gap-1 text-[15px]">
+              <span>{t.means}</span>
+              <span className="text-muted-foreground"><b className="mono-label mr-1.5 text-orange-deep">In our project</b>{t.ours}</span>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   )
 }

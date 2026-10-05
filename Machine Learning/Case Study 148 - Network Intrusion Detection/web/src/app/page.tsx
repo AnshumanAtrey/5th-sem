@@ -64,7 +64,7 @@ export default function Page() {
       </Section>
 
       <Section title="The data is very uneven"
-        intro={<>Floods (DDoS) are {pct(share("DDoS"), 0)} of all rows. Web attacks are {pct(share("Web"), 2)}, so
+        intro={<>This is called <b className="text-foreground">class imbalance</b>. Floods (DDoS) are {pct(share("DDoS"), 0)} of all rows. Web attacks are {pct(share("Web"), 2)}, so
           small their bar barely shows. Left like this, a model would hardly ever see a web attack and would never
           learn it. Step 3 shows how we fixed that.</>}>
         <ImbalanceChart />

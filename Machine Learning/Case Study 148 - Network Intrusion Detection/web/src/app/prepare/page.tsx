@@ -1,7 +1,7 @@
 import { CheckCircle2, CircleDot } from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { HowWeDidIt, Learned } from "@/components/explain"
+import { HowWeDidIt, KeyTerms, Learned } from "@/components/explain"
 import { PageTitle } from "@/components/page-title"
 import { LabelMap } from "@/components/prepare/label-map"
 import { SampleChart } from "@/components/prepare/sample-chart"
@@ -39,6 +39,12 @@ export default function Page() {
         intro={<>{(r.flows_full / 1e6).toFixed(1)} million rows is too many to train 11 models on, and step 1 showed how
           uneven they are. So we keep a smaller part, chosen so the rare attacks don&apos;t get lost.</>}>
         <SampleChart />
+        <KeyTerms terms={[
+          { term: "Class imbalance", means: "When some answers have far more examples than others.",
+            ours: <>DDoS floods are {pct(famFull("DDoS") / r.flows_full, 0)} of all {(r.flows_full / 1e6).toFixed(1)} million rows; web attacks are only {pct(famFull("Web") / r.flows_full, 2)}.</> },
+          { term: "Biased (toward the majority class)", means: "A model that learns mostly from one big group and leans toward always answering it, neglecting the small groups.",
+            ours: <>Trained on all the rows, the model would learn floods very well and mostly ignore web attacks and brute force. So we kept every rare-attack row and only cut the repeated floods.</> },
+        ]} />
         <Learned>
           {int(r.flows_full)} rows became {int(r.flows_sample)} (about 1%), and every rare attack is still there: web
           attacks went from {pct(famFull("Web") / r.flows_full, 2)} of the data to {pct(famSample("Web") / r.flows_sample, 1)}.
