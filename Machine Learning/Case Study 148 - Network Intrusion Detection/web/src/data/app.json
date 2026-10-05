@@ -1377,5 +1377,211 @@
    }
   },
   "pca_95": 20
- }
+ },
+ "counts": [
+  {
+   "label": "BenignTraffic",
+   "family": "Benign",
+   "full": 1098195,
+   "sample": 120539
+  },
+  {
+   "label": "DictionaryBruteForce",
+   "family": "BruteForce",
+   "full": 13064,
+   "sample": 11974
+  },
+  {
+   "label": "DDoS-ICMP_Flood",
+   "family": "DDoS",
+   "full": 7200504,
+   "sample": 12035
+  },
+  {
+   "label": "DDoS-UDP_Flood",
+   "family": "DDoS",
+   "full": 5412287,
+   "sample": 11792
+  },
+  {
+   "label": "DDoS-TCP_Flood",
+   "family": "DDoS",
+   "full": 4497667,
+   "sample": 11843
+  },
+  {
+   "label": "DDoS-PSHACK_Flood",
+   "family": "DDoS",
+   "full": 4094755,
+   "sample": 12113
+  },
+  {
+   "label": "DDoS-SYN_Flood",
+   "family": "DDoS",
+   "full": 4059190,
+   "sample": 11973
+  },
+  {
+   "label": "DDoS-RSTFINFlood",
+   "family": "DDoS",
+   "full": 4045285,
+   "sample": 12135
+  },
+  {
+   "label": "DDoS-SynonymousIP_Flood",
+   "family": "DDoS",
+   "full": 3598138,
+   "sample": 12067
+  },
+  {
+   "label": "DDoS-ICMP_Fragmentation",
+   "family": "DDoS",
+   "full": 452489,
+   "sample": 11967
+  },
+  {
+   "label": "DDoS-UDP_Fragmentation",
+   "family": "DDoS",
+   "full": 286925,
+   "sample": 11945
+  },
+  {
+   "label": "DDoS-ACK_Fragmentation",
+   "family": "DDoS",
+   "full": 285104,
+   "sample": 11814
+  },
+  {
+   "label": "DDoS-HTTP_Flood",
+   "family": "DDoS",
+   "full": 28790,
+   "sample": 12203
+  },
+  {
+   "label": "DDoS-SlowLoris",
+   "family": "DDoS",
+   "full": 23426,
+   "sample": 11950
+  },
+  {
+   "label": "DoS-UDP_Flood",
+   "family": "DoS",
+   "full": 3318595,
+   "sample": 12085
+  },
+  {
+   "label": "DoS-TCP_Flood",
+   "family": "DoS",
+   "full": 2671445,
+   "sample": 12020
+  },
+  {
+   "label": "DoS-SYN_Flood",
+   "family": "DoS",
+   "full": 2028834,
+   "sample": 12005
+  },
+  {
+   "label": "DoS-HTTP_Flood",
+   "family": "DoS",
+   "full": 71864,
+   "sample": 11944
+  },
+  {
+   "label": "Mirai-greeth_flood",
+   "family": "Mirai",
+   "full": 991866,
+   "sample": 11869
+  },
+  {
+   "label": "Mirai-udpplain",
+   "family": "Mirai",
+   "full": 890576,
+   "sample": 11922
+  },
+  {
+   "label": "Mirai-greip_flood",
+   "family": "Mirai",
+   "full": 751682,
+   "sample": 12124
+  },
+  {
+   "label": "Recon-HostDiscovery",
+   "family": "Recon",
+   "full": 134378,
+   "sample": 11877
+  },
+  {
+   "label": "Recon-OSScan",
+   "family": "Recon",
+   "full": 98259,
+   "sample": 12055
+  },
+  {
+   "label": "Recon-PortScan",
+   "family": "Recon",
+   "full": 82284,
+   "sample": 11825
+  },
+  {
+   "label": "VulnerabilityScan",
+   "family": "Recon",
+   "full": 37382,
+   "sample": 11928
+  },
+  {
+   "label": "Recon-PingSweep",
+   "family": "Recon",
+   "full": 2262,
+   "sample": 2262
+  },
+  {
+   "label": "MITM-ArpSpoofing",
+   "family": "Spoofing",
+   "full": 307593,
+   "sample": 12026
+  },
+  {
+   "label": "DNS_Spoofing",
+   "family": "Spoofing",
+   "full": 178911,
+   "sample": 11874
+  },
+  {
+   "label": "BrowserHijacking",
+   "family": "Web",
+   "full": 5859,
+   "sample": 5859
+  },
+  {
+   "label": "CommandInjection",
+   "family": "Web",
+   "full": 5409,
+   "sample": 5409
+  },
+  {
+   "label": "SqlInjection",
+   "family": "Web",
+   "full": 5245,
+   "sample": 5245
+  },
+  {
+   "label": "XSS",
+   "family": "Web",
+   "full": 3846,
+   "sample": 3846
+  },
+  {
+   "label": "Backdoor_Malware",
+   "family": "Web",
+   "full": 3218,
+   "sample": 3218
+  },
+  {
+   "label": "Uploading_Attack",
+   "family": "Web",
+   "full": 1252,
+   "sample": 1252
+  }
+ ]
 }

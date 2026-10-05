@@ -10,6 +10,7 @@ Run from the case study folder, after the notebook has saved models/ids_bundle.j
     python web/scripts/export_model.py
 """
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -98,9 +99,21 @@ parity = {"flows": demo[FEATURES].head(300).to_dict("records"),
 (WEB / "tests").mkdir(exist_ok=True)
 (WEB / "tests" / "parity.json").write_text(json.dumps(parity))
 
+def dataset_counts():
+    """Rows per label in the full dataset and in our sample: the table the notebook printed in section 2."""
+    nb = json.loads((ROOT / "intrusion_detection.ipynb").read_text())
+    cell = next(c for c in nb["cells"] if c["cell_type"] == "code" and "overview = pd.DataFrame" in "".join(c["source"]))
+    html = next("".join(o["data"]["text/html"]) for o in cell["outputs"] if "text/html" in o.get("data", {}))
+    cells = re.findall(r"<th[^>]*>([^<]+)</th>\s*<td[^>]*>([^<]+)</td>\s*<td[^>]*>(\d+)</td>\s*<td[^>]*>(\d+)</td>", html)
+    rows = [{"label": label, "family": family, "full": int(full), "sample": int(kept)} for label, family, full, kept in cells]
+    assert sum(r["full"] for r in rows) == results["flows_full"] and len(rows) == 34, "counts must match results.json"
+    return rows
+
+
 app = {key: bundle[key] for key in ("top_features", "examples", "thresholds", "comparison", "family_report", "unseen",
                                     "test", "n_train", "n_test", "dataset")}
 app["results"] = results
+app["counts"] = dataset_counts()
 (WEB / "src" / "data").mkdir(parents=True, exist_ok=True)
 (WEB / "src" / "data" / "app.json").write_text(json.dumps(app, indent=1, default=float, allow_nan=False))
 size = (WEB / "public" / "model.json").stat().st_size / 1e6

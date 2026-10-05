@@ -20,6 +20,7 @@ export type ModelRow = {
 }
 
 export type AppData = {
+  counts: { label: string; family: string; full: number; sample: number }[]
   top_features: string[]
   examples: Record<string, Record<string, number>>
   thresholds: { threshold: number; recall: Rate; "false alarm rate": Rate }[]

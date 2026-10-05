@@ -16,4 +16,4 @@ iframe[title="streamlit_app.iframe"], iframe[title="st.iframe"] {
   position: fixed; inset: 0; width: 100vw !important; height: 100vh !important; border: 0; z-index: 1000;
 }
 </style>""", unsafe_allow_html=True)
-components.iframe("app/static/index.html", height=900)
+components.iframe("app/static/index.html", height=900, scrolling=True)  # scrolling is off by default
