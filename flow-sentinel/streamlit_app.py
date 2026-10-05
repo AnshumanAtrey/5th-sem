@@ -5,8 +5,14 @@ build:streamlit` there builds it as static files into static/ next to this scrip
 /app/static/ (server.enableStaticServing in .streamlit/config.toml). This page only shows that site full-screen. The
 model runs in the visitor's browser, so nothing here needs Python beyond Streamlit itself.
 """
+import hashlib
+from pathlib import Path
+
 import streamlit as st
 import streamlit.components.v1 as components
+
+# a version tag from the built page's contents: every new build gets a new address, so no browser shows a cached old one
+VERSION = hashlib.sha1((Path(__file__).parent / "static" / "index.html").read_bytes()).hexdigest()[:10]
 
 st.set_page_config(page_title="Flow Sentinel · Walrus Securitas", page_icon="🛡️", layout="wide")
 st.markdown("""<style>
@@ -16,4 +22,4 @@ iframe[title="streamlit_app.iframe"], iframe[title="st.iframe"] {
   position: fixed; inset: 0; width: 100vw !important; height: 100vh !important; border: 0; z-index: 1000;
 }
 </style>""", unsafe_allow_html=True)
-components.iframe("app/static/index.html", height=900, scrolling=True)  # scrolling is off by default
+components.iframe(f"app/static/index.html?v={VERSION}", height=900, scrolling=True)  # scrolling is off by default
