@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { data } from "@/lib/data"
+import { COLUMN_MEANING } from "@/lib/columns"
 import { toNumber, type Flow } from "@/lib/ids"
 import { cn } from "@/lib/utils"
 
@@ -14,7 +15,10 @@ function FeatureInput({ name, value, onChange }: { name: string; value: unknown;
   const bad = Number.isNaN(toNumber(value))
   return (
     <div className="grid gap-1">
-      <Label htmlFor={id} className="text-xs font-normal text-muted-foreground">{name}</Label>
+      <Label htmlFor={id} className="grid gap-0 text-xs font-normal text-muted-foreground">
+        <span className="font-mono text-foreground">{name}</span>
+        {COLUMN_MEANING[name] && <span className="text-[11px] leading-snug">{COLUMN_MEANING[name]}</span>}
+      </Label>
       <Input id={id} inputMode="decimal" value={String(value ?? "")} aria-invalid={bad || undefined}
         onChange={(e) => onChange(e.target.value)} className="h-8 font-mono text-sm tabular" />
     </div>
@@ -44,7 +48,7 @@ export function FlowEditor({ features, flow, example, onExample, onChange }: {
         </Select>
       </div>
       <div className="grid gap-3">
-        <p className="text-sm text-muted-foreground">The {top.length} features the model relies on most. Change any of them and the verdict updates.</p>
+        <p className="text-sm text-muted-foreground">The {top.length} columns the model relies on most (the ones that hurt it most when scrambled, step 5). Each shows its name in the dataset and what it means. Change any of them and the verdict updates.</p>
         <div className="grid grid-cols-2 gap-3">
           {top.map((f) => <FeatureInput key={f} name={f} value={flow[f]} onChange={(v) => onChange(f, v)} />)}
         </div>

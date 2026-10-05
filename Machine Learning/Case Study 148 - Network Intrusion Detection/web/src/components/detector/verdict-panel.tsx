@@ -44,7 +44,7 @@ export function VerdictPanel({ verdict, threshold, onThreshold, truth }: {
 
       <div className="grid gap-3">
         <div className="flex items-baseline justify-between text-sm">
-          <span className="mono-label text-muted-foreground">Intrusion score</span>
+          <span><span className="mono-label text-muted-foreground">Intrusion score</span> <span className="text-xs text-muted-foreground">(the chance this flow is an attack)</span></span>
           <span className="font-mono text-lg tabular">{pct(verdict.intrusion, 2)}</span>
         </div>
         <div className="relative h-3 rounded-[1px] bg-muted" aria-hidden>
@@ -52,7 +52,7 @@ export function VerdictPanel({ verdict, threshold, onThreshold, truth }: {
           <div className="absolute -top-1 h-5 w-0.5 bg-ink" style={{ left: `${threshold}%` }} />
         </div>
         <label className="grid gap-2 pt-2 text-sm">
-          <span className="flex justify-between"><span className="mono-label text-muted-foreground">Alarm threshold</span><span className="font-mono tabular">{threshold}%</span></span>
+          <span className="flex justify-between"><span><span className="mono-label text-muted-foreground">Alarm threshold</span> <span className="text-xs text-muted-foreground">(at or above it: intrusion)</span></span><span className="font-mono tabular">{threshold}%</span></span>
           <Slider min={5} max={95} step={5} value={[threshold]} onValueChange={([v]) => onThreshold(v)} aria-label="Alarm threshold" />
         </label>
         <p className="text-sm text-muted-foreground">
@@ -62,7 +62,7 @@ export function VerdictPanel({ verdict, threshold, onThreshold, truth }: {
       </div>
 
       <div className="grid gap-2">
-        <h3 className="mono-label text-muted-foreground">Attack family · 8-class model</h3>
+        <h3><span className="mono-label text-muted-foreground">Attack family</span> <span className="text-xs text-muted-foreground">(a second model that names the kind of attack: each bar is its chance)</span></h3>
         <ul className="grid gap-1.5">
           {verdict.family.map((f) => (
             <li key={f.name} className="grid grid-cols-[6.5rem_1fr_3.5rem] items-center gap-3 text-sm">
