@@ -55,3 +55,22 @@ export function KeyTerms({ terms }: { terms: { term: string; means: string; ours
     </div>
   )
 }
+
+/** A plain-words dictionary for a page: each recurring term, explained once, before it is used. */
+export function WordList({ title = "Words used on this page", words }: { title?: string; words: { term: string; means: string }[] }) {
+  return (
+    <div className="rounded-md border">
+      <p className="mono-label flex items-center gap-2 border-b bg-panel px-4 py-2.5 text-muted-foreground">
+        <BookOpen className="size-4" aria-hidden /> {title}
+      </p>
+      <dl className="grid gap-x-8 gap-y-3 p-4 md:grid-cols-2">
+        {words.map((w) => (
+          <div key={w.term} className="grid gap-0.5">
+            <dt className="font-semibold">{w.term}</dt>
+            <dd className="text-sm text-muted-foreground">{w.means}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  )
+}

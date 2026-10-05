@@ -64,11 +64,11 @@ export function BoosterWalk() {
       </ToggleGroup>
       <div className="grid gap-4 rounded-md border p-4 md:grid-cols-[1fr_1.4fr]">
         <div className="grid content-start gap-2">
-          <p className="mono-label text-muted-foreground">Tree 1 of 300: the questions this row meets</p>
+          <p className="mono-label text-muted-foreground">Tree 1 of 300: the questions this row meets, top to bottom</p>
           <ol className="grid gap-1 font-mono text-sm">
             {first.steps.map((s, i) => <li key={i} className="flex gap-2"><span className="text-muted-foreground">{i + 1}.</span>{s}?</li>)}
           </ol>
-          <p className="text-sm">End point: <b className="font-mono">{first.value >= 0 ? "+" : "−"}{Math.abs(first.value).toFixed(3)}</b>{" "}
+          <p className="text-sm">End point (the bottom box it lands in): <b className="font-mono">{first.value >= 0 ? "+" : "−"}{Math.abs(first.value).toFixed(3)}</b>{" "}
             <span className="text-muted-foreground">({first.value >= 0 ? "a nudge towards attack" : "a nudge towards normal"})</span></p>
         </div>
         <div className="grid content-start gap-3">
@@ -78,7 +78,7 @@ export function BoosterWalk() {
           </div>
           <Slider min={0} max={300} step={1} value={[trees]} onValueChange={([v]) => setTrees(v)} aria-label="Trees added" />
           <p className="text-sm text-muted-foreground">
-            Running score {totals[trees] >= 0 ? "+" : "−"}{Math.abs(totals[trees]).toFixed(3)} → chance of attack {pct(now, 1)}. This row is really {truth}.
+            Running score (the starting score plus every tree&apos;s nudge so far) {totals[trees] >= 0 ? "+" : "−"}{Math.abs(totals[trees]).toFixed(3)}, turned into a chance with the S-curve: {pct(now, 1)}. This row is really {truth}.
           </p>
         </div>
       </div>

@@ -1,21 +1,22 @@
 import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { KeyTerms, Learned } from "@/components/explain"
+import { KeyTerms, Learned, WordList } from "@/components/explain"
 import { PageTitle } from "@/components/page-title"
 import { Section } from "@/components/section"
 import { BoosterWalk } from "@/components/train/booster-walk"
 import { ModelsAccordion } from "@/components/train/models-accordion"
 import { data, int } from "@/lib/data"
+import { TRAIN_WORDS } from "@/lib/models"
 
 export const metadata: Metadata = { title: "4 · Train" }
 
 export default function Page() {
   const flow = [
     ["The prepared rows", `${int(data.n_train)} rows × 45 numbers, plus each row's answer (0 or 1)`],
-    ["model.fit(rows, answers)", "the library adjusts the model's inner numbers until its guesses match the answers"],
+    ["model.fit(rows, answers)", "the library adjusts the model's inner numbers (its parameters) until its guesses match the answers"],
     ["A trained model", "its learned numbers: weights, tree questions, cut-offs…"],
-    ["model.predict_proba(new row)", "a chance of attack for a row it has never seen, e.g. 93%"],
+    ["model.predict_proba(new row)", "'predict probability': a chance of attack for a row it has never seen, e.g. 93%"],
   ]
   return (
     <div className="grid gap-16">
@@ -24,6 +25,8 @@ export default function Page() {
         formula we wrote: each is a ready-made class in scikit-learn, a free machine learning library. We choose a few
         settings, hand it the rows and their answers, and the library does the learning.
       </PageTitle>
+
+      <WordList words={TRAIN_WORDS} />
 
       <Section title="What 'training' means" intro="The same four steps for every one of the 11 models.">
         <ol className="grid gap-px overflow-hidden rounded-md border bg-border md:grid-cols-4">
@@ -39,11 +42,12 @@ export default function Page() {
           ))}
         </ol>
         <pre className="overflow-x-auto rounded-md bg-ink p-5 font-mono text-[13px] leading-relaxed text-white">
-{`from sklearn.ensemble import RandomForestClassifier   # 1. import a ready-made model
+{`from sklearn.ensemble import RandomForestClassifier   # 1. load a ready-made model from the library
 
-model = RandomForestClassifier(n_estimators=200)     # 2. choose its settings
-model.fit(X_train, y_train)                          # 3. learn from the rows and answers
-model.predict_proba(X_test)                          # 4. chance of attack for unseen rows`}
+model = RandomForestClassifier(n_estimators=200)     # 2. create it with our settings (200 trees)
+model.fit(X_train, y_train)                          # 3. learn: X_train = the 344,246 rows of 45 numbers,
+                                                     #           y_train = their answers (0 or 1)
+model.predict_proba(X_test)                          # 4. chance of attack for each exam row it never saw`}
         </pre>
         <KeyTerms terms={[
           { term: "Supervised learning", means: "Learning from examples that come with the right answer.",
@@ -65,7 +69,7 @@ model.predict_proba(X_test)                          # 4. chance of attack for u
       </Section>
 
       <Section title="Inside the model on this website"
-        intro="Gradient boosting runs the detector on this site. Pick a real exam row and drag the slider: every tree adds a small nudge, and you can watch the chance of attack settle as the trees add up.">
+        intro="Gradient boosting runs the detector on this site. Pick a real exam row (one the model never learned from) and drag the slider: every tree adds a small nudge (a plus or minus number) to the row's score, and you can watch its chance of attack settle as the trees add up.">
         <BoosterWalk />
         <Learned>
           No single tree is sure of anything; each adds a nudge worth a tenth of its vote. Together, 300 of them push a
