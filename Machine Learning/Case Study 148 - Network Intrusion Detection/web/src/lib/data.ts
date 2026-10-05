@@ -17,6 +17,7 @@ export type ModelRow = {
   "train s": number
   "score s": number
   "size MB": number
+  "trained on": number
 }
 
 export type AppData = {
