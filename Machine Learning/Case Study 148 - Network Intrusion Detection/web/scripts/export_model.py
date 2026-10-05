@@ -9,6 +9,7 @@ Run from the case study folder, after the notebook has saved models/ids_bundle.j
 
     python web/scripts/export_model.py
 """
+import ast
 import json
 import re
 import shutil
@@ -110,10 +111,27 @@ def dataset_counts():
     return rows
 
 
+def cleaning_checks():
+    """What the notebook's cleaning step (section 3) printed: duplicates, gaps, bad values, useless and copied columns."""
+    nb = json.loads((ROOT / "intrusion_detection.ipynb").read_text())
+    cell = next(c for c in nb["cells"] if c["cell_type"] == "code" and "drop_duplicates()" in "".join(c["source"]))
+    text = "".join("".join(o.get("text", "")) for o in cell["outputs"])
+    num = lambda label: int(re.search(rf"{label}: ([\d,]+)", text).group(1).replace(",", ""))
+    checks = {"duplicates": num("exact duplicate rows dropped"), "conflicts": num("same numbers but different labels dropped"),
+              "left": num("left"), "missing": num("missing values"), "infinite": num("infinite values"),
+              "negative": num("negative values"),
+              "constant": ast.literal_eval(re.search(r"never change: (\[.*\])", text).group(1)),
+              "copies": [list(p) for p in ast.literal_eval(re.search(r"copies of another: (\[.*\])", text).group(1))]}
+    assert checks["left"] == results["flows_clean"], "the cleaning output must match results.json"
+    return checks
+
+
 app = {key: bundle[key] for key in ("top_features", "examples", "thresholds", "comparison", "family_report", "unseen",
                                     "test", "n_train", "n_test", "dataset")}
 app["results"] = results
 app["counts"] = dataset_counts()
+app["checks"] = cleaning_checks()
+app["prep"] = {"columns": FEATURES, **prep_numbers(binary)}       # the scaling numbers, learned from training rows only
 (WEB / "src" / "data").mkdir(parents=True, exist_ok=True)
 (WEB / "src" / "data" / "app.json").write_text(json.dumps(app, indent=1, default=float, allow_nan=False))
 eda = json.loads((ROOT / "reports" / "eda.json").read_text())       # the Explore tab's numbers (kaggle/eda_export.py)

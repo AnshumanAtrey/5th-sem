@@ -21,6 +21,8 @@ export type ModelRow = {
 
 export type AppData = {
   counts: { label: string; family: string; full: number; sample: number }[]
+  checks: { duplicates: number; conflicts: number; left: number; missing: number; infinite: number; negative: number; constant: string[]; copies: string[][] }
+  prep: { columns: string[]; median: number[]; mean: number[]; scale: number[] }
   top_features: string[]
   examples: Record<string, Record<string, number>>
   thresholds: { threshold: number; recall: Rate; "false alarm rate": Rate }[]
