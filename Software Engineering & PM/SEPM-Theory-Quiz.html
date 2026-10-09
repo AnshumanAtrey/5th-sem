@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEPM Theory Drill</title>
+<style>
+/* layout: one reading column, sticky score bar, question cards */
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --fg: #1d2330; --muted: #5d6677; --line: #dde1e8;
+  --accent: #2f5bd3; --good: #1d7a46; --good-bg: #e6f4ec; --bad: #b3261e; --bad-bg: #fbe9e8;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #12151b; --card: #1b2029; --fg: #e6e9ef; --muted: #9aa3b5; --line: #2c3340;
+    --accent: #7ea2ff; --good: #5fd08f; --good-bg: #16301f; --bad: #ff8a80; --bad-bg: #3a1c1b; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 var(--sans); }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+header { padding-block: 24px 8px; }
+h1 { margin: 0 0 4px; font-size: 24px; text-wrap: balance; }
+.sub { margin: 0; color: var(--muted); }
+.bar { position: sticky; top: 0; z-index: 2; background: var(--bg); padding-block: 10px; border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.score { font-variant-numeric: tabular-nums; font-weight: 600; margin-right: auto; }
+.score small { color: var(--muted); font-weight: 400; }
+button, select { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+button:hover, select:hover { border-color: var(--accent); }
+button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.on { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.mods { display: flex; flex-wrap: wrap; gap: 6px; padding-block: 10px 4px; }
+.list { display: grid; gap: 14px; padding-block: 12px; }
+.q { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.meta { font-size: 12px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
+.qt { font-weight: 600; margin: 0 0 10px; }
+.opts { display: grid; gap: 6px; }
+.opt { text-align: left; width: 100%; border-radius: 8px; padding: 8px 10px; }
+.opt.right { background: var(--good-bg); border-color: var(--good); color: var(--fg); }
+.opt.wrong { background: var(--bad-bg); border-color: var(--bad); color: var(--fg); }
+.opt:disabled { cursor: default; }
+.ex { margin: 10px 0 0; padding: 8px 10px; border-left: 3px solid var(--accent); color: var(--fg); font-size: 14px; }
+.ex b { color: var(--good); }
+.empty { color: var(--muted); padding: 24px 0; }
+code { font-family: var(--mono); font-size: 13px; }
+@media (prefers-reduced-motion: no-preference) { .opt { transition: background .15s, border-color .15s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SEPM Theory Drill</h1>
+    <p class="sub">Software Engineering &amp; Project Management · Sprint 1 theory, Fri 9 Oct, 10:00–10:30 AM · 100 questions across the 5 syllabus modules. Tap an option to check it; the explanation shows the formula or full form to remember.</p>
+  </header>
+  <div class="bar">
+    <span class="score" id="score">0 / 0 <small>answered</small></span>
+    <button id="btn-wrong" type="button">Only my mistakes</button>
+    <button id="btn-reveal" type="button">Show all answers</button>
+    <button id="btn-shuffle" type="button">Shuffle</button>
+    <button id="btn-reset" type="button">Reset</button>
+  </div>
+  <div class="mods" id="mods"></div>
+  <div class="list" id="list"></div>
+</div>
+<script>
+// [module, question, [correct, wrong, wrong, wrong], explanation]
+const Q = [
+// Module I: Introduction & process models
+[1,"SDLC stands for?",["Software Development Life Cycle","System Design Logic Chain","Software Design Life Chart","Structured Development Logic Cycle"],"Phases: requirements → design → implementation → testing → deployment → maintenance."],
+[1,"The term \"software crisis\" became popular at which event?",["1968 NATO Software Engineering Conference","1975 IEEE ICSE","1984 ACM SIGSOFT meeting","2001 Snowbird (Agile) meeting"],"The 1968 NATO conference also popularised the term \"software engineering\". Crisis = projects late, over budget, unreliable, hard to maintain."],
+[1,"Who first described the Waterfall model (1970)?",["Winston W. Royce","Barry Boehm","Ivar Jacobson","Kent Beck"],"Royce, 1970. Boehm = Spiral & COCOMO; Jacobson = use cases/UML; Beck = XP/TDD."],
+[1,"Correct order of Waterfall phases?",["Requirements → Design → Implementation → Testing → Deployment → Maintenance","Design → Requirements → Implementation → Testing → Maintenance → Deployment","Requirements → Implementation → Design → Testing → Deployment → Maintenance","Requirements → Testing → Design → Implementation → Deployment → Maintenance"],"Linear and sequential: each phase finishes before the next starts."],
+[1,"Which process model is called risk-driven?",["Spiral model","Waterfall model","RAD model","Big Bang model"],"Spiral = risk-driven, iterative. Also called a meta-model because it can contain other models."],
+[1,"Who proposed the Spiral model?",["Barry Boehm","Winston Royce","Grady Booch","Fred Brooks"],"Barry Boehm, 1986/1988."],
+[1,"Each Spiral loop has 4 quadrants. Which quadrant makes Spiral different from other models?",["Risk analysis and resolution","Coding","Customer billing","Deployment"],"Quadrants: 1 determine objectives, 2 identify & resolve risks, 3 develop & test, 4 plan the next iteration."],
+[1,"Best model when the customer's requirements are unclear?",["Prototype model","Waterfall model","V-model","Big Bang model"],"Build a quick prototype, get feedback, refine requirements. Throwaway vs evolutionary prototyping."],
+[1,"The Incremental model delivers…",["Working software in small increments, core features first","The whole system only at the end","Only documentation first, code later","Only throwaway prototypes"],"Each increment adds functionality; the first increment is usually the core product."],
+[1,"Main weakness of the Waterfall model?",["Hard to handle changing requirements once a phase is done","Too many customer meetings","No documentation at all","Cannot be used for small projects"],"Waterfall suits stable, well-understood requirements; customer sees working software late."],
+[1,"The V-model is also known as the…",["Verification and Validation model","Velocity model","Version model","Vector model"],"Each development phase on the left has a matching test phase on the right."],
+[1,"In the V-model, unit testing is paired with which phase?",["Module (low-level) design","Requirements analysis","System design","Architecture (high-level) design"],"Requirements ↔ acceptance testing, system design ↔ system testing, architecture design ↔ integration testing, module design ↔ unit testing."],
+[1,"The Agile Manifesto was written in…",["2001, with 4 values and 12 principles","1995, with 5 values and 10 principles","2005, with 3 values and 12 principles","2001, with 12 values and 4 principles"],"Snowbird, Utah, 2001: 17 developers, 4 values, 12 principles."],
+[1,"Which pair matches an Agile Manifesto value (left side valued more)?",["Working software over comprehensive documentation","Processes and tools over individuals and interactions","Contract negotiation over customer collaboration","Following a plan over responding to change"],"The 4 values: individuals & interactions > processes & tools; working software > documentation; customer collaboration > contract negotiation; responding to change > following a plan."],
+[1,"RAD stands for?",["Rapid Application Development","Random Access Design","Reliable Application Deployment","Rapid Architecture Design"],"Short cycles (often 60–90 days), heavy reuse and prototyping, needs strong user involvement."],
+[1,"XP (an Agile method) stands for?",["Extreme Programming","Expert Programming","Experimental Processing","Extended Practice"],"Kent Beck. Practices: pair programming, TDD, continuous integration, small releases, refactoring."],
+[1,"The TDD cycle is…",["Red → Green → Refactor","Code → Test → Deploy","Green → Red → Refactor","Design → Code → Test"],"TDD = Test-Driven Development: write a failing test (red), make it pass (green), clean up (refactor)."],
+[1,"Which statement about software is true?",["Software doesn't wear out, but it deteriorates as changes pile up","Software is manufactured like hardware","Software follows the hardware bathtub curve","Software has no maintenance cost"],"Software is developed/engineered, not manufactured. Hardware follows the bathtub curve; software's failure rate spikes after each change."],
+[1,"Which SDLC phase usually costs the most over a product's lifetime?",["Maintenance","Requirements","Design","Coding"],"Maintenance is often 60–70% or more of total lifetime cost."],
+[1,"CASE stands for?",["Computer-Aided Software Engineering","Computer Automated System Evaluation","Code Analysis and Software Execution","Common Application Software Environment"],"Tools that support SE activities: modelling (StarUML), testing, version control, project planning."],
+// Module II: Requirements engineering
+[2,"SRS stands for?",["Software Requirements Specification","System Requirement Schedule","Software Review Summary","Standard Requirement Sheet"],"The document that states what the software must do; the contract between client and developer."],
+[2,"Which IEEE standard is for the SRS?",["IEEE 830","IEEE 829","IEEE 1012","IEEE 802.11"],"IEEE 830-1998 (now replaced by ISO/IEC/IEEE 29148). IEEE 829 = test documentation; 1012 = V&V; 802.11 = Wi-Fi."],
+[2,"An SRS should describe…",["WHAT the system must do, not HOW it is built","HOW the code is written","The database table code","Only the project budget"],"Design and implementation details belong in the design document, not the SRS."],
+[2,"\"The system shall return search results within 2 seconds\" is a…",["Non-functional (performance) requirement","Functional requirement","Domain requirement","User story"],"Non-functional = qualities and constraints: performance, security, usability, reliability, availability."],
+[2,"\"A user shall be able to reset the password by email\" is a…",["Functional requirement","Non-functional requirement","Quality attribute","Hardware constraint"],"Functional = a service or behaviour the system provides."],
+[2,"Which one is NOT a non-functional requirement?",["Generate a monthly sales report","Usability","Security","99.9% availability"],"Generating a report is a feature, so it is functional."],
+[2,"Feasibility study types are often remembered as TELOS. TELOS stands for?",["Technical, Economic, Legal, Operational, Schedule","Testing, Estimation, Logic, Output, Security","Time, Effort, LOC, Output, Size","Technical, Ethical, Logical, Organisational, Structural"],"Feasibility answers: can we build it, is it worth it, is it legal, will users use it, can we finish on time."],
+[2,"Cost-benefit analysis belongs to which feasibility?",["Economic feasibility","Technical feasibility","Operational feasibility","Schedule feasibility"],"Economic = do the benefits outweigh the costs."],
+[2,"Sommerville's requirements engineering process, in order?",["Feasibility study → Elicitation & analysis → Specification → Validation","Specification → Elicitation → Validation → Feasibility study","Validation → Specification → Elicitation → Feasibility study","Elicitation → Validation → Feasibility study → Specification"],"Requirements management runs alongside all of these to handle change."],
+[2,"JAD (an elicitation technique) stands for?",["Joint Application Development","Java Application Design","Joint Analysis Document","Job Allocation Diagram"],"Structured workshops where users and developers define requirements together. Other techniques: interviews, questionnaires, brainstorming, observation, prototyping."],
+[2,"Watching users do their real work to discover requirements is called…",["Ethnography (observation)","Interview","Questionnaire","Prototyping"],"Ethnography finds tacit requirements that users forget to mention in interviews."],
+[2,"RTM stands for, and it is used to…",["Requirements Traceability Matrix: link each requirement to its design and test cases","Requirement Testing Method: run unit tests","Risk Tracking Matrix: list project risks","Release Timeline Map: plan releases"],"Traceability ensures every requirement is designed, built and tested, and shows the impact of a change."],
+[2,"Which set lists good SRS characteristics (IEEE 830)?",["Correct, unambiguous, complete, consistent, verifiable, modifiable, traceable","Long, technical and full of code","Vague, so it can change easily","Written only by developers"],"Also: ranked for importance and/or stability."],
+[2,"Requirements validation checks for…",["Validity, consistency, completeness, realism, verifiability","Code coverage","Server uptime","Unit test pass rate"],"Techniques: requirements reviews, prototyping, test-case generation."],
+[2,"MoSCoW prioritisation stands for?",["Must have, Should have, Could have, Won't have (this time)","Mandatory, Optional, Specific, Conditional, Wanted","Model, Specify, Code, Write","Minimum, Standard, Complete, Wide"],"A common way to prioritise requirements and backlog items."],
+[2,"A context diagram is…",["A level-0 DFD: the whole system as one process with its external entities","A level-2 DFD","A UML class diagram","A Gantt chart"],"It shows the system boundary and the data flowing in and out."],
+[2,"DFD stands for?",["Data Flow Diagram","Data Function Design","Dynamic Flow Document","Design Flow Diagram"],"Elements: process, data flow, data store, external entity."],
+[2,"ERD stands for?",["Entity-Relationship Diagram","Event Response Diagram","Error Reporting Document","External Requirement Design"],"Entities, attributes, relationships and cardinality (1:1, 1:N, M:N)."],
+[2,"A stakeholder is…",["Anyone affected by, or with an interest in, the system","Only the programmer","Only the paying client","Only the tester"],"Users, clients, managers, developers, regulators: all have requirements."],
+[2,"Requirements management mainly deals with…",["Changing requirements: change control, versioning, traceability","Writing the source code","Deploying to servers","Hiring the team"],"Requirements change during the project; management keeps them controlled and traceable."],
+// Module III: Software design & UML
+[3,"UML stands for?",["Unified Modeling Language","Universal Markup Language","Unified Machine Logic","Uniform Modeling Layout"],"A standard visual language for specifying and documenting software design."],
+[3,"Which body maintains the UML standard?",["OMG (Object Management Group)","IEEE","W3C","ISO alone"],"OMG adopted UML in 1997."],
+[3,"The \"Three Amigos\" who created UML are…",["Grady Booch, James Rumbaugh, Ivar Jacobson","Royce, Boehm, Brooks","Beck, Fowler, Martin","Gamma, Helm, Johnson"],"Gamma, Helm, Johnson (with Vlissides) are the Gang of Four of design patterns, a common trap."],
+[3,"How many diagram types does UML 2.x define?",["14","9","7","21"],"7 structural + 7 behavioural. UML 1.x had 9."],
+[3,"Which is a STRUCTURAL UML diagram?",["Class diagram","Sequence diagram","Activity diagram","Use case diagram"],"Structural: class, object, component, deployment, package, composite structure, profile."],
+[3,"Which is a BEHAVIOURAL UML diagram?",["State machine diagram","Component diagram","Deployment diagram","Package diagram"],"Behavioural: use case, activity, state machine, and the interaction diagrams (sequence, communication, timing, interaction overview)."],
+[3,"In a use case diagram, «include» vs «extend»?",["«include» is always part of the base use case; «extend» is optional or conditional","«include» is optional; «extend» is mandatory","They mean the same thing","«extend» means inheritance between actors"],"Example: Checkout «include» Make Payment; Apply Coupon «extend» Checkout."],
+[3,"In a class diagram, the symbol # means…",["protected","private","public","package"],"+ public, − private, # protected, ~ package."],
+[3,"A filled (black) diamond on an association means…",["Composition: the part cannot exist without the whole","Aggregation","Generalisation","Dependency"],"Composition example: House ◆— Room. Aggregation uses a hollow diamond: Team ◇— Player (player can exist alone)."],
+[3,"A line with a hollow triangle arrowhead means…",["Generalisation (inheritance)","Composition","Association","Dependency"],"The arrow points to the parent class. A dependency is a dashed line with an open arrow."],
+[3,"Multiplicity 1..* means…",["One or more","Zero or one","Exactly one","Zero or more"],"0..1 = optional, 1 = exactly one, * or 0..* = zero or more."],
+[3,"A sequence diagram mainly shows…",["Messages between objects in time order along lifelines","Physical servers and devices","Class attributes and methods","All the states of one object"],"Lifelines are dashed vertical lines; thin rectangles on them are activation bars; time runs downward."],
+[3,"In an activity diagram, a thick bar that splits one flow into parallel flows is a…",["Fork","Join","Decision","Merge"],"Fork splits, join synchronises. Decision and merge use diamonds."],
+[3,"A state (machine) diagram is best for showing…",["The states one object goes through in response to events","Hardware nodes","Class inheritance","Message timing between servers"],"Example: Order: Placed → Paid → Shipped → Delivered. Initial state = filled circle; final state = bullseye."],
+[3,"A deployment diagram shows…",["Physical nodes (servers, devices) and the artifacts deployed on them","User goals","Object states","Source code classes"],"Example: Browser → Web server → Database server, with the .jar or .war placed on a node."],
+[3,"Which is the BEST (highest) type of cohesion?",["Functional","Coincidental","Logical","Temporal"],"Worst → best: coincidental, logical, temporal, procedural, communicational, sequential, functional."],
+[3,"Which is the WORST type of coupling?",["Content coupling","Data coupling","Stamp coupling","Control coupling"],"Content coupling = one module directly changes another's internal data or code."],
+[3,"Coupling ordered from best (loosest) to worst?",["Data → Stamp → Control → External → Common → Content","Content → Common → External → Control → Stamp → Data","Data → Control → Stamp → Common → External → Content","Common → Data → Stamp → Content → Control → External"],"Lowest coupling is best. Common coupling = modules share global data."],
+[3,"Good modular design aims for…",["High cohesion, low coupling","Low cohesion, high coupling","High cohesion, high coupling","Low cohesion, low coupling"],"Each module does one job well (cohesion) and depends little on others (coupling)."],
+[3,"MVC (an architectural pattern) stands for?",["Model-View-Controller","Module-Version-Control","Main-View-Class","Model-Variable-Component"],"Model = data and logic, View = what the user sees, Controller = handles input. Other patterns: layered, client-server, pipe-and-filter, repository, microservices."],
+// Module IV: Testing & QA
+[4,"Verification asks…",["\"Are we building the product right?\"","\"Are we building the right product?\"","\"Is the customer paying on time?\"","\"Does the code compile?\""],"Boehm's definition. Verification = conforms to the specification (reviews, inspections)."],
+[4,"Validation asks…",["\"Are we building the right product?\"","\"Are we building the product right?\"","\"Is the server up?\"","\"Is the design document long enough?\""],"Validation = meets the user's real needs (e.g. acceptance testing)."],
+[4,"Correct order of testing levels?",["Unit → Integration → System → Acceptance","System → Unit → Integration → Acceptance","Acceptance → System → Integration → Unit","Integration → Unit → Acceptance → System"],"Small parts first, then combined parts, then the whole system, then the user signs off."],
+[4,"In top-down integration testing, missing lower-level modules are replaced by…",["Stubs","Drivers","The compiler","The database"],"Top-down uses stubs (fake callees). Bottom-up uses drivers (fake callers). Big-bang integrates everything at once."],
+[4,"White-box testing is also called…",["Glass-box, clear-box or structural testing","Behavioural testing","Functional testing","Closed-box testing"],"Tests are based on internal code paths: statement, branch and path coverage."],
+[4,"Black-box testing is based on…",["The specification (inputs and expected outputs), without seeing the code","Internal code paths","Compiler output","Hardware registers"],"Techniques: equivalence partitioning, boundary value analysis, decision tables, state transition."],
+[4,"Cyclomatic complexity formula?",["V(G) = E − N + 2P","V(G) = N − E + 2","V(G) = E + N − 2","V(G) = E × N"],"E = edges, N = nodes, P = connected components (usually 1). Also V(G) = predicate (decision) nodes + 1 = number of regions."],
+[4,"A control flow graph has 9 edges and 7 nodes (one component). V(G) = ?",["4","2","3","16"],"9 − 7 + 2 = 4."],
+[4,"A function has 3 if-statements and no loops. Its cyclomatic complexity is…",["4","3","1","6"],"Decisions + 1 = 3 + 1 = 4."],
+[4,"Cyclomatic complexity tells you…",["The number of independent paths, i.e. minimum test cases for basis path testing","Lines of code","The number of bugs","The number of classes"],"Introduced by Thomas McCabe, 1976. Above 10 is usually considered too complex."],
+[4,"BVA stands for?",["Boundary Value Analysis","Basic Validation Approach","Black-box Verification Analysis","Branch Value Assessment"],"Errors cluster at the edges of input ranges."],
+[4,"Valid age range is 18–60. Which are the boundary values to test?",["17, 18, 60, 61 (plus 19 and 59)","18, 39, 60","0 and 100","20, 30, 40, 50"],"Test just below, on and just above each boundary."],
+[4,"Equivalence partitioning for a valid range 1–100 gives how many partitions?",["3: below 1, 1–100, above 100","1","2","100"],"One valid class and two invalid classes; pick one test value from each."],
+[4,"Regression testing is done…",["After a change, to check that existing features still work","Only once, before coding starts","Only by the customer","Only on the hardware"],"Re-run old tests after bug fixes, new features or refactoring."],
+[4,"Alpha vs beta testing?",["Alpha: at the developer's site; beta: real users at their own site","Alpha: customers at home; beta: developers in the lab","Both are unit tests","Beta always happens before alpha"],"Both are forms of acceptance testing."],
+[4,"UAT stands for?",["User Acceptance Testing","Unit Automation Testing","Universal Application Test","User Analysis Technique"],"The final level: users confirm the system meets their needs before release."],
+[4,"QA vs QC?",["QA is process-focused and prevents defects; QC is product-focused and finds defects","QA finds bugs in the product; QC defines the process","They are the same thing","QC is only done by customers"],"SQA = Software Quality Assurance: audits, standards, reviews. Testing is a QC activity."],
+[4,"CMMI has how many maturity levels, and what is the top one called?",["5 levels; level 5 = Optimizing","3 levels; level 3 = Defined","5 levels; level 5 = Managed","4 levels; level 4 = Optimizing"],"Initial → Managed → Defined → Quantitatively Managed → Optimizing. CMM came from SEI (Carnegie Mellon)."],
+[4,"Updating software so it runs on a new OS version is which type of maintenance?",["Adaptive","Corrective","Perfective","Preventive"],"Corrective = fix bugs; adaptive = adapt to a new environment; perfective = new features or better performance; preventive = refactor to avoid future problems."],
+[4,"Defect density = ?",["Number of defects ÷ size (e.g. per KLOC)","Defects × LOC","LOC ÷ defects","Testers ÷ defects"],"KLOC = thousand lines of code. Other metrics: LOC, function points (Albrecht, 1979), cyclomatic complexity."],
+// Module V: Project management
+[5,"WBS stands for?",["Work Breakdown Structure","Work Budget Schedule","Weekly Build System","Workflow Business Structure"],"A hierarchical breakdown of the whole project scope into smaller deliverables."],
+[5,"The lowest level of a WBS is called a…",["Work package","Milestone","Sprint","Epic"],"Work packages can be estimated, assigned and tracked. A milestone is a zero-duration checkpoint."],
+[5,"A Gantt chart shows…",["Tasks as horizontal bars against a timeline","Class relationships","Risk probability","Code coverage"],"Created by Henry Gantt. Good for schedules; it does not show dependencies as clearly as a PERT/CPM network."],
+[5,"PERT stands for?",["Program Evaluation and Review Technique","Project Estimation and Resource Tool","Process Evaluation and Risk Tracking","Planned Execution Review Timeline"],"Developed for the US Navy Polaris project (1958). Uses 3 time estimates per task."],
+[5,"CPM stands for?",["Critical Path Method","Cost Per Module","Critical Process Model","Change Plan Management"],"CPM uses one fixed duration per activity; PERT uses three estimates."],
+[5,"PERT expected time formula?",["(O + 4M + P) / 6","(O + M + P) / 3","(O + 2M + P) / 4","(P − O) / 6"],"O = optimistic, M = most likely, P = pessimistic."],
+[5,"O = 2, M = 4, P = 12 days. PERT expected time?",["5 days","6 days","4 days","18 days"],"(2 + 4×4 + 12) / 6 = 30 / 6 = 5."],
+[5,"PERT standard deviation of one task?",["(P − O) / 6","(P + O) / 2","(O + 4M + P) / 6","P − O"],"For O = 2 and P = 12: (12 − 2) / 6 ≈ 1.67. Variance = ((P − O) / 6)²."],
+[5,"The critical path is…",["The longest path through the network; its tasks have zero slack and it sets the minimum project duration","The shortest path through the network","The path with the most tasks","The cheapest path"],"Any delay on a critical task delays the whole project."],
+[5,"Slack (float) of an activity = ?",["LS − ES (or LF − EF)","ES − EF","LF + LS","Duration × 2"],"ES/EF = earliest start/finish, LS/LF = latest start/finish. Critical activities have 0 slack."],
+[5,"COCOMO stands for, and who created it?",["Constructive Cost Model, Barry Boehm (1981)","Cost Control Model, Winston Royce","Code Complexity Model, Thomas McCabe","Constant Cost Model, Fred Brooks"],"Estimates effort, time and people from size in KLOC."],
+[5,"The three project modes (classes) in COCOMO are…",["Organic, Semi-detached, Embedded","Small, Medium, Large","Basic, Intermediate, Detailed","Simple, Average, Complex"],"Trap: Basic / Intermediate / Detailed are the three model LEVELS, not the modes. Organic = small team, familiar problem; embedded = tight hardware and real-time constraints."],
+[5,"Basic COCOMO effort for an ORGANIC project?",["E = 2.4 × (KLOC)^1.05 person-months","E = 3.6 × (KLOC)^1.20 person-months","E = 3.0 × (KLOC)^1.12 person-months","E = 2.5 × (KLOC)^0.38 person-months"],"Semi-detached: 3.0, 1.12. Embedded: 3.6, 1.20. Development time = 2.5 × E^0.38 (organic), ^0.35 (semi-detached), ^0.32 (embedded)."],
+[5,"Risk exposure = ?",["Probability × Impact (loss)","Probability + Impact","Impact ÷ Probability","Cost × Time"],"Example: 30% chance × ₹1,00,000 loss = ₹30,000 exposure. Rank risks by exposure."],
+[5,"Risk management process, in order?",["Identification → Analysis → Planning → Monitoring","Planning → Identification → Monitoring → Analysis","Monitoring → Analysis → Identification → Planning","Analysis → Monitoring → Planning → Identification"],"Risk types: project (schedule, staff), product (quality, performance), business (market, budget). Strategies: avoid, minimise (mitigate), contingency plan."],
+[5,"SCM stands for?",["Software Configuration Management","Source Code Monitoring","Software Change Model","System Control Module"],"Covers version control, baselines, change control, release management. Tools: Git, SVN."],
+[5,"Which Git command creates a new branch and switches to it?",["git checkout -b feature (or git switch -c feature)","git branch -d feature","git merge feature","git clone feature"],"git branch -d deletes, git merge joins a branch into the current one, git clone copies a remote repository."],
+[5,"The three Scrum roles are…",["Product Owner, Scrum Master, Developers (Development Team)","Project Manager, Tester, Client","Architect, Coder, Reviewer","CEO, CTO, Intern"],"Product Owner owns the backlog; Scrum Master coaches and removes blockers; Developers build the increment."],
+[5,"The three Scrum artifacts are…",["Product Backlog, Sprint Backlog, Increment","Gantt chart, WBS, SRS","Burndown chart, RTM, PERT chart","Use case, class diagram, test plan"],"Events: the Sprint (1 month or less, usually 2–4 weeks), Sprint Planning, Daily Scrum (15 minutes), Sprint Review, Sprint Retrospective."],
+[5,"A burndown chart shows…",["Remaining work against time in a sprint","Completed features per year","The team's salaries","Bug severity levels"],"Velocity = story points finished per sprint. User story format: \"As a <role>, I want <goal> so that <benefit>\"."]
+];
+const MODS = {1: "I · Intro & process models", 2: "II · Requirements", 3: "III · Design & UML", 4: "IV · Testing & QA", 5: "V · Project management"};
+const KEY = "sepm-drill-v1";
+let state = { picks: {}, filter: 0, wrongOnly: false, reveal: false, order: Q.map((_, i) => i), opts: {} };
+try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && s.order && s.order.length === Q.length) state = Object.assign(state, s); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+Q.forEach((q, i) => { if (!state.opts[i]) state.opts[i] = shuffle([0, 1, 2, 3]); });
+const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function render() {
+  const mods = document.getElementById("mods");
+  mods.innerHTML = [0, 1, 2, 3, 4, 5].map(m => `<button type="button" data-m="${m}" class="${state.filter === m ? "on" : ""}">${m ? MODS[m] : "All 100"}</button>`).join("");
+  const list = document.getElementById("list");
+  const shown = state.order.filter(i => (!state.filter || Q[i][0] === state.filter) && (!state.wrongOnly || (state.picks[i] !== undefined && state.picks[i] !== 0)));
+  list.innerHTML = shown.length ? shown.map((i, n) => {
+    const [m, text, opts, ex] = Q[i]; const pick = state.picks[i]; const done = pick !== undefined || state.reveal;
+    const buttons = state.opts[i].map(k => {
+      let cls = "opt"; if (done && k === 0) cls += " right"; if (pick === k && k !== 0) cls += " wrong";
+      return `<button type="button" class="${cls}" data-q="${i}" data-k="${k}" ${done ? "disabled" : ""}>${esc(opts[k])}</button>`;
+    }).join("");
+    const verdict = pick === undefined ? "" : (pick === 0 ? "<b>Correct.</b> " : "");
+    return `<article class="q"><div class="meta">Q${i + 1} · Module ${MODS[m]}</div><p class="qt">${esc(text)}</p><div class="opts">${buttons}</div>${done ? `<p class="ex">${verdict}${esc(ex)}</p>` : ""}</article>`;
+  }).join("") : `<p class="empty">${state.wrongOnly ? "No mistakes here yet. Answer some questions first, or switch off \"Only my mistakes\"." : "No questions in this view."}</p>`;
+  const answered = Object.keys(state.picks).length, right = Object.values(state.picks).filter(v => v === 0).length;
+  document.getElementById("score").innerHTML = `${right} / ${answered} <small>correct · ${Q.length - answered} left</small>`;
+  document.getElementById("btn-wrong").classList.toggle("on", state.wrongOnly);
+  document.getElementById("btn-reveal").classList.toggle("on", state.reveal);
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.q !== undefined) { state.picks[b.dataset.q] = +b.dataset.k; }
+  else if (b.dataset.m !== undefined) { state.filter = +b.dataset.m; }
+  else if (b.id === "btn-wrong") { state.wrongOnly = !state.wrongOnly; }
+  else if (b.id === "btn-reveal") { state.reveal = !state.reveal; }
+  else if (b.id === "btn-shuffle") { state.order = shuffle(state.order); Q.forEach((q, i) => state.opts[i] = shuffle([0, 1, 2, 3])); }
+  else if (b.id === "btn-reset") { state.picks = {}; state.wrongOnly = false; state.reveal = false; }
+  else return;
+  save(); render();
+});
+render();
+</script>
+</body>
+</html>
