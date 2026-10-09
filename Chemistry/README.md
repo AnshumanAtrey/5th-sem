@@ -2,10 +2,10 @@
 
 Anshuman Atrey · 150096724029 · BTech CSE 2024-28
 
-13 continuous-evaluation assignments (organic chemistry) + a Class Test. Each folder holds
-`answers.html` (source) and `answers.pdf` (submission). Structures are drawn with RDKit; the
-Assignment 2 degree table and Assignment 6 σ/π counts are computed in code. Questions were
-cross-read from 2–4 classmate submissions per assignment to lock the exact set.
+13 continuous-evaluation assignments (organic chemistry) + a Certificate + a Class Test. Each
+assignment folder holds `answers.html` (source) and `answers.pdf` (submission). Structures are drawn
+with RDKit; the Assignment 2 degree table and Assignment 6 σ/π counts are computed in code. Questions
+were cross-read from 2–4 classmate submissions per assignment to lock the exact set.
 
 ## Assignments
 
@@ -28,16 +28,32 @@ cross-read from 2–4 classmate submissions per assignment to lock the exact set
 Grading (exam-dept email, 2026-09-19): 13 assignments = 80 (6 each A1–A12, 8 for A13) ·
 Certificate 10 · Class Participation 5 · Attendance 5.
 
-## Submission
-- **Drive (graded channel):** upload each `answers.pdf` to its matching `Assignments/Assignment-N` subfolder.
-- **LISA:** 7 upload slots (A1–A7) + Class Test; content IDs in `lisa-chemistry.json`.
-- **Certificate (done):** OpenLearn *Discovering Chemistry* at
-  `../certification/openlearn-discovering-chemistry/DC_1_statement_of_participation.pdf` → Drive `Certificates`.
+## Submitted — what and where (as of 2026-10-03)
 
-## Class Test — due 2026-10-17
-Question paper is not available digitally (Drive has only answer scans). Get it from class; not yet built.
+| Item | Channel | Where exactly | State |
+|------|---------|---------------|-------|
+| Assignments 1–13 | **Google Drive** (graded channel) | `Assignments/Assignment-N/Anshuman_Atrey_150096724029.pdf` (one per assignment) | ✅ 13/13 uploaded |
+| Assignments 1–7 | **LISA** (isu-btech.lisaapp.in) | the 7 Chemistry upload slots; each has `answers.pdf` + a plain-language description of what was done | ✅ 7/7 submitted |
+| Certificate | **Google Drive** | `Certificates/Anshuman_Atrey_150096724029/Anshuman_Atrey_Chemistry_Certificate.pdf` (OpenLearn *Discovering Chemistry*) | ✅ uploaded |
+
+Notes:
+- The Drive `Assignments` folder has 13 numbered sub-folders; LISA exposes only 7 slots, so the full
+  13-assignment graded set lives on Drive. Both channels are now covered for what they support.
+- File naming follows the classmate convention: assignments as a single `Name_RollNo.pdf`; the
+  certificate as a `Name_RollNo/` sub-folder with the cert inside.
+- All Drive uploads are shared **"anyone with the link can view"** (verified 2026-10-03), so the
+  grader can open them directly.
+- LISA content IDs for each slot are in `lisa-chemistry.json` (gitignored — keep local).
+
+## Pending
+
+- **Class Test** (12 marks, due **2026-10-17**) — not built. The question paper is not available
+  digitally (the Drive `Class Test` folder has only answer scans); get it from class, then it will be
+  built and uploaded the same way.
+- **Faculty feedback form** — https://forms.gle/ZHCpaSKZTvdS52aZ8 (status unknown).
 
 ## Status
-All 13 answers drafted and rendered. Nothing submitted yet.
 
-_Data companion: `lisa-chemistry.json` (questions, answers, LISA content IDs)._
+All 13 assignments and the certificate are **done and submitted**. Only the Class Test remains.
+
+_Data companion: `lisa-chemistry.json` (questions, answers, LISA content IDs) — kept local._
