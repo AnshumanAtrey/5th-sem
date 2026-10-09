@@ -23,3 +23,6 @@ token.json
 
 # chemistry working notes name classmates (whose submissions were cross-read) and a classmate's login, keep local
 Chemistry/lisa-chemistry.json
+
+# cloudflare wrangler local cache
+.wrangler/
